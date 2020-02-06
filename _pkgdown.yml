@@ -1,0 +1,13 @@
+destination: docs
+
+url: https://knapply.github.io/ironmarch
+
+template:
+  params:
+    bootswatch: cerulean
+    # ganalytics:
+
+reference:
+
+
+

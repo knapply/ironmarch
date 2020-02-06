@@ -1,0 +1,39 @@
+Package: ironmarch
+Title: Iron March
+Version: 0.1
+Authors@R:
+        c(
+            person("Brendan", "Knapp", 
+                    email = "brendan.g.knapp@gmail.com", 
+                    role = c("aut", "cre"),
+                    comment = c(ORCID = "0000-0003-3284-4972"))
+            # , # ADD PERSON TEMPLATE
+            # person("<LAST NAME>", "<FIRST NAME>", 
+            #        email = "<EMAIL>", 
+            #        role = "aut")
+        )
+Description: 
+    Iron March.
+License: GPL-3 + file LICENSE
+Depends: R (>= 3.3)
+Imports:
+    data.table (>= 1.12.4),
+    purrr,
+    stringi
+Suggests:
+    covr,
+    igraph,
+    knitr,
+    network,
+    RSiena,
+    sf,
+    tergm,
+    testthat (>= 2.1.0),
+    rmarkdown
+URL: https://github.com/knapply/ironmarch, https://knapply.github.io/ironmarch
+BugReports: https://github.com/knapply/ironmarch/issues
+Encoding: UTF-8
+LazyData: yes
+RoxygenNote: 7.0.2
+Roxygen: list(markdown = TRUE)
+VignetteBuilder: knitr
