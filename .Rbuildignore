@@ -8,3 +8,5 @@
 ^appveyor.yml$
 ^pkgdown$
 ^LICENSE.md$
+^playground$
+^inst/raw-data$
