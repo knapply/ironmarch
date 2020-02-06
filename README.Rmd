@@ -45,6 +45,10 @@ options(width = 150)
 
 # Introduction
 
+```{r}
+(`# TODO` <- TRUE)
+```
+
 # Installation
 
 ```{r, eval=FALSE}

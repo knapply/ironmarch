@@ -29,6 +29,12 @@ bytes](https://img.shields.io/github/languages/code-size/knapply/ironmarch.svg)]
 
 # Introduction
 
+``` r
+(`# TODO` <- TRUE)
+```
+
+    #> [1] TRUE
+
 # Installation
 
 ``` r
