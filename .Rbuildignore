@@ -6,6 +6,7 @@
 ^\.github$
 ^_pkgdown\.yml$
 ^appveyor.yml$
+^\.travis\.yml$
 ^pkgdown$
 ^LICENSE.md$
 ^playground$
