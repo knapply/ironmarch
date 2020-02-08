@@ -11,3 +11,4 @@
 ^LICENSE.md$
 ^playground$
 ^inst/raw-data$
+^db-dissection$
