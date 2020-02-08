@@ -1,0 +1,464 @@
+id,title,text,description,position,app
+1,Searching,"The search feature can be used to search all areas of the community quickly based on keywords you enter.<br />
+<br />
+&lt;strong&gt;Quick Search&lt;/strong&gt;<br />
+You can start a quick search by typing your keywords into the quick-search bar at the top of any page and pressing the &quot;Search&quot; button.<br />
+<br />
+&lt;strong&gt;Advanced Options&lt;/strong&gt;<br />
+If instead of typing your keywords into the quick-search bar, you click the &quot;Advanced&quot; link next to it, you will see some advanced options for searching.<br />
+<br />
+The first option, &quot;Find &lt;strong&gt;words&lt;/strong&gt;&quot; is where you can enter the keywords to search for.<br />
+<br />
+The next option, &quot;Find &lt;strong&gt;author&lt;/strong&gt;&quot; can be used to only find content from a specific user. As you begin typing ausername, you should see a dropdown with username suggestions that you can select from.<br />
+<br />
+The next option, &quot;Find by &lt;strong&gt;date&lt;/strong&gt;&quot; allows you to restrict the results to content added between particular dates. To select your date, click the &lt;img src=&#39;{style_image_url}/date.png&#39; /&gt; button - this will bring up a calendar. From here you can select any date and your option will be filled into the search form.<br />
+<br />
+The next option, &quot;Find in &lt;strong&gt;forum&lt;/strong&gt; allows you to restrict your results to content within particular forums. You can select multiple options by holding the Ctrl key on your keyboard (or the cmd key if you use a Mac) and clicking on your options.<br />
+<br />
+You can leave any of these options blank, however you must supply at least one search criteria when submitting the form.  Once you have filled in the options that you require, press the &lt;span class=&#39;input_submit&#39;&gt;Do Search&lt;/span&gt; button.<br />
+<br />
+&lt;strong&gt;Inline Search&lt;/strong&gt;<br />
+When you are viewing a particular topic, or a particular forum, you will notice that the search bar changes from ""Search Forum"" to ""Search This Topic"" - this allows you to easily and quickly search through the current topic, forum, or application, without getting search results for other areas of the forum.<br />
+<br />
+&lt;strong&gt;Results&lt;/strong&gt;<br />
+Once you have submitted your search, a tabbed page of results will appear - you can change the selected tab to choose which area of the community you wish to search. For example, results under the &quot;Forums&quot; tab will bring up any topics and posts that contain your search keywords, while the &quot;Members&quot; tab will bring up any member accounts that match your search criteria.<br />
+<br />
+You can change the order of the results to sort by relevance or to sort by date using the options at the top of the results page.<br />
+<br />
+The keywords that you searched for will be highlighted like &lt;span class=&#39;searchlite&#39;&gt;this&lt;/span&gt;.<br />
+<br />
+Once you have found the result you are looking for, you can click on it to bring up the page, or, if you are searching through the forums, you can click on the preview icon to preview the search results without having to leave the search page.",How to use the search feature.,8,core
+2,Your Settings,"<p>
+	You can access your settings from any page by selecting your name at the top of the screen and then selecting &quot;My Settings&quot;.<br />
+	<br />
+	There are several tabs on the side of the page, which allow you to configure and update different board settings:<br />
+	<br />
+	<br />
+	<br />
+	<strong><em>Profile Settings</em></strong><br />
+	From the Profile Settings area of your UserCP, you can configure various aspects of your profile, including:</p>
+<ul>
+	<li>
+		Profile Picture: This is the photo used to identify you throughtout the community.</li>
+	<li>
+		Timezome</li>
+	<li>
+		Allow Comments: If checked, other forum members can leave comments on your profile.</li>
+	<li>
+		Friends</li>
+	<li>
+		Edit your &quot;About Me&quot; information</li>
+	<li>
+		Change your Member Title</li>
+	<li>
+		Update your Birthday</li>
+	<li>
+		Add profile information, such as interests</li>
+	<li>
+		Share contact information such as AIM usernames.</li>
+</ul>
+<p>
+	&nbsp;</p>
+<p>
+	<strong><em>Profile Customization</em></strong></p>
+<p>
+	From the Profile Customization tab of your UserCP, you can setup a custom profile background, change the colors of your profile, and perform other ways to customize the look and feel of your profile.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<em><strong>Email &amp; Password</strong></em></p>
+<p>
+	The Email &amp; Password area allows you to update the password or email address associated with your account.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<em><strong>Display Name</strong></em></p>
+<p>
+	The Display Name page allows you to change the name that is shown to members throughout the community. The board administrator limits the number of times you can change your display name, so make changes wisely.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<strong><em>Signature</em></strong></p>
+<p>
+	The signature page allows you to modify the custom signature that is shown below all of your posts.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<em><strong>Ignore</strong></em></p>
+<p>
+	The &quot;ignore&quot; tab allows you to configure your Ignore settings - you can choose to hide individual member&#39;s posts, signatures, chats, status updates, or other aspects of a member that you wish to hide.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<strong><em>Manage Facebook/Twitter</em></strong></p>
+<p>
+	If you have connected your forum profile to Facebook or Twitter, you can manage your connection here, including settings on importing status updates, linking your user photo, and more.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<em><strong>Manage Attachments</strong></em></p>
+<p>
+	This page will display all attachments that you have uploaded to the forum. If you are running close to your global attachment limit, you can delete attachments from this area.&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	<em><strong>Notification Options</strong></em></p>
+<p>
+	The Notification Options page allows you to configure how you should be notified of certain events, such as a reply to a topic, a private message, or a new topic. You can configure how you would like to recieve these notifications as well, such as via the mobile application, email, or inline notifications.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<em><strong>Your Notifications</strong></em></p>
+<p>
+	This tab will display the most recent notifications that you have recieved.</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>","Editing contact information, personal information, signatures, board settings, languages and style choices.",3,core
+3,How to Register,"To be able to enjoy all of the features available to the community, you will need to sign up for a member account. Registration is easy and only takes a moment to complete. <br />
+ <br />
+ To sign up, click the &quot;Create Account&quot; link at the top of any page.  You can then provide your email address and password to complete the registration process.
+ <br />
+Some communities may have an easier way to register without filling out the registration form. If enabled, you will see a Facebook or Twitter icon next to the Create Account button. If you use these services, you can use your existing login information from those services to link your account. Registration via this method takes only 3 clicks and will return you back to the forum after you authorize it.
+ <br />
+ You may be registered and logged straight in, or you may have to verify your email address by clicking a link in an email that we will send you. If this is the case, a screen will appear with further instructions. You will receive a confirmation of your membership as an email.",How to register and the added benefits of being a registered member.,1,core
+4,Logging In and Out,"&lt;strong&gt;Logging In&lt;/strong&gt;<br />
+Once you have signed up for an account, you can log in by pressing the &quot;Sign In&quot; button at the top of any page.<br />
+<br />
+From here, you should enter your username or email address, and the password you used when you registered.  If you tick the &quot;Remember Me&quot; box you will not have to sign in when you visit the community in future. This ability can be very useful, but should not be used if other people have access to your computer or if you are using a public computer.<br />
+<br />
+You may also be able to hide your username from the online list by checking the &quot;Sign in anonymously&quot; box.  Administrators will still be able to see you online if you do so, however other members will not be able to.<br />
+<br />
+When you are ready, click &lt;span class=&#39;input_submit&#39;&gt;Sign In&lt;/span&gt;.<br />
+Once logged in, you should be taken back to whatever page you were previously viewing.<br />
+<br />
+You may also see additional log in options such as Twitter or Facebook Connect. If these features are available and you would prefer to use one of these options to log in, click on the appropriate button and follow the on-screen instructions.<br />
+<br />
+<br />
+&lt;strong&gt;Forgotten your password&lt;/strong&gt;<br />
+If you have forgotten your password, you can click the &quot;I&#39;ve forgotten my password&quot; link on the sign in page below the password box.  This will take you to a page where you can enter your username or email address, and we will then either email you a new password that you can use or a link for you to reset your password.<br />
+<br />
+Note that if you locked your account by typing in the wrong password too many times, you will still need to unlock your account before you can use your new password. Please contact an administrator for assistance if you encounter trouble with a locked account.<br />
+<br />
+<br />
+&lt;strong&gt;Logging Out&lt;/strong&gt;<br />
+To log out click the &quot;Sign Out&quot; link at the top of the screen from any page.","How to log in and out from the board, how to remain anonymous and not be shown on the active users list and what to do if you forget your password.",2,core
+5,Contacting the staff,"If you need to contact a moderator, or simply wish to view the complete administration team, you can click the link &#39;The moderating team&#39; found at the bottom of the main board page. This list will show you administrators and moderators. <br />
+<br />
+Note that you can report content to all staff by pressing the &quot;Report&quot; button when viewing the content.",Where to find a list of the board moderators and administrators.,10,core
+6,Personal Messenger,"The personal messenger can be used to have private conversations with other members. To access it, select your username while logged in from the top corner of any page, and then press &quot;Messenger&quot;.<br />
+<br />
+<br />
+&lt;strong&gt;Managing conversations&lt;/strong&gt;<br />
+<br />
+&lt;em&gt;Change which conversations you are viewing&lt;/em&gt;<br />
+By default, all conversations are shown, but you can change the view to only display conversations you started, or conversations that others have started.  To change this, select the appropriate option from the dropdown underneath the conversation list and then press &lt;span class=&#39;input_submit alt&#39;&gt;Update&lt;/span&gt;.<br />
+<br />
+&lt;em&gt;Deleting conversations&lt;/em&gt;<br />
+To delete a whole conversation, select the checkbox beside the conversation, then select &quot;Delete&quot; from the dropdown at the bottom and then press &lt;span class=&#39;input_submit alt&#39;&gt;Go&lt;/span&gt;.<br />
+<br />
+If you started the conversation, this will remove the conversation from your list, and lock it for everyone else - nobody else will be able to make replies to the conversation, but they will still be able to read it until they also delete it.<br />
+<br />
+If you did not start the conversation, this will remove the conversation from your list and remove you from the conversation - you will not be able to make any more replies, but others will still be able to continue the conversation without you, and see your previous replies.<br />
+<br />
+&lt;em&gt;Managing notifications&lt;/em&gt;<br />
+You will see a &lt;img src=&#39;{style_image_url}/bell.png&#39; /&gt; icon for conversations that you will be notified of updates to, and &lt;img src=&#39;{style_image_url}/bell_off.png&#39; /&gt; for conversations that you will not receive notifications for.<br />
+<br />
+To turn on or off notifications for any conversation, select the checkbox beside the conversation, then select the appropriate option from the dropdown at the bottom and then press &lt;span class=&#39;input_submit alt&#39;&gt;Go&lt;/span&gt;.<br />
+<br />
+<br />
+&lt;strong&gt;Managing messages&lt;/strong&gt;<br />
+To edit or delete one of your messages in a conversation, press the &quot;&lt;img src=&#39;{style_image_url}/comment_edit.png&#39; /&gt; Edit&quot; or &quot;&lt;img src=&#39;{style_image_url}/comment_delete.png&#39; /&gt; Delete&quot; button underneath the post.  The changes will be reflected to all participants in the conversation.<br />
+<br />
+<br />
+&lt;strong&gt;Starting a new conversation&lt;/strong&gt;<br />
+To start a new conversation, start by pressing the &quot;Compose New&quot; button.  Enter the user&#39;s name into the &quot;Recipient&#39;s Name&quot; field.  As you type, suggestions will appear below the box.  When you see the member you are looking for, click on their name.<br />
+<br />
+You may also be able to add other recipients into the &quot;Other Recipients&quot; box. If so, the next option allows you to specify how the messages will be sent to alternate recipients: &quot;Invitation&quot; allows all invited members to participate in a single conversation, while &quot;Copy&quot; will send a separate conversation to each member.<br />
+<br />
+You should then type a message subject and the message body, just like you would for a new topic in the forums.<br />
+<br />
+When you are done, you can press &lt;span class=&#39;input_submit&#39;&gt;Send Message&lt;/span&gt; or &lt;span class=&#39;input_submit alt&#39;&gt;Save (Send Later)&lt;/span&gt; to save the message for later.<br />
+<br />
+<br />
+&lt;strong&gt;Replying to a conversation&lt;/strong&gt;<br />
+To reply to any conversation, press the &quot;&lt;img src=&#39;{style_image_url}/arrow_rotate_clockwise.png&#39; /&gt; Add Reply&quot; button when viewing it or press the &quot;&lt;img src=&#39;{style_image_url}/comment_add.png&#39; /&gt; Reply&quot; button underneath any existing message to quote it. Then type your message just like you would a post and press &lt;span class=&#39;input_submit&#39;&gt;Send Message&lt;/span&gt;.  You can also use the Fast Reply box at the bottom of each conversation to quickly reply to the conversation.<br />
+<br />
+<br />
+&lt;strong&gt;Adding participants to a conversation&lt;/strong&gt;<br />
+You may be able to add more participants to a conversation. If so, you will see an &quot;&lt;img src=&#39;{style_image_url}/user_add.png&#39; /&gt; Add&quot; button on the left-side when viewing a conversation.<br />
+Click this button and a box will appear for you to enter member names into. To add more than one member, separate their names with commas. When you are done, press &lt;span class=&#39;input_submit&#39;&gt;Add&lt;/span&gt;.<br />
+<br />
+<br />
+&lt;strong&gt;Reporting a message&lt;/strong&gt;<br />
+If you wish to report to a moderator a message that someone has sent to you, you can press the &quot;&lt;img src=&#39;{style_image_url}/report.png&#39; /&gt; Report&quot; button underneath the message.<br />
+<br />
+Type in your report and then press &lt;span class=&#39;input_submit&#39;&gt;Submit Report&lt;/span&gt;. This will send a copy of the message to the moderators - only the specific message you report will be displayed to the moderating team, however some moderators may be able to add themselves to the conversation you have reported.<br />
+<br />
+<br />
+&lt;strong&gt;Managing your messenger folders&lt;/strong&gt;<br />
+By default there are three folders for messages: &lt;ul&gt;&lt;li&gt;New, which stores all unread conversations.&lt;/li&gt;&lt;li&gt;My Conversations, which contains all conversations you are participating in.&lt;/li&gt;&lt;li&gt;Drafts, which stores unsent messages saved for later.&lt;/li&gt;&lt;/ul&gt;<br />
+<br />
+You can also add your own folders to make it easier to manage your messages.<br />
+<br />
+&lt;em&gt;Adding a new folder&lt;/em&gt;<br />
+To add a new folder, press the &quot;&lt;img src=&#39;{style_image_url}/folder_add.png&#39; /&gt; Add&quot; button beneath the list of folders.<br />
+Type the name of the folder you want to add, then press the &quot;+&quot; button.<br />
+<br />
+&lt;em&gt;Moving messages&lt;/em&gt;<br />
+To move a message from one folder to another, select the checkbox beside the conversation, then select the name of the folder you want to move the conversation to from the dropdown at the bottom and then press &lt;span class=&#39;input_submit alt&#39;&gt;Go&lt;/span&gt;.<br />
+<br />
+&lt;em&gt;Renaming, Deleting or Emptying a folder&lt;/em&gt;<br />
+To rename, empty or delete a folder, press the &quot;&lt;img src=&#39;{style_image_url}/folder_edit.png&#39; /&gt; Edit&quot; button beneath the list of folders.<br />
+<br />
+To rename a folder, type the new name in the textbox currently containing the folder name, and then press the &quot;&gt;&quot; button.  You cannot rename default folders.<br />
+<br />
+To empty a folder, press the &lt;img src=&#39;{style_image_url}/bin.png&#39; /&gt; icon beside the folder name.<br />
+<br />
+To delete a folder, press the &lt;img src=&#39;{style_image_url}/delete.png&#39; /&gt; icon beside the folder name. Be careful as this will also empty the folder. You cannot delete default folders.","How to send personal messages, track them, edit your messenger folders and archive stored messages.",6,members
+7,Members,"&lt;strong&gt;Member List&lt;/strong&gt;<br />
+The member list contains a list of all members of the community. To access it, click the &quot;Members&quot; tab at the top of any page.<br />
+<br />
+By default, all members are listed in alphabetical order.  You can choose to only display members whose names begin with a certain letter by selecting that letter from the bar at the top.  You can also choose to change the order of the results to display based on post count or join date by selecting the appropriate option from the bar below that.<br />
+<br />
+&lt;em&gt;Advanced Search&lt;/em&gt;<br />
+To search for a specific member, you can press the &quot;&lt;img src=&#39;{style_image_url}/cog.png&#39; /&gt; Use Advanced Filters&quot; button. This will reveal advanced filter options. Once you have entered the search criteria, press &lt;span class=&#39;input_submit&#39;&gt;Apply Filters&lt;/span&gt;.<br />
+<br />
+&lt;strong&gt;Profiles&lt;/strong&gt;<br />
+You can access a member&#39;s profile by clicking their name anywhere in the community. From here you can see content the member has added, information about the member and contact the member.<br />
+<br />
+&lt;em&gt;User Information&lt;/em&gt;<br />
+To the side, you will see the user&#39;s profile picture if they have one. Below this you will see options to add the user as a friend, send the user a personal message and view content from the user. Underneath this, you will see the user&#39;s total reputation, if enabled, taking into account all positive and negative reputation given for all posts. Underneath this, you will see the user&#39;s statistics, including what group they are in, how long they have been a member and other basic details. <br />
+<br />
+&lt;em&gt;Status&lt;/em&gt;<br />
+The user's status displays in the profile upon clicking the Profile Feed tab. You can leave a profile comment here too and reply to their status or previous comments.
+<br /><br />
+To update your own status, open the usermenu on the top right available on every page and you'll have an input box to enter one.<br />
+<br />
+&lt;em&gt;Content&lt;/em&gt;<br />
+In the middle of the profile, you can see what a user has specified in their &quot;About Me&quot; page. You can use the tabs above this to view content the user has contributed to the community.  This section will, however, only show recent content - to view all content, use the appropriate links from the user information section of the profile.<br />
+<br />
+&lt;em&gt;Personal and Contact Information&lt;/em&gt;<br />
+Below the content box, you will see the member&#39;s personal information such as age and birthday. You may also be able to send the user an email if they have allowed it.<br />
+<br />
+&lt;em&gt;Friends&lt;/em&gt;<br />
+Below the personal and contact information, you will see the user&#39;s friends. You can click on any of the usernames here to go view their profiles.<br />
+<br />
+&lt;em&gt;Rating&lt;/em&gt;<br />
+You may be able to rate the user by selecting one of the stars at the top of their profile.  If you can rate a user, the stars will change color as you move your mouse over them.  If you cannot rate the user, you will not be able to select the stars. You cannot rate yourself.  You may be able to change your rating.  To do this, just click on a different star and your vote will be updated.","A guide to the member list and member profiles, including profile comments, adding friends and contacting members.",7,members
+8,Posting,"<!-- isHtml:1 --><!-- isHtml:1 --><p><strong>The Post Editor</strong><br />
+There are two versions of the post editor: the standard editor and the rich text editor. Which one you use can be configured from your settings. With the rich text editor, you'll see how the post will look when it's finally posted, like a live preview.<br />
+<br />
+The toolbar buttons on each editor are very similar, and each button is explained below, from left to right:</p>
+<ul class=""bbc"">
+<li><img src=""{style_image_url}/rte_icons/toggle.png"" /> - This will toggle between RTE and Standard modes.</li>
+<li><img src=""{style_image_url}/rte_icons/remove_formatting.png"" /> - This will turn off all formatting tools currently in use.</li>
+<li><img src=""{style_image_url}/rte_icons/ips_bbcode.png"" /> - Shows available custom bbcodes.</li>
+<li>Fonts - This menu allows you to set what font your post is displayed in.</li>
+<li>Sizes - This menu allows you to set what size the text in your post is.</li>
+<li><img src=""{style_image_url}/rte_icons/text_color.png"" /> - This menu allows you to set the color of the text in your post.</li>
+<li><img src=""{style_image_url}/rte_icons/emoticons.png"" /> - This menu will allow you to insert an emoticon into your post.</li>
+<li><img src=""{style_image_url}/rte_icons/media.png"" /> - This will allow you to link to media, such as a video or song.</li>
+<li><img src=""{style_image_url}/rte_icons/find.png"" /> - This will allow you to search the text for a specific word or phrase.</li>
+<li><img src=""{style_image_url}/rte_icons/replace.png"" /> - This will allow you to replace words or phrases in the text.</li>
+<li><img src=""{style_image_url}/rte_icons/undo.png"" /> - This will undo the last change made.</li>
+<li><img src=""{style_image_url}/rte_icons/redo.png"" /> - This will redo the last undone change.</li>
+<li><img src=""{style_image_url}/rte_icons/copy.png"" /> - This will copy the selected text</li>
+<li><img src=""{style_image_url}/rte_icons/paste.png"" /> - This will paste test at the cursor position.</li>
+<li><img src=""{style_image_url}/rte_icons/paste_plain.png"" /> - Paste content with plain text formatting.</li>
+<li><img src=""{style_image_url}/rte_icons/paste_word.png"" /> - Paste content from Word</li>
+<li><img src=""{style_image_url}/rte_icons/ips_options.png"" /> - This will display configurable editor options such as paste as plain text and clearing saved content.</li>
+<li><img src=""{style_image_url}/rte_icons/bold.png"" /> - This will make the text <strong>bold</strong>.</li>
+<li><img src=""{style_image_url}/rte_icons/italic.png"" /> - This will make the text <em>italic</em> .</li>
+<li><img src=""{style_image_url}/rte_icons/underline.png"" /> - This will make the text <u>underlined</u>.</li>
+<li><img src=""{style_image_url}/rte_icons/strike.png"" /> - This will make the text <strike>striked out</strike>.</li>
+<li><img src=""{style_image_url}/rte_icons/subscript.png"" /> - This will make the text <sub>subscript</sub>.</li>
+<li><img src=""{style_image_url}/rte_icons/superscript.png"" /> - This will make the text <sup>superscript</sup>.</li>
+<li><img src=""{style_image_url}/rte_icons/unordered_list.png"" /> - This will start a bullet-point list.</li>
+<li><img src=""{style_image_url}/rte_icons/ordered_list.png"" /> - This will start a numbered list.</li>
+<li><img src=""{style_image_url}/rte_icons/link.png"" /> - This will insert a link.</li>
+<li><img src=""{style_image_url}/rte_icons/unlink.png"" /> - This will remove a link from selected text.</li>
+<li><img src=""{style_image_url}/rte_icons/picture.png"" /> - This will insert an image.</li>
+<li><img src=""{style_image_url}/rte_icons/code.png"" /> - This will insert a codebox.</li>
+<li><img src=""{style_image_url}/rte_icons/quote.png"" /> - This will insert a quote.</li>
+<li><img src=""{style_image_url}/rte_icons/outdent.png"" /> - Decrease Indent</li>
+<li><img src=""{style_image_url}/rte_icons/indent.png"" /> - Increase Indent</li>
+<li><img src=""{style_image_url}/rte_icons/align_left.png"" /> - This will make the text aligned to the left.</li>
+<li><img src=""{style_image_url}/rte_icons/align_right.png"" /> - This will make the text aligned to the right</li>
+<li><img src=""{style_image_url}/rte_icons/align_center.png"" /> - This will make the text aligned in the center</li>
+</ul>
+<p><strong>Polls</strong><br />
+Depending on where in the at community you are posting your message at, you may have the option to add a poll that other members can vote in. If so, you will see a ""Manage Poll"" link. Click on this to configure the poll.<br />
+<br />
+You can optionally enter a title for the poll in the ""Poll Title"" box. You may then also be able to set it as a public poll by checking the ""Public Poll?"" box. In public polls, all members will be able to see who voted for which option.<br />
+<br />
+You can then add your questions by typing the first question into the Question box. You must then choose if you want this question to be multi-choice (allowing users to select an arbitrary number of answers) or single-choice (users will only be able to select one answer). To make the question multi-choice, check the ""Allow users to select multiple answers?"" box, otherwise, leave it blank.<br />
+<br />
+Then enter the possible answers for the questions into the boxes below. To add more answers, press the ""<img alt=""add.png"" src=""{style_image_url}/add.png"" /> Add Another Choice"" button, or to remove an answer, click the <img alt=""bullet_delete.png"" src=""{style_image_url}/bullet_delete.png"" /> icon. You can see how many choices you are allowed per question at the bottom of the list of questions.<br />
+<br />
+To add additional questions, press the ""<img alt=""add.png"" src=""{style_image_url}/add.png"" /> Add Another Question"" button. You can see how many questions you are allowed at the bottom of the list of questions.<br />
+<br />
+To remove a question, press the ""<img alt=""delete.png"" src=""{style_image_url}/delete.png"" /> Remove Question"" button, or to cancel adding a poll, press the ""<img alt=""cross.png"" src=""{style_image_url}/cross.png"" /> Close Poll Form"" button.<br />
+<br />
+<br />
+<strong>Post Options</strong><br />
+Depending on where in the community you are posting your message at, you may have additional options including whether or not to add your signature, what post icon to use, and more. To see and configure these options, press the ""<img alt=""add.png"" src=""{style_image_url}/add.png"" /> Click to configure post options"" link if it is available.<br />
+<br />
+<br />
+<strong>Attachments</strong><br />
+Depending on where in the community you are posting your message at, you may be able to upload attachments to your message. There are two types of uploaders available: the default uploader and the flash uploader.<br />
+<br />
+<em>Default Uploader</em><br />
+The default uploader allows you to upload attachments one at a time. To begin, press the button. A box will appear for you to select the file on your computer that you want to attach. Select the file you want to upload.<br />
+<br />
+If you change your mind, you can press the button and then choose a different file.<br />
+<br />
+Once you have selected the file you want, press Attach the file.<br />
+If there are any errors uploading the file, you will receive an error message, otherwise, you will see the attachment appear.<br />
+<br />
+<em>Flash Uploader</em><br />
+You can enable the flash uploader from your settings menu. When enabled, you will be able to easily upload more than one file at a time.<br />
+<br />
+To start, press Click to Attach Files. A box will appear for you to select the file or files on your computer that you want to attach. Select the file or files you want to upload. You can select more than one file at a time by holding Ctrl (on Windows) or Command (on Mac) and click on the files.<br />
+<br />
+Once you have selected your files and clicked ""Open"", they will begin uploading. If there are any errors uploading the files, you will receive an error message, otherwise, you will see the attachments appear.<br />
+<br />
+<em>Managing Attachments</em><br />
+Regardless of which uploader you use, once the files are uploaded you will see them on your screen. By default, all attachments are added to the bottom of your message, however, you can add any attachment to a particular section of your post by pressing the ""Add to Post"" link.<br />
+<br />
+If you wish to remove an attachment and have it not appear in your post, simply press the ""Delete"" link.</p>
+","A guide to the features available when posting or sending messages. Including the post editor, polls and attachments.",5,forums
+9,Topics and Forums,"<p>
+	<em><b>Viewing The Board Index</b></em></p>
+<p>
+	&nbsp;</p>
+<p>
+	When visiting the board, you will be presented with a list of categories and forums in those categories. This page is called the Board Index, and it lists all of the forums.</p>
+<p>
+	<br />
+	Forums are split into categories. You can choose to hide any category by pressing the &quot;-&quot; button on the right-hand side above the list of forums, and the &quot;+&quot; button to make them visible again. If hidden, such categories, and the forums inside them, will be collapsed and no longer shown to you when visiting the board index.<br />
+	<br />
+	When viewing the forums, there are icons shown next to them which indicate the status of a forum, and if it has unread posts or not.</p>
+<p>
+	&lt;img src=&#39;{style_image_url}/f_icon.png&#39; /&gt; This indicates that there are posts which you have not read contained inside this forum, or one of it&#39;s sub forums.<br />
+	&lt;img src=&#39;{style_image_url}/f_icon_read.png&#39; /&gt; This indicates that all of the posts contained in this forum and it&#39;s sub forums have been read.<br />
+	&lt;img src=&#39;{style_image_url}/f_redirect.png&#39; /&gt; Redirect forum, when you enter this forum you will be redirected elsewhere.<br />
+	<br />
+	<br />
+	<em><strong>The Topic List</strong></em><br />
+	Within each forum there are a list of topics. Just like forums, each topic has an marker to indicate the type of topic it is:<br />
+	&lt;img src=&#39;{style_image_url}/t_unread.png&#39; /&gt; A regular topic with unread posts.<br />
+	&lt;img src=&#39;{style_image_url}/t_read_dot.png&#39; /&gt; This is a topic which you have participated in, with no new replies since you last read it.<br />
+	&lt;img src=&#39;{style_image_url}/t_unread_dot.png&#39; /&gt; This indicates that you have previously replied in this topic, and there are new replies since you last read or replied to the topic.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<em><strong>Special Types of Topics</strong></em><br />
+	&lt;img src=&#39;{style_image_url}/t_announcement.png&#39; /&gt; This icon indicates an &quot;Announcement&quot; - Announements are not regular topics, because members cannot reply to them. They are simply important news or information which should be read.</p>
+<p>
+	<span class=""ipsBadge ipsBadge_orange"">Hot</span> This icon indicates a hot topic which has many members participating and replying.</p>
+<p>
+	&lt;img src=&#39;{style_image_url}/t_moved.png&#39; /&gt; Topic that has been moved into another forum.<br />
+	&lt;img src=&#39;{style_image_url}/t_locked.png&#39; /&gt; This indicates that a topic has been locked, and can no longer be replied to.<br />
+	<br />
+	To add a new topic, press the <span class=""input_submit"">Start new Topic</span> button. This may not be available for all forums. In forums where you cannot create a topic you will see &quot;You cannot start a new topic&quot; in place of the button.<br />
+	<br />
+	To enter a any topic, click on its name.<br />
+	<br />
+	<em><strong>Sorting Options</strong></em><br />
+	To customize the way topics are displayed, you can use the sorting options found at the top of the forum.</p>
+<p>
+	<img sr=""http://community.invisionpower.com/global_remote_files/help_files/huElCk.png""/><br />
+	&lt;ul&gt;&lt;li&gt;Show type - this allows you to only display certain types of topics such as polls or topics that you have posted in.&lt;/li&gt;&lt;li&gt;Sort by - this allows you to change the way topics are ordered. By default topics are ordered with the topics that have most recently had replies first, but you can choose to sort by other factors such as the number of replies or alphabetically.&lt;/li&gt;&lt;li&gt;Sort direction - this allows you to set which way you want to sort for the setting above. For example if you set &quot;Sort by&quot; to be &quot;Replies&quot;, choosing &quot;A-Z&quot; for this setting will show the topics that have no replies first, whereas choosing &quot;Z-A&quot; will show the topics with the most replies first.&lt;/li&gt;&lt;li&gt;Time frame - this allows you to limit the topics that are shown to only topics that have been made within a certain amount of time.&lt;/li&gt;&lt;/ul&gt;<br />
+	<br />
+	There may be more than one page of topics, if this is the case, you will see an option to &quot;Load More Topics&quot; at the bottom of the list of topics. There will also be page numbers to the left of this button.<br />
+	<br />
+	<br />
+	<b><i>Viewing Posts</i></b><br />
+	&nbsp;</p>
+<p>
+	To the side of each post there will be information about the user.&nbsp;<br />
+	<br />
+	To view a user&#39;s profile information at a glance, simply hover your mouse over their username. Their profile card will display, showing you various profile information without having to leave the topic. From their profile card, you can send them a message quickly, without having to leave the topic.&nbsp;If you wish to view their full profile page, simply click on their user name.</p>
+<p>
+	&lt;img src=&quot;http://community.invisionpower.com/global_remote_files/help_files/BLHgeZ.png&quot;/&gt;</p>
+<p>
+	On their member card, you can also click on several options to view that user&#39;s content.&nbsp;</p>
+<p>
+	<br />
+	Below this there are several more buttons: the &lt;img src=&#39;{style_image_url}/user_add.png&#39; /&gt; icon adds the user as a friend,&nbsp;&nbsp;&lt;img src=&#39;{style_image_url}/book_open.png&#39; /&gt; allows you to read their blog, and &nbsp;&lt;img src=&#39;{style_image_url}/picture.png&#39; /&gt; will take you to their gallery.</p>
+<p>
+	<br />
+	<br />
+	Below their username you will see their photo, member title and pips or group image.<br />
+	<br />
+	<br />
+	&lt;em&gt;Reputation&lt;/em&gt;<br />
+	If enabled, you will see reputation options in the corner below each post. You may see an icon representing the reputation other members have given for that post, along with icons to give reputation. To give the post a positive reputation, click the &lt;img src=&#39;{style_image_url}/add.png&#39; /&gt; icon or to give the post a negative reputation, click the &lt;img src=&#39;{style_image_url}/delete.png&#39; /&gt; icon. On some boards, you may see a button to Like content, such as this: <img src=""http://community.invisionpower.com/global_remote_files/help_files/Xf1Pir.png""/> If you choose to do this, it will show that you &quot;Like&quot; a certain post, and will also add a reputation point to that post. &lt;img src=&quot;http://community.invisionpower.com/global_remote_files/help_files/p4H5FN.png&quot;/&gt;&nbsp;You may only be able to give positive or negative reputation, and for some users you may not be able to give reputation at all.<br />
+	<br />
+	&lt;em&gt;Replying&lt;/em&gt;<br />
+	To add a post to the topic, simply scroll to the bottom of the page, and start typing in the reply box.&nbsp;<br />
+	<br />
+	To quote another post in your reply, you can either click the Quote button beneath a post, or use the multiquote feature. Multiquote is used when you want to quote more than one post in your reply. Select the Multiquote button underneath the posts you want to quote, and you will notice that the button will change color. At the bottom of the page, you will notice an informational box appear with the total number of posts you have added to multiquote. You can multiquote from different pages in a topic, or even different topics in the forum. When you are ready to post a reply with the posts you have quoted, simply click the &quot;Quote Posts Add Reply&quot; button.<br />
+	<br />
+	<br />
+	&lt;em&gt;Post Options&lt;/em&gt;<br />
+	Next to the reply and multiquote buttons you may also see &quot;&lt;img src=&#39;{style_image_url}/comment_edit.png&#39; /&gt; Edit&quot; and &quot;&lt;img src=&#39;{style_image_url}/comment_delete.png&#39; /&gt; Delete&quot; buttons for your own posts. If so, you can use these buttons to edit or delete your posts. Note that these options may not be available after a certain amount of time.<br />
+	<br />
+	<br />
+	&lt;strong&gt;Sharing Topics&lt;/strong&gt;<br />
+	At the bottom of each topic you will see &quot;Share this topic&quot; followed by a number of links that allow you to email the topic to someone else, share a topic on Twitter, post it to Facebook, print the topic, or download and save the topic. Simply press the appropriate link and follow the on-screen instructions.<br />
+	<br />
+	&lt;strong&gt;Polls&lt;/strong&gt;<br />
+	Some topic may have polls attached to them. If you can vote in the poll, you will see the questions and the options for voting. Once you have selected your options, press &lt;span class=&#39;input_submit alt&#39;&gt;Vote!&lt;/span&gt; to add your vote. Once voted, you will see the results and a &lt;img src=&#39;{style_image_url}/bullet_star_rated.png&#39;/&gt; icon besides the options you voted for.<br />
+	<br />
+	You may be able to change your vote. If so, you will see &lt;span class=&#39;input_submit alt&#39;&gt;Delete My Vote&lt;/span&gt;. To change your vote, press this and then vote again.<br />
+	<br />
+	To see the results of the poll without voting, press &lt;span class=&#39;input_submit alt&#39;&gt;Show Results&lt;/span&gt;. If the poll is a public poll, you can see who voted for which option by pressing the &quot;View&quot; link next to any option.<br />
+	<br />
+	&lt;strong&gt;Notifications&lt;/strong&gt;<br />
+	You may want to subscribe to your favorite forums or topics so that when a new topic or reply is added you will be notified.<br />
+	<br />
+	To subscribe to a topic or forum, go to that area and click the <img src=""http://community.invisionpower.com/global_remote_files/help_files/Vb7F2p.png"" /> Follow button. You will them be prompted with how often you wish to be notified. To the right of this button, it shows how many other people are watching the topic.<br />
+	<br />
+	There are several types of notification, and you will be asked to choose one of these options:<br />
+	&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Instantly&lt;/strong&gt;: You will be notified instantly when a reply is made, via the method specified in your notification preferences.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Only When Not Online&lt;/strong&gt;: This option will send out a notification if a reply has been posted and you&#39;re not active on the board.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Daily&lt;/strong&gt;: This option will send out a daily digest of updates.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Weekly&lt;/strong&gt;: This option will send out a weekly digest of updates.&lt;/li&gt;&lt;/ul&gt;</p>
+<p>
+	<br />
+	If you wish to automatically subscribe to every topic you reply to, you can configure this from &lt;a href=&#39;{board_url}app=core&amp;module=usercp&amp;tab=core&amp;area=notifications&#39;&gt;your control panel&lt;/a&gt;. Simply select the &nbsp;&quot;Auto follow topics I reply to&quot; option.<br />
+	<br />
+	You can remove a subscription from your settings, or by going back to the area you are subscribed to and pressing the &quot;&lt;img src=&#39;{style_image_url}/transmit_blue.png&#39; alt=&#39;Icon&#39; /&gt; Stop Watching&quot; button.</p>","A guide to forums, topics, posts and polls.",4,forums
+10,Calendar,"The calendar can be used to post events for other members of the community to see. It also lists each member&#39;s birthday. To access it, click the &quot;Calendar&quot; tab at the top of any page.<br />
+<br />
+&lt;strong&gt;Navigating the Calendar&lt;/strong&gt;<br />
+<br />
+&lt;em&gt;Quick Jump&lt;/em&gt;<br />
+At the top of the side-bar you will see a box that will allow you to select a calendar to view, or quickly change to any month.  To change the month you are viewing, select the month you want to view using the drop-down boxes and press &lt;span class=&#39;input_submit&#39;&gt;Go&lt;/span&gt;.  <br />
+<br />
+There are also links to quickly jump the current month or week below the main calendar.<br />
+<br />
+The Calender offers three different display modes, there is a ""Month"" view, like a standard wall calender, a ""Week"" view, which shows a vertical list of the days events ni a week, such as a weekly planner, and a ""Day"" view, which shows all events for a particular day.<br />
+
+<br />
+&lt;em&gt;Mini-Calendars&lt;/em&gt;<br />
+Below the quick jump box, you will see a mini-calendar view of the previous month and the next month based on the current month that you are viewing. If you are viewing a specific week, you will also see a mini-calendar of the current month, and today&#39;s date will be highlighted.<br />
+<br />
+If a day has an event scheduled for it, clicking on the date will bring up the details for all events on that day.<br />
+<br />
+You can also click on &lt;img src=&#39;{style_image_url}/next.png&#39; /&gt; beside any week to change the calendar view to that week.<br />
+<br />
+&lt;em&gt;Main Calendar&lt;/em&gt;<br />
+The calendar you are currently viewing displays in the middle of the page. Today&#39;s date will be highlighted if it is in the month that you are viewing.<br />
+<br />
+Events or birthdays will be noted in the boxes.  Click on any of these for details of the events.  If there are too many events to display on the monthly view, you will be advised of this with a link to view all events for the day.<br />
+<br />
+<br />
+<br />
+&lt;strong&gt;Adding New Events&lt;/strong&gt;<br />
+When adding a new event, you will be asked for a start and stop date of the event. You will also be asked if the event reoccurs and when this is, weekly, monthly or yearly.
+<br />
+Finally, type a description for your event and press &lt;span class=&#39;input_submit&#39;&gt;Add Calendar Event&lt;/span&gt;.",More information on the boards calendar feature.,11,calendar

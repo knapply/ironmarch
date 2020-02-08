@@ -1,0 +1,38 @@
+conf_title_id,conf_title_title,conf_title_desc,conf_title_count,conf_title_noshow,conf_title_keyword,conf_title_app,conf_title_tab
+1,Ad Code Integration,These settings will allow you to enter ad codes that can then be displayed throughout your forum,13,FALSE,adcodeintegration,core,System
+2,Community Guidelines,This section allows you to maintain your community guidelines.,7,FALSE,boardguidelines,core,System
+3,Community Offline / Online,"Use this setting to turn switch your community online or offline, and to leave a message for your visitors.",2,FALSE,boardoffline,core,System
+4,COPPA Set-up,This section allows you to comply with <a href='http://www.ftc.gov/ogc/coppa1.htm' target='_blank'>COPPA</a>.,4,FALSE,coppa,core,Members
+5,Copyright Removal,This section allows you to manage your copyright removal key.,2,TRUE,ipbcopyright,core,IPS Apps
+6,CPU Saving &amp; Optimization,This section allows certain features to be limited or removed to get more performance out of your board.,22,FALSE,cpusaving,core,Advanced
+7,"Date, Time and Number Formats",This section contains the date and time formats used throughout the board.,12,FALSE,date,core,Advanced
+8,Email Set-up,This section will allow you to change the incoming and outgoing email addresses as well as the email method.,11,FALSE,email,core,System
+9,General Configuration,These settings control the basics of the board such as URLs and paths.,16,FALSE,general,core,System
+10,IP.Board External Edit (WebDav),,1,TRUE,externaledit,core,
+11,IP.Board License Key,,2,TRUE,ipboardlicensekey,core,System
+31,Admob Integration,Configure settings for Admob integration with the IPS Mobile App,3,FALSE,admob,core,IPS Apps
+13,iPhone App,Settings for the iPhone application,2,FALSE,iphoneappsettings,core,IPS Apps
+14,Log Management,Manage IP.Board's various logs,13,FALSE,log_prune,core,Advanced
+15,Search Engine Optimization,Settings to optimize your site for search engine indexing,11,FALSE,seo,core,System
+16,Search Set-Up,This section contains settings for your IPB's search system,16,FALSE,searchsetup,core,System
+17,Security and Privacy,These options allow you to adjust the security and privacy options for your board.,21,FALSE,securityandprivacy,core,System
+18,Server Environment,These settings help tailor your output based on your server's settings.,13,FALSE,serverenvironment,core,System
+19,Social Media and Sharing,"Settings for Facebook, Twitter, and other social media sharing tools.",14,FALSE,fbconnect,core,System
+20,Tags,Settings to refine the tagging system,11,FALSE,globaltags,core,System
+21,XML-RPC API,Settings to manage your XML-RPC API interface,3,FALSE,xmlrpcapi,core,Advanced
+22,Personal Message Set-up,This section allows you to control the global PM options.,3,FALSE,personalmessagesetup,members,Members
+23,Reputation System,Configuration options for the reputation system,7,FALSE,reputation,members,Members
+24,Spam Prevention,"Settings for preventing and controlling spam, and for configuring the IPS Spam Service",19,FALSE,spamservice,members,Members
+25,User Profiles,This section allows you to adjust your members' global permissions and other options.,14,FALSE,userprofiles,members,Members
+26,Username Restrictions,Settings to control display names on the forums.,6,FALSE,displaynamesettings,members,Members
+27,Warning and Moderation,This section will allow you to configure moderator settings,9,FALSE,warnsetup,members,Members
+28,"Topics, Posts and Polls","These options control various elements when posting, reading topics and reading polls.",48,FALSE,topicspostsandpolls,forums,Forums
+32,Archive Settings,Settings for archive functionality,2,TRUE,archiveips,core,Advanced
+33,Hidden Mobile Settings,,1,TRUE,mobile_hidden,core,System
+34,Hidden Task Settings,,2,TRUE,task_hidden,core,System
+35,Mandrill,,2,TRUE,mandrill,core,System
+36,Postageapp,,1,TRUE,postageapp,core,IPS Apps
+37,Sitemap,Control the generation of your community's sitemap.,27,FALSE,sitemaps,core,System
+38,VigLink,,5,TRUE,viglink,core,System
+39,ConstantContact,,1,TRUE,constantcontact,members,Members
+40,Calendar &amp; Birthdays,This section will allow you to set up the board calendar and its related options.,11,FALSE,calendar,calendar,IPS Apps

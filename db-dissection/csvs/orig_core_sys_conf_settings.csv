@@ -1,0 +1,1142 @@
+conf_id,conf_title,conf_description,conf_group,conf_type,conf_key,conf_value,conf_default,conf_extra,conf_evalphp,conf_position,conf_start_group,conf_add_cache,conf_keywords
+1,Enable Ad System,This setting will allow you to globally enable or disable the ad system,1,yes_no,ad_code_global_enabled,,0,,,1,Global Settings,TRUE,
+2,Groups exempt from ads,Any groups that you select here will not be shown ads,1,multi,ad_code_exempt_groups,,,#show_groups#,"if ( $save == 1)
+{
+	if ( is_array($_POST['ad_code_exempt_groups']) )
+	{
+		$_POST['ad_code_exempt_groups'] = implode("","",$_POST['ad_code_exempt_groups']);
+	}
+	else
+	{
+		$_POST['ad_code_exempt_groups'] = """";
+	}
+	
+	$key = 'ad_code_exempt_groups';
+}
+if ( $show == 1 )
+{
+    $key='ad_code_exempt_groups[]';
+}",2,,TRUE,
+3,Header Code,This code will be inserted into the header of every page,1,textarea,ad_code_global_header,,,,,3,,TRUE,"ad,advertisement,code,header"
+4,Footer Code,This code will be inserted into the footer of every page,1,textarea,ad_code_global_footer,,,,,4,,TRUE,"ad,code,advertisement,footer"
+5,Override Header Code,"Using this setting, you can replace the global header code with code specific for this section.",1,textarea,ad_code_board_index_header,,,,,5,Board Index,TRUE,
+6,Override Footer Code,"Using this setting, you can replace the global footer code with code specific for this section.",1,textarea,ad_code_board_index_footer,,,,,6,,TRUE,
+7,Sidebar Code,This code will be displayed in the board index sidebar,1,textarea,ad_code_board_sidebar,,,,,7,,TRUE,
+8,Override Header Code,"Using this setting, you can replace the global header code with code specific for this section.",1,textarea,ad_code_forum_view_header,,,,,8,Forum View,TRUE,
+9,Override Footer Code,"Using this setting, you can replace the global footer code with code specific for this section.",1,textarea,ad_code_forum_view_footer,,,,,9,,TRUE,
+10,Code to display after first topic,This ad code will be displayed after the first topic,1,textarea,ad_code_forum_view_topic_code,,,,,10,,TRUE,
+11,Override Header Code,"Using this setting, you can replace the global header code with code specific for this section.",1,textarea,ad_code_topic_view_header,,,,,11,Topic View,TRUE,
+12,Override Footer Code,"Using this setting, you can replace the global footer code with code specific for this section.",1,textarea,ad_code_topic_view_footer,,,,,12,,TRUE,
+13,Code to display after first post,This code will be displayed after the first post in a topic,1,textarea,ad_code_topic_view_code,,,,,13,,TRUE,
+14,Show link to guidelines in footer,,2,yes_no,gl_show,1,0,,,1,,TRUE,
+15,Title,,2,input,gl_title,Iron March Forum Charter and Mission Statement,,,,2,,TRUE,
+16,External http:// link to guidelines page,Enter the URL to a set of external guidelines or if you wish to add your guidelines below simply leave this box clear.,2,input,gl_link,,,,,3,,TRUE,
+17,Guidelines/rules text,Only applies if not using an external guidelines link. <b>HTML Enabled</b>,2,editor,gl_guidelines,"<!-- isHtml:1 --><!-- isHtml:1 --><p class=""bbc_center""><span style=""color: rgb(188,188,188)""><span style=""font-family: tahoma""><span style=""font-size: 12px;""><span style=""background-color: rgb(26,26,26)""><span style=""font-family: verdana""><span style=""font-size: 36px;""><span style=""color: rgb(255,140,0)""><strong class=""bbc"">Iron March Charter and Mission Statement</strong></span></span></span></span></span></span></span></p><p class=""bbc_center""><span style=""color: rgb(188,188,188)""><span style=""font-family: tahoma""><span style=""font-size: 12px;""><span style=""background-color: rgb(26,26,26)""><span style=""color: rgb(188,188,188)""><span style=""font-family: tahoma""><span style=""font-size: 12px;""><span style=""background-color: rgb(26,26,26)""><span style=""font-family: courier new""><span style=""font-size: 18px;""><span style=""color: rgb(255,140,0)""><strong class=""bbc"">Iron March Mission Statement</strong></span></span></span></span></span></span></span></span></span></span></span></p><p><span style=""color: rgb(188,188,188)""><span style=""font-family: tahoma""><span style=""font-size: 12px;""><span style=""background-color: rgb(26,26,26)""><span style=""color: rgb(188,188,188)""><span style=""font-family: tahoma""><span style=""font-size: 12px;""><span style=""background-color: rgb(26,26,26)"">Iron March is a global online fascist community that seeks to become the <strong class=""bbc"">Forge of the 21st Century Fascist</strong> by establishing an online <strong class=""bbc"">Fascist Space</strong> so as to foster and develop internet resources dedicated to the study, understanding and practice of the <em class=""bbc"">Fascist Worldview</em> and <em class=""bbc"">Lifestyle</em>; and a global <strong class=""bbc"">Fascist Fraternity</strong> in the world for the purpose of creating a non-movement/party form of association between fascists that can in turn lead to the strengthening of existing or formation of new movements that engage in our common struggle worldwide.</span></span></span></span><br />
+<br />
+<span style=""color: rgb(188,188,188)""><span style=""font-family: tahoma""><span style=""font-size: 12px;""><span style=""background-color: rgb(26,26,26)"">Iron March itself is not a movement and never intends to become one, rather it is the platform for the creation of the global Fascist Fraternity and the central communications hub for its members online as well as the HQ for the online Fascist Space and the primary source for studying our worldview, thus acting as the <strong class=""bbc"">Fascist Alma Mater</strong>.</span></span></span></span><br />
+<br />
+<span style=""color: rgb(188,188,188)""><span style=""font-family: tahoma""><span style=""font-size: 12px;""><span style=""background-color: rgb(26,26,26)"">Furthermore, a distinction must be made that <strong class=""bbc"">Iron March</strong> and <strong class=""bbc"">Iron March <em class=""bbc"">forum</em></strong><em class=""bbc""> </em>(i.e.<em class=""bbc""> IRONMARCH.ORG</em>) are not synonymous as the intent and ambitions outlined in this Mission Statement clearly show that Iron March has outgrown itself as just an internet forum, now encompassing an array of both online and real world activities and goals, making Iron March a living community while the Iron March forum acts as its online HQ. </span></span></span></span><br />
+<br />
+<span style=""color: rgb(188,188,188)""><span style=""font-family: tahoma""><span style=""font-size: 12px;""><span style=""background-color: rgb(26,26,26)"">To further explain our intentions each key term mentioned above is explained below:</span></span></span></span></span></span></span></span></p><ul class=""bbc""><li><span style=""color: rgb(188,188,188)""><span style=""font-family: tahoma""><span style=""font-size: 12px;""><span style=""background-color: rgb(26,26,26)""><strong class=""bbc"">Forge<em class=""bbc"">(-ing)</em> of the 21st Century Fascist</strong> - the most broad and succinct way of describing our Mission Statement that covers both our online and real world activities, implying that we seeks to create not just mere political and career/hobbyist fascists but rather people who share an inherently different perception of the world and thus live and breathe Fascism 24/7, making it not just a mere ideology but a Worldview and Way of Life or Lifestyle, that in the Modern World would appear as a form of counter-culture.</span></span></span></span></li><li><span style=""color: rgb(188,188,188)""><span style=""font-family: tahoma""><span style=""font-size: 12px;""><span style=""background-color: rgb(26,26,26)""><strong class=""bbc"">Fascist Alma Mater</strong> - the role that the Iron March forum plays in educating people towards a more comprehensive understanding of the Fascist Struggle and Worldview, and a common way of referring to any Iron March projects dedicated to further research and education in those fields (<em class=""bbc"">ex. Fascist Archive, Antimony Group</em>).</span></span></span></span></li><li><span style=""color: rgb(188,188,188)""><span style=""font-family: tahoma""><span style=""font-size: 12px;""><span style=""background-color: rgb(26,26,26)""><strong class=""bbc"">Fascist Space</strong> - common way of referring to all online Iron March projects and online projects/activities created by members of the IM community that in any way further our goals, including educational, creative, demonstrative outlets of the Fascist Lifestyle (<em class=""bbc"">ex. NOOSE</em>).</span></span></span></span></li><li><span style=""color: rgb(188,188,188)""><span style=""font-family: tahoma""><span style=""font-size: 12px;""><span style=""background-color: rgb(26,26,26)""><strong class=""bbc"">Fascist Fraternity</strong> - Iron March community manifested in the real world as a means of fascist association that exists outside belonging to any particular movement or party, encouraging fascists to spend time together outside of movement activities or to the contrary bring together fascists with no existing affiliations to share in common interests or form some organization of their own. It is important to note that in the event of a movement's formation Iron March has no direct control over it and can merely offer advice as a community, in the hopes of nurturing the growth of a successful and dedicated fascist organization.</span></span></span></span></li></ul><br />
+<br />
+<br />
+<p><span style=""color: rgb(188,188,188)""><span style=""font-family: tahoma""><span style=""font-size: 12px;""><span style=""background-color: rgb(26,26,26)""><span style=""color: rgb(188,188,188)""><span style=""font-family: tahoma""><span style=""font-size: 12px;""><span style=""background-color: rgb(26,26,26)"">Most of the planning behind the aforementioned goals and projects occurs on our online HQ - the Iron March forum. As such the Forum Charter in no small part defines the nature of our community and can be used not as only a guide for using the forum itself but also as a point of reference to the standards of our community at large.</span></span></span></span></span></span></span></span></p><p class=""bbc_center""><span style=""color: rgb(188,188,188)""><span style=""font-family: tahoma""><span style=""font-size: 12px;""><span style=""background-color: rgb(26,26,26)""><span style=""color: rgb(188,188,188)""><span style=""font-family: tahoma""><span style=""font-size: 12px;""><span style=""background-color: rgb(26,26,26)""><span style=""color: rgb(255,140,0)""><span style=""font-family: courier new""><span style=""font-size: 18px;""><strong class=""bbc"">Iron March Forum Charter</strong></span></span></span></span></span></span></span></span></span></span></span></p><p><span style=""color: rgb(188,188,188)""><span style=""font-family: tahoma""><span style=""font-size: 12px;""><span style=""background-color: rgb(26,26,26)""><span style=""color: rgb(188,188,188)""><span style=""font-family: tahoma""><span style=""font-size: 12px;""><span style=""background-color: rgb(26,26,26)""><strong class=""bbc"">I. <span style=""color: rgb(255,140,0)"">Adminship</span></strong><br />
+<br />
+The Adminship are the Iron March Forum Admins, tasked with maintaining the forum, disciplinary actions, enforcing the values of our worldview and the planning of all IM projects to further our common goals.<br />
+<br />
+The official symbol of the Adminship and the Iron March forum is the <em class=""bbc"">Machina Hierarchia</em> - <em class=""bbc"">Hierarchy Machine</em> (cog and hands) - it symbolizes the organic unity that exists in a proper hierarchy, making it work as smoothly and efficiently as a machine; alternatively it symbolizes the fostering of an organic unity from what were initially mechanical means.<br />
+<br />
+<strong class=""bbc"">II. <span style=""color: rgb(255,140,0)"">Black Corps</span></strong><br />
+<br />
+The Black Corps are the Iron March Forum Moderators - the most trusted and true who embody both the values that are at the foundation of this community and of the values of our worldview. The Black Corps are tasked with maintaining order and cleanliness on the forum, as well as seeking out and purging unwanted elements as outlined in segment <strong class=""bbc"">III </strong>of this charter (<strong class=""bbc"">Community</strong>). </span></span></span></span><br />
+<br />
+<span style=""color: rgb(188,188,188)""><span style=""font-family: tahoma""><span style=""font-size: 12px;""><span style=""background-color: rgb(26,26,26)"">To become a member of the Black Corps one must be a long term member of the IM Forum in good standing who has also proven to be responsible and thus worthy of the title and the tasks that come with it.<br />
+<br />
+<strong class=""bbc"">III. <span style=""color: rgb(255,140,0)"">Community</span></strong><br />
+<br />
+Iron March is not a movement, but we expect users to share our purpose â€“ to take an active interest in using the forum, and when contributing to do so as fascists in ultimate pursuit of knowledge, ideas, contacts, etcetera. Those who are not constructive and threaten this are in the wrong place and unwelcome. We recognize there is a widespread character issue in movement politics, and we start here to address some of those problems here. The following rules are to be observed by all members and handled quickly and diplomatically where possible.<br />
+<br />
+<strong class=""bbc"">1. </strong>No â€˜Spergingâ€™. As in â€˜Aspergerâ€™s syndromeâ€™, an Autistic mental disorder characterized by extreme egocentricity and an inability to understand how to interact socially. This policy is to curtail and recognize the tendencies of users whose actions and motivations are outside our common goals, are deliberately of no benefit to anyone, and only serve to cause trouble. Regardless of whether it is motivated by narcissism, social alienation, cowardice, or stupidity we must control it, and it is the userâ€™s responsibility to observe these following principles which will serve as a guide to ensure there will be no problems for you while you are here.<br />
+<br />
+<strong class=""bbc"">1.1 - </strong>Role-playing. The tendency to portray personal views in the third person with no clear relation to the real world constitutes a form of role-playing. Another form of role-playing is found in arrogance; insisting on special treatment or to be regarded as a separate tier, in contradiction to the fact it is usually marked by an absence of; personal effort, courage, commitment, consistency, positions that will attract negative response, interest in people, etc - by coincidence. If you are a fake you will be recognized and publicly called out.<br />
+<br />
+<strong class=""bbc"">1.2 - </strong>Fashion Fascism. Fascism isn't a fetish â€“ if you regularly treat it as such your motivations will be questioned as ulterior. If you reflect your political â€˜identityâ€™ in things like science fiction or anything else found in Television, Video games, hobbies, sub-cultures etc, it tells us that you are unable to distinguish between the two.<br />
+<br />
+<strong class=""bbc"">1.3 - </strong>Shitposting. Making shit posts; this happens when a post is devoid of content or context, eg randomly responding with a reaction image. If you have nothing else to contribute you have no right to be engaging in this.<br />
+<br />
+<strong class=""bbc"">1.4 - </strong>Constructive debate. The goal of debate is the pursuit of truth therefore you should take care about what you are saying and care about opposing arguments and should assume it is the same for your opponent â€“ so where relevant you should be capable of providing sources to back up an opinion - this is an argument. Ignoring responses while continuing to argue shows you have no investment in the discussion and also, that you have nothing to offer or contribute.<br />
+<br />
+<strong class=""bbc"">1.5 - </strong>Conduct. It is your responsibility to judge group relations and know what not to post and where things should be posted. When you can participate in a forum drama, promote yourself, become insolent towards members, etc, is something only you can judge.<br />
+<br />
+<strong class=""bbc"">If these are not monitored by the user and kept in check it may result in messages of warning from moderators.</strong><br />
+<br />
+<strong class=""bbc"">2.</strong> This is not <em class=""bbc"">Stormfront</em>. Our community is based on discussion and debate constructive towards fascist goals<em class=""bbc"">, it is not a hangout for White Nationalists and their unique subculture. Stormfront </em>and <em class=""bbc"">VNN </em>forums already provide this in terms of its endless topics on conspiracy theories, chimpouts, Zionism, etcetera. Exclusively posting remarks and threads of that nature without proper context is a form of spamming<em class=""bbc"">.</em></span></span></span></span><br />
+<br />
+<span style=""color: rgb(188,188,188)""><span style=""font-family: tahoma""><span style=""font-size: 12px;""><span style=""background-color: rgb(26,26,26)"">Likewise, we are not a <em class=""bbc"">New Right</em> intellectual circle jerk and we do not tolerate aimless, abstract philosophizing and the typical self-important snobbish behavior that comes with it. Furthermore we recognize displays of such behavior to be a form of violation of points outlined in segment <strong class=""bbc"">III </strong>of this charter (<strong class=""bbc"">Community</strong>).</span></span></span></span><br />
+<br />
+<span style=""color: rgb(188,188,188)""><span style=""font-family: tahoma""><span style=""font-size: 12px;""><span style=""background-color: rgb(26,26,26)""><strong class=""bbc"">3.</strong> Tolerance. We accept people with strong viewpoints even if ultimately we seek everyone to join us in our comprehension of the world, whilst also understanding that this can be accomplished only so far via our internet forum platform. Those who take themselves too seriously yet refuse to debate become paranoid, patronizing, passive aggressive and can become the source of drama. Users of non straight-white-male-fascist backgrounds also need to be conscious of their differences and check their privilege at the door. If you have allowed yourself to become aggravated through your own fault we will not side with you and you may be held responsible.<br />
+<br />
+<strong class=""bbc"">4.</strong> Sophian Language. You are expected to use this website with intelligence, knowing not what to write and to read between the lines. Nobody is likely to monitor the website or trawl through your messages, but by posting here you need to personally be prepared it might be read in a court, quoted on in a newspaper, or read to your weeping mother â€“ and hold yourself to account. Don't ask us to delete all your posts because you have ""changed your mind."", or even attempt to alter them yourself. Remember you public posts are cached by search engines or may be recorded by others.<br />
+<br />
+<strong class=""bbc"">5.</strong> Untermenschen. Just being you can result in an immediate ban, and we will take immediate and permanent action if it is ever found out the following applies to you.<br />
+<br />
+<strong class=""bbc"">5.1</strong> - We do not allow or entertain the mentally ill to the extent they cannot understand fascism, (for instance those who do genuinely suffer from Autism) and it is our responsibility to direct them away from this place because they should not be here.<br />
+<br />
+<strong class=""bbc"">5.2</strong> - Expression of interest in Paedophilia (Including any similar inclinations towards the under-aged) will result immediate ban, and even the slightest hint will be treated seriously.<br />
+<br />
+<strong class=""bbc"">5.3</strong> - Simply put, we reserve the right to ban you if you are any kind of faggot. If you feel the need to tell the world then you will bring the consequences on yourself just as hard. Belonging to the furry fandom is prohibited, partly because it also involves a breach of 1.1 and 1.2, but mostly because it is utterly degenerative (it deserves note here because it will apply even if explicitly sexual grounds cannot be ascertained).<br />
+<br />
+Failure to comply may result in <em class=""bbc"">internment</em>, when a member's activity on the forum is restricted to the Showers. These members will be marked as <strong class=""bbc"">Prisoners </strong>and they will inevitably be <strong class=""bbc"">Gassed</strong>.<br />
+<br />
+<strong class=""bbc"">IV. <span style=""color: rgb(255,140,0)"">Forum Activities</span></strong><br />
+<br />
+Iron March Forum provides it's users with a number of activities that help us develop as a forum, an information center and a community for fellow fascists as well as establish new projects outside the Forum both online and in real life. Any user can officially sign up for any such activity and become an active contributor. Simply follow the rules of each such activity and you will find yourself occupied with interesting projects that will help you develop your skills or further your knowledge.<br />
+<br />
+<strong class=""bbc"">V. <span style=""color: rgb(255,140,0)"">Discipline</span></strong><br />
+<br />
+We expect every user to follow the rules set forth by the Adminship.<br />
+<br />
+<strong class=""bbc"">1.</strong> Our community is interested in active members, not lurker and defunct profiles. All accounts that have <em class=""bbc"">zero</em> posts for a week after registry on the forum will be deleted. Once a year (sometime in January) the forum undergoes cleaning of defunct profiles, meaning that any years old profiles with less than 10 posts are permanently deleted. The more the forum membership grows with active users the higher the number of posts required to prevent deletion will become.<br />
+<br />
+<strong class=""bbc"">2.</strong> Before creating a new topic make sure that a similar one doesn't already exist and be sure to post topics in the appropriate sections of the Iron March forum. Use the search bar in the top right corner if you are not sure where to look.<br />
+<br />
+<strong class=""bbc"">3.</strong> Do not derail topics, do not flame, do not spam (outside <a class=""bbc_url"" href=""http://ironmarch.org/index.php?/forum/78-cancer/"">Cancer</a> and the <a class=""bbc_url"" href=""http://ironmarch.org/index.php?/forum/13-wastelands/"">Wastelands</a>).<br />
+<br />
+<em class=""bbc"">*It is the userâ€™s responsibility not to be trolled.</em><br />
+<br />
+<strong class=""bbc"">4.</strong> Follow the respective rules of all forum activities and projects as they are explained in the sections dedicated to those activities.<br />
+<br />
+<strong class=""bbc"">5.</strong> Moderators and Admins may dispense punishment at their discretion and can give formal warnings to users who behave in an unacceptable manner (unnecessary aggression, blatant and systematic disregard of the forum rules and etc) with 3 and more warnings being grounds for temporary suspension or immediate gassing, or in some cases said penalties can happen with no warning at all.<br />
+<br />
+<strong class=""bbc"">VI. <span style=""color: rgb(255,140,0)"">Uniform</span></strong><br />
+<br />
+<strong class=""bbc"">1.</strong> Forum avatars are restricted to a size of 150x200 pixels, and 25 kb.</span></span></span></span><br />
+<br />
+<span style=""color: rgb(188,188,188)""><span style=""font-family: tahoma""><span style=""font-size: 12px;""><span style=""background-color: rgb(26,26,26)""><strong class=""bbc"">2.</strong> Forum signatures are restricted to one image of 800x140 pixels and 5 lines of text.<br />
+<br />
+<strong class=""bbc"">3.</strong> Admins can be recognized by the symbol of the Iron March Adminship below their title and avatar - <em class=""bbc"">Machina Hierarchia</em> and <em class=""bbc"">Admins Wreath</em>.<br />
+<br />
+<strong class=""bbc"">4.</strong> Members of the Black Corps can be recognized by the symbol of the Black Corps below their title and avatar - <em class=""bbc"">the Sword and Shield</em>, combined with the <em class=""bbc"">Machina Hierarchia</em>. Black Corps Captain is recognized by the same symbol with wings.<br />
+<br />
+<strong class=""bbc"">5.</strong> Users are discouraged from taking the names of historic persons, eg â€˜Benito Mussoliniâ€™, and may be asked to change their username.</span></span></span></span></span></span></span></span></p><p class=""bbc_center""><br />
+<span style=""color: rgb(188,188,188)""><span style=""font-family: tahoma""><span style=""font-size: 12px;""><span style=""background-color: rgb(26,26,26)""><span style=""color: rgb(188,188,188)""><span style=""font-family: tahoma""><span style=""font-size: 12px;""><span style=""background-color: rgb(26,26,26)""><strong class=""bbc"">Follow these rules diligently, least you face the wrath of the Adminship.</strong></span></span></span></span></span></span></span></span></p><p class=""bbc_center"">",,,,4,,FALSE,
+18,Registration terms &amp; rules,"The content of this section will be displayed before a member can register a new account.
+<b>HTML ENABLED</b>",2,editor,reg_rules,"<!-- isHtml:1 --><!-- isHtml:1 --><strong class='bbc'>IronMarch is not your average forum, please make sure that you have read the following IronMarch threads before registering:</strong><ul class='bbc'><li><a class='bbc_url' href='http://ironmarch.org/index.php?/topic/5130-iron-march-charter-and-mission-statement/'><strong class='bbc'>Iron March Charter and Mission Statement</strong></a></li><li><a class='bbc_url' href='http://ironmarch.org/index.php?/topic/5131-introduction-guidelines/'><strong class='bbc'>Introduction Guidelines</strong></a></li></ul>","Please take a moment to review these rules detailed below. If you agree with them and wish to proceed with the registration, simply click the ""Register"" button below. To cancel this registration, simply hit the 'back' button on your browser.<br /><br />Please remember that we are not responsible for any messages posted. We do not vouch for or warrant the accuracy, completeness or usefulness of any message, and are not responsible for the contents of any message.<br /><br />The messages express the views of the author of the message, not necessarily the views of this bulletin board. Any user who feels that a posted message is objectionable is encouraged to contact us immediately by email. We have the ability to remove objectionable messages and we will make every effort to do so, within a reasonable time frame, if we determine that removal is necessary.<br /><br />You agree, through your use of this service, that you will not use this bulletin board to post any material which is knowingly false and/or defamatory, inaccurate, abusive, vulgar, hateful, harassing, obscene, profane, sexually oriented, threatening, invasive of a person's privacy, or otherwise violative of any law.<br /><br />You agree not to post any copyrighted material unless the copyright is owned by you or by this bulletin board.<br /><br />Our websites use cookies to distinguish you from other users of our website. This helps us to provide you with a personalised experience when you browse this site. For detailed information on the cookies we use and the purposes for which we use them see our cookie policy (link at the footer of each page).",,,5,Registration Terms &amp; Rules,FALSE,
+19,Turn the community offline,The community will still be accessible by those who have permission (settable from the <a href='{ACP_URL}app=members&module=groups'>Manage User Groups</a> page).,3,yes_no,board_offline,1,0,,,1,,TRUE,
+20,The offline message to display,,3,editor,offline_msg,"[center][b]Our research team has discovered the secret passage to Hollow Earth from beneath New Swabia, and came back with retrieved Nazi UFO technologies. We are currently reverse engineering it to improve the forum. Check back later.[/b][/center]<br />[center][img]https://pbs.twimg.com/media/BmqC0HoCYAAtzst.png[/img][/center]",,,,2,,FALSE,
+21,Use COPPA registration system,"Enabling <a href=""http://www.ftc.gov/ogc/coppa1.htm"" target=""_blank"">COPPA</a> on your board will require children under the age of 13 to get parental consent via a faxed or mailed form.",4,yes_no,use_coppa,,0,,,1,,TRUE,
+22,Fax number to receive COPPA forms,,4,input,coppa_fax,,,,,2,,TRUE,
+23,Mail address to receive COPPA forms,,4,textarea,coppa_address,,,,,3,,TRUE,
+24,Additional COPPA information,This text will be displayed on the parental consent form and can be used to include your privacy policy (a requirement for COPPA compliance),4,editor,coppa_consent_extra,,,,,4,,TRUE,
+25,IP.Board copyright removal key,Your copyright removal key obtained from IPS.,5,input,ipb_copy_number,,,,,1,,TRUE,
+332,Days to store marking data,"After the specified number of days, items will appear as read.",6,input,topic_marking_keep_days,,30,,,30,,TRUE,
+26,Turn off copyright,,5,yes_no,ips_cp_purchase,,0,,,2,,TRUE,
+27,Server load limit,Will display 'busy' message when limit hit. Can be left blank for no limit,6,input,load_limit,,,,,1,,TRUE,
+28,Disable prefetching,"Some web accelerators can ""prefetch"" pages before users request them.  Will feel faster for the user if the page is then requested, but can waste server resources if it isn't.",6,yes_no,disable_prefetching,,1,,,2,,TRUE,
+29,Enable content caching,"If 'yes', then content set out below will be cached to save resources.",6,yes_no,cc_on,,1,,,4,Content Caching,TRUE,
+30,Post cache,Enter the number of days to cache posts for. Enter 0 to not cache.,6,input,cc_posts,,7,,,6,,TRUE,
+31,Signature cache,Enter the number of days to cache members' signatures for. Enter 0 to not cache.,6,input,cc_sigs,,180,,,7,,TRUE,
+32,Allow custom profile field info be used in topic view,"If set to ""yes"", this will add a LEFT JOIN onto the custom profile field table.",6,yes_no,custom_profile_topic,,1,,,8,Saving SQL Resources,TRUE,
+33,Cut off for active user display [in minutes],,6,input,au_cutoff,,15,,,10,,TRUE,
+34,Update topic views immediately,"If enabled, the topic views counter will be updated as one loads a topic. If not enabled, the topic views will be written to another table and the topic views updated every 3 hours. This will significantly reduce overhead on the topics table if you have a very busy board as it overcomes the write lock initiated when the topic counter is updated.",6,yes_no,update_topic_views_immediately,,0,,,12,,TRUE,
+35,Mark topics a user has posted when displaying a forum,,6,yes_no,show_user_posted,,1,,,13,,TRUE,
+36,Kill long running search queries,Number of seconds after a search has started that IP.Board should try to kill the query if the user has left the page.  Enter 0 to disable.,6,input,kill_search_after,,30,,,14,,TRUE,"resources, search, kill"
+37,Remove &#39;Users browsing this forum&#39; feature,This saves 1 query per forum view,6,yes_no,no_au_forum,,0,no_au_forum,,15,Turning Features Off,TRUE,
+38,Remove &#39;Users browsing this topic&#39; feature,This saves 1 query per topic view,6,yes_no,no_au_topic,,0,,,16,,TRUE,
+39,Show active users,,6,yes_no,show_active,,1,,,17,,TRUE,
+40,Disable topic summary,Do you wish to disable the topic summary from displaying at the bottom of the post reply page?,6,yes_no,disable_summary,,0,,,18,,TRUE,
+41,Allow users (where allowed) to use search,,6,yes_no,allow_search,,1,,,19,,TRUE,
+42,Show community statistics,Show the community statistic totals at the footer of the forum index page.,6,yes_no,show_totals,,1,,,21,,TRUE,
+43,Disable profile statistics,Member statistics related to forum activity displayed in the profile can be resource intensive on larger sites.,6,yes_no,disable_profile_stats,,0,,,22,,TRUE,
+44,Disable sub-forums on board index,Do you wish to disable subforums from displaying on the board index?,6,yes_no,disable_subforum_show,,0,,,24,Reducing HTML output,TRUE,
+45,Load javascript files from Google,Enabling this setting causes the prototype and scriptaculous javascript files to be loaded from Google's servers instead of your own.,6,yes_no,remote_load_js,,0,,,26,,TRUE,
+46,Enable database topic marking tracking,"If 'yes', IP.Board will manage your read topics in the database so that they are available on different computers.",6,yes_no,topic_marking_enable,,1,,,28,Topic Marking,TRUE,
+48,Native server time zone,"<span style='color:red'>If you have chosen the correct timezone and the clock is an hour out, this is because of daylight savings time and your members can correct this by editing their 'Board settings' via their User Control Panel.</span>",7,dropdown,time_offset,,0,,"if ( $show == 1 )
+{
+	ipsRegistry::getClass('class_localization')->loadLanguageFile( array( 'public_usercp' ), 'core' );
+	
+	foreach( ipsRegistry::getClass('class_localization')->words as $off => $words )
+	{
+		if (preg_match(""/^time_(-?[&#092;d&#092;.]+)$/"", $off, $match))
+		{
+			$dropdown[ $match[1] ] = array( $match[1], $words );
+		}
+	}
+	
+	ksort($dropdown);
+}",1,Time Adjustments,TRUE,
+49,Server time adjustment (in minutes),"You fine tune the server time. If you need to subtract minutes from the server time, start the number with a '-' (no quotes)
+<br>Community time (inc. above time zone and current adj.) is now: <-T->",7,input,time_adjust,,0,,"if ( $show )
+{
+ $d_date = ipsRegistry::getClass('class_localization')->getDate(time(), 'LONG',1);
+$r['conf_description'] = str_replace( '<-T->', $d_date, $r['conf_description'] );
+}",2,,TRUE,
+50,Use relative dates,Would use 'today' and 'yesterday' in posts / last post info,7,dropdown,time_use_relative,,1,"0=No
+1=Yes ( Today & Yesterday )
+2=Yes ( Last X Minutes, Today & Yesterday)
+3=Yes ( Full, minutes, hours & days )",,3,Relative Dates,TRUE,
+51,Relative time format,{--} Will be replaced with 'today' or 'yesterday',7,input,time_use_relative_format,,"{--}, %I:%M %p",,,4,,TRUE,
+52,DST auto-detection,"When daylight saving time auto-detection is enabled, your member's profiles will be automatically updated with the correct time.",7,yes_no,time_dst_auto_correction,,1,,,5,DST Correction,TRUE,
+53,Long date method,The format here is the same as <a href='http://uk.php.net/manual/en/function.strftime.php'>PHP's strftime</a>,7,input,clock_long,,%d %B %Y - %I:%M %p,,,6,Date and Time Formats,TRUE,
+54,Short date method,The format here is the same as <a href='http://uk.php.net/manual/en/function.strftime.php'>PHP's strftime</a>,7,input,clock_short,,%b %d %Y %I:%M %p,,,7,,TRUE,
+55,Alternate short date method,The format here is the same as <a href='http://uk.php.net/manual/en/function.strftime.php'>PHP's strftime</a>,7,input,clock_short2,,%d %B %Y,,,8,,TRUE,
+56,Joined date method,The format here is the same as <a href='http://uk.php.net/manual/en/function.strftime.php'>PHP's strftime</a>,7,input,clock_joined,,%d-%B %y,,,9,,TRUE,
+57,Tiny date method,The format here is the same as <a href='http://uk.php.net/manual/en/function.strftime.php'>PHP's strftime</a>,7,input,clock_tiny,,%d %b %Y - %H:%M,,,10,,TRUE,
+58,Date only method,The format here is the same as <a href='http://uk.php.net/manual/en/function.strftime.php'>PHP's strftime</a>,7,input,clock_date,,%d %b %Y,,,11,,TRUE,
+59,Mail delivery method,"If PHP's mail() isn't available, choose SMTP. If you are unsure, please ask your web host.",8,dropdown,mail_method,,mail,"mail=PHP Mail()
+smtp=SMTP",,1,,TRUE,
+60,Community incoming email address,This is the email address that all incoming mail is addressed to.,8,input,email_in,slavros_a@mail.ru,,,,2,Email Addresses,TRUE,
+61,Community outgoing email address,This is the email address that all mail appears to come from.,8,input,email_out,slavros_a@mail.ru,,,,3,,TRUE,
+62,Override SMTP host,Default is 'localhost',8,input,smtp_host,,localhost,,,4,SMTP Set-up,TRUE,
+63,Override SMTP port,Default is 25,8,input,smtp_port,,25,,,5,,TRUE,
+64,Add &#39;&lt;&#39; and &#39;&gt;&#39; to &#39;to&#39; and &#39;from&#39; addresses,"Some SMTP mailers require that email addresses are in the following format '<' address '>' (no quotes). If you are getting errors in the mail error log, enabled this option",8,yes_no,mail_wrap_brackets,,0,,,6,,TRUE,
+65,SMTP username,Not required in most cases when using 'localhost',8,input,smtp_user,,,,,7,,TRUE,
+66,SMTP password,Not required in most cases when using 'localhost',8,input,smtp_pass,,,,,8,,TRUE,
+67,Enhanced SMTP HELO,Select which identification clause you need to use with your SMTP server.,8,dropdown,smtp_helo,,HELO,"HELO=HELO
+EHLO=EHLO",,9,,TRUE,helo ehlo
+68,PHP mail extra options,Example: -femail@address.com will force a 'From' header.,8,input,php_mail_extra,,,,,9,PHP Mail Settings,TRUE,
+69,Community name,"This is the name of the community. It is used as the first link in the navigation menu, etc.",9,input,board_name,Iron March Forums,Invision Power Board,,,1,Names &amp; Addresses,TRUE,
+70,Meta tag: image_src,"Facebook and other services use this when sharing links or syndicating content. Minimum size is 50px x 50px, with an aspect ratio of 3:1. {style_image_url} will be replaced with URL to current skin directory.",9,input,meta_imagesrc,,{style_image_url}/meta_image.png,,,2,,TRUE,
+71,Website name,"This is the name of your website. If this and ""Website Address' is filled in, your website address and name will appear on the community above the header by default.",9,input,home_name,IRONMARCH.ORG,,,,3,,TRUE,
+72,Website address,"This is the URL to your website. If entered, it'll appear on the community above the header by default.",9,input,home_url,,,,,4,,TRUE,
+325,Publisher ID,This is the publisher ID issued to you by Google when you sign up for Admob.  <a href='https://developers.google.com/mobile-ads-sdk/kb/#getpublisherid'>Click here for instructions</a>,31,input,admob_pub_id,,,,,1,,TRUE,
+74,Path to &#39;upload&#39; directory,"This is a path, not a URL.
+<!--SUGGEST-->",9,input,upload_dir,/home/ironmarc/public_html/uploads,,upload_dir,"if( $show == 1 )
+{
+	$this_script = str_replace( '&#092;&#092;&#092;&#092;', '/', getenv( 'SCRIPT_FILENAME' ) );
+ 	
+	if( $this_script )
+	{
+		$this_script = str_replace( '/'.CP_DIRECTORY.'/index.php', '/uploads', $this_script );
+ 		$r['conf_description'] = str_replace( ""<!--SUGGEST-->"", ""<br />IP.Board has detected your uploads path as: <strong>"".$this_script . '</strong>', $r['conf_description'] );
+	}
+}
+if( $save == 1 )
+{
+	$value = trim($value);
+}",6,,TRUE,
+75,Upload URL,"The URL to your ""uploads"" folder.
+<!--SUGGEST-->",9,input,upload_url,http://ironmarch.org/uploads,,,"if( $show == 1 )
+{
+	$this_host   = getenv( 'SERVER_NAME' );
+	$this_port   = getenv( 'SERVER_PORT' );
+	$this_script = getenv( 'SCRIPT_NAME' );
+	$this_script = str_replace( ""&#092;&#092;&#092;&#092;"", ""/"", $this_script );
+
+	if( $this_host AND $this_script )
+	{
+		$this_script = str_replace( '/'.CP_DIRECTORY.'/index.php', '/uploads', $this_script );
+
+		if( $this_port == 80 )
+		{
+			$_url	= ""http://"" . $this_host . $this_script;
+		}
+		else if( $this_port == 443 )
+		{
+			$_url	= ""https://"" . $this_host . $this_script;
+		}
+		else
+		{
+			$_url	= ""http://"" . $this_host . "":"" . $this_port . $this_script;
+		}
+		
+		$r['conf_description'] = str_replace( ""<!--SUGGEST-->"", ""<br />IP.Board has detected your uploads url as: <strong>"". $_url . '</strong>', $r['conf_description'] );
+	}
+}
+if( $save == 1 )
+{
+	$value = trim($value);
+}",7,Other URLs and Paths,TRUE,
+76,Caching PATH,"<b>This can be left blank</b>
+<br />This is useful for specifing a PATH for the IP.Board written files (skin_cache, lang_cache, tmp) when dealing with load balanced/clustered servers. If you enter a PATH, please ensure that it ends with a trailing slash.	<br />
+	Note: This location must have a 'cache' folder. So if you enter /home/path/ then you must have a folder /home/path/cache/",9,input,ipb_cache_path,,,,"if( $save == 1 )
+{
+	$value = trim($value);
+}",8,,TRUE,
+77,Caching URL,"<b>This can be left blank</b>
+<br />
+If you supplied a Caching PATH, you must also supply the URL to this caching path here.",9,input,ipb_cache_url,,,,"if( $save == 1 )
+{
+	$value = trim($value);
+}",9,,TRUE,
+78,Minify CSS and JS,"You can minify javascript and CSS to reduce the number of HTTP requests to the server, support proper browser caching, and compress the contents sent. Note, if you are using a CDN, you will need to disable this.",9,yes_no,use_minify,,1,,,10,,TRUE,"minify, reduce, compress, javascript"
+79,Images URL,"<b>This can be left blank</b>
+<br />This can be used if you wish to serve images from a different server, using a CDN, or when using clustered servers. Please ensure it starts with http(s):// if entering a URL",9,input,ipb_img_url,,,,"if( $save == 1 && $value )
+{
+	$value = trim($value);
+
+		/* Flag skins for recache */
+		require_once( IPS_ROOT_PATH . 'sources/classes/skins/skinFunctions.php' );
+		require_once( IPS_ROOT_PATH . 'sources/classes/skins/skinCaching.php' );
+		$skinCaching	= new skinCaching( $this->registry );
+		
+		/* Flag all for recache */
+		$skinCaching->flagSetForRecache();
+}",11,CDN Settings,TRUE,
+80,Debug level,This controls the debug information shown at the footer of your board.,9,dropdown,debug_level,,0,"0=0: None - Don't show any debug information
+1=1: Show server load, page generation times and query count
+2=2: Show level 1 (above) and GET and POST information
+3=3: Show level 1 + 2 and database queries",,14,Other General Settings,TRUE,
+81,Show as licensed to...,"Example: <em>Matthew Mecham, IPS, Inc.</em>  If blank, licensed to line will not show.",9,input,ipb_reg_name,,,,,15,,TRUE,
+82,Remove default forums navigation,Removes the board index navigation link when not in the forum application.,9,yes_no,remove_forums_nav,,0,,,16,,TRUE,
+83,Enable WebDav,Enable webdav so skins are editable outside the ACP.,10,yes_no,webdav_on,,0,,,1,,TRUE,
+84,IPB registered license key,"This is the IPB registraton key NOT your customer code or client center password. To get your key, log into your client center and click on 'Invision Power Board' under 'Your Purchases'.
+<br />DO NOT REMOVE OR EDIT THIS KEY UNLESS YOU'RE SURE OF WHAT YOU'RE DOING!",11,input,ipb_reg_number,1315832416-74506-155866-1144811605,,,,1,,TRUE,
+331,Privacy Policy Text,,2,editor,priv_body,"<!-- isHtml:1 --><!-- isHtml:1 -->Your privacy is important to us. To better protect your privacy we provide this notice explaining our online information practices and the choices you can make about the way your information is collected and used. To make this notice easy to find, we make it available in our footer and at every point where personally identifiable information may be requested.<br />
+<br />
+Log files are maintained and analysed of all requests for files on this website's web servers. Log files do not capture personal information but do capture the user's IP address, which is automatically recognised by our web servers.<br />
+<br />
+<strong class='bbc'>Our Commitment to Children's Privacy</strong><br />
+Protecting the privacy of the very young is especially important. For that reason, we never collect or maintain information at our website from those we actually know are under 13, and no part of our website is structured to attract anyone under 13.<br />
+<br />
+<strong class='bbc'>Cookies</strong><br />
+This website does not store any information that would, on its own, allow us to identify individual users of this service without their permission. Any cookies that may be used by this website are used either solely on a per session basis or to maintain user preferences. Cookies are not shared with any third parties.","Your privacy is important to us. To better protect your privacy we provide this notice explaining our online information practices and the choices you can make about the way your information is collected and used. To make this notice easy to find, we make it available in our footer and at every point where personally identifiable information may be requested.<br /><br />Log files are maintained and analysed of all requests for files on this website's web servers. Log files do not capture personal information but do capture the user's IP address, which is automatically recognised by our web servers.<br /><br />[b]Our Commitment to Children's Privacy[/b]<br />Protecting the privacy of the very young is especially important. For that reason, we never collect or maintain information at our website from those we actually know are under 13, and no part of our website is structured to attract anyone under 13.<br /><br />[b]Cookies[/b]<br />This website does not store any information that would, on its own, allow us to identify individual users of this service without their permission. Any cookies that may be used by this website are used either solely on a per session basis or to maintain user preferences. Cookies are not shared with any third parties.",,,7,,FALSE,
+88,Enable notifications,Mobile notifications require an active support license,13,yes_no,iphone_notifications_enabled,,1,,,1,Mobile Notifications,TRUE,
+89,Group restriction,"Select which groups can receive mobile notifications, not selecting any will cause notifications to be enabled for all groups.",13,multi,iphone_notifications_groups,,,#show_groups#,"if ( $save == 1)
+{
+	if ( is_array($_POST['iphone_notifications_groups']) )
+	{
+		$_POST['iphone_notifications_groups'] = implode("","",$_POST['iphone_notifications_groups']);
+	}
+	else
+	{
+		$_POST['iphone_notifications_groups'] = """";
+	}
+	
+	$key = 'iphone_notifications_groups';
+}
+if ( $show == 1 )
+{
+$key = 'iphone_notifications_groups[]';
+}",2,,TRUE,
+90,Prune spam logs,Do you wish to prune spam logs regularly (default every 30 days)?,14,yes_no,ipb_prune_spam,,1,,,10,,TRUE,
+91,Prune spider logs,Do you wish to prune spider logs regularly (default every 30 days)?,14,yes_no,ipb_prune_spider,,1,,,10,Prune Options,TRUE,
+92,Prune task logs,Do you wish to prune task logs regularly (default every 30 days)?,14,yes_no,ipb_prune_task,,1,,,20,,TRUE,
+93,Prune admin logs,Do you wish to prune admin logs regularly (default every 30 days)?,14,yes_no,ipb_prune_admin,,0,,,30,,TRUE,
+94,Prune moderator logs,Do you wish to prune moderator logs regularly (default every 30 days)?,14,yes_no,ipb_prune_mod,,0,,,40,,TRUE,
+96,Prune email error logs,Do you wish to prune email error logs regularly (default every 30 days)?,14,yes_no,ipb_prune_emailerror,,1,,,60,,TRUE,
+97,Prune SQL error logs,Do you wish to prune SQL Error logs older than 30 days?,14,yes_no,ipb_prune_sql,,1,,,70,,TRUE,
+98,Prune admin login logs,Prunes admin login logs over configured days.,14,yes_no,prune_admin_login_logs,,1,,,80,,TRUE,
+99,Prune error logs,Prune error logs over 30 days old?,14,yes_no,prune_error_logs,,1,,,90,,TRUE,"prune, error, logs"
+100,Log errors,Log all errors over the selected level,14,dropdown,error_log_level,,4,"0=Do not log any additional errors
+1=Log all errors
+2=Log all level 1 errors and above
+3=Log all level 2 errors and above
+4=Log all level 3 errors and above
+5=Log all level 4 errors and above
+6=Log all level 5 errors",,100,Error Logs,TRUE,
+101,Notify administrator,Notify the community incoming email address when an error is logged?,14,dropdown,error_log_notify,,0,"0=Do not notify of any errors
+1=Notify of all errors
+2=Notify of all level 1 errors and above
+3=Notify of all level 2 errors and above
+4=Notify of all level 3 errors and above
+5=Notify of all level 4 errors and above
+6=Notify of all level 5 errors",,110,,TRUE,"email, admin, notify, error, log"
+102,Log all search engine visits,"If you're under heavy attack, switch this off as it may put a little extra load on the SQL server as it attempts to insert new data rows.",15,yes_no,spider_visit,,0,,,1,Search Engines,TRUE,
+103,Show search engine in the active users list,,15,yes_no,spider_active,,1,,,2,,TRUE,
+104,Redirect to new friendly URL format,"If enabled, a user accessing showxxxx=x type links will be automatically redirected to the new URL format.",15,yes_no,seo_r_on,,0,,,5,Friendly URL Features,TRUE,
+105,URL type,"If you're using PHP as an Apache module you can use 'path info' or you can use 'query string' if you're on Windows hosting or using PHP as a CGI module. Not sure?<br />
+Use 'query_string'.",15,dropdown,url_type,,query_string,"path_info=Path Info
+query_string=Query String","if ( $show == 1 AND ! $this->settings['use_friendly_urls'] )
+{
+	$r['conf_description'] .= ""<div style='color:red'>Note: FURLs are not enabled. Please edit your 'conf_global.php' and at the bottom add: <kbd>&#092;$INFO['use_friendly_urls']            = '1';</kdb></div>"";
+}",6,,TRUE,
+106,Use .htaccess mod_rewrite,"If yes, add a file called .htaccess with the following contents.<br />
+<!-- MOD_REWITE_EXAMPLE -->",15,yes_no,htaccess_mod_rewrite,,0,,"if( $show == 1 )
+{
+	$r['conf_description'] = str_replace( '<!-- MOD_REWITE_EXAMPLE -->', nl2br( $this->registry->adminFunctions->fetchModRewrite() ), $r['conf_description'] );
+}",7,,TRUE,
+326,Show ads at top,Enabling this option will show an ad at the top of the screen in the IPS Mobile App,31,yes_no,admob_top,,0,,,2,,TRUE,
+327,Show ads at bottom,Enabling this option will show ads at the bottom of the IPS Mobile App,31,yes_no,admob_bottom,,1,,,3,,TRUE,
+328,Archive System Enabled,,32,yes_no,archive_on,,0,,,1,,TRUE,
+329,Restore in last X days,,32,input,archive_restore_days,,,,,2,,TRUE,
+330,Privacy Policy Title,Enter the name of your privacy policy. This will also be used in the link.,2,input,priv_title,,Privacy Policy,,,6,Privacy Policy,TRUE,
+112,Google Analytics code,"Enter your Google Analytics code here, and it will be automatically inserted into all skins. It is not advised that you use this setting if you are not using the asynchronous tracking code.",15,textarea,ipseo_ga,,,,,4,,TRUE,"ipseo, ip.seo, google, analytics, tracking, code"
+113,Type of search to use,"You can use traditional or sphinx searching (if available).
+<!--FULLTEXT-->
+<br />
+<!--FULLCHECK-->",16,dropdown,search_method,,traditional,"traditional=Traditional
+sphinx=Sphinx",,1,,TRUE,
+114,Use fulltext searching,"Only applies to traditional search. If you are using traditional search, this is recommended, but may not find non-English words if the database is not configured properly.",16,yes_no,use_fulltext,,1,,,2,,TRUE,
+115,Minimum search word length,"Allowing shorter search words can return more results, such as 'if', 'at', etc. Note, if using the fulltext search method, your MySQL configuration may override this setting.",16,input,min_search_word,,4,min_search_word,,3,,TRUE,
+116,Limit search results,"Choose the maximum number of results returned when searching. Note, this only affects 'traditional search' and not Sphinx.",16,dropdown,search_hardlimit,,200,"100=100
+200=200
+300=300
+400=400
+500=500
+1000=1000",,4,,TRUE,
+117,Number of search results to show per page,Default is 25,16,input,search_per_page,,25,,,5,,TRUE,
+118,View New Content: Use SQL Always,"If 'yes', then the SQL method of fetching results for view new content will be used even if Sphinx is selected for the main search. This negates the 15 minute delay in result updates caused by Sphinx.",16,yes_no,force_sql_vnc,,1,,,6,,TRUE,
+119,View new posts: block forums,Select the forums you <b>don't</b> wish to search for new posts when using either the 'get active topics' or 'view new posts' links. You may select more than one.,16,multi,vnp_block_forums,,,#show_forums#,"if ( $save == 1)
+{
+	if ( is_array($_POST['vnp_block_forums']) )
+	{
+		$_POST['vnp_block_forums'] = implode("","",$_POST['vnp_block_forums']);
+	}
+	else
+	{
+		$_POST['vnp_block_forums'] = """";
+	}
+	
+	$key = 'vnp_block_forums';
+}
+if ( $show == 1 )
+{
+$key = 'vnp_block_forums[]';
+}",6,,TRUE,
+120,Default search type,"If you searched for ""foo bar"" 'OR' matching would find all results with either keyword, 'AND' matching would find all results with both keywords. Affects 'traditional' searching only.",16,dropdown,s_andor_type,,and,"and=And
+or=Or",,7,,TRUE,
+121,Default &quot;View New Content&quot; method,,16,dropdown,default_vnc_method,,unread,"unread=Content I have not read
+lastvisit=New since my last visit",,8,,TRUE,
+122,Hide manual search notice,"If you are using manual search and your SQL server supports fulltext searching, a note is shown on the admin home page.  You can manually hide it by changing this to yes.",16,yes_no,hide_ftext_note,,0,,,9,,TRUE,
+123,Limit &quot;My Content&quot; results to X days,"If you have a large post or topic database then you may wish to restrict the search to X days past the user's last post date. So if the user last posted in March and you entered 30 days, it would start looking from February onwards.",16,input,search_ucontent_days,,365,,,10,,TRUE,
+124,Sphinx server address,"The address of your Sphinx server, 127.0.0.1 by default.",16,input,search_sphinx_server,,127.0.0.1,,,10,Sphinx Settings,TRUE,
+125,Sphinx port,"The port used to connect to your Sphinx server, 3312 by default.",16,input,search_sphinx_port,,3312,,,11,,TRUE,
+126,Sphinx base path,Base path for sphinx indexes and logs,16,input,sphinx_base_path,,/var/sphinx,,,12,,TRUE,
+127,Sphinx index prefix,Allows you to use a prefix for the Sphinx indexes from this community.  Useful if you run multiple communities on the same server using Sphinx and wish to combine the indexes to only run one Sphinx daemon.,16,input,sphinx_prefix,,,,,13,,TRUE,
+128,Enable wildcard support,"If enabled ""exam*"" will match ""example"", ""exams"", etc. When enabled, re-indexing can be up to ten times slower which may be an issue when re-indexing a very large busy community. After you have changed this setting, please <a href='{ACP_URL}app=core&module=applications&amp;section=applications&do=applications_overview'>rebuild your sphinx.conf file</a>",16,yes_no,sphinx_wildcard,,0,,,14,,TRUE,
+129,Enable X_FORWARDED_FOR IP matching,"If enabled, this will check the X_FORWARDED_FOR headers to match the user's IP address. This is useful in a intranet situation if the REMOTE_ADDR will be the same across the network. It will also help maintain AOL sessions but can be abused to forge incorrect headers to report an incorrect IP address. If unsure, leave off.",17,yes_no,xforward_matching,,0,,,11,Security [General - High],TRUE,
+130,Lost password: password method,Please choose which lost password method you wish to use. We recommend using 'Email random password' as it's the most secure method.,17,dropdown,lp_method,,random,"random=Email random password
+choose=Allow user to enter new password",,12,,TRUE,
+131,Member&#39;s log in key expiration,It is advised that a member's log in key (used in cookies for persistent log in) expires weekly if not used. This increases the security of your board by exposing log in data for a week limiting the time frame a hacker would have to use the key if stolen.,17,dropdown,login_key_expire,,7,"0=Do not expire (not recommended)
+3=Expire after 3 days
+7=Expire after 7 days
+30=Expire after 30 days",,13,,TRUE,
+132,Session expiration (in seconds),Removes inactive sessions over the limit you specify. The lower the number the less chance of a session being hijacked.,17,input,session_expiration,,3600,,,15,,TRUE,
+133,Match user&#39;s IP address during session validation,"If 'yes', the IP address of the user must match the one stored in the sessions table for security. Only use 'no' in an intranet environment where many users share the same IP address.",17,yes_no,match_ipaddress,,1,,,16,,TRUE,
+134,Match user&#39;s browser during session validation,This further reduces the risk of session hijacking and tampering but it does mean that a user will have their session terminated if they use another browser at the same time.,17,yes_no,match_browser,,0,,,17,,TRUE,
+135,Lock user account after how many failed login attempts,"How many failed login attempts should a user be allowed before the account is locked?<br />
+<b>Tip</b>: Set to 0 to disable",17,input,ipb_bruteforce_attempts,,3,,,18,Brute-force Account Locking,TRUE,
+136,Reset failed login attempts after how many minutes,"Reset the login attempts after how many minutes?<br />
+<b>Tip</b>: Set to 0 to not reset failed login attempts until a succesful login occurs <!-- locked -->",17,input,ipb_bruteforce_period,,15,,,19,,TRUE,
+137,Automatically unlock account,"If an account is locked due to failed login attempts, do you wish for the account to unlock after the defined time period has passed since their failed login attempt?<br />
+<b>Tip</b>: Setting this to no will require you to manually unlock accounts under the Members tab",17,yes_no,ipb_bruteforce_unlock,,1,,,20,,TRUE,
+138,Remove the ACP link from the community,"If 'yes', the ACP link will not be displayed in the community header. This is useful if you rename the default 'admin' folder.",17,yes_no,security_remove_acp_link,,0,,,24,,TRUE,
+139,Use https for logins,This setting forces login requests to the https version of the forums.  You MUST first ensure SSL works for your domain (contact your host if unsure).,17,yes_no,logins_over_https,,0,,,25,,TRUE,
+140,New registration email validation,"Make an administrator manually preview all new accounts or make new users validate their email address. If ""User then Admin"" validation is selected, the user receives a validation email. On successful user validation, the user is entered into the administration approval queue.",17,dropdown,reg_auth_type,admin_user,user,"admin_user=User then Admin Validation
+user=User Email Validation
+admin=Admin Validation
+0=None",,26,Security [Managing Members],TRUE,
+141,Remove incomplete registration validations after [x] days,"This will automatically remove all unvalidated members after the number of days you specify. Enter ""0"" to not automatically remove unvalidated members.",17,input,validate_day_prune,3,0,,,27,,TRUE,
+142,Get notified when a new user registers via email,This will send an email to the community incoming email address when a new user successfully registers on the community.,17,yes_no,new_reg_notify,,0,,,28,,TRUE,
+143,Force guests to log in before allowing access to the community,"If set to yes, any guest must either log in or register before they can view the community.",17,yes_no,force_login,,0,,,32,,TRUE,
+144,Disable new registrations,Specifies which registrations are disabled.,17,dropdown,no_reg,,0,"0=No
+1=Disable IP.Board registrations only
+2=Disable All (IP.Board, Twitter, Facebook, etc)",,33,,TRUE,
+145,Remove chr(0xCA) from input,Can be used as a 'hidden' space to emulate registered names - but can cause problems in non Western character sets.,17,yes_no,strip_space_chr,,0,,,34,,TRUE,
+146,Posting flood control delay (in seconds),Make users wait before posting again<br>Can be left blank for no flood control and does not apply to members which belong to a group that can bypass flood control.,17,input,flood_control,,0,,,36,,TRUE,
+147,Allow users to browse the active users list,"If set to ""yes"", members and guests will be able to determine the whereabouts of each other by viewing the online list. Topics and forums that the viewer does not have permission to see are not shown.",17,yes_no,allow_online_list,,1,,,37,Privacy,TRUE,
+148,Disable anonymous login,Do you wish to disable members' ability to login anonymously?,17,yes_no,disable_anonymous,,0,,,38,,TRUE,
+149,Display IP.Board version on your site,Do you wish to display the version of IP.Board you are running in your copyright footer?,17,yes_no,ipb_display_version,,1,,,40,,TRUE,
+150,Document character set,"This is the ""charset"" for all ACP and public documents. We strongly recommend UTF-8",18,input,gb_char_set,,UTF-8,,,1,Character Encoding,TRUE,
+151,Character conversion method,Select the method to use for character set conversion. Not all methods supported on all servers. Only applies to non-English languages.,18,dropdown,charset_conv_method,,internal,"internal=Internal
+mb=mb functions
+recode=recode
+iconv=iconv",,2,,TRUE,"multibyte, utf8, utf-8, charset, recode, iconv, mb, internal"
+152,Disable AJAX for text,Disables sending of text through AJAX.  Useful for sites that use character sets not fully supported by PHP to prevent native characters being saved as HTML entities.,18,yes_no,disable_text_ajax,,0,,,3,,TRUE,
+153,Use safe mode skins &amp; languages,This setting is automatically set during installation but you can override the setting here if you wish. Safe mode skins & languages do not cache to PHP files and uses the database exclusively.,18,yes_no,safe_mode_skins,0,0,,,4,Server Environment,TRUE,
+154,Disable GZIP encoding,GZIP enables faster page transfers and lower bandwidth use however some servers are not configured to allow it.,18,yes_no,disable_gzip,,0,,,5,,TRUE,
+155,Print HTTP headers,Some NT installations will require this to be turned to 'no'.,18,yes_no,print_headers,,1,,,7,,TRUE,
+156,Print HTTP no-cache headers,(This will stop browsers caching pages)<br /><b>Note</b>: The previous setting must be enabled for this to have any effect,18,yes_no,nocache,,1,,,8,,TRUE,
+157,Immediate redirect type,Please select the method to use when immediately redirecting a page.,18,dropdown,header_redirect,,location,"location=HTTP Header Location
+refresh=Windows Refresh Command
+html=HTML Meta Redirect",,10,,TRUE,
+158,HTTP Authentication: Username,The username for any HTTP (.htaccess) authentication for this installation.,18,input,http_auth_username,,,,,12,HTTP Authentication,TRUE,
+159,HTTP Authentication: Password,The password for any HTTP (.htaccess) authentication for this installation.,18,input,http_auth_password,,,,,13,,TRUE,
+160,Cookie domain,Use .domain.com for site wide cookies,18,input,cookie_domain,,,,,500,Cookies,TRUE,
+161,Cookie prefix,Useful if you have multiple installations on one URL.,18,input,cookie_id,,,,,501,,TRUE,
+162,Cookie path,,18,input,cookie_path,,,,,502,,TRUE,
+163,Enable Facebook Connect,"You *must* set up a Facebook Application. You can do that <a href=""http://developers.facebook.com/setup/"" target='_blank'>here</a>",19,yes_no,fbc_enable,,0,,,1,Facebook Connect,TRUE,
+164,Application ID,This is shown on your Application ID after you have created your Facebook application.,19,input,fbc_appid,,,,,3,,TRUE,
+165,Secret key,"This is shown as ""Secret"" after you have created your Facebook Application.",19,input,fbc_secret,,,,,3,,TRUE,
+166,Default member group,Please select the default member group that will be used for all new Facebook created accounts. This does not affect members linking their accounts.,19,dropdown,fbc_mgid,,3,#show_groups#,,4,,TRUE,
+167,Facebook &quot;bot&quot; group,"Facebook will check pages to ensure they're valid when using the ""Like"" button or ""Share"" buttons. Please select the group you'd like it to 'appear' as. You may want to choose 'Members' if you hide forums from guests by default.",19,dropdown,fbc_bot_group,,2,#show_groups#,,5,,TRUE,
+168,Facebook javascript &quot;locale&quot;,"Specifies the language Facebook uses for its new Social widgets. Tip: You can usually copy the locale, minus any period and suffix, from your language pack under the Manage Languages page.",19,input,fb_locale,,en_US,,,6,,TRUE,
+169,Facebook &quot;Real name/Display name&quot; handling,"Specifies how you wish for the Facebook user's real name to be handled when creating a new forum account via logging in.<br /><br />You <strong>MUST</strong> have the setting 'Allow ""Display Names""' enabled for this to work, otherwise the real name is enforced.",19,dropdown,fb_realname,,any,"any=Allow User's Choice
+prefilled=Allow User's Choice, Real Name Suggested
+enforced=Enforce Real Name",,7,,TRUE,
+170,Enable Twitter Connect,"You can set up a Twitter application <a href=""http://twitter.com/oauth_clients"">here</a>",19,yes_no,tc_enabled,,0,,,30,Twitter Connect,TRUE,
+171,Twitter app: consumer key,,19,input,tc_token,,,,,31,,TRUE,
+172,Twitter app: consumer secret,,19,input,tc_secret,,,,,32,,TRUE,
+173,Default member group,Please select the default member group for new accounts created with Twitter log in.,19,dropdown,tc_mgid,,3,#show_groups#,,33,,TRUE,
+174,Enable share links,"Share links add icons to the specific pages enabling your members to share links. Note, there is no way to enforce permissions on shared links but you can remove the ability on a per forum basis.",19,yes_no,sl_enable,,1,,,40,Share Links,TRUE,
+395,Prune topic archiver logs,Do you wish to prune topic archive logs older than 30 days?,14,yes_no,prune_topic_archive_logs,,0,,,10,,TRUE,"prune,topic,archive,logs"
+176,Tagging enabled,This will enable the tagging system,20,yes_no,tags_enabled,,1,,,1,,TRUE,
+177,Tag mode,An open system allows users to create and add their own tags to content where allowed. A closed system allows admins to define tags on this page that others can use where allowed.,20,dropdown,tags_open_system,,1,"1=Open System (Create and apply tags ad-hoc)
+0=Closed System (Can only use pre-defined tags)",,2,,TRUE,
+178,Can use a tag as content prefix,"You can allow the first entered or selected tag to appear as a prefix to the content, such as a topic.",20,dropdown,tags_can_prefix,,1,"0=Disable prefixes
+1=Admins only can set prefixes
+2=Anyone where allowed can set prefixes",,3,,TRUE,
+179,Pre-defined tags,"If you are using the tag system as a closed system, you can create a default set of tags separated by a comma here. Applications may override these where permitted.",20,textarea,tags_predefined,,,,,4,,TRUE,
+180,Force tags to lowercase,You may wish to convert all tags to lowercase before saving.,20,yes_no,tags_force_lower,,0,,,5,,TRUE,
+181,Minimum tags per item,You may set a minimum number of tags required for each item. Entering 0 will disable any minimum restriction.,20,input,tags_min,,0,,,6,,TRUE,
+182,Maximum tags per item,You may set a maximum number of tags required for each item. Entering 0 will disable any maximum restriction.,20,input,tags_max,,10,,,7,,TRUE,
+183,Minimum length per tag,You may require a minimum length per tag. Entering 0 disables any restriction.,20,input,tags_len_min,,2,,,8,,TRUE,
+184,Maximum length per tag,You may require a maximum length per tag. Entering 0 disables any restriction.,20,input,tags_len_max,,30,,,9,,TRUE,
+185,Clean tags via bad word filter,"If enabled, tags will be cleaned via the bad word filter.",20,yes_no,tags_clean,,1,,,10,,TRUE,
+186,Enable XML-RPC API system,If 'yes' then your API users will be able to use the XML-RPC interface.,21,yes_no,xmlrpc_enable,,0,,,1,,TRUE,
+187,XML-RPC API logging,"Which type of logging do you wish to record? 'All' will record all API access, 'Failed' will only log failed API accesses.",21,dropdown,xmlrpc_log_type,,all,"all=All
+failed=Failed",,2,,TRUE,
+188,XML-RPC Log expiration,"Enter the maximum number of days you wish to keep logs for. For example, if you entered '30' all logs older than 30 days will be removed.",21,input,xmlrpc_log_expire,,30,,,3,,TRUE,
+189,Max. number of messages to show per page when viewing message list,The default is 50.,22,input,show_max_msg_list,,50,,,3,,TRUE,
+190,Unblockable groups,Members will not be able to block private messages from members in the selected groups.  You may select more than one.,22,multi,unblockable_pm_groups,,,#show_groups#,"if ( $save == 1)
+{
+	if ( is_array($_POST['unblockable_pm_groups']) )
+	{
+		$_POST['unblockable_pm_groups'] = implode("","",$_POST['unblockable_pm_groups']);
+	}
+	else
+	{
+		$_POST['unblockable_pm_groups'] = """";
+	}
+	
+	$key = 'unblockable_pm_groups';
+}
+if ( $show == 1 )
+{
+    $key='unblockable_pm_groups[]';
+}",4,,TRUE,
+191,Override &#39;inbox full&#39; error,"Members in the selected groups will be able to send private messages to other members, even when their inbox is 'full'.",22,multi,override_inbox_full,,,#show_groups#,"if ( $save == 1)
+{
+	if ( is_array($_POST['override_inbox_full']) )
+	{
+		$_POST['override_inbox_full'] = implode("","",$_POST['override_inbox_full']);
+	}
+	else
+	{
+		$_POST['override_inbox_full'] = """";
+	}
+	
+	$key = 'override_inbox_full';
+}
+if ( $show == 1 )
+{
+    $key='override_inbox_full[]';
+}",5,,TRUE,
+192,Enable reputation system,,23,yes_no,reputation_enabled,,1,,,741,General Setup,TRUE,
+193,Protected groups,These groups can not receive reputation votes,23,multi,reputation_protected_groups,,,#show_groups#,"if ( $save == 1)
+{
+	if ( is_array($_POST['reputation_protected_groups']) )
+	{
+		$_POST['reputation_protected_groups'] = implode("","",$_POST['reputation_protected_groups']);
+	}
+	else
+	{
+		$_POST['reputation_protected_groups'] = """";
+	}
+	
+	$key = 'reputation_protected_groups';
+}
+if ( $show == 1 )
+{
+    $key='reputation_protected_groups[]';
+}",742,,TRUE,
+194,Reputation type,Set the type of reputation points that your users can give,23,dropdown,reputation_point_types,,like,"positive=Positive Reputation Points
+negative=Negative Reputation Points
+both=Both Positive and Negative Reputation Points
+like=Like System (Positive rep only, visible names)",,743,,TRUE,
+195,Highlight content above X points,Set the number of points required to highlight content that has been rated.,23,input,reputation_highlight,,50,,,744,Display Settings,TRUE,
+196,Display user reputation,Set to yes to show a users reputation on their profile,23,yes_no,reputation_show_profile,,1,,,745,,TRUE,
+197,Display content points,Set to yes to display the number of points that a post or other type of content has received,23,yes_no,reputation_show_content,,1,,,746,,TRUE,
+198,Allow users to give themselves reputation,"If set to yes, users will be allowed to vote on their own content",23,yes_no,reputation_can_self_vote,,1,,,747,,TRUE,
+199,Enable spam service,,24,yes_no,spam_service_enabled,,1,,,1,Basic Settings,TRUE,
+200,Report &quot;Mark as Spam&quot; to IPS,"If set to yes, any users that your admin/mods report as spam will be reported to IPS for inclusion in the spam database.",24,yes_no,spam_service_send_to_ips,,1,,,2,,TRUE,
+201,Request timeout,This is how may seconds IP.Board will wait for a response from the spam system,24,input,spam_service_timeout,,15,,,3,,TRUE,
+202,Action to take for request timeout,"If the request takes longer than the request timeout setting, what action should be taken?",24,dropdown,spam_service_action_timeout,,1,"1=Proceed with account registration
+2=Flag the account for administrator review
+3=Register the account but immediately mark it as banned
+4=Do not permit the user to register an account",,4,Report Actions,TRUE,
+203,Action to take for code 0,"Code 0 means that the request could not be processed by the spam service, due to an out of date license key or other technical issue.",24,dropdown,spam_service_action_0,,1,"1=Proceed with account registration
+2=Flag the account for administrator review
+3=Register the account but immediately mark it as banned
+4=Do not permit the user to register an account",,5,,TRUE,
+204,Action to take for code 1,Code 1 is sent if the spam service determines that the account is unlikely to be spam.,24,dropdown,spam_service_action_1,,1,"1=Proceed with account registration
+2=Flag the account for administrator review
+3=Register the account but immediately mark it as banned
+4=Do not permit the user to register an account",,6,,TRUE,
+205,Action to take for code 2,Code 2 is sent by the service if the account is possibly spam,24,dropdown,spam_service_action_2,,1,"1=Proceed with account registration
+2=Flag the account for administrator review
+3=Register the account but immediately mark it as banned
+4=Do not permit the user to register an account",,7,,TRUE,
+206,Action to take for code 3,Code 3 is sent by the service if the account is likely spam,24,dropdown,spam_service_action_3,,2,"1=Proceed with account registration
+2=Flag the account for administrator review
+3=Register the account but immediately mark it as banned
+4=Do not permit the user to register an account",,8,,TRUE,
+207,Action to take for code 4,Code 4 is sent by the service if the account is a known spammer,24,dropdown,spam_service_action_4,,3,"1=Proceed with account registration
+2=Flag the account for administrator review
+3=Register the account but immediately mark it as banned
+4=Do not permit the user to register an account",,9,,TRUE,
+208,Get notified when a member is flagged for spamming,This will send an email to the community incoming email address when a moderator flags a member for spamming.,24,yes_no,spm_notify,,0,,,10,Flagging Members,TRUE,
+209,Action to take when a member is flagged for spamming,Choose what to do when a moderator flags a member for spamming.,24,dropdown,spm_option,,disable,"none=Do nothing
+disable=Disable Post/PM permission
+unapprove=Disable Post/PM and delete posts and comments
+ban=Delete posts and comments, empty profile and ban account",,11,,TRUE,
+210,Number of days worth of posts to (un)approve,Enter the number of days worth of posts that flagging a member as spam unapproves (if set above). Enter 0 to select all posts.,24,input,spm_post_days,,3,,,12,,TRUE,
+211,Captcha: Type,Please select which CAPTCHA method you'd like to use.,24,dropdown,bot_antispam_type,,recaptcha,"none=None
+default=Default (Requires GD)
+recaptcha=reCAPTCHA
+keycaptcha=KeyCAPTCHA",,14,CAPTCHA Settings,TRUE,
+212,Guest posting bot control,Do you wish to require guests who post (where allowed) to input a code to confirm their post?,24,yes_no,guest_captcha,,1,,,13,,TRUE,
+213,reCAPTCHA public key,"You can use the popular reCAPTCHA service.  You must select it as your bot control option, and input your public API key here.  <a href='http://www.recaptcha.net'>Get an API Key</a>",24,input,recaptcha_public_key,,6LcpWAMAAAAAAA4klDtDNuDH6LsGgBX5mBoJ3naK,,,15,reCAPTCHA Options,TRUE,"recaptcha, captcha"
+214,reCAPTCHA private key,"You can use the popular reCAPTCHA service.  You must select it as your bot control option, and input your private API key here.  <a href='http://www.recaptcha.net'>Get an API Key</a>",24,input,recaptcha_private_key,,6LcpWAMAAAAAAETX5jHd9NlPtIHJA4G-ra3X2RQB,,,16,,TRUE,"recaptcha, captcha"
+215,reCAPTCHA language,Select the language to use for reCAPTCHA,24,dropdown,recaptcha_language,,en,"en=English
+nl=Dutch
+fr=French
+de=German
+pt=Portuguese
+ru=Russian
+es=Spanish
+tr=Turkish",,17,,TRUE,recaptcha
+216,reCAPTCHA theme,Which reCAPTCHA theme would you like to use?,24,dropdown,recaptcha_theme,,clean,"clean=Clean
+red=Red
+white=White
+blackglass=Blackglass",,18,,TRUE,
+217,Number of posts a member must have before allowing them to change their member title,Enter 0 to disable completely or -1 for no limit.,25,input,post_titlechange,0,500,,,1,,TRUE,
+218,Enable the friends feature,,25,yes_no,friends_enabled,,1,,,2,,TRUE,
+219,Allow members to rate each other,"If 'yes', members will be able to rate other members from their profiles.",25,yes_no,pp_allow_member_rate,,1,,,3,,TRUE,
+220,Length of time to keep lost password requests,"After this time period (specified in days), lost password requests will be pruned.",25,input,lost_pw_prune,,60,,,4,,TRUE,
+221,Allow animated GIFs in photo thumbs?,"If enabled, uploaded animated gifs will animate in the mini thumb on the board index and next to a post. Profile page photos always animate. If you change this setting, it will only apply to future uploaded images.",25,yes_no,member_photo_gif_animate,1,0,,,5,,TRUE,
+222,Allow users to use Gravatars,<a href='http://en.gravatar.com/' target='_blank'>Click here for more information on Gravatars</a>,25,yes_no,allow_gravatars,0,1,,,5,,TRUE,
+223,Show users full photo in topic view; maximum width,"If you enter a numerical value, then the full member's photo is shown with a maximum width of the entered value. If 0 or nothing is entered, then the 100x100 cropped thumb is used.",25,input,member_topic_avatar_max,150x150,0,,,5,,TRUE,
+224,Allowed photo URL extensions,"Seperate with comma (gif,png,jpeg) etc",25,input,photo_ext,,"gif,jpg,jpeg,png",,,6,,TRUE,
+225,Auto prune all topic follows if the topic has no replies over [x] days,Leave blank or enter 0 for no auto prune limit,25,input,subs_autoprune,,0,,,8,Topic &amp; Forum Follows,TRUE,
+226,Automatically follow every forum,Please choose which user groups you'd like to automatically follow for notification of <b>new</b> topics (not replies) in every forum available to them. This means that members having a selected PRIMARY group will be emailed everytime there is a new topic and they are not online to view it.<br /><b>Note</b> This will only send the email to those who have chosen to 'Allow emails from the administrators'.,25,multi,autoforum_sub_groups,,,#show_groups#,"if ( $save == 1)
+{
+	if ( is_array($_POST['autoforum_sub_groups']) )
+	{
+		$_POST['autoforum_sub_groups'] = implode("","",$_POST['autoforum_sub_groups']);
+	}
+	else
+	{
+		$_POST['autoforum_sub_groups'] = """";
+	}
+	
+	$key = 'autoforum_sub_groups';
+}
+if ( $show == 1 )
+{
+    $key='autoforum_sub_groups[]';
+}",9,,TRUE,
+227,Default follow method on registration,"You can use this option to determine whether newly registered users should automatically follow every topic they reply to or start by default, and the notification method to use.  The user can change their preference in their User Control Panel after registration.",25,dropdown,auto_track_method,0,,"0=Do not automatically subscribe
+none=Subscribe, but do not send a notification
+immediate=Immediate email notifications
+offline=Offline (delayed) email notifications
+daily=Send a daily digest
+weekly=Send a weekly digest",,10,,TRUE,
+228,Allow guests to view signatures,,25,yes_no,guests_sig,,1,,,11,Guest Default Options,TRUE,
+229,Characters allowed in usernames,"If this is set, IP.Board will ensure all usernames only contain characters in this list upon registration.<br /><br />
+To allow only alphanumeric usernames, use: <b>a-zA-Z0-9</b>",26,input,username_characters,,,,,1,Username Restrictions,TRUE,
+230,Error message to display,"If you specify the characters allowed in usernames, and a user tries to register with a name that has invalid characters, what error message should be displayed?<br /><b>Tip:</b> You can use {chars} to show the characters allowed",26,input,username_errormsg,,The name can only contain these characters: {chars},,,2,,TRUE,
+231,Block linebreaks in names,"Do you want to explicitly block newlines, linebreaks, and html tags in usernames and display names?",26,yes_no,usernames_nobr,,0,,,3,,TRUE,
+232,Allow display names,"If enabled, the member can choose a ""Display Name"" that is separate from their ""Log in UserName"". This is REQUIRED when using non-internal authentication methods.",26,yes_no,auth_allow_dnames,,1,,,4,Display Name Restrictions,TRUE,
+233,Maximum display name length,The maximum number of characters that a display name can be.,26,input,max_user_name_length,,26,,,5,,TRUE,
+234,Prohibit display names from selecting log in names,"If ""yes"", one is not able to choose a display name that is the same as another's display name OR another's log in name. If ""no"" one is not able to choose a display name that is the same as another's display name only.",26,yes_no,auth_dnames_nologinname,,1,,,6,,TRUE,
+235,Enable the warning system,"If set to ""no"", the warn system will not be used and all warn levels will be hidden from view.",27,yes_no,warn_on,,1,,,1,Warn System,TRUE,
+239,Protected groups,Groups that cannot be warned. You may choose more than one.,27,multi,warn_protected,,,#show_groups#,"if ( $save == 1)
+{
+	if ( is_array($_POST['warn_protected']) )
+	{
+		$_POST['warn_protected'] = implode("","",$_POST['warn_protected']);
+	}
+	else
+	{
+		$_POST['warn_protected'] = """";
+	}
+	
+	$key = 'warn_protected';
+}
+if ( $show == 1 )
+{
+    $key='warn_protected[]';
+}",4,,TRUE,
+240,Allow all other non-protected groups to see their own warn points and reasons,"If set to ""yes"", members will be able to see their own warn points and reasons for their warns.",27,yes_no,warn_show_own,,1,,,5,,TRUE,
+244,Number of times per day moderators can warn a single member,,27,input,warn_mod_day,,3,,,7,,TRUE,
+334,Calendar Select Localization,"In some areas, a javascript calendar is displayed to users to select the date and/or time.  This calendar is a third party script with limited localization support.  Select the language you would like to use for this calendar script.",7,dropdown,calendar_date_select_locale,,en,"ar=Arabic
+cs=Czech
+da=Danish
+de=German
+en=English
+es=Spanish
+fi=Finnish
+fr=French
+hu=Hungarian
+it=Italian
+ja=Japanese
+nl=Dutch
+pl=Polish
+pt=Portuguese
+ru=Russian
+sl=Slovenian
+sv=Swedish",,12,Calendar Date Select,TRUE,
+333,Enable topic marking for guests,Cookies are used to track markers for guests. You can completely disable topic marking for guests so everything appears as read.,6,yes_no,topic_marking_guests,,0,,,31,,TRUE,
+248,Number of times per day a global moderator can warn a single member,,27,input,warn_gmod_day,,3,,,8,,TRUE,
+249,Can view report center,Specifies what groups can view the report center. <!--PERM_LINK-->,27,multi,report_mod_group_access,"4,6,8",4,#show_groups#,"if ( $save == 1)
+{
+	if ( is_array($_POST['report_mod_group_access']) )
+	{
+		$_POST['report_mod_group_access'] = implode("","",$_POST['report_mod_group_access']);
+	}
+	else
+	{
+		$_POST['report_mod_group_access'] = """";
+	}
+	
+	$key = 'report_mod_group_access';
+}
+if ( $show == 1 )
+{
+    $key='report_mod_group_access[]';
+    $r['conf_description'] = str_replace( ""<!--PERM_LINK-->"", '<a href=""' . $this->settings['base_url'] . 'module=report&section=reports&do=plugin"">Configure group access</a>', $r['conf_description'] );
+}",9,Report Center,TRUE,
+250,Number of topics per forum page,,28,input,display_max_topics,,30,,,1,Showing Topics,TRUE,
+251,Number of rating votes required to show,The number of actual rating votes needed before the topic's rating value is displayed.,28,input,topic_rating_needed,,1,,,2,,TRUE,
+252,Auto remove redirect links (days),"If you would like the redirect links created when a topic is moved to be automatically removed after a certain number of days, enter the no. days. Enter 0 to not remove them automatically.",28,input,topic_redirect_prune,,30,,,3,,TRUE,
+253,Number of posts needed to make a &#39;hot topic&#39;,,28,input,hot_topic,30,15,,,3,,TRUE,
+254,Days to retain deleted topics and posts,"Topics and posts that are deleted are retained in the database, allowing you to restore them from the moderator control panel. After how many days would you like these topics and posts removed from the database permanently?",28,input,days_to_keep_deletions,7,5,,,5,,TRUE,"delete, deletions, deleted, deletion, marked"
+255,Topic title max length,Maximum topic title length allowed. Maximum topic title length allowed. Minimum is two regardless of input here.,28,input,topic_title_max_len,,150,,,7,,TRUE,
+256,Remove excess exclamation/question marks in topic titles,Will turn: This!!!!! into This!,28,yes_no,etfilter_punct,1,0,,,8,,TRUE,
+257,Stop shouting in topic titles,Will turn: CLICK HERE into Click Here,28,yes_no,etfilter_shout,,0,,,9,,TRUE,
+258,Number of posts per topic page,,28,input,display_max_posts,,20,,,10,Showing Posts,TRUE,
+259,Open posted links in a new window,"Forces links to open in a new window, if javascript is available.",28,yes_no,links_external,,1,,"if ( $save && ( ! isset($_POST[ $key ]) || $_POST[ $key ] != ipsRegistry::$settings[ $key ] ) )
+{
+	ipsRegistry::DB()->delete('content_cache_posts');
+	ipsRegistry::DB()->delete('content_cache_sigs');
+}",11,,TRUE,
+260,Automatic resize image force size,"By default, when automatic linked image resizing is on, it is resized to fit the width of the screen. If you'd like to enforce a PX width/height, enter it here. If you enter 600, then an image larger in width or height is scaled down.",28,input,resize_img_force,,0,,,12,,TRUE,
+261,Ignore users: protected groups,Members of the groups selected will not be able to be ignored.,28,multi,cannot_ignore_groups,,",4,",#show_groups#,"if ( $save == 1)
+{
+	if ( is_array($_POST['cannot_ignore_groups']) )
+	{
+		$_POST['cannot_ignore_groups'] = ','.implode("","",$_POST['cannot_ignore_groups']).',';
+	}
+	else
+	{
+		$_POST['cannot_ignore_groups'] = """";
+	}
+	
+	$key = 'cannot_ignore_groups';
+}
+if ( $show == 1 )
+{
+$key = 'cannot_ignore_groups[]';
+}",16,,TRUE,
+263,Order posts within a topic by,,28,dropdown,post_order_sort,,asc,"asc=Ascending (0-9)
+desc=Descending (9-0)",,18,,TRUE,
+264,Maximum number of emoticons per post,,28,input,max_emos,30,10,,,19,Making a Post,TRUE,
+265,Maximum number of images per post,,28,input,max_images,100,10,,,20,,TRUE,
+266,Valid postable image extensions,"Defines which images are allowed in [img][/img] tags.
+<br />Seperate with comma (gif,jpeg,jpg)",28,input,img_ext,,"gif,jpeg,jpg,png",,,21,,TRUE,
+267,Maximum size of post (in kilobytes [kb]),,28,input,max_post_length,777,100,,,22,,TRUE,
+268,Automatically parse media URLs,"If enabled, and a link is submitted without bbcode tags that matches your configured media tag URLs, the link will be treated as media instead of a regular hyperlink.",28,yes_no,bbcode_automatic_media,,1,,,23,,TRUE,
+269,Maximum height of posted media (in pixels),"When using the [media] tags where allowed.<br />
+Only applies when posting direct URLs to swf files - YouTube videos, etc. will always be shown at the same size.",28,input,max_h_flash,400,199,,,24,,TRUE,
+270,Maximum width of posted media (in pixels),"When using the [media] tags where allowed.<br />
+Only applies when posting direct URLs to swf files - YouTube videos, etc. will always be shown at the same size.",28,input,max_w_flash,400,199,,,25,,TRUE,
+271,Stop quote embedding,"This will remove any quoted text when quoting a post that contains quotes<br><a href='#' title='and if that made any sense, then you are far cleverer than I.'>..</a>",28,yes_no,strip_quotes,,1,,,26,,TRUE,
+272,Maximum number of quotes per post,Use this to stop multiple quote embedding which can cause some browsers to hang or crash.,28,input,max_quotes_per_post,60,10,,,27,,TRUE,
+273,Merge member&#39;s concurrent posts,"When a member posts twice within <em>n</em> minutes, once after the other in a topic they will be merged into one post.
+Enter the number of minutes to capture concurrent posts.
+Enter 0 to not use.",28,input,post_merge_conc,,0,,,28,,TRUE,
+274,Use URL filtering,"If you would like to filter urls based on your blacklist or whitelist settings, enable this.  URL filtering allows you to explicitely allow (whitelist) or deny (blacklist) links in topic posts (images and urls).",28,yes_no,ipb_use_url_filter,,0,,,29,URL Filtering Options,TRUE,
+275,Which filter do you wish to use,"If you have enabled the url filtering, do you wish to use your blacklist or whitelist?  You may only use one or the other.",28,dropdown,ipb_url_filter_option,,black,"white=Whitelist
+black=Blacklist",,30,,TRUE,
+276,Whitelist options,"You can specify here links that you explicitly want to allow.  You may use * as a wildcard.  One per line.<br /><br />
+i.e.: http://www.yourdomain.com*<br />
+http://*google.com*",28,textarea,ipb_url_whitelist,,,,,31,,TRUE,
+277,Blacklist options,"You can specify here links that you explicitely want to disallow.  You may use * as a wildcard.  One per line.<br /><br />
+i.e.: http://*somedomain.com*<br />
+http://competitor_domain.com*",28,textarea,ipb_url_blacklist,,,,,32,,TRUE,
+278,Add rel=&quot;nofollow&quot; to posted links,"Do you wish to add rel=""nofollow"" to user-contributed links?",28,yes_no,posts_add_nofollow,,1,,,33,,TRUE,
+279,Show uploaded images in post as images,"If set to ""yes"", any image attachments in a post will be shown as the image and not as a downloadable link. Set this to yes to allow members to position their image attachments in the post using the [attachmentid] tag.",28,yes_no,show_img_upload,,1,,,34,Attached Image Options,TRUE,
+280,Show thumbnail of attached image,"If the above option is set to ""yes"" to allow image attachments to show as the image select this option to show the attached image as a thumbnail which takes up less space and can be quicker to load.",28,yes_no,siu_thumb,,1,siu_thumb,,36,,TRUE,
+281,Attachment image thumbnail size [width],"If both options above are set to ""yes"", you can define the maximum width of the thumbnail. If attached images are smaller than the dimensions set here, they will not be shown as a thumbnail.",28,input,siu_width,,100,,,37,,TRUE,
+282,Attachment image thumbnail size [height],"If both options above are set to ""yes"", you can define the maximum width of the thumbnail. If attached images are smaller than the dimensions set here, they will not be shown as a thumbnail.",28,input,siu_height,,100,,,38,,TRUE,
+283,Attachment image maximum size [width],"If the image is larger than the dimensions supplied, it will be resized accordingly before being saved.",28,input,attach_img_max_w,,1200,,,39,,TRUE,
+284,Attachment image maximum size [height],"If the image is larger than the dimensions supplied, it will be resized accordingly before being saved.",28,input,attach_img_max_h,,1600,,,40,,TRUE,
+285,Disable lightbox,This setting disables the fancier image viewing routine used for attached images in the forums.,28,yes_no,disable_lightbox,,0,,,40,,TRUE,
+286,Guest names [prefix],"This is for when a guest posts with a members name, it allows for a visual difference to prevent confusion",28,input,guest_name_pre,,Guest_,,,40,Guest Username,TRUE,
+287,Guest names [suffix],"This is for when a guest posts with a members name, it allows for a visual difference to prevent confusion",28,input,guest_name_suf,,_*,,,41,,TRUE,
+288,Maximum poll questions per poll,Enter the maximum number of questions you wish to allow your members to create in a single poll.,28,input,max_poll_questions,,3,,,43,Polls,TRUE,
+289,Maximum number of poll choices allowed,,28,input,max_poll_choices,30,20,,,44,,TRUE,
+290,Allow members to view the results of a poll without losing their vote,,28,yes_no,allow_result_view,,1,,,45,,TRUE,
+291,Allow poll creator to vote in own poll,"If set to ""yes"", the poll creator will have the option of voting in their own poll.",28,yes_no,allow_creator_vote,,1,,,46,,TRUE,
+292,Allow poll creator to make &quot;poll only&quot;,Do you wish to allow posters who create polls to be able to disallow replies to the poll?,28,yes_no,ipb_poll_only,,0,,,47,,TRUE,
+293,Allow public polls,Public polls show who voted for which option and can be enabled when creating a poll if allowed.,28,yes_no,poll_allow_public,,1,,,48,,TRUE,
+294,Allow vote deletion,"If enabled, members can delete their vote so they can re-vote. Admins and super moderators always have this ability.",28,yes_no,poll_allow_vdelete,,1,,,49,,TRUE,
+295,Number of hours to keep open the ability for topic starters to attach a poll to their topic,Does not affect administrators or super moderators,28,input,startpoll_cutoff,,24,,,50,,TRUE,
+296,Allow members to use flash uploader,Do you wish to allow members the option to use the flash multi-file uploader?,28,yes_no,uploadFormType,,1,,,52,Other,TRUE,
+297,Maximum number of media files per post,Too many media files embedded on one page can potentially crash the browser.,28,input,max_media_files,30,2,,,53,,TRUE,"media, bbcode"
+335,Send HTML emails,"If enabled, HTML formatted emails will be sent out with a plain text alternative so that if the email client doesn't support HTML then the email can still be read.",8,yes_no,email_use_html,,0,,,1,,TRUE,
+336,Upload form action domain,"Override the form action for uploads.  This is useful in a load-balanced environment to force uploaded files to a specific server.  (Most users can leave this blank)<br />
+Ex: http://master.mysite.com/forums",9,input,upload_domain,,,,"if( $save == 1 )
+{
+	$value = trim($value);
+}",5,,TRUE,
+337,CSS URL,"<b>This can be left blank</b>
+<br />This can be used if you wish to serve CSS files from a different server, using a CDN, or when using clustered servers. Please ensure that you use a trailing slash and that it starts with http(s):// if entering a URL",9,input,ipb_css_url,,,,"if( $save == 1 && $value )
+{
+	$value = trim($value);
+
+		/* Flag skins for recache */
+		require_once( IPS_ROOT_PATH . 'sources/classes/skins/skinFunctions.php' );
+		require_once( IPS_ROOT_PATH . 'sources/classes/skins/skinCaching.php' );
+		$skinCaching	= new skinCaching( $this->registry );
+		
+		/* Flag all for recache */
+		$skinCaching->flagSetForRecache();
+}",12,,TRUE,
+338,Javascript URL,"<b>This can be left blank</b>
+<br />This can be used if you wish to serve Javascript files from a different server, using a CDN, or when using clustered servers. Please ensure that you use a trailing slash and that it starts with http(s):// if entering a URL",9,input,ipb_js_url,,,,"if( $save == 1 && $value )
+{
+	$value = trim($value);
+
+		/* Flag skins for recache */
+		require_once( IPS_ROOT_PATH . 'sources/classes/skins/skinFunctions.php' );
+		require_once( IPS_ROOT_PATH . 'sources/classes/skins/skinCaching.php' );
+		$skinCaching	= new skinCaching( $this->registry );
+		
+		/* Flag all for recache */
+		$skinCaching->flagSetForRecache();
+}",13,,TRUE,
+339,Last Style Timestamp,Contains the timestamp of the last style change done to the mobile app,33,input,style_last_updated,,,,,1,,TRUE,
+340,Use Cron?,,34,yes_no,task_use_cron,,0,,,1,,TRUE,
+341,Cron Key,,34,input,task_cron_key,,,,,2,,TRUE,
+342,IPS CDN Enabled,,11,yes_no,ips_cdn,,,,,2,,TRUE,
+343,Prune share link logs,Do you wish to prune share link logs regularly (default every 30 days)?,14,yes_no,prune_share_link_logs,,0,,,3,,TRUE,
+344,Username,,35,input,mandrill_username,,,,,1,,TRUE,
+345,API Key,,35,input,mandrill_api_key,,,,,2,,TRUE,
+346,API Key,,36,input,postageapp_api_key,,,,,1,,TRUE,
+347,Ping services,"List any XML-RPC ping services you wish to notify when new content is created.<br />
+<strong>Note that each service you provide will be pinged when a topic is created. If you provide a lot of services, submitting a topic may become very slow.</strong>",15,textarea,ipseo_ping_services,,"http://rpc.pingomatic.com/
+http://api.my.yahoo.com/RPC2
+http://api.moreover.com/ping",,,3,,TRUE,
+348,Board index page title,"Specify the title to use for the forum index page.  If left blank, the ""Community name"" setting will be used",15,input,seo_index_title,,,,,8,Board Index,TRUE,"seo,title"
+349,Meta description,Specify the meta description you would like to use on the board index,15,textarea,seo_index_md,,,,,9,,TRUE,
+350,Meta keywords,Specify the meta keywords you would like to use on the board index,15,textarea,seo_index_mk,,,,,10,,TRUE,"meta, keywords"
+351,Guest Skin,Select a default skin set specifically for guests.,15,dropdown,ipseo_guest_skin,,0,,"if($show == 1)
+{
+$dropdown = array(0 => array('0', 'No Guest Skin'));
+$dropdown = array_merge($dropdown, $this->registry->output->generateSkinDropdown());
+}",11,Look and Feel,TRUE,
+352,Sitemap path,"Path to where you want your sitemap. If you're using IP.Content, this may not be your forum root. <br /><br /><b>Note:</b> If your path does not start with a /, it will be treated as relative to your forum root. Leave blank for the forum root. Please also ensure your path ends with a trailing slash. If your server supports it, this will be created automatically at the path given. If not, you will need to create it manually and ensure it has appropriate write permissions.",37,input,sitemap_path,,,,,1,Sitemap Options,TRUE,"sietmap,path"
+353,Sitemap URL,"URL to your sitemap location, not including the filename. Leave blank to use board root URL.<br /><br />e.g. http://www.mysite.com/",37,input,sitemap_url,,,,,2,,TRUE,"sitemap,url"
+354,Ping search engines?,"Do you want to inform search engines (Google, Bing, Yahoo, Ask and Moreover) when your sitemap is updated?",37,yes_no,sitemap_ping,,1,,,3,,TRUE,"sitemap,ping,google,bing,yahoo"
+355,Board Index,Priority value of the board index.,37,dropdown,sitemap_priority_index,,1,"1=1
+0.9=0.9
+0.8=0.8
+0.7=0.7
+0.6=0.6
+0.5=0.5
+0.4=0.4
+0.3=0.3
+0.2=0.2
+0.1=0.1
+0=Do not include",,4,IP.Board,TRUE,"sitemap,priority,index"
+356,Forums,Priority value of forums and categories.,37,dropdown,sitemap_priority_forums,,0.6,"1=1
+0.9=0.9
+0.8=0.8
+0.7=0.7
+0.6=0.6
+0.5=0.5
+0.4=0.4
+0.3=0.3
+0.2=0.2
+0.1=0.1
+0=Do not include",,5,,TRUE,"sitemap,priority,forum"
+357,Topics,"Basic priority value of topics, would apply to a new topic, for example.",37,dropdown,sitemap_priority_topics,,100,"100=Calculate automatically
+1=1
+0.9=0.9
+0.8=0.8
+0.7=0.7
+0.6=0.6
+0.5=0.5
+0.4=0.4
+0.3=0.3
+0.2=0.2
+0.1=0.1
+0=Do not include",,6,,TRUE,"sitemap,priority,topic"
+358,Number of topics,"The number of recent topics to include in your generated sitemap.<br /><br /><strong>Important</strong>: You must disable the sitemap generator task and run as a cron job in order to include more than 10,000 topics.",37,dropdown,sitemap_recent_topics,,1000,"50=50
+100=100
+500=500
+1000=1,000
+2500=2,500
+5000=5,000
+10000=10,000
+25000=25,000
+50000=50,000
+-1=All Topics",,7,,TRUE,"sitemap,number,topic"
+359,Include all pages in topics?,Do you want to include all pages in multi-page topics?,37,yes_no,sitemap_topic_pages,,1,,,8,,TRUE,"sitemap,topic,pages"
+360,Blog entries,Priority value of blog entries in IP.Blog.,37,dropdown,sitemap_priority_blog_entries,,0.8,"1=1
+0.9=0.9
+0.8=0.8
+0.7=0.7
+0.6=0.6
+0.5=0.5
+0.4=0.4
+0.3=0.3
+0.2=0.2
+0.1=0.1
+0=Do not include",,9,IP.Blog,TRUE,"sitemap,priority,blog,entries"
+361,Blogs,Priority value of blogs in IP.Blog.,37,dropdown,sitemap_priority_blogs,,0.6,"1=1
+0.9=0.9
+0.8=0.8
+0.7=0.7
+0.6=0.6
+0.5=0.5
+0.4=0.4
+0.3=0.3
+0.2=0.2
+0.1=0.1
+0=Do not include",,10,,TRUE,"sitemap,priority,blog,blogs"
+362,Number of entries,The number of blog entries to include in the sitemap.,37,dropdown,sitemap_count_blog_entries,,1000,"50=50
+100=100
+500=500
+1000=1,000
+2500=2,500
+5000=5,000
+10000=10,000
+25000=25,000
+50000=50,000
+-1=All Entries",,11,,TRUE,"sitemap,count,number,blog,entries"
+363,Images,Priority value of images.,37,dropdown,sitemap_priority_gallery_images,,0.6,"1=1
+0.9=0.9
+0.8=0.8
+0.7=0.7
+0.6=0.6
+0.5=0.5
+0.4=0.4
+0.3=0.3
+0.2=0.2
+0.1=0.1
+0=Do not include",,12,IP.Gallery,TRUE,"ip.seo, ipseo, seo, sitemap, priority, gallery, images"
+364,Albums,Priority value of albums.,37,dropdown,sitemap_priority_gallery_albums,,0.4,"1=1
+0.9=0.9
+0.8=0.8
+0.7=0.7
+0.6=0.6
+0.5=0.5
+0.4=0.4
+0.3=0.3
+0.2=0.2
+0.1=0.1
+0=Do not include",,13,,TRUE,"ip.seo, ipseo, seo, sitemap, priority, gallery, albums"
+365,Number of Images,Number of images to include in the sitemap.,37,dropdown,sitemap_count_gallery_images,,1000,"50=50
+100=100
+500=500
+1000=1,000
+2500=2,500
+5000=5,000
+10000=10,000
+25000=25,000
+50000=50,000
+-1=All Images",,14,,TRUE,"ip.seo, ipseo, seo, sitemap, gallery, images, number, count"
+366,Home page,Priority value of the IP.Content home page.,37,dropdown,sitemap_priority_ccs_index,,1,"1=1
+0.9=0.9
+0.8=0.8
+0.7=0.7
+0.6=0.6
+0.5=0.5
+0.4=0.4
+0.3=0.3
+0.2=0.2
+0.1=0.1",,15,IP.Content,TRUE,"sitemap,content,ip.content,homepage"
+367,Other pages,Priority value of other pages in IP.Content.,37,dropdown,sitemap_priority_ccs_page,,0.8,"1=1
+0.9=0.9
+0.8=0.8
+0.7=0.7
+0.6=0.6
+0.5=0.5
+0.4=0.4
+0.3=0.3
+0.2=0.2
+0.1=0.1",,16,,TRUE,"sitemap,content,ip.content,page"
+368,Database Records,Priority value for database records (including articles),37,dropdown,sitemap_priority_content_records,,0.6,"1=1
+0.9=0.9
+0.8=0.8
+0.7=0.7
+0.6=0.6
+0.5=0.5
+0.4=0.4
+0.3=0.3
+0.2=0.2
+0.1=0.1
+0=Do not include",,17,,TRUE,"ip.seo, ipseo, seo, ip.content, content, priority, sitemap, records"
+369,Database Categories,Priority value for database categories (including Articles categories),37,dropdown,sitemap_priority_content_categories,,0.4,"1=1
+0.9=0.9
+0.8=0.8
+0.7=0.7
+0.6=0.6
+0.5=0.5
+0.4=0.4
+0.3=0.3
+0.2=0.2
+0.1=0.1
+0=Do not include",,18,,TRUE,"ip.seo, ipseo, seo, ip.content, content, priority, sitemap, categories"
+370,Categories,Priority value for categories in IP.Downloads.,37,dropdown,sitemap_priority_downloads_categories,,0.2,"1=1
+0.9=0.9
+0.8=0.8
+0.7=0.7
+0.6=0.6
+0.5=0.5
+0.4=0.4
+0.3=0.3
+0.2=0.2
+0.1=0.1
+0=Do not include",,19,IP.Downloads,TRUE,"sitemap,priority,download,categories,category"
+371,Files,Priority value for files in IP.Downloads.,37,dropdown,sitemap_priority_downloads_files,,0.4,"1=1
+0.9=0.9
+0.8=0.8
+0.7=0.7
+0.6=0.6
+0.5=0.5
+0.4=0.4
+0.3=0.3
+0.2=0.2
+0.1=0.1
+0=Do not include",,20,,TRUE,"sitemap,priority,downloads,file,files"
+372,Number of files,Number of files to include in sitemap.,37,dropdown,sitemap_count_downloads_files,,1000,"50=50
+100=100
+500=500
+1000=1,000
+2500=2,500
+5000=5,000
+10000=10,000
+25000=25,000
+50000=50,000",,21,,TRUE,"sitemap,count,number,download,file"
+373,Categories,Priority value for categories in IP.Nexus.,37,dropdown,sitemap_priority_nexus_categories,,0.4,"1=1
+0.9=0.9
+0.8=0.8
+0.7=0.7
+0.6=0.6
+0.5=0.5
+0.4=0.4
+0.3=0.3
+0.2=0.2
+0.1=0.1
+0=Do not include",,22,IP.Nexus,TRUE,
+374,Products,Priority value for products in IP.Nexus.,37,dropdown,sitemap_priority_nexus_products,,0.6,"1=1
+0.9=0.9
+0.8=0.8
+0.7=0.7
+0.6=0.6
+0.5=0.5
+0.4=0.4
+0.3=0.3
+0.2=0.2
+0.1=0.1
+0=Do not include",,23,,TRUE,
+375,IP.Chat,Priority value of IP.Chat.	,37,dropdown,sitemap_priority_chat,,0,"1=1
+0.9=0.9
+0.8=0.8
+0.7=0.7
+0.6=0.6
+0.5=0.5
+0.4=0.4
+0.3=0.3
+0.2=0.2
+0.1=0.1
+0=Do not include",,24,IP.Chat,TRUE,
+376,Events,Priority value for events in IP.Calendar.,37,dropdown,sitemap_priority_calendar,,0.4,"1=1
+0.9=0.9
+0.8=0.8
+0.7=0.7
+0.6=0.6
+0.5=0.5
+0.4=0.4
+0.3=0.3
+0.2=0.2
+0.1=0.1
+0=Do not include",,25,IP.Calendar,TRUE,
+377,Number of past events,Number of <strong>past</strong> events to include in sitemap.,37,dropdown,sitemap_count_calendar_past,,250,"50=50
+100=100
+250=250
+500=500
+1000=1,000
+2500=2,500
+5000=5,000
+10000=10,000
+25000=25,000
+50000=50,000",,26,,TRUE,
+378,Number of future events,Number of <strong>future</strong> events to include in sitemap.,37,dropdown,sitemap_count_calendar_future,,750,"50=50
+100=100
+500=500
+750=750
+1000=1,000
+2500=2,500
+5000=5,000
+10000=10,000
+25000=25,000
+50000=50,000",,27,,TRUE,
+379,Twitter Default Hashtag,Default hashtag to be added to all shared links via twitter. (Hash tag automatically added),19,input,twitter_hashtag,,,,,30,,TRUE,
+380,Enable &quot;Auto Share&quot; when creating new content,"When enabled, members will be given the option of automatically sharing their new content (such as a topic) with social media sites.
+Note: this feature is not used for replies and comments and only in supported applications.",19,yes_no,sm_autoshare,,1,,,42,,TRUE,
+381,Minimum tags required?,"If yes, the minimum number of tags <strong>must</strong> be provided. If no, then the minimum tags setting will only apply if the user provides at least one tag.",20,yes_no,tags_min_req,,0,,,7,,TRUE,
+382,VigLink Enabled,,38,yes_no,viglink_enabled,,,,,1,,TRUE,
+383,VigLink API Key,,38,input,viglink_api_key,,,,,2,,TRUE,
+384,VigLink Sub-id,,38,input,viglink_subid,,,,,3,,TRUE,
+385,Enable VigLink for members in groups,"Users in these groups, when browsing the community, will have the links they click tracked through VigLink.<br />
+Leave blank for all groups.",38,multi,viglink_groups,,,#show_groups#,"if ( $save == 1)
+{
+	if ( is_array($_POST['viglink_groups']) )
+	{
+		$_POST['viglink_groups'] = implode("","",$_POST['viglink_groups']);
+	}
+	else
+	{
+		$_POST['viglink_groups'] = """";
+	}
+	
+	$key = 'viglink_groups';
+}
+if ( $show == 1 )
+{
+$key = 'viglink_groups[]';
+}",4,,TRUE,
+386,Bypass content by...,Posts and other content submitted by users in these groups will not be handled through VigLink.,38,multi,viglink_norewrite,,,#show_groups#,"if ( $save == 1)
+{
+	if ( is_array($_POST['viglink_norewrite']) )
+	{
+		$_POST['viglink_norewrite'] = implode("","",$_POST['viglink_norewrite']);
+	}
+	else
+	{
+		$_POST['viglink_norewrite'] = """";
+	}
+	
+	$key = 'viglink_norewrite';
+}
+if ( $show == 1 )
+{
+$key = 'viglink_norewrite[]';
+}",5,,TRUE,
+387,Enabled &#39;Also tagged with&#39;,"If enabled and the topic has tags, other topics with the same tag(s) will be displayed underneath the fast reply box.",28,yes_no,forums_enabled_also_tagged,,1,,,8,,TRUE,
+388,List ID,,39,input,cc_list_id,,,,,4,,TRUE,
+389,KeyCAPTCHA Private key,"Sign up for a key at <a href=""https://www.keycaptcha.com/login/?cms=plugin_ipb_34x"" target=""_blank"">keyCAPTCHA.com</a>",24,input,keycaptcha_privatekey,,,,,501,KeyCAPTCHA Settings,TRUE,"keycaptcha, captcha"
+390,Allow members to import photos via URL,"If enabled, where members have permission to upload photos, they can import a photo from a URL. This will download it to the forum server.",25,yes_no,mem_photo_url,,1,,,5,,TRUE,
+391,Keep user notifications for,"Please select the number of months to keep user notifications (such as inline new reply notifications, etc).",25,dropdown,prune_notifications,,3,"1=1 Month
+3=3 Months
+6=6 Months
+9=9 Months
+12=12 Months",,12,Notifications,TRUE,
+392,Allow moderators to set custom punishment if no Warning Action is set,"If yes, and a moderator selects a Warning Reason which gives the member a total number of points lower than any of the determined Warning Actions, they will still be able to set a punishment for the member. If no, they will only be able to give a verbal warning.<br />
+Administrators can always set custom punishments.",27,yes_no,warning_custom_noaction,1,,,,2,,TRUE,
+393,Allow moderators to use &quot;Other&quot; reason,,27,yes_no,warnings_enable_other,1,,,,3,,TRUE,
+394,Users must acknowledge issued warnings before posting again?,,27,yes_no,warnings_acknowledge,,,,,6,,TRUE,
+396,Show birthdays on the main calendar view,"If set to ""yes"", the calendar will show the number of birthdays for that day.",40,yes_no,show_bday_calendar,0,1,,,1,,TRUE,
+397,Show today&#39;s birthdays on the forum index,,40,yes_no,show_birthdays,0,1,,,2,Today&#39;s Birthdays,TRUE,
+398,Auto hide when no birthdays to show,"If set to ""yes"", this will remove the ""Today's Birthdays"" block on the forum index when there are none to show.",40,yes_no,autohide_bday,,0,,,3,,TRUE,
+399,Show forthcoming calendar events,"If set to ""yes"", this will show single forthcoming calendar events on the board index view. It will not show recurring events or ranged events.",40,yes_no,show_calendar,,1,,,4,Forthcoming Calendar Events,TRUE,
+400,Auto hide when no events to show,"If set to ""yes"", this will remove the forthcoming calendar events block from the board index view if there are none to show.",40,yes_no,autohide_calendar,1,0,,,5,,TRUE,
+401,Show forthcoming events from today to [x] days ahead,Controls how far into the future events are shown on the forcoming events block on the forum index.,40,input,calendar_limit,,5,,"if( $save == 1 )
+{
+ $this->cache->rebuildCache( 'calendar_events', 'calendar' );
+}",6,,TRUE,
+402,Starting year for calendar &#39;Year&#39; drop down box,This applies to view calendar / post event.,40,input,start_year,2011,2008,,,7,,TRUE,
+403,Year end limit for &#39;Year&#39; drop down box,"This applies to view calendar / post event.<br>Example: current year is 2002, you enter 5 - last choosable year = 2007",40,input,year_limit,,8,,,8,,TRUE,
+404,Start calendar on Monday,"The default behavior for the calendar is to start the week on Sunday.  By setting this to yes, you will start the week on Monday instead.",40,yes_no,ipb_calendar_mon,1,0,,,9,,TRUE,
+405,Time format,Choose between US standard and 24 hour time format,40,dropdown,cal_time_format,24hour,standard,"standard=Standard (AM/PM)
+24hour=24 hour",,10,Time / Date Formatting,TRUE,
+406,Date format,Choose the date format to use for event submission.  Note this format is specifically used for event submission only.,40,dropdown,cal_date_format,italian,american,"american=MM/DD/YYYY
+danish=YYYY/MM/DD
+italian=DD/MM/YYYY
+db=YYYY-MM-DD",,11,,TRUE,

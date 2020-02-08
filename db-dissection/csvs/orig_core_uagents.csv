@@ -1,0 +1,60 @@
+uagent_id,uagent_key,uagent_name,uagent_regex,uagent_regex_capture,uagent_type,uagent_position,uagent_default_regex
+215,lotus,Lotus Notes,"Lotus[ \-]?Notes[ /]([0-9.]{1,10})",1,browser,1027,"Lotus[ \-]?Notes[ /]([0-9.]{1,10})"
+214,firefox,Firefox,"Firefox/([0-9.+]{1,10})",1,browser,1026,"Firefox/([0-9.+]{1,10})"
+213,firebird,Firebird,"Firebird/([0-9.+]{1,10})",1,browser,1025,"Firebird/([0-9.+]{1,10})"
+212,curl,Curl,"curl[ /]([0-9.]{1,10})",1,browser,1024,"curl[ /]([0-9.]{1,10})"
+15,msnbot,MSN/Bing,"msnbot[ /]([0-9.]{1,10})",1,search,14,"msnbot[ /]([0-9.]{1,10})"
+211,chrome,Chrome,"Chrome/([0-9.]{1,10})",1,browser,1023,"Chrome/([0-9.]{1,10})"
+210,chimera,Chimera,"chimera/([0-9.+]{1,10})",1,browser,1022,"chimera/([0-9.+]{1,10})"
+209,camino,Camino,"camino/([0-9.+]{1,10})",1,browser,1021,"camino/([0-9.+]{1,10})"
+208,aol,AOL,"aol[ /\-]([0-9.]{1,10})",1,browser,1020,"aol[ /\-]([0-9.]{1,10})"
+207,amaya,Amaya,"amaya/([0-9.]{1,10})",1,browser,1019,"amaya/([0-9.]{1,10})"
+206,windows8,Windows Phone 8,Windows Phone ([^;]+);,1,browser,1018,Windows Phone ([^;]+);
+205,windows7,Windows 7,Windows Phone OS ([^;]+);,1,browser,1017,Windows Phone OS ([^;]+);
+204,operamini,Opera Mobile/Mini,opera (mobi|mini),0,browser,1016,opera (mobi|mini)
+203,palm,Palm,"(palmsource/| pre/[0-9.]{1,10}|palm webos)",0,browser,1015,"(palmsource/| pre/[0-9.]{1,10}|palm webos)"
+202,lg,LG,^(lg|lge)-[A-Za-z0-9],0,browser,1014,^(lg|lge)-[A-Za-z0-9]
+201,htc,Nexus(Google)/HTC,"(htc-|htc_)([A-Za-z0-9.]{1,10})",2,browser,1013,"(htc-|htc_)([A-Za-z0-9.]{1,10})"
+200,siemens,Siemens (Openwave),^sie-[A-Za-z0-9],0,browser,1012,^sie-[A-Za-z0-9]
+199,samsung,Samsung,^samsung-[A-Za-z0-9],0,browser,1011,^samsung-[A-Za-z0-9]
+198,motorola,Motorola,^mot-[A-Za-z0-9],0,browser,1010,^mot-[A-Za-z0-9]
+197,nokia,Nokia,Nokia[A-Za-z0-9],0,browser,1009,Nokia[A-Za-z0-9]
+196,sonyericsson,Sony Ericsson,^SonyEricsson[A-Za-z0-9],0,browser,1008,^SonyEricsson[A-Za-z0-9]
+195,iPad,iPad,iPad;,0,browser,1007,iPad;
+193,iphone,iPhone,iphone;,0,browser,1005,iphone;
+194,ipodtouch,iPod Touch,(ipod|ipod touch);,0,browser,1006,(ipod|ipod touch);
+192,blackberry,Blackberry,blackberry\s?(\d+?)[\/;],1,browser,1004,blackberry\s?(\d+?)[\/;]
+190,firefoxmobile,Firefox Mobile,Mozilla(?:[^\(]+?)\((?:android|tablet),0,browser,1002,Mozilla(?:[^\(]+?)\((?:android|tablet)
+191,androidtablet,Android Tablet,"\sandroid\s+?([A-Za-z0-9.]{1,10})",1,browser,1003,"\sandroid\s+?([A-Za-z0-9.]{1,10})"
+189,android,Android,"\sandroid\s+?([A-Za-z0-9.]{1,10}).+?mobile",1,browser,1001,"\sandroid\s+?([A-Za-z0-9.]{1,10}).+?mobile"
+188,transformer,Transformer Tablet,;\s+?Transformer\s+?,0,browser,1000,;\s+?Transformer\s+?
+187,yahoo,Yahoo,Yahoo(.*?)(Slurp|FeedSeeker),0,search,18,Yahoo(.*?)(Slurp|FeedSeeker)
+186,websense,Websense,(Sqworm|websense|Konqueror/3\.(0|1)(\-rc[1-6])?; i686 Linux; 2002[0-9]{4}),0,search,17,(Sqworm|websense|Konqueror/3\.(0|1)(\-rc[1-6])?; i686 Linux; 2002[0-9]{4})
+185,webcrawl,WebCrawl,webcrawl\.net,0,search,16,webcrawl\.net
+184,bingbot,Bing,"bingbot[ /]([0-9.]{1,10})",1,search,15,"bingbot[ /]([0-9.]{1,10})"
+183,msproxy,MSProxy,"MSProxy[ /]([0-9.]{1,10})",1,search,14,"MSProxy[ /]([0-9.]{1,10})"
+182,lycos,Lycos,Lycos_Spider_,0,search,13,Lycos_Spider_
+181,looksmart,Looksmart,looksmart-sv-fw,0,search,12,looksmart-sv-fw
+180,look,Look,www\.look\.com,0,search,11,www\.look\.com
+179,internetseer,InternetSeer,^InternetSeer\.com,0,search,10,^InternetSeer\.com
+178,inktomi,Inktomi,slurp@inktomi\.com,0,search,9,slurp@inktomi\.com
+177,infoseek,Infoseek,Infoseek,0,search,8,Infoseek
+176,facebook,Facebook,"facebookexternalhit/([0-9.]{1,10})",0,search,7,"facebookexternalhit/([0-9.]{1,10})"
+174,google,Google,Googl(e|ebot)(-Image)?/,0,search,5,Googl(e|ebot)(-Image)?/
+175,googlemobile,Google Mobile,Googl(e|ebot)(-Mobile)?/,0,search,6,Googl(e|ebot)(-Mobile)?/
+172,ask,Ask Jeeves,Ask[ \-]?Jeeves,0,search,3,Ask[ \-]?Jeeves
+173,excite,Excite,Architext[ \-]?Spider,0,search,4,Architext[ \-]?Spider
+170,alexa,Alexa,^ia_archive,0,search,1,^ia_archive
+171,altavista,Altavista,"Scooter[ /\-]*[a-z]*([0-9.]{1,10})",1,search,2,"Scooter[ /\-]*[a-z]*([0-9.]{1,10})"
+169,about,About,"Libby[_/ ]([0-9.]{1,10})",1,search,0,"Libby[_/ ]([0-9.]{1,10})"
+216,konqueror,Konqueror,"konqueror/([0-9.]{1,10})",1,browser,1028,"konqueror/([0-9.]{1,10})"
+217,lynx,Lynx,"lynx/([0-9a-z.]{1,10})",1,browser,1029,"lynx/([0-9a-z.]{1,10})"
+218,maxthon,Maxthon, Maxthon[\);],0,browser,1030, Maxthon[\);]
+219,omniweb,OmniWeb,"omniweb/[ a-z]?([0-9.]{1,10})$",1,browser,1031,"omniweb/[ a-z]?([0-9.]{1,10})$"
+220,opera,Opera,"opera[ /]([0-9.]{1,10})",1,browser,1032,"opera[ /]([0-9.]{1,10})"
+221,safari,Safari,"version/([0-9.]{1,10})\s+?safari/([0-9.]{1,10})",1,browser,1033,"version/([0-9.]{1,10})\s+?safari/([0-9.]{1,10})"
+222,webtv,Webtv,"webtv[ /]([0-9.]{1,10})",1,browser,1034,"webtv[ /]([0-9.]{1,10})"
+223,explorer,Explorer,"\(compatible; MSIE[ /]([0-9.]{1,10})",1,browser,5000,"\(compatible; MSIE[ /]([0-9.]{1,10})"
+224,netscape,Netscape,"^mozilla/([0-4]\.[0-9.]{1,10})",1,browser,5001,"^mozilla/([0-4]\.[0-9.]{1,10})"
+225,mozilla,Mozilla,"^mozilla/([5-9]\.[0-9a-z.]{1,10})",1,browser,5002,"^mozilla/([5-9]\.[0-9a-z.]{1,10})"
+226,xbox,Xbox,"\(compatible; MSIE[ /]([0-9.]{1,10})(.*)Xbox",1,browser,5003,"\(compatible; MSIE[ /]([0-9.]{1,10})(.*)Xbox"

@@ -1,0 +1,11 @@
+share_id,share_title,share_key,share_position,share_canonical
+1,Twitter,twitter,1,TRUE
+2,Facebook,facebook,2,TRUE
+3,Google Plus One,googleplusone,3,TRUE
+4,Digg,digg,4,TRUE
+5,Del.icio.us,delicious,6,TRUE
+6,Reddit,reddit,7,TRUE
+7,StumbleUpon,stumble,8,TRUE
+8,Email,email,9,TRUE
+10,Print,print,10,FALSE
+11,Download,download,11,FALSE

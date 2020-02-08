@@ -1,0 +1,62 @@
+log_id,log_member,log_date,log_error,log_error_code,log_ip_address,log_request_uri
+103794,0,2016-03-01T00:26:16Z,You are not allowed to visit this community. ,1001,173.245.203.69,/index.php?app=core&module=global&section=login&do=logout&k=662df4992cb4ff83a20814d5f9d7b057
+103793,0,2016-03-01T00:26:10Z,You are not allowed to visit this community. ,1001,173.245.203.69,/index.php?app=core&module=help
+103792,0,2016-03-01T00:25:58Z,You are not allowed to visit this community. ,1001,173.245.203.69,/index.php?app=core&module=global&section=register&do=reval
+103791,0,2016-03-01T00:25:54Z,You are not allowed to visit this community. ,1001,173.245.203.69,/
+103790,0,2016-03-01T00:24:12Z,You are not allowed to visit this community. ,1001,173.245.203.69,/index.php?app=core&module=global&section=login&do=logout&k=662df4992cb4ff83a20814d5f9d7b057
+103789,0,2016-03-01T00:24:08Z,You are not allowed to visit this community. ,1001,173.245.203.69,/index.php?app=core&module=global&section=login&do=logout&k=662df4992cb4ff83a20814d5f9d7b057
+103788,0,2016-03-01T00:23:38Z,You are not allowed to visit this community. ,1001,173.245.203.69,/index.php?/user/9919-kaliyuga/
+103787,0,2016-03-01T00:23:06Z,You are not allowed to visit this community. ,1001,173.245.203.69,/index.php?app=core&module=usercp
+103786,0,2016-03-01T00:22:45Z,You are not allowed to visit this community. ,1001,173.245.203.69,/index.php?app=core&module=global&section=register&do=reval
+103785,0,2016-03-01T00:21:05Z,You are not allowed to visit this community. ,1001,173.245.203.69,/
+103784,0,2016-03-01T00:21:00Z,You are not allowed to visit this community. ,1001,173.245.203.69,/index.php?/user/9919-kaliyuga/
+103783,0,2016-03-01T00:20:41Z,You are not allowed to visit this community. ,1001,173.245.203.69,/index.php?&app=core&module=global&section=login&do=autologin&fromreg=1
+103782,0,2016-02-29T08:13:03Z,We could not determine which topic you were attempting to moderate.,103118,182.255.0.11,/index.php?
+103737,0,2016-01-29T04:59:14Z,You are not allowed to visit this community.,2000,69.120.10.64,/
+103738,0,2016-01-29T04:59:16Z,You are not allowed to visit this community.,2000,69.120.10.64,/index.php?s=52d5d41d713b62a50f88d900b9e147f9&app=core&module=task
+103739,0,2016-02-05T19:11:18Z,You are not allowed to visit this community.,2000,69.120.10.64,/
+103740,7424,2016-02-10T05:34:43Z,You cannot split all posts within this topic to another topic.  You must leave at least one post in this topic.,10375,172.98.87.54,/index.php?app=forums&module=moderate&section=moderate
+103741,0,2016-02-12T04:02:07Z,You are not allowed to visit this community.,2000,69.120.10.64,/
+103742,9888,2016-02-12T23:39:23Z,You are not allowed to visit this community. ,1001,195.228.45.176,/index.php?&app=core&module=global&section=login&do=autologin&fromreg=1
+103743,9888,2016-02-12T23:39:36Z,You are not allowed to visit this community. ,1001,195.228.45.176,/index.php?app=core&module=help
+103744,9888,2016-02-12T23:40:21Z,You are not allowed to visit this community. ,1001,195.228.45.176,/index.php?/forum/171-jewish-question/
+103745,9888,2016-02-12T23:40:32Z,You are not allowed to visit this community. ,1001,195.228.45.176,/index.php?/user/9888-tuberose/
+103746,9888,2016-02-12T23:40:54Z,You are not allowed to visit this community. ,1001,195.228.45.176,/index.php?app=core&module=help
+103747,9888,2016-02-12T23:43:56Z,You are not allowed to visit this community. ,1001,195.228.45.176,/index.php?app=core&module=global&section=register&do=reval
+103748,9888,2016-02-12T23:44:15Z,You are not allowed to visit this community. ,1001,195.228.45.176,/index.php?app=core&module=global&section=register&do=reval
+103749,9888,2016-02-12T23:44:22Z,You are not allowed to visit this community. ,1001,195.228.45.176,/index.php?app=core&module=help
+103750,9888,2016-02-12T23:44:33Z,You are not allowed to visit this community. ,1001,195.228.45.176,/index.php?/user/9888-tuberose/
+103751,9888,2016-02-12T23:44:38Z,You are not allowed to visit this community. ,1001,195.228.45.176,/index.php?/user/9888-tuberose/
+103752,9888,2016-02-12T23:44:48Z,You are not allowed to visit this community. ,1001,195.228.45.176,/index.php?app=core&module=search&search_in=members
+103753,9888,2016-02-12T23:44:58Z,You are not allowed to visit this community. ,1001,195.228.45.176,/index.php?app=core&module=global&section=login&do=logout&k=c96582b332249d7a5a1a1c2ae3ed9e8e
+103754,9888,2016-02-12T23:45:02Z,You are not allowed to visit this community. ,1001,195.228.45.176,/index.php?app=core&module=global&section=login&do=logout&k=c96582b332249d7a5a1a1c2ae3ed9e8e
+103755,9888,2016-02-13T00:27:11Z,You are not allowed to visit this community. ,1001,65.19.167.130,/
+103756,9888,2016-02-13T00:27:26Z,You are not allowed to visit this community. ,1001,65.19.167.130,/index.php?/user/9888-tuberose/
+103757,9888,2016-02-13T00:27:42Z,You are not allowed to visit this community. ,1001,65.19.167.130,/index.php?/user/9888-tuberose/
+103758,9888,2016-02-13T00:27:56Z,You are not allowed to visit this community. ,1001,65.19.167.130,/index.php?app=core&module=search&search_in=members
+103759,9888,2016-02-13T00:28:00Z,You are not allowed to visit this community. ,1001,65.19.167.130,/
+103760,9888,2016-02-13T00:28:11Z,You are not allowed to visit this community. ,1001,65.19.167.130,/index.php?app=core&module=help
+103761,9888,2016-02-13T00:28:22Z,You are not allowed to visit this community. ,1001,65.19.167.130,/index.php?app=core&module=global&section=login&do=logout&k=c96582b332249d7a5a1a1c2ae3ed9e8e
+103762,9888,2016-02-13T00:28:35Z,You are not allowed to visit this community. ,1001,65.19.167.130,/index.php?app=core&module=global&section=login&do=logout&k=c96582b332249d7a5a1a1c2ae3ed9e8e
+103763,0,2016-02-18T02:36:10Z,You are not allowed to visit this community.,2000,69.120.10.64,/
+103764,0,2016-02-19T04:44:36Z,You are not allowed to visit this community.,2000,69.120.10.64,/
+103765,0,2016-02-21T02:57:42Z,You are not allowed to visit this community.,2000,69.120.10.64,/
+103766,0,2016-02-21T02:57:44Z,You are not allowed to visit this community.,2000,69.120.10.64,/index.php?s=07a9dc6afb46cb19a24348d398fe79ba&app=core&module=task
+103767,0,2016-02-21T03:28:12Z,You are not allowed to visit this community.,2000,69.120.10.64,/
+103768,0,2016-02-21T03:54:58Z,You are not allowed to visit this community.,2000,69.120.10.64,/
+103769,0,2016-02-21T04:00:41Z,You are not allowed to visit this community.,2000,69.120.10.64,/
+103770,0,2016-02-21T05:24:30Z,You are not allowed to visit this community. ,1001,43.249.38.98,/index.php?&app=core&module=global&section=login&do=autologin&fromreg=1
+103771,0,2016-02-21T05:24:52Z,You are not allowed to visit this community. ,1001,43.249.38.98,/
+103772,0,2016-02-21T05:25:23Z,You are not allowed to visit this community. ,1001,43.249.38.98,/
+103773,0,2016-02-21T05:25:38Z,You are not allowed to visit this community. ,1001,43.249.38.98,/index.php?/members/
+103774,0,2016-02-21T05:25:43Z,You are not allowed to visit this community. ,1001,43.249.38.98,/index.php?app=core&module=help
+103775,0,2016-02-21T17:12:15Z,You are not allowed to visit this community. ,1001,92.20.145.131,/
+103776,0,2016-02-21T17:12:22Z,You are not allowed to visit this community. ,1001,92.20.145.131,/
+103777,0,2016-02-21T17:12:25Z,You are not allowed to visit this community. ,1001,92.20.145.131,/index.php?app=core&module=global&section=login&do=logout&k=0503ae31d41a0d5d97562ec80e87dd56
+103778,0,2016-02-21T17:12:31Z,You are not allowed to visit this community. ,1001,92.20.145.131,/index.php?app=core&module=global&section=login&do=logout&k=0503ae31d41a0d5d97562ec80e87dd56
+103779,0,2016-02-22T02:06:21Z,You are not allowed to visit this community. ,1001,2.97.164.139,/
+103780,0,2016-02-22T02:21:33Z,You are not allowed to visit this community. ,1001,2.97.164.139,/index.php?/calendar/
+103781,0,2016-02-22T02:21:34Z,You are not allowed to visit this community. ,1001,2.97.164.139,/index.php?/calendar/
+103795,9144,2016-03-09T15:52:42Z,You cannot split all posts within this topic to another topic.  You must leave at least one post in this topic.,10375,101.173.3.208,/index.php?app=forums&module=moderate&section=moderate
+103796,9144,2016-03-09T16:03:13Z,We could not determine which topic you were attempting to moderate.,103118,101.173.3.208,/index.php?app=forums&module=moderate&section=moderate
+103797,9144,2016-03-12T13:44:57Z,We could not determine which topic you were attempting to moderate.,3033,101.173.3.208,/index.php?app=forums&module=moderate&section=moderate&t=6188&f=64&page=&auth_key=985947cc26d9aa7dc042f2646a14e048&_fromTopic=1&do=02

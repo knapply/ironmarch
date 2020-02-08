@@ -1,0 +1,202 @@
+replacement_id,replacement_key,replacement_content,replacement_set_id,replacement_added_to,replacement_master_key
+1,add_folder,<img src='{style_image_url}/folder_add.png' alt='{lang:add_folder}' />,0,0,root
+2,add_friend,<img src='{style_image_url}/user_add.png' alt='{lang:add_friend}' />,0,0,root
+3,add_poll_choice,<img src='{style_image_url}/add.png' alt='+' />,0,0,root
+4,add_poll_question,<img src='{style_image_url}/add.png' alt='+' />,0,0,root
+5,blog_add_entry,<img src='{style_image_url}/blog/book_add.png' alt='+' />,0,0,root
+6,blog_banish,<img src='{style_image_url}/blog/layout_delete.png' alt='' />,0,0,root
+7,blog_blocks,<img src='{style_image_url}/blog/layout_add.png' alt='' />,0,0,root
+8,blog_blog,<img src='{style_image_url}/blog/blog.png' alt='' />,0,0,root
+9,blog_category,<img src='{style_image_url}/folder.png' alt='-' />,0,0,root
+10,blog_comments,<img src='{style_image_url}/blog/comments.png' alt='' />,0,0,root
+11,blog_comments_new,<img src='{style_image_url}/blog/comments_new.png' alt='' />,0,0,root
+12,blog_editor,<img src='{style_image_url}/blog/blog_editor.png' alt='' />,0,0,root
+13,blog_group,<img src='{style_image_url}/blog/blog_group.png' alt='' />,0,0,root
+14,blog_header,<img src='{style_image_url}/blog/layout_header.png' alt='' />,0,0,root
+15,blog_link,<img src='{style_image_url}/book_open.png' alt='{lang:view_blog}' />,0,0,root
+16,blog_locked,<img src='{style_image_url}/blog/lock.png' alt='' />,0,0,root
+17,blog_option,<img src='{style_image_url}/blog/option.png' alt='' />,0,0,root
+18,blog_owner,<img src='{style_image_url}/blog/blog_owner.png' alt='' />,0,0,root
+19,blog_privateclub,<img src='{style_image_url}/blog/blog_privateclub.png' alt='' />,0,0,root
+20,blog_rss_import,<img src='{style_image_url}/blog/rss-import.png' alt='' title='{lang:entry_imported_from_rss}' data-tooltip='{lang:entry_imported_from_rss}' />,0,0,root
+21,blog_theme,<img src='{style_image_url}/blog/palette.png' alt='' />,0,0,root
+22,close_poll_form,<img src='{style_image_url}/accept.png' alt='x' />,0,0,root
+23,compose_icon,<img src='{style_image_url}/note_add.png' alt='{lang:macro__compose}' />,0,0,root
+24,display_name,<img src='{style_image_url}/display_name.png' alt='' />,0,0,root
+25,dropdown,<img src='{style_image_url}/dropdown.png' alt='+' />,0,0,root
+26,edit_folder,<img src='{style_image_url}/folder_edit.png' alt='{lang:edit_folders}' />,0,0,root
+27,find_icon,<img src='{style_image_url}/magnifier.png' alt='{lang:macro__compose}' />,0,0,root
+28,find_topics_link,<img src='{style_image_url}/page_topic_magnify.png' alt='{lang:find_topics}' />,0,0,root
+29,folder_delete,<img src='{style_image_url}/delete.png' alt='{lang:delete_folder_title}' />,0,0,root
+30,folder_drafts,<img src='{style_image_url}/folder.png' alt='{lang:macro__folder}' />,0,0,root
+31,folder_empty,<img src='{style_image_url}/bin.png' alt='{lang:empty_folder_title}' />,0,0,root
+32,folder_finished,<img src='{style_image_url}/folder.png' alt='{lang:macro__folder}' />,0,0,root
+33,folder_generic,<img src='{style_image_url}/folder.png' alt='{lang:macro__folder}' />,0,0,root
+34,folder_myconvo,<img src='{style_image_url}/email_go.png' alt='{lang:macro__myconvo}' />,0,0,root
+35,folder_new,<img src='{style_image_url}/folder_page.png' alt='{lang:macro__new}' />,0,0,root
+36,f_cat_read,<img src='{style_image_url}/f_icon_read.png' alt='{lang:macro__readcat}' title='{lang:macro__readcat}' />,0,0,root
+37,f_cat_unread,<img src='{style_image_url}/f_icon.png' alt='{lang:macro__unreadcat}' title='{lang:macro__markread}' />,0,0,root
+38,f_nav_sep,{lang:_rarr},0,0,root
+39,f_newpost,<img src='{style_image_url}/new_post.png' alt='' title='{lang:first_unread_post}' />,0,0,root
+40,f_pass_read,<img src='{style_image_url}/f_icon_read.png' alt='{lang:macro__readpw}' title='{lang:macro__readpw}' />,0,0,root
+41,f_pass_unread,<img src='{style_image_url}/f_icon.png' alt='{lang:macro__unreadpw}' title='{lang:macro__markread}' />,0,0,root
+42,f_read,<img src='{style_image_url}/f_icon_read.png' alt='{lang:macro__readf}' title='{lang:macro__readf}' />,0,0,root
+43,f_redirect,<img src='{style_image_url}/f_redirect.png' alt='{lang:macro__redirect}' title='{lang:macro__redirect}' />,0,0,root
+44,f_unread,<img src='{style_image_url}/f_icon.png' alt='{lang:macro__unreadf}' title='{lang:macro__markread}' />,0,0,root
+45,galery_album_edit,<img src='{style_image_url}/folder_edit.png' alt='' />,0,0,root
+46,gallery_album_delete,<img src='{style_image_url}/delete.png' alt='-' />,0,0,root
+47,gallery_image,<img src='{style_image_url}/gallery/image_add.png' alt='' />,0,0,root
+48,gallery_link,<img src='{style_image_url}/picture.png' alt='{lang:view_gallery}' />,0,0,root
+49,gallery_slideshow,<img src='{style_image_url}/gallery/pictures.png' alt='' />,0,0,root
+50,generic_cog,<img src='{style_image_url}/cog.png' alt='+' />,0,0,root
+51,lim_facebook,<img src='{style_image_url}/loginmethods/facebook.png' alt='{lang:lim_facebook}' />,0,0,root
+52,lim_openid,<img src='{style_image_url}/loginmethods/openid.png' alt='{lang:lim_openid}' />,0,0,root
+53,lim_twitter,<img src='{style_image_url}/loginmethods/twitter.png' alt='{lang:lim_twitter}' />,0,0,root
+54,lim_windows,<img src='{style_image_url}/loginmethods/windows.png' alt='{lang:lim_windows}' />,0,0,root
+55,live_large,<img src='{style_image_url}/live.gif' alt='{lang:macro__liveicon}' />,0,0,root
+56,live_small,<img src='{style_image_url}/live.gif' alt='{lang:macro__liveicon}' />,0,0,root
+57,lock_icon,<img src='{style_image_url}/lock.png' alt='{lang:pm_locked}' />,0,0,root
+58,logo_img,{style_image_url}/logo.png,0,0,root
+59,mini_rate_off,<img src='{style_image_url}/bullet_star_off.png' alt='-' class='mini_rate' />,0,0,root
+60,mini_rate_on,<img src='{style_image_url}/bullet_star.png' alt='*' class='mini_rate' />,0,0,root
+61,openid_large,<img src='{style_image_url}/openid_logo.png' alt='{lang:macro__openidlogo}' />,0,0,root
+62,openid_small,<img src='{style_image_url}/openid.gif' alt='{lang:macro__openidicon}' />,0,0,root
+63,pip_pip,<img src='{style_image_url}/bullet_black.png' alt='{lang:macro__pip}' />,0,0,root
+64,popular_post,<img src='{style_image_url}/star_big.png' alt='*' />,0,0,root
+65,post_attach_link,<img src='{style_image_url}/attachicon.gif'	alt='{lang:macro__attachment}' />,0,0,root
+66,rate_off,<img src='{style_image_url}/star_off.png' alt='-' class='rate_img' />,0,0,root
+67,rate_on,<img src='{style_image_url}/star.png' alt='*' class='rate_img' />,0,0,root
+68,remove_friend,<img src='{style_image_url}/user_delete.png' alt='{lang:remove_friend}' />,0,0,root
+69,remove_poll_choice,<span class='cancel' title='{lang:remove_choice}'>&times;</span>,0,0,root
+70,remove_poll_question,<img src='{style_image_url}/cross.png' alt='-' />,0,0,root
+71,report_green_alert,<img src='{style_image_url}/reports/post_alert_3.png' alt='' />,0,0,root
+72,report_red_alert,<img src='{style_image_url}/reports/post_alert_1.png' alt='' />,0,0,root
+73,rep_down,<img src='{style_image_url}/rep_down.png' alt='-' />,0,0,root
+74,rep_up,<img src='{style_image_url}/rep_up.png' alt='+' />,0,0,root
+75,send_msg,<img src='{style_image_url}/email_open.png' alt='{lang:pm_this_member}' />,0,0,root
+76,signin_icon,<img src='{style_image_url}/key.png' alt='{lang:macro__signin}' />,0,0,root
+77,snapback,<img src='{style_image_url}/snapback.png' alt='{lang:macro__view_post}' />,0,0,root
+78,sort_down,<img src='{style_image_url}/bullet_arrow_down.png' alt='V' />,0,0,root
+79,sort_up,<img src='{style_image_url}/bullet_arrow_up.png' alt='^' />,0,0,root
+80,spammer_off,<img src='{style_image_url}/spammer_off.png' alt='{lang:spm_off}' />,0,0,root
+81,spammer_on,<img src='{style_image_url}/spammer_on.png' alt='{lang:spm_on}' />,0,0,root
+82,topic_popup,<img src='{style_image_url}/topicpreview.png' alt='' />,0,0,root
+83,t_announcement,<img src='{style_image_url}/t_announcement.png' alt='{lang:announce_row}' />,0,0,root
+84,t_closed,<img src='{style_image_url}/t_locked.png' alt='{lang:pm_locked}' /><br />,0,0,root
+85,t_moved,<img src='{style_image_url}/t_moved.png' alt='{lang:pm_moved}' />,0,0,root
+86,t_read_dot,<img src='{style_image_url}/t_read_dot.png' alt='{lang:you_posted_here}' title='{lang:you_posted_here}' /><br />,0,0,root
+87,t_unread,<img src='{style_image_url}/t_unread.png' alt='{lang:pm_open_new}' /><br />,0,0,root
+88,t_unread_dot,<img src='{style_image_url}/t_unread_dot.png' alt='{lang:you_posted_here}' /><br />,0,0,root
+89,your_vote,<img src='{style_image_url}/bullet_star_rated.png' alt='{lang:macro__voted}' />,0,0,root
+90,f_read,<img src='{style_image_url}/f_read.png' alt='{lang:macro__readf}' title='{lang:macro__readf}' />,0,0,mobile
+91,f_redirect,<img src='{style_image_url}/f_redirect.png' alt='{lang:macro__redirect}' title='{lang:macro__redirect}' />,0,0,mobile
+92,f_unread,<img src='{style_image_url}/f_unread.png' alt='{lang:macro__unreadf}' title='{lang:macro__markread}' />,0,0,mobile
+93,msg_deleted,<img src='{style_image_url}/cross.png' title='{lang:macro__deletedmsg}' alt='*' />,0,0,mobile
+94,msg_icon,<img src='{style_image_url}/pm_nonew.png' title='{lang:macro__nonewmsg}' alt='*' />,0,0,mobile
+95,msg_icon_new,<img src='{style_image_url}/pm_new.png' title='{lang:macro__newmsg}' alt='*' />,0,0,mobile
+96,openid_small,<img src='{style_image_url}/openid.gif' alt='{lang:macro__openidicon}' />,0,0,mobile
+97,snapback,&nbsp;,0,0,mobile
+98,t_announcement,<img src='{style_image_url}/t_announcement.png' alt='{lang:announce_row}' />,0,0,mobile
+99,t_closed,<img src='{style_image_url}/t_locked.png' alt='{lang:pm_locked}' /><br />,0,0,mobile
+100,t_moved,<img src='{style_image_url}/t_moved.png' alt='{lang:pm_moved}' />,0,0,mobile
+101,t_read_dot,<img src='{style_image_url}/t_read_dot.png' alt='{lang:you_posted_here}' title='{lang:you_posted_here}' /><br />,0,0,mobile
+102,t_unread,<img src='{style_image_url}/t_unread.png' alt='{lang:pm_open_new}' /><br />,0,0,mobile
+103,t_unread_dot,<img src='{style_image_url}/t_unread_dot.png' alt='{lang:you_posted_here}' /><br />,0,0,mobile
+199,mini_rate_off,<img src='{style_image_url}/bullet_star_off.png' alt='-' class='mini_rate' />,0,0,mobile
+200,mini_rate_on,<img src='{style_image_url}/bullet_star.png' alt='*' class='mini_rate' />,0,0,mobile
+201,post_attach_link,&nbsp;,0,0,mobile
+202,rate_off,<img src='{style_image_url}/star_off.png' alt='-' class='rate_img' />,0,0,mobile
+203,rate_on,<img src='{style_image_url}/star.png' alt='*' class='rate_img' />,0,0,mobile
+480,t_unread_dot,<img src='{style_image_url}/t_unread_dot.png' alt='{lang:you_posted_here}' /><br />,9,9,
+479,t_unread,<img src='{style_image_url}/t_unread.png' alt='{lang:pm_open_new}' /><br />,9,9,
+478,t_read_dot,<img src='{style_image_url}/t_read_dot.png' alt='{lang:you_posted_here}' title='{lang:you_posted_here}' /><br />,9,9,
+477,t_moved,<img src='{style_image_url}/t_moved.png' alt='{lang:pm_moved}' />,9,9,
+476,t_closed,<img src='{style_image_url}/t_locked.png' alt='{lang:pm_locked}' /><br />,9,9,
+475,t_announcement,<img src='{style_image_url}/t_announcement.png' alt='{lang:announce_row}' />,9,9,
+474,spammer_on,<img src='{style_image_url}/spammer_on.png' alt='{lang:spm_on}' />,9,9,
+473,spammer_off,<img src='{style_image_url}/spammer_off.png' alt='{lang:spm_off}' />,9,9,
+471,sort_down,<img src='{style_image_url}/bullet_arrow_down.png' alt='V' />,9,9,
+472,sort_up,<img src='{style_image_url}/bullet_arrow_up.png' alt='^' />,9,9,
+470,snapback,<img src='{style_image_url}/snapback.png' alt='{lang:macro__view_post}' />,9,9,
+469,skinlink,"<div class='skin_link'><a href=""http://www.ipbforumskins.com"">IPB skin</a> by <a href=""http://www.ipbforumskins.com"">IPBForumSkins</a></div>",9,9,
+468,signin_icon,<img src='{style_image_url}/key.png' alt='{lang:macro__signin}' />,9,9,
+466,report_red_alert,<img src='{style_image_url}/reports/post_alert_1.png' alt='' />,9,9,
+467,send_msg,<img src='{style_image_url}/email_open.png' alt='{lang:pm_this_member}' />,9,9,
+465,report_green_alert,<img src='{style_image_url}/reports/post_alert_3.png' alt='' />,9,9,
+464,rep_up,<img src='{style_image_url}/rep_up.png' alt='+' />,9,9,
+463,rep_down,<img src='{style_image_url}/rep_down.png' alt='-' />,9,9,
+462,remove_poll_question,<img src='{style_image_url}/cross.png' alt='-' />,9,9,
+461,remove_poll_choice,<span class='cancel' title='{lang:remove_choice}'>&times;</span>,9,9,
+460,remove_friend,<img src='{style_image_url}/user_delete.png' alt='{lang:remove_friend}' />,9,9,
+459,rate_on,<img src='{style_image_url}/star.png' alt='*' class='rate_img' />,9,9,
+458,rate_off,<img src='{style_image_url}/star_off.png' alt='-' class='rate_img' />,9,9,
+456,popular_post,<img src='{style_image_url}/star_big.png' alt='*' />,9,9,
+457,post_attach_link,<img src='{style_image_url}/attachicon.gif'	alt='{lang:macro__attachment}' />,9,9,
+454,openid_small,<img src='{style_image_url}/openid.gif' alt='{lang:macro__openidicon}' />,9,9,
+455,pip_pip,<img src='{style_image_url}/bullet_black.png' alt='{lang:macro__pip}' />,9,9,
+453,openid_large,<img src='{style_image_url}/openid_logo.png' alt='{lang:macro__openidlogo}' />,9,9,
+452,mini_rate_on,<img src='{style_image_url}/bullet_star.png' alt='*' class='mini_rate' />,9,9,
+450,logo_img,{style_image_url}/logo.png,9,9,
+451,mini_rate_off,<img src='{style_image_url}/bullet_star_off.png' alt='-' class='mini_rate' />,9,9,
+448,live_small,<img src='{style_image_url}/live.gif' alt='{lang:macro__liveicon}' />,9,9,
+449,lock_icon,<img src='{style_image_url}/lock.png' alt='{lang:pm_locked}' />,9,9,
+447,live_large,<img src='{style_image_url}/live.gif' alt='{lang:macro__liveicon}' />,9,9,
+445,lim_twitter,<img src='{style_image_url}/loginmethods/twitter.png' alt='{lang:lim_twitter}' />,9,9,
+446,lim_windows,<img src='{style_image_url}/loginmethods/windows.png' alt='{lang:lim_windows}' />,9,9,
+444,lim_openid,<img src='{style_image_url}/loginmethods/openid.png' alt='{lang:lim_openid}' />,9,9,
+442,header_start,,9,9,
+443,lim_facebook,<img src='{style_image_url}/loginmethods/facebook.png' alt='{lang:lim_facebook}' />,9,9,
+441,header_end,<div class='border'>,9,9,
+439,gallery_slideshow,<img src='{style_image_url}/gallery/pictures.png' alt='' />,9,9,
+440,generic_cog,<img src='{style_image_url}/cog.png' alt='+' />,9,9,
+438,gallery_link,<img src='{style_image_url}/picture.png' alt='{lang:view_gallery}' />,9,9,
+437,gallery_image,<img src='{style_image_url}/gallery/image_add.png' alt='' />,9,9,
+435,galery_album_edit,<img src='{style_image_url}/folder_edit.png' alt='' />,9,9,
+436,gallery_album_delete,<img src='{style_image_url}/delete.png' alt='-' />,9,9,
+434,folder_new,<img src='{style_image_url}/folder_page.png' alt='{lang:macro__new}' />,9,9,
+433,folder_myconvo,<img src='{style_image_url}/email_go.png' alt='{lang:macro__myconvo}' />,9,9,
+432,folder_generic,<img src='{style_image_url}/folder.png' alt='{lang:macro__folder}' />,9,9,
+430,folder_empty,<img src='{style_image_url}/bin.png' alt='{lang:empty_folder_title}' />,9,9,
+431,folder_finished,<img src='{style_image_url}/folder.png' alt='{lang:macro__folder}' />,9,9,
+429,folder_drafts,<img src='{style_image_url}/folder.png' alt='{lang:macro__folder}' />,9,9,
+428,folder_delete,<img src='{style_image_url}/delete.png' alt='{lang:delete_folder_title}' />,9,9,
+427,find_topics_link,<img src='{style_image_url}/page_topic_magnify.png' alt='{lang:find_topics}' />,9,9,
+426,find_icon,<img src='{style_image_url}/magnifier.png' alt='{lang:macro__compose}' />,9,9,
+425,f_unread,<img src='{style_image_url}/f_icon.png' alt='{lang:macro__unreadf}' title='{lang:macro__markread}' />,9,9,
+424,f_redirect,<img src='{style_image_url}/f_redirect.png' alt='{lang:macro__redirect}' title='{lang:macro__redirect}' />,9,9,
+423,f_read,<img src='{style_image_url}/f_icon_read.png' alt='{lang:macro__readf}' title='{lang:macro__readf}' />,9,9,
+422,f_pass_unread,<img src='{style_image_url}/f_icon.png' alt='{lang:macro__unreadpw}' title='{lang:macro__markread}' />,9,9,
+421,f_pass_read,<img src='{style_image_url}/f_icon_read.png' alt='{lang:macro__readpw}' title='{lang:macro__readpw}' />,9,9,
+419,f_nav_sep,{lang:_rarr},9,9,
+420,f_newpost,<img src='{style_image_url}/new_post.png' alt='' title='{lang:first_unread_post}' />,9,9,
+418,f_cat_unread,<img src='{style_image_url}/f_icon.png' alt='{lang:macro__unreadcat}' title='{lang:macro__markread}' />,9,9,
+417,f_cat_read,<img src='{style_image_url}/f_icon_read.png' alt='{lang:macro__readcat}' title='{lang:macro__readcat}' />,9,9,
+416,edit_folder,<img src='{style_image_url}/folder_edit.png' alt='{lang:edit_folders}' />,9,9,
+415,dropdown,<img src='{style_image_url}/dropdown.png' alt='+' />,9,9,
+414,display_name,<img src='{style_image_url}/display_name.png' alt='' />,9,9,
+413,compose_icon,<img src='{style_image_url}/note_add.png' alt='{lang:macro__compose}' />,9,9,
+412,close_poll_form,<img src='{style_image_url}/accept.png' alt='x' />,9,9,
+410,blog_theme,<img src='{style_image_url}/blog/palette.png' alt='' />,9,9,
+411,box_end,</div>,9,9,
+408,blog_privateclub,<img src='{style_image_url}/blog/blog_privateclub.png' alt='' />,9,9,
+409,blog_rss_import,<img src='{style_image_url}/blog/rss-import.png' alt='' title='{lang:entry_imported_from_rss}' data-tooltip='{lang:entry_imported_from_rss}' />,9,9,
+407,blog_owner,<img src='{style_image_url}/blog/blog_owner.png' alt='' />,9,9,
+406,blog_option,<img src='{style_image_url}/blog/option.png' alt='' />,9,9,
+405,blog_locked,<img src='{style_image_url}/blog/lock.png' alt='' />,9,9,
+404,blog_link,<img src='{style_image_url}/book_open.png' alt='{lang:view_blog}' />,9,9,
+403,blog_header,<img src='{style_image_url}/blog/layout_header.png' alt='' />,9,9,
+402,blog_group,<img src='{style_image_url}/blog/blog_group.png' alt='' />,9,9,
+401,blog_editor,<img src='{style_image_url}/blog/blog_editor.png' alt='' />,9,9,
+400,blog_comments_new,<img src='{style_image_url}/blog/comments_new.png' alt='' />,9,9,
+399,blog_comments,<img src='{style_image_url}/blog/comments.png' alt='' />,9,9,
+398,blog_category,<img src='{style_image_url}/folder.png' alt='-' />,9,9,
+397,blog_blog,<img src='{style_image_url}/blog/blog.png' alt='' />,9,9,
+396,blog_blocks,<img src='{style_image_url}/blog/layout_add.png' alt='' />,9,9,
+395,blog_banish,<img src='{style_image_url}/blog/layout_delete.png' alt='' />,9,9,
+394,blog_add_entry,<img src='{style_image_url}/blog/book_add.png' alt='+' />,9,9,
+393,add_poll_question,<img src='{style_image_url}/add.png' alt='+' />,9,9,
+392,add_poll_choice,<img src='{style_image_url}/add.png' alt='+' />,9,9,
+391,add_friend,<img src='{style_image_url}/user_add.png' alt='{lang:add_friend}' />,9,9,
+390,add_folder,<img src='{style_image_url}/folder_add.png' alt='{lang:add_folder}' />,9,9,
+481,topic_popup,<img src='{style_image_url}/topicpreview.png' alt='' />,9,9,
+482,your_vote,<img src='{style_image_url}/bullet_star_rated.png' alt='{lang:macro__voted}' />,9,9,

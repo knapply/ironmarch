@@ -1,0 +1,5 @@
+sys_login_id,sys_cookie
+2,"a:1:{s:12:""memberFilter"";a:0:{}}"
+9,"a:1:{s:12:""memberFilter"";a:19:{s:15:""c_member_status"";s:3:""all"";s:15:""c_member_string"";s:0:"""";s:17:""c_member_contains"";s:20:""members_display_name"";s:22:""c_member_contains_type"";s:8:""contains"";s:22:""c_member_contains_text"";s:0:"""";s:10:""c_order_by"";s:6:""joined"";s:17:""c_order_direction"";s:4:""desc"";s:12:""c_post_count"";s:0:"""";s:17:""c_post_count_type"";s:2:""lt"";s:15:""c_date_reg_from"";s:0:"""";s:13:""c_date_reg_to"";s:0:"""";s:16:""c_date_post_from"";s:0:"""";s:14:""c_date_post_to"";s:0:"""";s:18:""c_date_active_from"";s:0:"""";s:16:""c_date_active_to"";s:0:"""";s:15:""c_primary_group"";i:0;s:17:""c_secondary_group"";i:0;s:19:""c_include_secondary"";i:0;s:15:""c_custom_fields"";s:0:"""";}}"
+1,"a:1:{s:12:""memberFilter"";a:0:{}}"
+7,"a:1:{s:12:""memberFilter"";a:0:{}}"

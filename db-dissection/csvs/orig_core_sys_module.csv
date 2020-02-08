@@ -1,0 +1,42 @@
+sys_module_id,sys_module_title,sys_module_application,sys_module_key,sys_module_description,sys_module_version,sys_module_protected,sys_module_position,sys_module_admin
+1,Global,core,global,"Global functions such as logging in, registering, etc",1.0.0,TRUE,1,FALSE
+2,User CP,core,usercp,The user&#39;s control panel,1.0.0,TRUE,2,FALSE
+3,Task Manager,core,task,Runs the tasks,1.0.0,TRUE,3,FALSE
+4,Attachments,core,attach,Attachments handling,1.0.0,TRUE,4,FALSE
+5,Logs,core,logs,Various IP.Board Logs,1.0.0,TRUE,1,TRUE
+6,Look &amp; Feel,core,templates,Manage your templates and CSS,1.0.0,TRUE,1,TRUE
+7,My Control Panel,core,mycp,"View your tasks, calendars and topics",1.0.0,TRUE,1,TRUE
+8,Diagnostics,core,diagnostics,,1.0.0,TRUE,2,TRUE
+9,System Settings,core,settings,Manage your system settings,1.0.0,TRUE,2,TRUE
+10,Post Content,core,posts,"Manage BBCode, banned words and more",1.0.0,TRUE,2,TRUE
+11,Languages,core,languages,Admin interface for managing languages,3.0.0,TRUE,3,TRUE
+12,Tools &amp; Settings,core,tools,Manage tools and settings for this installtion,1.0.0,TRUE,3,TRUE
+13,Applications &amp; Modules,core,applications,Manage tools and settings for this installtion,1.0.0,TRUE,4,TRUE
+14,Report Center,core,report,Admin interface for managing reported content,3.0.0,TRUE,7,TRUE
+15,System,core,system,"Manage your security center, languages, etc.",1.0.0,TRUE,9,TRUE
+16,SQL Management,core,sql,,1.0.0,TRUE,11,TRUE
+17,Help &amp; Support,core,help,,1.0.0,TRUE,12,TRUE
+18,Messaging,members,messaging,Personal Messaging Features,1.0.0,TRUE,0,FALSE
+19,Member List,members,list,Displays the member list,1.0.0,TRUE,0,FALSE
+20,Online List,members,online,Displays the online member list,1.0.0,TRUE,0,FALSE
+21,Profile,members,profile,View members profiles,1.0.0,TRUE,0,FALSE
+22,Members,members,members,Manage Members,1.0.0,TRUE,1,TRUE
+23,Member Groups,members,groups,Manage Member Groups,1.0.0,TRUE,2,TRUE
+24,Custom Profile Fields,members,cfields,Manage your custom profile fields and profile field groups,1.0,TRUE,3,TRUE
+25,Bulk Mail,members,bulkmail,Manage your bulk mail,1.0.0,TRUE,5,TRUE
+26,Manage Admin Restrictions,members,restrictions,Allows you to manage user and group ACP restrictions,1.0.0,FALSE,6,TRUE
+27,Forums,forums,forums,Interact with forums,1.0.0,TRUE,0,FALSE
+28,Posting,forums,post,Functions for making forum topics and posts,1.0.0,TRUE,1,FALSE
+29,Forums,forums,forums,Manage Forums,1.0.0,TRUE,0,TRUE
+30,Post Attachments,forums,attachments,Manage post attachments,1.0.0,TRUE,1,TRUE
+31,Tools,forums,tools,"Delete posts, etc",1.0.0,TRUE,2,TRUE
+32,Statistics Center,forums,statistics,,1.0.0,TRUE,3,TRUE
+33,RSS Management,forums,rss,,1.0.0,TRUE,4,TRUE
+34,Mobile App,core,mobileapp,Handles mobile application skins,1.0.0,TRUE,22,TRUE
+35,SEO Advice,core,seo,,,TRUE,23,TRUE
+36,Archiving,forums,archive,Module to manage post archiving,1.0.0,TRUE,19,TRUE
+37,Warnings,members,warnings,,3.2,FALSE,4,TRUE
+38,Public Calendar,calendar,calendar,,1.0.0,TRUE,0,FALSE
+39,Calendar Management,calendar,calendar,,1.0.0,TRUE,0,TRUE
+40,Calendar Settings,calendar,settings,,1.0.0,TRUE,1,TRUE
+41,Import iCalendar Feeds,calendar,icalendar,Management of iCalendar feed imports,1.0,TRUE,18,TRUE

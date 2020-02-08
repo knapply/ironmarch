@@ -1,0 +1,9 @@
+perm_id,perm_name
+1,Validating Forum Set
+3,Member Forum Set
+2,Guest Forum Set
+4,Admin Forum Set
+5,Banned Forum Set
+6,Moderator Forum Set
+7,Prisoner
+12,Newcomer

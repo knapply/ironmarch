@@ -1,0 +1,8 @@
+pf_id,pf_content,pf_type,pf_not_null,pf_position,pf_show_on_reg,pf_format,pf_group_id,pf_search_type
+3,null,Url,FALSE,0,FALSE,,1,loose
+5,"[""Not Telling"",""Male"",""Female""]",Select,TRUE,2,TRUE,,2,
+6,null,Text,TRUE,3,TRUE,<span class='ft'>{title}</span> <span class='fc'>{content}</span>,2,loose
+7,null,TextArea,FALSE,4,FALSE,,2,loose
+13,null,Url,FALSE,5,FALSE,,1,loose
+11,null,Text,TRUE,1,TRUE,"<span class=""ft"">{title}: </span><span class=""fc"">{content}</span>",2,exact
+12,null,Editor,FALSE,0,FALSE,,3,

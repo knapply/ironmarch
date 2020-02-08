@@ -246,10 +246,20 @@ to_write <- cleaned[vapply(cleaned,
                            function(.x) ncol(.x) != 0 && nrow(.x) != 0,
                            logical(1L))]
 
+to_gzip <- c("forums_posts", "orig_posts", "core_search_index")
 for (i in seq_along(to_write)) {
+  df <- to_write[[i]]
+  name <- names(to_write)[[i]]
+
+  if (name %in% to_gzip) {
+    path <- sprintf("db-dissection/csvs/%s.csv.gz", name)
+  } else {
+    path <- sprintf("db-dissection/csvs/%s.csv", name)
+  }
+  
   data.table::fwrite(
-    x = to_write[[i]],
-    file = sprintf("db-dissection/csvs/%s.csv.gz", names(to_write)[[i]])
+    x = df,
+    file = path
   )
 }
 

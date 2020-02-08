@@ -1,0 +1,29 @@
+task_id,task_title,task_file,task_next_run,task_week_day,task_month_day,task_hour,task_minute,task_cronkey,task_log,task_description,task_enabled,task_key,task_safemode,task_application
+1,Hourly Clean Out,cleanout.php,1458844680,-1,-1,-1,59,c86e4fce9eac27eeeeb60b648c8c97a4,TRUE,"Kill old sessions, reg images, searches",TRUE,cleanout,TRUE,core
+2,Content Cache Prune,contentcache.php,1458874800,-1,-1,3,0,ed1093827496d2865a49f34f828b713f,TRUE,Removes old content cache entries,TRUE,contentcache,TRUE,core
+3,Item Marking Clean Up,itemmarkers.php,1458864000,-1,-1,0,0,e86f06abc2cbcde3d95bdc2c48352baf,TRUE,Cleans out &#39;dead&#39; item markers,TRUE,itemmarkers,FALSE,core
+4,Prune Logs,logprune.php,1459058400,-1,27,6,0,89e1afc4024293053962d29b52d82897,TRUE,This task will prune logs based on your log pruning settings,TRUE,logprune,TRUE,core
+5,Clean Up MySQL,mysqlcleanup.php,1458845400,-1,-1,-1,30,2a192045a26dc519940e1e845fd15766,TRUE,Cleans up sleeping mysql procceses,TRUE,mysqlcleanup,TRUE,core
+24,Archiver,archive.php,1458844560,-1,-1,-1,15,65b2fa32944b5625355eddb6d256c8ae,TRUE,Task to archive items,TRUE,core_archiver,TRUE,core
+7,Optimize Database Tables,optimize.php,1458878400,-1,-1,4,0,686070535539d6e258f24611eb64ea50,TRUE,Task runs once a day to optimize your database tables,TRUE,optimizetables,FALSE,core
+8,POP3 Incoming Email,pop3email.php,1315842488,-1,-1,-1,30,35c4cff4ea0c0108b3e25d79b5fd4cf6,FALSE,Polls a POP3 account for incoming Emails,FALSE,pop3email,FALSE,core
+9,Daily Stats Rebuild,rebuildstats.php,1458864000,-1,-1,0,0,8a29604e94083c937a6c21aa15bb4911,TRUE,Rebuilds board statistics,TRUE,rebuildstats,TRUE,core
+10,Send Bulk Mail,bulkmail.php,1374129660,-1,-1,-1,-1,7e09800dd1ac9f41b83f8e6866766671,FALSE,"Dynamically assigned, no need to edit or change",FALSE,bulkmail,TRUE,members
+23,Back Up Batch Send,backup.php,1458844080,-1,-1,-1,-1,4c7eb93000c96c159b1ec94b0da707d9,FALSE,Sends a batch to the back up servers,TRUE,backup,TRUE,core
+12,Remove Locked Members,removelocked.php,1458874800,-1,-1,3,0,c3918dd87f9cc8188022d89852d9ef85,TRUE,Removes member accounts that are no longer locked,TRUE,remove_locked,TRUE,members
+13,Twitter/Facebook Sync,twitfacesync.php,1458844260,-1,-1,1,-1,9d40b574d9d62ec7f9b175b5513ec68d,TRUE,Resyncs Facebook/Twitter integration,TRUE,twitfacesync,TRUE,members
+14,Update Profile Views,update_profile_views.php,1458844260,-1,-1,1,-1,b60969600971221395bd192b20edb5bd,FALSE,Rebuilds the profile view counters,TRUE,update_profile_views,TRUE,members
+15,Remove Old Validating Members,removevalidating.php,1458871200,-1,-1,2,0,f1609caf357863d874dd2ec4432acbef,TRUE,"If you enable the &#39;Prune validating members after x days&#39; setting, this task will remove those members",TRUE,validating,TRUE,members
+16,Announcements Update,announcements.php,1458854760,-1,-1,4,-1,33a801bdadfd7eae03cf4890ebd49362,TRUE,Rebuilds cache and expires out of date announcements,TRUE,announcements,TRUE,forums
+17,Daily Clean Out,dailycleanout.php,1458874800,-1,-1,3,0,8fb12b918a670a2d2d56971f5ae28494,TRUE,Prunes topic subscriptions and old read topic entries,TRUE,dailycleanout,TRUE,forums
+18,Daily Topic &amp; Forum Digest,dailydigest.php,1458845280,-1,-1,-1,20,bba82188cf5b96d7335fe79a393166bf,TRUE,Emails out daily topic &amp; forum digest emails,TRUE,dailydigest,TRUE,forums
+19,Remove deleted items,permadelete.php,1458858540,-1,-1,6,-1,7f6c3bd367df2ffd421ddf4c41a18e9b,TRUE,Removes topics and posts marked for deletion,TRUE,forums_permadelete,FALSE,forums
+20,RSS Import Update,rssimport.php,1458844320,-1,-1,-1,30,d6836518876abaa382b0382335d2249e,TRUE,Imports any new RSS articles,TRUE,rssimport,TRUE,forums
+21,Update Topic Views Counter,updateviews.php,1458850140,-1,-1,3,-1,1cd0f221afe6630219414b82c283dcba,FALSE,Used when topic views are not incremented immediately,TRUE,updateviews,TRUE,forums
+22,Weekly Topic &amp; Forum Digest,weeklydigest.php,1458844080,-1,-1,-1,15,13d282286ee9bc11a82793962b7ab967,TRUE,Emails weekly topic &amp; forum digest emails,TRUE,weeklydigest,TRUE,forums
+25,Sitemap Generator,sitemapgenerator.php,1458844920,-1,-1,-1,0,479dd7c25c575b75a4738b727c9d1aef,TRUE,Generates a sitemap for your forum.,TRUE,ipseo_sitemap_generator,FALSE,core
+26,Minify Cleanup,minifycleanup.php,1459134000,1,-1,3,0,3afdf4865e1a85149d384c34d02080cf,TRUE,Clean out old files created by minify,TRUE,minifycleanup,TRUE,core
+27,Prune Notifications,prunenotifications.php,1458855120,-1,-1,6,-1,68de4b39e66fa4da91ee36c1022281ae,TRUE,Removes older notifications,TRUE,prunenotifications,TRUE,members
+28,Remove Warning Points,warnings.php,1458864000,-1,-1,0,0,f8fe20d5b7415ba3b8936642ca290bb3,TRUE,,TRUE,warnings,FALSE,members
+29,Birthday and Events Cache,calendarevents.php,1458877260,-1,-1,12,-1,f51756495c51e8be021155dd3cbdcb1e,TRUE,Caches calendar events &amp; birthdays,TRUE,calendarevents,TRUE,calendar
+30,Recache calendar feeds,importfeeds.php,1458844320,-1,-1,1,-1,0b43e4997f11445a41c3017e23d7e2ad,TRUE,Recaches stored iCalendar feeds,TRUE,importcalendarfeeds,FALSE,calendar

@@ -1,0 +1,69 @@
+bbcode_id,bbcode_title,bbcode_desc,bbcode_tag,bbcode_replace,bbcode_useoption,bbcode_example,bbcode_menu_option_text,bbcode_menu_content_text,bbcode_single_tag,bbcode_php_plugin,bbcode_no_parsing,bbcode_protected,bbcode_aliases,bbcode_optional_option,bbcode_image
+1,Post Snap Back,This tag displays a little linked image which links back to a post - used when quoting posts from the board. Opens in same window by default.,snapback,,FALSE,[snapback]100[/snapback],,,FALSE,defaults.php,FALSE,FALSE,,FALSE,
+2,Right,Aligns content to the right of the posting area,right,<p class='bbc_right'>{content}</p>,FALSE,[right]Some text here[/right],,,FALSE,,FALSE,FALSE,,FALSE,
+3,Left,Aligns content to the left of the post,left,<p class='bbc_left'>{content}</p>,FALSE,[left]Left aligned text[/left],,,FALSE,,FALSE,FALSE,,FALSE,
+4,Center,Aligns content to the center of the posting area.,center,<p class='bbc_center'>{content}</p>,FALSE,[center]Centered Text[/center],,Enter content to be centered,FALSE,,FALSE,FALSE,,FALSE,
+5,Topic Link,This tag provides an easy way to link to a topic,topic,"<a href='{base_url}showtopic={option}' class=""bbc_url"">{content}</a>",TRUE,[topic=1]Click me![/topic],Enter the topic ID,Enter the title for this link,FALSE,,FALSE,FALSE,,FALSE,
+6,Post Link,This tag provides an easy way to link to a post.,post,"<a href='{base_url}act=findpost&amp;pid={option}' class=""bbc_url"">{content}</a>",TRUE,[post=1]Click me![/post],Enter the Post ID,Enter the title for this link,FALSE,,FALSE,FALSE,,FALSE,
+7,Spoiler,Spoiler tag,spoiler,"<div class='bbc_spoiler'>
+	<span class='spoiler_title'>Spoiler</span> <input type='button' class='bbc_spoiler_show' value='Show' />
+	<div class='bbc_spoiler_wrapper'><div class='bbc_spoiler_content' style=""display:none;"">{content}</div></div>
+</div>",FALSE,[spoiler]Some hidden text[/spoiler],,Enter the text to be masked,FALSE,,FALSE,FALSE,,FALSE,
+8,Acronym,Allows you to make an acronym that will display a description when moused over,acronym,<acronym title='{option}' class='bbc'>{content}</acronym>,TRUE,[acronym='Laugh Out Loud']lol[/acronym],Enter the description for this acronym (EG: Laugh Out Loud),Enter the acronym (EG: lol),FALSE,,FALSE,FALSE,,FALSE,
+9,Bold Text,Makes text bold,b,<strong class='bbc'>{content}</strong>,FALSE,[b]This text is bold[/b],,,FALSE,,FALSE,TRUE,,FALSE,
+10,Italic Text,Makes the text italic,i,<em class='bbc'>{content}</em>,FALSE,[i]This text is italicized[/i],,,FALSE,,FALSE,TRUE,,FALSE,
+11,Underlined Text,Makes the text underlined,u,<span class='bbc_underline'>{content}</span>,FALSE,[u]This text is underlined[/u],,,FALSE,,FALSE,TRUE,,FALSE,
+12,Horizontal Rule,Adds a horizontal rule to separate text,hr,<span class='bbc_hr'>&nbsp;</span>,FALSE,[hr],,,TRUE,,FALSE,FALSE,,FALSE,
+13,Code,Allows you to enter general code,code,,FALSE,[code]$text = 'Some long code here';[/code],,Code,FALSE,defaults.php,TRUE,TRUE,codebox,FALSE,
+14,PHP Code,Allows you to enter PHP code into a formatted/highlighted syntax box,php,"<pre class='prettyprint'>
+{content}
+</pre>",FALSE,"[php]$variable = true;
+
+print_r($variable);[/php]",,PHP Code,FALSE,,TRUE,TRUE,,FALSE,
+15,HTML Code,Allows you to enter formatted/syntax-highlighted HTML code,html,"<pre class='prettyprint lang-html'>
+{content}
+</pre>",FALSE,"[html]<div class='outer'>
+  <p>Hello World</p>
+ </div>[/html]",,HTML Code,FALSE,,TRUE,TRUE,,FALSE,
+16,SQL Code,Allows you to enter formatted/syntax-highlighted SQL code,sql,"<pre class='prettyprint lang-sql'>
+{content}
+</pre>",FALSE,"[sql]SELECT p.*, t.* FROM posts p LEFT JOIN topics t ON t.tid=p.topic_id WHERE t.tid=7[/sql]",,SQL Commands,FALSE,,TRUE,TRUE,,FALSE,
+17,XML Code,Allows you to enter formatted/syntax-highlighted XML code,xml,"<pre class='prettyprint lang-xml'>
+{content}
+</pre>",FALSE,"[xml]<outer>
+ <inner>
+  <tag param='1'>Test</tag>
+ </inner>
+</outer>[/xml]",,XML Code,FALSE,,TRUE,TRUE,,FALSE,
+18,URL,A standard HTML url anchor tag,url,,TRUE,"[url=http://google.com]Google[/url]
+
+[url]http://mysite.com[/url]",,,FALSE,defaults.php,FALSE,TRUE,,TRUE,
+19,Image,Displays linked images,img,,TRUE,[img=http://www.google.com/intl/en_ALL/images/logo.gif],,,TRUE,defaults.php,TRUE,TRUE,,FALSE,
+20,Quote,Displayed quoted text within post content,quote,,FALSE,"[quote]Some generic content here[/quote]
+
+[quote name='Username' date='Jun 30 2008, 10:39 AM' post='1735291']Quoted post content here[/quote]",,,FALSE,defaults.php,FALSE,TRUE,,FALSE,
+21,Indent,Indents text a few spaces from the left content border,indent,<div class='bbc_indent' style='margin-left:{option}px'>{content}</div>,TRUE,[indent=1]Indent this text to make it stand out[/indent],,,TRUE,defaults.php,FALSE,TRUE,,TRUE,
+22,Lists,"Generate HTML lists.  Supports multi-dimensional lists, and different list marker types.",list,,FALSE,"[list][*]Unordered list
+[/list]
+
+[list=1][*]Ordered list
+[/list]
+
+[list=A][*]Generate different marker types (you can use a, A, i, I, and 1)
+[list][*]This is multi-dimensional..
+[/list]
+[/list]",,,FALSE,defaults.php,FALSE,TRUE,,FALSE,
+23,strike,Displays text striked-out,strike,<del class='bbc'>{content}</del>,FALSE,[strike]Striked out text[/strike],,,FALSE,,FALSE,TRUE,s,FALSE,
+24,Subscript text,Displays text lowered on the line,sub,<sub class='bbc'>{content}</sub>,FALSE,Carbon Dioxide's chemical composition is CO[sub]2[/sub],,,FALSE,,FALSE,TRUE,,FALSE,
+25,Superscript Text,Displays superscript text,sup,<sup class='bbc'>{content}</sup>,FALSE,"The mathematical way to write ""x squared"" is x[sup]2[/sup]",,,FALSE,,FALSE,TRUE,,FALSE,
+26,Email address,Formats an email address as a mailto link,email,<a href='mailto:{option}' title='{text.bbc_email}' class='bbc_email'>{content}</a>,TRUE,"Please email [email=admin@mysite.com]the admin[/email]
+
+My email address is [email]my@emailaddress.com[/email]",,,FALSE,,FALSE,TRUE,,TRUE,
+27,Background-color,Adds a background color behind the text,background,<span style='background-color: {option}'>{content}</span>,TRUE,[background=red]Red background behind this text[/background],,,FALSE,,FALSE,TRUE,,FALSE,
+28,Color text,Applies a different text-color to the text,color,<span style='color: {option}'>{content}</span>,TRUE,[color=blue]This text is blue[/color],,,FALSE,,FALSE,TRUE,,FALSE,
+29,Size tag,Makes text bigger or smaller in font-size,size,,TRUE,[size=4]This is larger text[/size],,,FALSE,defaults.php,FALSE,TRUE,,FALSE,
+30,Font tag,Applies a different font-family to the text,font,<span style='font-family: {option}'>{content}</span>,TRUE,[font=Tahoma]This text uses Tahoma font-family styling[/font],,,FALSE,,FALSE,TRUE,,FALSE,
+31,Member,"Given a member name, a link is automatically generated to the member's profile",member,,TRUE,[member=admin] runs this site.,Member Name,,TRUE,defaults.php,FALSE,FALSE,,FALSE,
+32,Media,Allows a user to post media content from certain common media sites,media,,TRUE,[media]http://www.youtube.com/watch?v=YqqLx-2vUr0[/media],Dimensions (Flash Only),Media URL,FALSE,defaults.php,TRUE,TRUE,"video,movie,flash,blogmedia,youtube",TRUE,
+33,Twitter,A tag to link to a user's twitter account,twitter,"<a href='http://www.twitter.com/{content}' class=""bbc_url"">@{content}</a>",FALSE,[twitter]userName[/twitter],,Twitter Username,FALSE,,TRUE,FALSE,,FALSE,twitter.png
+34,Shared Media,Allows users to share media throughout IP.Board and addon applications,sharedmedia,,TRUE,[sharedmedia=core:attachments:123],,,TRUE,defaults.php,TRUE,TRUE,,FALSE,

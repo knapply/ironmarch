@@ -1,0 +1,5 @@
+app_id,app_title,app_public_title,app_description,app_author,app_version,app_long_version,app_directory,app_added,app_position,app_protected,app_location,app_website,app_update_check
+1,System,Help Files,Manage global tools and settings,"Invision Power Services, Inc.",3.4.7,34013,core,2011-09-12T15:47:14Z,1,TRUE,root,http://www.invisionpower.com/,https://www.invisionpower.com/clients/resource_updates.php?resource=core
+2,Members,Members,Manage members and groups,"Invision Power Services, Inc.",3.4.7,34013,members,2011-09-12T15:47:17Z,2,TRUE,root,http://www.invisionpower.com/,https://www.invisionpower.com/clients/resource_updates.php?resource=core
+3,Forums,Forums,Manage forums and posts,"Invision Power Services, Inc.",3.4.7,34013,forums,2011-09-12T15:47:19Z,3,TRUE,root,http://www.invisionpower.com/apps/board/,https://www.invisionpower.com/clients/resource_updates.php?resource=board
+4,Fascist Calendar,Fascist Calendar,,,,33004,calendar,2015-05-12T14:21:25Z,4,FALSE,ips,,
