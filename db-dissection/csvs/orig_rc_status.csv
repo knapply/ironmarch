@@ -1,4 +1,0 @@
-status,title,points_per_report,minutes_to_apoint,is_new,is_complete,is_active,rorder
-1,New Report,TRUE,5,TRUE,FALSE,TRUE,1
-2,Under Review,TRUE,5,FALSE,FALSE,TRUE,2
-3,Complete,FALSE,0,FALSE,TRUE,FALSE,3

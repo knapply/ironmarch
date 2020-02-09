@@ -10,5 +10,6 @@
 ^pkgdown$
 ^LICENSE.md$
 ^playground$
-^inst/raw-data$
-^db-dissection$
+^inst$
+^use-all-the-data\.jpeg$
+^man-roxygen$

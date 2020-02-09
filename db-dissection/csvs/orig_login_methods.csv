@@ -1,4 +1,0 @@
-login_id,login_title,login_description,login_folder_name,login_settings,login_enabled,login_safemode,login_order
-1,IPB Internal,The standard method of authentication,internal,FALSE,TRUE,FALSE,1
-2,LDAP Authentication,LDAP / Active Directory Authentication,ldap,TRUE,FALSE,TRUE,4
-3,External Database,Authentication via an external database,external,FALSE,FALSE,TRUE,5

@@ -1,6 +1,0 @@
-com_id,class_title,class_desc,my_class,group_can_report,mod_group_perm,extra_data,app
-1,Simple Plugin Example,"Plugin that does not require any programming, but does need to be configured.",default,",3,4,6,7,8,9,10,11,12,13,",",4,6,10,","a:5:{s:14:""required_input"";a:1:{s:8:""video_id"";s:13:""[^A-Za-z0-9_]"";}s:10:""string_url"";s:41:""http://www.youtube.com/watch?v={video_id}"";s:12:""string_title"";s:25:""#PAGE_TITLE# ({video_id})"";s:13:""section_title"";s:7:""YouTube"";s:11:""section_url"";s:22:""http://www.youtube.com"";}",core
-2,Forum Plugin,This is the plugin used for reporting posts on the forum.,post,",1,2,3,4,6,7,8,9,10,11,12,13,",",4,6,10,","a:1:{s:15:""report_supermod"";i:1;}",forums
-3,Private Messages Plugin,This plugin allows private messages to be reported,messages,",1,2,3,4,6,7,8,9,10,11,12,13,",",4,6,10,","a:1:{s:18:""plugi_messages_add"";s:5:""4"";}",members
-4,Member Profiles,Allows you to report member profiles,profiles,",1,2,3,4,6,7,8,9,10,11,12,13,",",4,6,10,",N;,members
-5,Calendar Plugin,Allows calendar entries to be reported,calendar,",1,2,3,4,6,",",4,6,",N;,calendar

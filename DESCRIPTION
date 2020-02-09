@@ -1,6 +1,6 @@
 Package: ironmarch
 Title: Iron March
-Version: 0.1
+Version: 0.0.1
 Authors@R:
         c(
             person("Brendan", "Knapp", 
@@ -22,9 +22,12 @@ Imports:
     stringi
 Suggests:
     covr,
+    DBI,
     igraph,
     knitr,
     network,
+    odbc,
+    RMariaDB,
     RSiena,
     sf,
     tergm,

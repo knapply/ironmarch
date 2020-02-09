@@ -2,6 +2,8 @@
 output:
   github_document:
     html_preview: true
+    toc: true
+    toc_depth: 3
   html_document:
     keep_md: yes
 always_allow_html: yes
@@ -20,7 +22,7 @@ knitr::opts_chunk$set(
   message = FALSE,
   warning = FALSE
 )
-options(width = 150)
+options(width = 170)
 ```
 
 
@@ -34,7 +36,7 @@ options(width = 150)
 [![Codecov test coverage](https://codecov.io/gh/knapply/ironmarch/branch/master/graph/badge.svg)](https://codecov.io/gh/knapply/ironmarch?branch=master)
 [![GitHub last commit](https://img.shields.io/github/last-commit/knapply/ironmarch.svg)](https://github.com/knapply/ironmarch/commits/master)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Depends](https://img.shields.io/badge/Depends-GNU_R>=3.3-blue.svg)](https://www.r-project.org/)
+[![Depends](https://img.shields.io/badge/Depends-GNU_R>=3.5-blue.svg)](https://www.r-project.org/)
 [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/knapply/ironmarch.svg)](https://github.com/knapply/ironmarch)
 <!-- [![HitCount](http://hits.dwyl.io/knapply/ironmarch.svg)](http://hits.dwyl.io/knapply/ironmarch) -->
 <!-- badges: end -->
@@ -42,29 +44,101 @@ options(width = 150)
 <!-- [![R build status](https://github.com/knapply/ironmarch/workflows/R-CMD-check/badge.svg)](https://github.com/knapply/ironmarch/actions?workflow=R-CMD-check) -->
 
 
-# Introduction
+## Introduction
 
-```{r}
-(`# TODO` <- TRUE)
-```
+`{ironmarch}` contains data related to _ironmarch.org_, a now-defunct neo-Nazi/white supremacist message board.
 
-# Installation
+The site data were extracted from the MySQL database that was originally posted on Internet Archive. You can find more information in [Bellingcat's description](https://www.bellingcat.com/resources/how-tos/2019/11/06/massive-white-supremacist-message-board-leak-how-to-access-and-interpret-the-data/).
+
+## Installation
 
 ```{r, eval=FALSE}
 if (!requireNamespace("remotes", quietly = TRUE)) install.packages("remotes")
 remotes::install_github("knapply/ironmarch")
 ```
 
-# Usage
+## Usage
 
 ```{r}
 library(ironmarch)
 ```
 
-# TBD
+
+The site data are stored in a series of named lists containing data frames, all of which are prefixed with `im_`.
+
+* The following lists correspond to tables whose original names are prefixed with `core_`, `orig_`, and `forums_`:
+    + `ironmarch::im_core_dfs`
+    * `ironmarch::im_orig_dfs`
+    * `ironmarch::im_forums_dfs`
+* The remaining tables are stored in `ironmarch::im_other_dfs`.
+
+The data frames are stored as `<data.table>`s.
 
 ```{r}
-(`# TODO` <- TRUE)
+library(data.table)
+options(datatable.print.trunc.cols = TRUE)
+```
+
+The following code provides examples of accessing individual tables from each the `im_*` lists.
+
+```{r}
+im_core_dfs$core_members
+im_orig_dfs$orig_members
+im_forums_dfs$forums_posts
+im_other_dfs$calendar_calendars
+```
+
+If you're a `tidyverse` fan, you can convert the data frames using `tibble::as_tibble()` if desired.
+
+```{r}
+library(tidyverse)
+
+im_core_dfs$core_members %>% as_tibble()
+im_orig_dfs$orig_members %>% as_tibble()
+im_forums_dfs$forums_posts %>% as_tibble()
+im_other_dfs$calendar_calendars %>% as_tibble()
+```
+
+
+## All the Data 
+
+```{r, echo=FALSE}
+knitr::include_graphics("man/figures/use-all-the-data.jpeg")
+```
+
+
+
+```{r, echo=FALSE, comment=""}
+walk_glimpse <- function(x, prefix) {
+  purrr::iwalk(x, ~ {
+    cat("\n\n>", sprintf("%s$%s", prefix, .y), "\n\n")
+    dplyr::glimpse(.x)
+  })
+}
+```
+
+### `core_*`
+
+```{r, echo=FALSE, comment=""}
+walk_glimpse(im_core_dfs, "ironmarch::im_core_dfs")
+```
+
+### `orig_*`
+
+```{r, echo=FALSE, comment=""}
+walk_glimpse(im_orig_dfs, "ironmarch::im_orig_dfs")
+```
+
+### `forums_*`
+
+```{r, echo=FALSE, comment=""}
+walk_glimpse(im_forums_dfs, "ironmarch::im_forums_dfs")
+```
+
+### Other
+
+```{r, echo=FALSE, comment=""}
+walk_glimpse(im_other_dfs, "ironmarch::im_other_dfs")
 ```
 
 
