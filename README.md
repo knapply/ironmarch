@@ -179,69 +179,6 @@ im_core_dfs$core_members %>% as_tibble()
     #> #   pp_customization <chr>, timezone <chr>, pp_cover_photo <chr>, members_bitoptions2 <int>, create_menu <chr>, marked_site_read <int>, pp_cover_offset <int>,
     #> #   acp_skin <lgl>, acp_language <lgl>, member_title <chr>, member_posts <int>, member_last_post <int>, member_streams <chr>, photo_last_update <dttm>
 
-``` r
-im_orig_dfs$orig_members %>% as_tibble()
-```
-
-    #> # A tibble: 763 x 51
-    #>    member_id name  member_group_id email joined              ip_address posts title allow_admin_mai… time_offset  skin warn_level warn_lastwarn last_post          
-    #>        <int> <chr>           <int> <chr> <dttm>              <chr>      <int> <chr> <lgl>            <chr>       <int>      <int>         <int> <dttm>             
-    #>  1         1 Alex…               4 slav… 2011-09-12 15:46:59 178.140.1…  5613 My s… FALSE            3               9          0             0 2016-03-20 19:37:40
-    #>  2         2 Kacen              13 illu… 2011-09-12 15:52:30 68.37.21.…  1267 THE … TRUE             -5              0          0             0 2015-09-25 18:11:45
-    #>  3         3 Bloo…              13 rene… 2011-09-12 18:10:11 68.10.255…   487 14/8… TRUE             -8              9          0             0 2015-12-04 02:23:51
-    #>  4         4 Mier…              13 homi… 2011-09-12 20:27:35 82.29.169…  1704 Mult… FALSE            0               0          0             0 2016-02-29 22:56:56
-    #>  5         5 Will…               5 tash… 2011-09-12 20:58:17 90.214.15…   463 A fox TRUE             0               0          0             0 2012-01-26 15:02:10
-    #>  6         6 Inte…              13 mich… 2011-09-12 21:14:03 86.7.229.…     9 <NA>  TRUE             0              NA         NA             0 2013-04-09 07:13:04
-    #>  7         7 Benj…               4 benj… 2011-09-13 01:22:58 81.141.31…  3127 2 Mi… TRUE             0               9          0             0 2016-02-25 01:53:44
-    #>  8         8 Mr. …              13 elei… 2011-09-13 04:24:07 98.198.24…   167 <NA>  TRUE             -6              0          0             0 2012-10-30 06:52:01
-    #>  9         9 Woma…               5 sol.… 2011-09-13 10:27:52 88.147.27…   997 <NA>  FALSE            1               0          0             0 2012-08-25 08:34:25
-    #> 10        10 Dene…              13 8056… 2011-09-13 12:13:09 72.76.138…    96 <NA>  TRUE             -5              0          0             0 2013-04-09 04:20:54
-    #> # … with 753 more rows, and 37 more variables: restrict_post <chr>, view_sigs <lgl>, bday_day <int>, bday_month <int>, bday_year <int>, msg_count_new <int>,
-    #> #   msg_count_total <int>, msg_count_reset <lgl>, msg_show_notification <lgl>, last_visit <dttm>, last_activity <dttm>, dst_in_use <lgl>, mod_posts <chr>,
-    #> #   auto_track <chr>, temp_ban <chr>, login_anonymous <chr>, ignored_users <chr>, mgroup_others <chr>, org_perm_id <chr>, member_login_key <chr>,
-    #> #   member_login_key_expire <dttm>, members_auto_dst <lgl>, members_display_name <chr>, members_seo_name <chr>, members_cache <chr>, members_disable_pm <int>,
-    #> #   members_l_display_name <chr>, members_l_username <chr>, failed_logins <chr>, members_profile_views <int>, members_pass_hash <chr>, members_pass_salt <chr>,
-    #> #   member_banned <lgl>, member_uploader <chr>, members_bitoptions <int>, members_day_posts <chr>, notification_cnt <int>
-
-``` r
-im_forums_dfs$forums_posts %>% as_tibble()
-```
-
-    #> # A tibble: 195,128 x 15
-    #>       pid append_edit edit_time           author_id author_name ip_address post_date           post  queued topic_id new_topic edit_name post_key post_edit_reason
-    #>     <int> <lgl>       <dttm>                  <int> <chr>       <chr>      <dttm>              <chr>  <int>    <int> <lgl>     <chr>     <chr>    <chr>           
-    #>  1    202 FALSE       NA                          7 MoonmanKKK  81.141.31… 2011-09-15 22:08:51 "<p>…      0       47 FALSE     <NA>      89e750e… <NA>            
-    #>  2    203 FALSE       NA                         16 Talleyrand  152.33.58… 2011-09-15 22:10:42 "\n<…      0       11 FALSE     <NA>      0bccae6… <NA>            
-    #>  3    532 FALSE       2011-09-19 23:14:09         5 Will to Po… 90.219.24… 2011-09-19 23:13:59 "\n<…      0      107 FALSE     Will to … 58e8b72… <NA>            
-    #>  4 114067 FALSE       NA                       7508 RIGHT WING… 80.212.44… 2015-05-16 18:00:29 "\n<…      0     5166 FALSE     <NA>      ac5b3c0… <NA>            
-    #>  5 114068 FALSE       2015-05-16 18:07:42         0 Nihonjin M… 73.222.21… 2015-05-16 18:02:08 "<p>…      0     5166 FALSE     Nihonjin… 3eb3ae5… <NA>            
-    #>  6 114069 FALSE       2015-05-16 19:12:42      7481 ¡VIVA LA R… 86.181.21… 2015-05-16 18:06:36 "\n<…      0     5165 FALSE     Generalp… a72ee7a… <NA>            
-    #>  7 114070 FALSE       NA                       9144 Neizbezhno… 121.215.1… 2015-05-16 18:14:36 "<p>…      0     5165 FALSE     <NA>      e2e1256… <NA>            
-    #>  8 114071 FALSE       NA                       6321 Culius Jae… 65.28.106… 2015-05-16 18:16:41 "\n<…      0     5167 TRUE      <NA>      774875f… <NA>            
-    #>  9      4 FALSE       NA                          1 Alexander … 178.140.1… 2011-09-13 01:06:06 "\n<…      0        3 TRUE      <NA>      cbd8458… <NA>            
-    #> 10     83 FALSE       NA                         16 Talleyrand  152.33.17… 2011-09-14 04:43:41 "\n<…      0       37 TRUE      <NA>      0bac739… <NA>            
-    #> # … with 195,118 more rows, and 1 more variable: pdelete_time <dttm>
-
-``` r
-im_other_dfs$calendar_calendars %>% as_tibble()
-```
-
-    #> # A tibble: 12 x 4
-    #>    cal_id cal_position cal_title_seo                 cal_color
-    #>     <int>        <int> <chr>                         <chr>    
-    #>  1      1            5 italian-nationalist-calendar  #000000  
-    #>  2      2            8 serbian-nationalist-calendar  #0050a1  
-    #>  3      3            6 russian-nationalist-calendar  #c2c2c2  
-    #>  4      4           10 orthodox-christian-calendar   #d4a900  
-    #>  5      5           11 catholic-christian-calendar   #6e4f99  
-    #>  6      6            4 greek-nationalist-calendar    #0091ff  
-    #>  7      7            3 german-nationalist-calendar   #e60000  
-    #>  8      8            1 american-nationalist-calendar #17d4cd  
-    #>  9      9           12 uncategorized-dates           #667070  
-    #> 10     10            7 romanian-nationalist-calendar #249637  
-    #> 11     11            2 british-nationalist-calendar  #514999  
-    #> 12     12            9 spanish-nationalist-calendar  #eb9500
-
 ## All the Data
 
 <img src="man/figures/use-all-the-data.jpeg" width="259" style="display: block; margin: auto;" />

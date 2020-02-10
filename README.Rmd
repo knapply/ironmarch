@@ -92,9 +92,6 @@ If you're a `tidyverse` fan, you can convert the data frames using `tibble::as_t
 library(tidyverse)
 
 im_core_dfs$core_members %>% as_tibble()
-im_orig_dfs$orig_members %>% as_tibble()
-im_forums_dfs$forums_posts %>% as_tibble()
-im_other_dfs$calendar_calendars %>% as_tibble()
 ```
 
 
