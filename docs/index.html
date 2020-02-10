@@ -68,10 +68,10 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-
-<ul>
-<li>
-<a href="#ironmarch"><code>{ironmarch}</code></a>
+<div id="ironmarch" class="section level1">
+<div class="page-header"><h1 class="hasAnchor">
+<a href="#ironmarch" class="anchor"></a><code>{ironmarch}</code>
+</h1></div>
 <ul>
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#installation">Installation</a></li>
@@ -86,14 +86,7 @@
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-<!-- README.Rmd generates README.md. --><div id="ironmarch" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#ironmarch" class="anchor"></a><code>{ironmarch}</code>
-</h1></div>
-<!-- badges: start -->
-
+<!-- README.Rmd generates README.md. --><!-- # `{ironmarch}` --><!-- badges: start -->
 <div id="introduction" class="section level2">
 <h2 class="hasAnchor">
 <a href="#introduction" class="anchor"></a>Introduction</h2>
@@ -206,57 +199,6 @@
 <span id="cb13-19"><a href="#cb13-19"></a><span class="co">#&gt; #   pp_reputation_points &lt;int&gt;, pp_gravatar &lt;chr&gt;, pp_photo_type &lt;chr&gt;, signature &lt;chr&gt;, fb_bwoptions &lt;lgl&gt;, tc_last_sid_import &lt;chr&gt;, tc_bwoptions &lt;lgl&gt;,</span></span>
 <span id="cb13-20"><a href="#cb13-20"></a><span class="co">#&gt; #   pp_customization &lt;chr&gt;, timezone &lt;chr&gt;, pp_cover_photo &lt;chr&gt;, members_bitoptions2 &lt;int&gt;, create_menu &lt;chr&gt;, marked_site_read &lt;int&gt;, pp_cover_offset &lt;int&gt;,</span></span>
 <span id="cb13-21"><a href="#cb13-21"></a><span class="co">#&gt; #   acp_skin &lt;lgl&gt;, acp_language &lt;lgl&gt;, member_title &lt;chr&gt;, member_posts &lt;int&gt;, member_last_post &lt;int&gt;, member_streams &lt;chr&gt;, photo_last_update &lt;dttm&gt;</span></span></code></pre></div>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>im_orig_dfs<span class="op">$</span>orig_members <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">as_tibble</span>()</span></code></pre></div>
-<div class="sourceCode" id="cb15"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="co">#&gt; # A tibble: 763 x 51</span></span>
-<span id="cb15-2"><a href="#cb15-2"></a><span class="co">#&gt;    member_id name  member_group_id email joined              ip_address posts title allow_admin_mai… time_offset  skin warn_level warn_lastwarn last_post          </span></span>
-<span id="cb15-3"><a href="#cb15-3"></a><span class="co">#&gt;        &lt;int&gt; &lt;chr&gt;           &lt;int&gt; &lt;chr&gt; &lt;dttm&gt;              &lt;chr&gt;      &lt;int&gt; &lt;chr&gt; &lt;lgl&gt;            &lt;chr&gt;       &lt;int&gt;      &lt;int&gt;         &lt;int&gt; &lt;dttm&gt;             </span></span>
-<span id="cb15-4"><a href="#cb15-4"></a><span class="co">#&gt;  1         1 Alex…               4 slav… 2011-09-12 15:46:59 178.140.1…  5613 My s… FALSE            3               9          0             0 2016-03-20 19:37:40</span></span>
-<span id="cb15-5"><a href="#cb15-5"></a><span class="co">#&gt;  2         2 Kacen              13 illu… 2011-09-12 15:52:30 68.37.21.…  1267 THE … TRUE             -5              0          0             0 2015-09-25 18:11:45</span></span>
-<span id="cb15-6"><a href="#cb15-6"></a><span class="co">#&gt;  3         3 Bloo…              13 rene… 2011-09-12 18:10:11 68.10.255…   487 14/8… TRUE             -8              9          0             0 2015-12-04 02:23:51</span></span>
-<span id="cb15-7"><a href="#cb15-7"></a><span class="co">#&gt;  4         4 Mier…              13 homi… 2011-09-12 20:27:35 82.29.169…  1704 Mult… FALSE            0               0          0             0 2016-02-29 22:56:56</span></span>
-<span id="cb15-8"><a href="#cb15-8"></a><span class="co">#&gt;  5         5 Will…               5 tash… 2011-09-12 20:58:17 90.214.15…   463 A fox TRUE             0               0          0             0 2012-01-26 15:02:10</span></span>
-<span id="cb15-9"><a href="#cb15-9"></a><span class="co">#&gt;  6         6 Inte…              13 mich… 2011-09-12 21:14:03 86.7.229.…     9 &lt;NA&gt;  TRUE             0              NA         NA             0 2013-04-09 07:13:04</span></span>
-<span id="cb15-10"><a href="#cb15-10"></a><span class="co">#&gt;  7         7 Benj…               4 benj… 2011-09-13 01:22:58 81.141.31…  3127 2 Mi… TRUE             0               9          0             0 2016-02-25 01:53:44</span></span>
-<span id="cb15-11"><a href="#cb15-11"></a><span class="co">#&gt;  8         8 Mr. …              13 elei… 2011-09-13 04:24:07 98.198.24…   167 &lt;NA&gt;  TRUE             -6              0          0             0 2012-10-30 06:52:01</span></span>
-<span id="cb15-12"><a href="#cb15-12"></a><span class="co">#&gt;  9         9 Woma…               5 sol.… 2011-09-13 10:27:52 88.147.27…   997 &lt;NA&gt;  FALSE            1               0          0             0 2012-08-25 08:34:25</span></span>
-<span id="cb15-13"><a href="#cb15-13"></a><span class="co">#&gt; 10        10 Dene…              13 8056… 2011-09-13 12:13:09 72.76.138…    96 &lt;NA&gt;  TRUE             -5              0          0             0 2013-04-09 04:20:54</span></span>
-<span id="cb15-14"><a href="#cb15-14"></a><span class="co">#&gt; # … with 753 more rows, and 37 more variables: restrict_post &lt;chr&gt;, view_sigs &lt;lgl&gt;, bday_day &lt;int&gt;, bday_month &lt;int&gt;, bday_year &lt;int&gt;, msg_count_new &lt;int&gt;,</span></span>
-<span id="cb15-15"><a href="#cb15-15"></a><span class="co">#&gt; #   msg_count_total &lt;int&gt;, msg_count_reset &lt;lgl&gt;, msg_show_notification &lt;lgl&gt;, last_visit &lt;dttm&gt;, last_activity &lt;dttm&gt;, dst_in_use &lt;lgl&gt;, mod_posts &lt;chr&gt;,</span></span>
-<span id="cb15-16"><a href="#cb15-16"></a><span class="co">#&gt; #   auto_track &lt;chr&gt;, temp_ban &lt;chr&gt;, login_anonymous &lt;chr&gt;, ignored_users &lt;chr&gt;, mgroup_others &lt;chr&gt;, org_perm_id &lt;chr&gt;, member_login_key &lt;chr&gt;,</span></span>
-<span id="cb15-17"><a href="#cb15-17"></a><span class="co">#&gt; #   member_login_key_expire &lt;dttm&gt;, members_auto_dst &lt;lgl&gt;, members_display_name &lt;chr&gt;, members_seo_name &lt;chr&gt;, members_cache &lt;chr&gt;, members_disable_pm &lt;int&gt;,</span></span>
-<span id="cb15-18"><a href="#cb15-18"></a><span class="co">#&gt; #   members_l_display_name &lt;chr&gt;, members_l_username &lt;chr&gt;, failed_logins &lt;chr&gt;, members_profile_views &lt;int&gt;, members_pass_hash &lt;chr&gt;, members_pass_salt &lt;chr&gt;,</span></span>
-<span id="cb15-19"><a href="#cb15-19"></a><span class="co">#&gt; #   member_banned &lt;lgl&gt;, member_uploader &lt;chr&gt;, members_bitoptions &lt;int&gt;, members_day_posts &lt;chr&gt;, notification_cnt &lt;int&gt;</span></span></code></pre></div>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>im_forums_dfs<span class="op">$</span>forums_posts <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">as_tibble</span>()</span></code></pre></div>
-<div class="sourceCode" id="cb17"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="co">#&gt; # A tibble: 195,128 x 15</span></span>
-<span id="cb17-2"><a href="#cb17-2"></a><span class="co">#&gt;       pid append_edit edit_time           author_id author_name ip_address post_date           post  queued topic_id new_topic edit_name post_key post_edit_reason</span></span>
-<span id="cb17-3"><a href="#cb17-3"></a><span class="co">#&gt;     &lt;int&gt; &lt;lgl&gt;       &lt;dttm&gt;                  &lt;int&gt; &lt;chr&gt;       &lt;chr&gt;      &lt;dttm&gt;              &lt;chr&gt;  &lt;int&gt;    &lt;int&gt; &lt;lgl&gt;     &lt;chr&gt;     &lt;chr&gt;    &lt;chr&gt;           </span></span>
-<span id="cb17-4"><a href="#cb17-4"></a><span class="co">#&gt;  1    202 FALSE       NA                          7 MoonmanKKK  81.141.31… 2011-09-15 22:08:51 "&lt;p&gt;…      0       47 FALSE     &lt;NA&gt;      89e750e… &lt;NA&gt;            </span></span>
-<span id="cb17-5"><a href="#cb17-5"></a><span class="co">#&gt;  2    203 FALSE       NA                         16 Talleyrand  152.33.58… 2011-09-15 22:10:42 "\n&lt;…      0       11 FALSE     &lt;NA&gt;      0bccae6… &lt;NA&gt;            </span></span>
-<span id="cb17-6"><a href="#cb17-6"></a><span class="co">#&gt;  3    532 FALSE       2011-09-19 23:14:09         5 Will to Po… 90.219.24… 2011-09-19 23:13:59 "\n&lt;…      0      107 FALSE     Will to … 58e8b72… &lt;NA&gt;            </span></span>
-<span id="cb17-7"><a href="#cb17-7"></a><span class="co">#&gt;  4 114067 FALSE       NA                       7508 RIGHT WING… 80.212.44… 2015-05-16 18:00:29 "\n&lt;…      0     5166 FALSE     &lt;NA&gt;      ac5b3c0… &lt;NA&gt;            </span></span>
-<span id="cb17-8"><a href="#cb17-8"></a><span class="co">#&gt;  5 114068 FALSE       2015-05-16 18:07:42         0 Nihonjin M… 73.222.21… 2015-05-16 18:02:08 "&lt;p&gt;…      0     5166 FALSE     Nihonjin… 3eb3ae5… &lt;NA&gt;            </span></span>
-<span id="cb17-9"><a href="#cb17-9"></a><span class="co">#&gt;  6 114069 FALSE       2015-05-16 19:12:42      7481 ¡VIVA LA R… 86.181.21… 2015-05-16 18:06:36 "\n&lt;…      0     5165 FALSE     Generalp… a72ee7a… &lt;NA&gt;            </span></span>
-<span id="cb17-10"><a href="#cb17-10"></a><span class="co">#&gt;  7 114070 FALSE       NA                       9144 Neizbezhno… 121.215.1… 2015-05-16 18:14:36 "&lt;p&gt;…      0     5165 FALSE     &lt;NA&gt;      e2e1256… &lt;NA&gt;            </span></span>
-<span id="cb17-11"><a href="#cb17-11"></a><span class="co">#&gt;  8 114071 FALSE       NA                       6321 Culius Jae… 65.28.106… 2015-05-16 18:16:41 "\n&lt;…      0     5167 TRUE      &lt;NA&gt;      774875f… &lt;NA&gt;            </span></span>
-<span id="cb17-12"><a href="#cb17-12"></a><span class="co">#&gt;  9      4 FALSE       NA                          1 Alexander … 178.140.1… 2011-09-13 01:06:06 "\n&lt;…      0        3 TRUE      &lt;NA&gt;      cbd8458… &lt;NA&gt;            </span></span>
-<span id="cb17-13"><a href="#cb17-13"></a><span class="co">#&gt; 10     83 FALSE       NA                         16 Talleyrand  152.33.17… 2011-09-14 04:43:41 "\n&lt;…      0       37 TRUE      &lt;NA&gt;      0bac739… &lt;NA&gt;            </span></span>
-<span id="cb17-14"><a href="#cb17-14"></a><span class="co">#&gt; # … with 195,118 more rows, and 1 more variable: pdelete_time &lt;dttm&gt;</span></span></code></pre></div>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>im_other_dfs<span class="op">$</span>calendar_calendars <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">as_tibble</span>()</span></code></pre></div>
-<div class="sourceCode" id="cb19"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="co">#&gt; # A tibble: 12 x 4</span></span>
-<span id="cb19-2"><a href="#cb19-2"></a><span class="co">#&gt;    cal_id cal_position cal_title_seo                 cal_color</span></span>
-<span id="cb19-3"><a href="#cb19-3"></a><span class="co">#&gt;     &lt;int&gt;        &lt;int&gt; &lt;chr&gt;                         &lt;chr&gt;    </span></span>
-<span id="cb19-4"><a href="#cb19-4"></a><span class="co">#&gt;  1      1            5 italian-nationalist-calendar  #000000  </span></span>
-<span id="cb19-5"><a href="#cb19-5"></a><span class="co">#&gt;  2      2            8 serbian-nationalist-calendar  #0050a1  </span></span>
-<span id="cb19-6"><a href="#cb19-6"></a><span class="co">#&gt;  3      3            6 russian-nationalist-calendar  #c2c2c2  </span></span>
-<span id="cb19-7"><a href="#cb19-7"></a><span class="co">#&gt;  4      4           10 orthodox-christian-calendar   #d4a900  </span></span>
-<span id="cb19-8"><a href="#cb19-8"></a><span class="co">#&gt;  5      5           11 catholic-christian-calendar   #6e4f99  </span></span>
-<span id="cb19-9"><a href="#cb19-9"></a><span class="co">#&gt;  6      6            4 greek-nationalist-calendar    #0091ff  </span></span>
-<span id="cb19-10"><a href="#cb19-10"></a><span class="co">#&gt;  7      7            3 german-nationalist-calendar   #e60000  </span></span>
-<span id="cb19-11"><a href="#cb19-11"></a><span class="co">#&gt;  8      8            1 american-nationalist-calendar #17d4cd  </span></span>
-<span id="cb19-12"><a href="#cb19-12"></a><span class="co">#&gt;  9      9           12 uncategorized-dates           #667070  </span></span>
-<span id="cb19-13"><a href="#cb19-13"></a><span class="co">#&gt; 10     10            7 romanian-nationalist-calendar #249637  </span></span>
-<span id="cb19-14"><a href="#cb19-14"></a><span class="co">#&gt; 11     11            2 british-nationalist-calendar  #514999  </span></span>
-<span id="cb19-15"><a href="#cb19-15"></a><span class="co">#&gt; 12     12            9 spanish-nationalist-calendar  #eb9500</span></span></code></pre></div>
 </div>
 <div id="all-the-data" class="section level2">
 <h2 class="hasAnchor">
@@ -3186,7 +3128,6 @@ $ table_schema &lt;chr&gt; "{\"name\":\"admin_login_logs\",\"definition\":{\"nam
 </div>
 </div>
 </div>
-
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -3224,7 +3165,6 @@ $ table_schema &lt;chr&gt; "{\"name\":\"admin_login_logs\",\"definition\":{\"nam
 <li><a href="https://www.gnu.org/licenses/gpl-3.0"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GPL v3"></a></li>
 <li><a href="https://www.r-project.org/"><img src="https://img.shields.io/badge/Depends-GNU_R%3E=3.5-blue.svg" alt="Depends"></a></li>
 <li><a href="https://github.com/knapply/ironmarch"><img src="https://img.shields.io/github/languages/code-size/knapply/ironmarch.svg" alt="GitHub code size in bytes"></a></li>
-<li><a href="http://hits.dwyl.io/knapply/ironmarch"><img src="http://hits.dwyl.io/knapply/ironmarch.svg" alt="HitCount"></a></li>
 </ul>
 </div>
 </div>

@@ -1,4 +1,5 @@
 ---
+title: "`{ironmarch}`"
 output:
   github_document:
     html_preview: true
@@ -26,7 +27,7 @@ options(width = 170)
 ```
 
 
-# `{ironmarch}`
+<!-- # `{ironmarch}` -->
 
 
 <!-- badges: start -->
@@ -38,7 +39,6 @@ options(width = 170)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Depends](https://img.shields.io/badge/Depends-GNU_R>=3.5-blue.svg)](https://www.r-project.org/)
 [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/knapply/ironmarch.svg)](https://github.com/knapply/ironmarch)
-[![HitCount](http://hits.dwyl.io/knapply/ironmarch.svg)](http://hits.dwyl.io/knapply/ironmarch)
 <!-- badges: end -->
 
 
@@ -92,9 +92,6 @@ If you're a `tidyverse` fan, you can convert the data frames using `tibble::as_t
 library(tidyverse)
 
 im_core_dfs$core_members %>% as_tibble()
-im_orig_dfs$orig_members %>% as_tibble()
-im_forums_dfs$forums_posts %>% as_tibble()
-im_other_dfs$calendar_calendars %>% as_tibble()
 ```
 
 
