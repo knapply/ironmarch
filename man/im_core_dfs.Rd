@@ -26,8 +26,32 @@ Contents of the SQL dump from \emph{ironmarch.org}, a defunct neo-Nazi/white sup
 \details{
 \itemize{
 \item Data were acquired via the \href{https://www.bellingcat.com/}{Bellingcat}-linked \href{https://drive.google.com/file/d/1X4THLMV2Mf05hwR6Yw6IYVXhyVJt7yDg/view}{iron_march_201911_archive.torrent}.
-\item The routine used to construct the MySQL database was adapted from \href{https://github.com/ThreeSixes/iron-march-leak-helper}{ThreeSixes/iron-march-leak-helper}.
 }
+}
+\examples{
+library(data.table)
+options(datatable.print.trunc.cols = TRUE)
+
+length(im_core_dfs)
+im_core_dfs$core_members
+
+length(im_orig_dfs)
+im_orig_dfs$orig_members
+
+length(im_forums_dfs)
+im_forums_dfs$forums_posts
+
+length(im_other_dfs)
+im_other_dfs$calendar_calendars
+
+names(im_core_dfs)
+
+names(im_orig_dfs)
+
+names(im_forums_dfs)
+
+names(im_other_dfs)
+
 }
 \author{
 Brendan Knapp \email{brendan.g.knapp@gmail.com}

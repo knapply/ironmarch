@@ -37,9 +37,6 @@ kill_docker <- function(target_dir = "inst/db-extraction/") {
 }
 
 
-# library(purrr)
-
-
 get_tables <- function() {
   exec_docker()
   
@@ -121,10 +118,6 @@ drop_junk_cols <- function(df, min_unique_vals = 2L) {
 }
 
 clean_lgl_cols <- function(df) {
-  # lgl_cols <- intersect(
-  #   names(df),
-  #   c("restrict_post", "notify_read")
-  # )
   int_cols <- names(df)[vapply(df, is.integer, logical(1L))]
   if (length(int_cols)) {
     int_df <- df[, ..int_cols]
@@ -276,14 +269,5 @@ usethis::use_data(im_core_dfs, overwrite = TRUE)
 usethis::use_data(im_orig_dfs, overwrite = TRUE)
 usethis::use_data(im_forums_dfs, overwrite = TRUE)
 usethis::use_data(im_other_dfs, overwrite = TRUE)
-
-# for (i in seq_along(to_write)) {
-#   df <- to_write[[i]]
-#   name <- names(to_write)[[i]]
-#   
-#   assign(x = name, value = df)
-#   
-#   do.call(usethis::use_data, list(as.name(name), overwrite = TRUE))
-# }
 
 

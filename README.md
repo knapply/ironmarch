@@ -1,17 +1,18 @@
+`{ironmarch}`
+================
 
-  - [`{ironmarch}`](#ironmarch)
-      - [Introduction](#introduction)
-      - [Installation](#installation)
-      - [Usage](#usage)
-      - [All the Data](#all-the-data)
-          - [`core_*`](#core_)
-          - [`orig_*`](#orig_)
-          - [`forums_*`](#forums_)
-          - [Other](#other)
+  - [Introduction](#introduction)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [All the Data](#all-the-data)
+      - [`core_*`](#core_)
+      - [`orig_*`](#orig_)
+      - [`forums_*`](#forums_)
+      - [Other](#other)
 
 <!-- README.Rmd generates README.md. -->
 
-# `{ironmarch}`
+<!-- # `{ironmarch}` -->
 
 <!-- badges: start -->
 
@@ -30,7 +31,6 @@ v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/li
 [![Depends](https://img.shields.io/badge/Depends-GNU_R%3E=3.5-blue.svg)](https://www.r-project.org/)
 [![GitHub code size in
 bytes](https://img.shields.io/github/languages/code-size/knapply/ironmarch.svg)](https://github.com/knapply/ironmarch)
-[![HitCount](http://hits.dwyl.io/knapply/ironmarch.svg)](http://hits.dwyl.io/knapply/ironmarch)
 <!-- badges: end -->
 
 ## Introduction
