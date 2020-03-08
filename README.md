@@ -17,8 +17,8 @@
 
 <!-- badges: start -->
 
-<!-- [![R build status](https://github.com/knapply/ironmarch/workflows/R-CMD-check/badge.svg)](https://github.com/knapply/ironmarch/actions?workflow=R-CMD-check) -->
-
+[![R build
+status](https://github.com/knapply/ironmarch/workflows/R-CMD-check/badge.svg)](https://github.com/knapply/ironmarch/actions?workflow=R-CMD-check)
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/knapply/ironmarch?branch=master&svg=true)](https://ci.appveyor.com/project/knapply/ironmarch)
 [![Travis-CI Build
