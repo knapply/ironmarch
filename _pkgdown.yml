@@ -16,6 +16,10 @@ reference:
     contents:
     - build_members
     - build_messages
+    
+  - title: Text Utilities
+    contents:
+    - extract_html_tags
 
   - title: Options
     contents:
