@@ -8,6 +8,13 @@
 
 <title>Function reference • ironmarch</title>
 
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -38,6 +45,8 @@
   
 
 <meta property="og:title" content="Function reference" />
+<meta property="og:image" content="https://knapply.github.io/ironmarch/logo.png" />
+<meta name="twitter:card" content="summary" />
 
 
 
@@ -119,32 +128,50 @@
     <tbody>
       <tr>
         <th colspan="2">
-          <h2 id="section-site-data" class="hasAnchor"><a href="#section-site-data" class="anchor"></a>Site Data</h2>
+          <h2 id="section-original-site-data" class="hasAnchor"><a href="#section-original-site-data" class="anchor"></a>Original Site Data</h2>
           <p class="section-desc"></p>
         </th>
       </tr>
       <tr>
         
         <td>
-          <p><code><a href="im_core_dfs.html">im_core_dfs</a></code> <code><a href="im_core_dfs.html">im_orig_dfs</a></code> <code><a href="im_core_dfs.html">im_forums_dfs</a></code> <code><a href="im_core_dfs.html">im_other_dfs</a></code> </p>
+          <p><code><a href="iron-march-tables.html">im_core_dfs</a></code> <code><a href="iron-march-tables.html">im_orig_dfs</a></code> <code><a href="iron-march-tables.html">im_forums_dfs</a></code> <code><a href="iron-march-tables.html">im_other_dfs</a></code> </p>
         </td>
         <td><p>Iron March Data</p></td>
       </tr>
     </tbody><tbody>
       <tr>
         <th colspan="2">
-          <h2 id="section-reconciled-data" class="hasAnchor"><a href="#section-reconciled-data" class="anchor"></a>Reconciled Data</h2>
+          <h2 id="section-builders" class="hasAnchor"><a href="#section-builders" class="anchor"></a>Builders</h2>
           <p class="section-desc"></p>
         </th>
       </tr>
       <tr>
         
         <td>
-          <p><code><a href="combo-data.html">combo_messages_df</a></code> <code><a href="combo-data.html">combo_members_df</a></code> </p>
+          <p><code><a href="build_members.html">build_members()</a></code> </p>
         </td>
-        <td><p>Combined Tables
-
-Data reconciled and merged from the <code>core_*</code> and <code>orig_*</code> tables.</p></td>
+        <td><p>Reconcile and Merge Members</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="build_messages.html">build_messages()</a></code> </p>
+        </td>
+        <td><p>Reconcile and Merge Messages</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-options" class="hasAnchor"><a href="#section-options" class="anchor"></a>Options</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="ironmarch-options.html">ironmarch_options()</a></code> <code><a href="ironmarch-options.html">ironmarch_as_tibble()</a></code> </p>
+        </td>
+        <td><p><code>{ironmarch}</code> Options</p></td>
       </tr>
     </tbody>
     </table>
@@ -153,8 +180,9 @@ Data reconciled and merged from the <code>core_*</code> and <code>orig_*</code> 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-site-data">Site Data</a></li>
-      <li><a href="#section-reconciled-data">Reconciled Data</a></li>
+      <li><a href="#section-original-site-data">Original Site Data</a></li>
+      <li><a href="#section-builders">Builders</a></li>
+      <li><a href="#section-options">Options</a></li>
     </ul>
   </div>
 </div>

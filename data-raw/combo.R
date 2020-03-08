@@ -43,7 +43,7 @@ combo_messages_df[
 stopifnot(nrow(combo_messages_df[is.na(msg_author_id)]) == 0L)
 stopifnot(nrow(combo_messages_df[is.na(msg_post)]) == 0L)
 
-usethis::use_data(combo_messages_df, overwrite = TRUE)
+# usethis::use_data(combo_messages_df, overwrite = TRUE)
 
 target_cols <- c(
   "member_id", "name", "member_group_id", "email", "joined", 

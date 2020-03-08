@@ -4,9 +4,18 @@
     <loc>https://knapply.github.io/ironmarch/index.html</loc>
   </url>
   <url>
-    <loc>https://knapply.github.io/ironmarch/reference/combo-data.html</loc>
+    <loc>https://knapply.github.io/ironmarch/reference/build_members.html</loc>
   </url>
   <url>
-    <loc>https://knapply.github.io/ironmarch/reference/im_core_dfs.html</loc>
+    <loc>https://knapply.github.io/ironmarch/reference/build_messages.html</loc>
+  </url>
+  <url>
+    <loc>https://knapply.github.io/ironmarch/reference/iron-march-tables.html</loc>
+  </url>
+  <url>
+    <loc>https://knapply.github.io/ironmarch/reference/ironmarch-options.html</loc>
+  </url>
+  <url>
+    <loc>https://knapply.github.io/ironmarch/reference/ironmarch-package.html</loc>
   </url>
 </urlset>

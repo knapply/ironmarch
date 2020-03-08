@@ -1,6 +1,6 @@
-if (requireNamespace("tibble", quietly = TRUE)) {
-  print.data.table <- function(x, ...) print(tibble::as_tibble(x), ...)
-}
+assignInNamespace("print.data.table", 
+                  function(x, ...) print(tibble::as_tibble(x), ...), 
+                  ns = "data.table")
 
 exec_docker <- function(target_dir = "inst/db-extraction/",
                         docker_file = "docker-compose.yml") {
@@ -248,11 +248,13 @@ clean_df <- function(x, list_col_handler = NULL) {
 get_dfs <- function() {
   all_tables <- get_tables()
   
-  cleaned <- lapply(data.table::copy(all_tables), clean_df)
+  init <- lapply(data.table::copy(all_tables), clean_df)
   
-  cleaned[vapply(cleaned, 
-                 function(.x) ncol(.x) != 0 && nrow(.x) != 0,
-                 logical(1L))]
+  cleaned <- init[
+    vapply(init, function(.x) ncol(.x) != 0 && nrow(.x) != 0, logical(1L))
+  ]
+  
+  lapply(cleaned, tibble::as_tibble)
 }
 
 to_write <- get_dfs()
@@ -264,11 +266,11 @@ im_forums_dfs <- to_write[grepl("^forums_", names(to_write))]
 main_names <- c(names(im_core_dfs), names(im_orig_dfs), names(im_forums_dfs))
 im_other_dfs <- to_write[setdiff(names(to_write), main_names)]
 
-all(names(to_write) %in% c(names(im_other_dfs), main_names))
+stopifnot(
+  all(names(to_write) %in% c(names(im_other_dfs), main_names))
+)
 
 usethis::use_data(im_core_dfs, overwrite = TRUE)
 usethis::use_data(im_orig_dfs, overwrite = TRUE)
 usethis::use_data(im_forums_dfs, overwrite = TRUE)
 usethis::use_data(im_other_dfs, overwrite = TRUE)
-
-
