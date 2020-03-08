@@ -44,7 +44,7 @@ options(width = 170)
 
 ## Introduction
 
-`{ironmarch}` contains data related to _ironmarch.org_, a now-defunct neo-Nazi/white supremacist message board.
+`{ironmarch}` contains data and analytical routines related to _ironmarch.org_, a now-defunct neo-Nazi/white supremacist message board.
 
 The site data were extracted from the MySQL database that was originally posted on Internet Archive. You can find more information in [Bellingcat's description](https://www.bellingcat.com/resources/how-tos/2019/11/06/massive-white-supremacist-message-board-leak-how-to-access-and-interpret-the-data/).
 
@@ -61,6 +61,19 @@ remotes::install_github("knapply/ironmarch")
 library(ironmarch)
 ```
 
+### Builders
+
+`build_*()` functions reconcile and merge data from the relevant `im_core*` and `im_orig*` data frames.
+
+```{r}
+build_messages()
+build_members()
+```
+
+
+
+
+## Original Site Data 
 
 The site data are stored in a series of named lists containing data frames, all of which are prefixed with `im_`.
 
@@ -70,12 +83,6 @@ The site data are stored in a series of named lists containing data frames, all 
     * `ironmarch::im_forums_dfs`
 * The remaining tables are stored in `ironmarch::im_other_dfs`.
 
-The data frames are stored as `<data.table>`s.
-
-```{r}
-library(data.table)
-options(datatable.print.trunc.cols = TRUE)
-```
 
 The following code provides examples of accessing individual tables from each the `im_*` lists.
 
@@ -86,54 +93,33 @@ im_forums_dfs$forums_posts
 im_other_dfs$calendar_calendars
 ```
 
-If you're a `tidyverse` fan, you can convert the data frames using `tibble::as_tibble()` if desired.
-
-```{r}
-library(tidyverse)
-
-im_core_dfs$core_members %>% as_tibble()
-```
-
-
-## All the Data 
-
 ```{r, echo=FALSE}
 knitr::include_graphics("man/figures/use-all-the-data.jpeg")
 ```
 
 
-
-```{r, echo=FALSE, comment=""}
-walk_glimpse <- function(x, prefix) {
-  purrr::iwalk(x, ~ {
-    cat("\n\n>", sprintf("%s$%s", prefix, .y), "\n\n")
-    dplyr::glimpse(.x)
-  })
-}
-```
-
 ### `core_*`
 
-```{r, echo=FALSE, comment=""}
-walk_glimpse(im_core_dfs, "ironmarch::im_core_dfs")
+```{r}
+im_core_dfs
 ```
 
 ### `orig_*`
 
-```{r, echo=FALSE, comment=""}
-walk_glimpse(im_orig_dfs, "ironmarch::im_orig_dfs")
+```{r}
+im_orig_dfs
 ```
 
 ### `forums_*`
 
-```{r, echo=FALSE, comment=""}
-walk_glimpse(im_forums_dfs, "ironmarch::im_forums_dfs")
+```{r}
+im_forums_dfs
 ```
 
 ### Other
 
-```{r, echo=FALSE, comment=""}
-walk_glimpse(im_other_dfs, "ironmarch::im_other_dfs")
+```{r}
+im_other_dfs
 ```
 
 
