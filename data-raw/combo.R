@@ -71,13 +71,36 @@ core_members <- copy(ironmarch::im_core_dfs$core_members
 # )
 
 
-combo_members_df <- merge(orig_members, core_members, 
-                          all = TRUE, on = "member_id"
-                          )[order(priority)
-                            ][, lapply(.SD, `[[`, 1L), by = member_id
-                              ][, priority := NULL
-                                ]
+combo_members_df <- merge(
+  orig_members, core_members, 
+  all = TRUE, on = "member_id"
+  )[order(priority)
+    ][, lapply(.SD, `[[`, 1L), by = member_id
+      ][, priority := NULL
+        ][, failed_logins := lapply(failed_logins, function(.x) {
+            if (is.na(.x)) {
+              return(
+                data.table(
+                  address = NA_real_, 
+                  time = as.POSIXct(NA_real_, origin = "1970-01-01")
+                  )[-1])
+            }
+            
+            .x <- jsonlite::parse_json(.x)  
+          
+            addresses <- names(.x)
+            addresses[nchar(addresses) == 0L] <- NA_character_
 
+            times <- vapply(.x, function(.y) {
+              init <- unlist(.y, use.names = FALSE)
+              if (length(init) != 1L) NA_real_ else init
+            }, double(1L), USE.NAMES = FALSE)
+            
+            data.table(
+              address = addresses,
+              time = as.POSIXct(times, origin = "1970-01-01")
+              )[!is.na(address)]
+        })]
 
 
 usethis::use_data(combo_members_df, overwrite = TRUE)
