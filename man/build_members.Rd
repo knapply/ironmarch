@@ -36,7 +36,7 @@ data frames.
 }
 }
 \description{
-\code{build_messages()} reconciles and merges the members found in
+\code{build_members()} reconciles and merges the members found in
 \code{im_orig_dfs$orig_members} and \code{im_core_dfs$core_members}.
 }
 \details{

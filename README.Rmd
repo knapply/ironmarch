@@ -38,7 +38,6 @@ options(width = 170)
 [![GitHub last commit](https://img.shields.io/github/last-commit/knapply/ironmarch.svg)](https://github.com/knapply/ironmarch/commits/master)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Depends](https://img.shields.io/badge/Depends-GNU_R>=3.5-blue.svg)](https://www.r-project.org/)
-[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/knapply/ironmarch.svg)](https://github.com/knapply/ironmarch)
 <!-- badges: end -->
 
 
@@ -49,6 +48,14 @@ options(width = 170)
 The site data were extracted from the MySQL database that was originally posted on Internet Archive. You can find more information in [Bellingcat's description](https://www.bellingcat.com/resources/how-tos/2019/11/06/massive-white-supremacist-message-board-leak-how-to-access-and-interpret-the-data/).
 
 ## Installation
+
+```{r, echo=FALSE}
+file_size <- paste(round(sum(file.size(dir("data/", full.names = TRUE))) / 1e6, digits = 0L), "MB")
+```
+
+
+> Before installing, understand that this is not a typical R package. The `/data` folder alone is __`r file_size`__.
+
 
 ```{r, eval=FALSE}
 if (!requireNamespace("remotes", quietly = TRUE)) install.packages("remotes")

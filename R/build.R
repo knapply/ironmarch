@@ -67,7 +67,7 @@ build_messages <- function(summarize = TRUE, split = FALSE,
 
 #' Reconcile and Merge Members
 #' 
-#' `build_messages()` reconciles and merges the members found in 
+#' `build_members()` reconciles and merges the members found in 
 #' `im_orig_dfs$orig_members` and `im_core_dfs$core_members`.
 #' 
 #' Values found in `im_core_dfs$core_members` are preferred. Otherwise values found in
@@ -99,7 +99,7 @@ build_messages <- function(summarize = TRUE, split = FALSE,
 #' ][1:3]
 #'
 #'
-#' @importFrom data.table copy fcase fifelse setcolorder setDT
+#' @importFrom data.table copy fifelse setcolorder setDT
 #' @export
 build_members <- function(summarize = TRUE, split = FALSE, 
                           as_tibble = ironmarch_as_tibble()) {
@@ -132,17 +132,13 @@ build_members <- function(summarize = TRUE, split = FALSE,
   # character to logical
   char_int_bool_cols <- c("restrict_post", "mod_posts", "temp_ban") 
   orig[, (char_int_bool_cols) := lapply(.SD, function(.x) {
-    fcase(.x == "1", TRUE, 
-          .x == "0", FALSE, 
-          is.na(.x), NA)
+    fifelse(.x == "1", TRUE, FALSE)
   }), .SDcols = char_int_bool_cols]
   
   # integer to logical
   shifted_int_bool_cols <- c("restrict_post", "mod_posts", "temp_ban")
   core[, (shifted_int_bool_cols) := lapply(.SD, function(.x) {
-    fcase(.x == -1L, TRUE,
-          .x == 0L, FALSE,
-          is.na(.x), NA)
+    fifelse(.x == -1L, TRUE, FALSE)
   }), .SDcols = shifted_int_bool_cols]
   
   core[, which_df := "core"]
