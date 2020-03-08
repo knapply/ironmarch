@@ -1,0 +1,16 @@
+citHeader("To cite ironmarch use:")
+
+citEntry(
+  entry        = "Manual",
+  title        = "ironmarch: Data and Analytical Routines related to IronMarch",
+  author       = as.person("Brendan Knapp"),
+  year         = "2020",
+  note         = "R package version 0.0.1",
+  url          = "https://knapply.github.io/ironmarch",
+  key          = "ironmarch-package",
+  textVersion  = paste(
+    "Knapp, B. G. (2020). ironmarch: Data and Analytical Routines related to IronMarch",
+    "R package version 0.0.1",
+    "Retrieved from https://knapply.github.io/ironmarch"
+  )
+)

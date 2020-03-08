@@ -1,5 +1,5 @@
 Package: ironmarch
-Title: Iron March
+Title: Data and Analytical Routines related to IronMarch
 Version: 0.0.1
 Authors@R:
         c(
@@ -13,7 +13,7 @@ Authors@R:
             #        role = "aut")
         )
 Description: 
-    Iron March.
+   Data and Analytical Routines related to IronMarch.
 License: GPL-3 + file LICENSE
 Depends: R (>= 3.5)
 Imports:

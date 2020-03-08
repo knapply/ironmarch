@@ -4,11 +4,11 @@
 \name{ironmarch-package}
 \alias{ironmarch}
 \alias{ironmarch-package}
-\title{ironmarch: Iron March}
+\title{ironmarch: Data and Analytical Routines related to IronMarch}
 \description{
 \if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
 
-Iron March.
+Data and Analytical Routines related to IronMarch.
 }
 \seealso{
 Useful links:

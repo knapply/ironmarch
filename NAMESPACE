@@ -2,6 +2,9 @@
 
 export(build_members)
 export(build_messages)
+export(extract_html_tags)
+export(extract_links)
+export(extract_text)
 export(ironmarch_as_tibble)
 export(ironmarch_options)
 importFrom(data.table,":=")
