@@ -16,8 +16,8 @@
 
 <!-- badges: start -->
 
-[![R build
-status](https://github.com/knapply/ironmarch/workflows/R-CMD-check/badge.svg)](https://github.com/knapply/ironmarch/actions?workflow=R-CMD-check)
+<!-- [![R build status](https://github.com/knapply/ironmarch/workflows/R-CMD-check/badge.svg)](https://github.com/knapply/ironmarch/actions?workflow=R-CMD-check) -->
+
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/knapply/ironmarch?branch=master&svg=true)](https://ci.appveyor.com/project/knapply/ironmarch)
 [![Travis-CI Build
@@ -160,16 +160,16 @@ im_core_dfs$core_members %>% as_tibble()
     #> # A tibble: 1,207 x 66
     #>    member_id name  member_group_id email joined              ip_address allow_admin_mai…  skin warn_level warn_lastwarn language restrict_post bday_day bday_month
     #>        <int> <chr>           <int> <chr> <dttm>              <chr>      <list>           <int>      <int>         <int>    <int>         <int>    <int>      <int>
-    #>  1         1 Алек…               4 slav… 2011-09-12 15:46:59 178.140.1… < [1]>               0          0             0        1             0       28          6
-    #>  2     14875 Poet…              17 Gray… 2017-08-29 15:39:22 199.66.88… < [1]>              NA         NA             0        1             0       NA         NA
-    #>  3     14918 Vale…              17 oliv… 2017-09-10 15:51:00 86.10.127… < [1]>              NA         NA             0        1             0       NA         NA
-    #>  4     14926 cucc…              14 nigg… 2017-09-12 18:29:13 172.104.1… < [1]>               0          0             0        1             0        0          0
-    #>  5     14921 Hier…              17 Prow… 2017-09-11 11:07:06 2600:8804… < [1]>              NA         NA             0        1             0       NA         NA
-    #>  6         2 Phal…              13 illu… 2011-09-12 15:52:30 68.37.21.… < [1]>               0          0             0        1             0        0          0
-    #>  7     14057 Righ               13 righ… 2017-02-20 16:13:25 46.28.53.… < [1]>               0          0             0        0             0        0          0
-    #>  8     14040 Zaxon              14 helv… 2017-02-18 09:36:32 185.93.18… < [1]>               0          2             0        1             0        0          0
-    #>  9     14041 Солд…              13 mrel… 2017-02-18 12:06:20 2a02:c7d:… < [1]>               0          0             0        1             0       NA         NA
-    #> 10         3 Bloo…              13 rene… 2011-09-12 18:10:11 68.10.255… < [1]>               0          0             0        1             0        0          0
+    #>  1         1 Алек…               4 slav… 2011-09-12 15:46:59 178.140.1… <raw [1]>            0          0             0        1             0       28          6
+    #>  2     14875 Poet…              17 Gray… 2017-08-29 15:39:22 199.66.88… <raw [1]>           NA         NA             0        1             0       NA         NA
+    #>  3     14918 Vale…              17 oliv… 2017-09-10 15:51:00 86.10.127… <raw [1]>           NA         NA             0        1             0       NA         NA
+    #>  4     14926 cucc…              14 nigg… 2017-09-12 18:29:13 172.104.1… <raw [1]>            0          0             0        1             0        0          0
+    #>  5     14921 Hier…              17 Prow… 2017-09-11 11:07:06 2600:8804… <raw [1]>           NA         NA             0        1             0       NA         NA
+    #>  6         2 Phal…              13 illu… 2011-09-12 15:52:30 68.37.21.… <raw [1]>            0          0             0        1             0        0          0
+    #>  7     14057 Righ               13 righ… 2017-02-20 16:13:25 46.28.53.… <raw [1]>            0          0             0        0             0        0          0
+    #>  8     14040 Zaxon              14 helv… 2017-02-18 09:36:32 185.93.18… <raw [1]>            0          2             0        1             0        0          0
+    #>  9     14041 Солд…              13 mrel… 2017-02-18 12:06:20 2a02:c7d:… <raw [1]>            0          0             0        1             0       NA         NA
+    #> 10         3 Bloo…              13 rene… 2011-09-12 18:10:11 68.10.255… <raw [1]>            0          0             0        1             0        0          0
     #> # … with 1,197 more rows, and 52 more variables: bday_year <int>, msg_count_new <int>, msg_count_total <int>, msg_count_reset <int>, msg_show_notification <lgl>,
     #> #   last_visit <dttm>, last_activity <dttm>, mod_posts <int>, auto_track <chr>, temp_ban <int>, mgroup_others <chr>, member_login_key_expire <dttm>,
     #> #   members_seo_name <chr>, members_cache <chr>, members_disable_pm <int>, failed_logins <chr>, failed_login_count <int>, members_profile_views <int>,

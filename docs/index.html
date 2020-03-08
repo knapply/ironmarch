@@ -86,7 +86,7 @@
 </ul>
 </li>
 </ul>
-<!-- README.Rmd generates README.md. --><!-- # `{ironmarch}` --><!-- badges: start -->
+<!-- README.Rmd generates README.md. --><!-- # `{ironmarch}` --><!-- badges: start --><!-- [![R build status](https://github.com/knapply/ironmarch/workflows/R-CMD-check/badge.svg)](https://github.com/knapply/ironmarch/actions?workflow=R-CMD-check) -->
 <div id="introduction" class="section level2">
 <h2 class="hasAnchor">
 <a href="#introduction" class="anchor"></a>Introduction</h2>
@@ -181,16 +181,16 @@
 <div class="sourceCode" id="cb13"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="co">#&gt; # A tibble: 1,207 x 66</span></span>
 <span id="cb13-2"><a href="#cb13-2"></a><span class="co">#&gt;    member_id name  member_group_id email joined              ip_address allow_admin_mai…  skin warn_level warn_lastwarn language restrict_post bday_day bday_month</span></span>
 <span id="cb13-3"><a href="#cb13-3"></a><span class="co">#&gt;        &lt;int&gt; &lt;chr&gt;           &lt;int&gt; &lt;chr&gt; &lt;dttm&gt;              &lt;chr&gt;      &lt;list&gt;           &lt;int&gt;      &lt;int&gt;         &lt;int&gt;    &lt;int&gt;         &lt;int&gt;    &lt;int&gt;      &lt;int&gt;</span></span>
-<span id="cb13-4"><a href="#cb13-4"></a><span class="co">#&gt;  1         1 Алек…               4 slav… 2011-09-12 15:46:59 178.140.1… &lt; [1]&gt;               0          0             0        1             0       28          6</span></span>
-<span id="cb13-5"><a href="#cb13-5"></a><span class="co">#&gt;  2     14875 Poet…              17 Gray… 2017-08-29 15:39:22 199.66.88… &lt; [1]&gt;              NA         NA             0        1             0       NA         NA</span></span>
-<span id="cb13-6"><a href="#cb13-6"></a><span class="co">#&gt;  3     14918 Vale…              17 oliv… 2017-09-10 15:51:00 86.10.127… &lt; [1]&gt;              NA         NA             0        1             0       NA         NA</span></span>
-<span id="cb13-7"><a href="#cb13-7"></a><span class="co">#&gt;  4     14926 cucc…              14 nigg… 2017-09-12 18:29:13 172.104.1… &lt; [1]&gt;               0          0             0        1             0        0          0</span></span>
-<span id="cb13-8"><a href="#cb13-8"></a><span class="co">#&gt;  5     14921 Hier…              17 Prow… 2017-09-11 11:07:06 2600:8804… &lt; [1]&gt;              NA         NA             0        1             0       NA         NA</span></span>
-<span id="cb13-9"><a href="#cb13-9"></a><span class="co">#&gt;  6         2 Phal…              13 illu… 2011-09-12 15:52:30 68.37.21.… &lt; [1]&gt;               0          0             0        1             0        0          0</span></span>
-<span id="cb13-10"><a href="#cb13-10"></a><span class="co">#&gt;  7     14057 Righ               13 righ… 2017-02-20 16:13:25 46.28.53.… &lt; [1]&gt;               0          0             0        0             0        0          0</span></span>
-<span id="cb13-11"><a href="#cb13-11"></a><span class="co">#&gt;  8     14040 Zaxon              14 helv… 2017-02-18 09:36:32 185.93.18… &lt; [1]&gt;               0          2             0        1             0        0          0</span></span>
-<span id="cb13-12"><a href="#cb13-12"></a><span class="co">#&gt;  9     14041 Солд…              13 mrel… 2017-02-18 12:06:20 2a02:c7d:… &lt; [1]&gt;               0          0             0        1             0       NA         NA</span></span>
-<span id="cb13-13"><a href="#cb13-13"></a><span class="co">#&gt; 10         3 Bloo…              13 rene… 2011-09-12 18:10:11 68.10.255… &lt; [1]&gt;               0          0             0        1             0        0          0</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a><span class="co">#&gt;  1         1 Алек…               4 slav… 2011-09-12 15:46:59 178.140.1… &lt;raw [1]&gt;            0          0             0        1             0       28          6</span></span>
+<span id="cb13-5"><a href="#cb13-5"></a><span class="co">#&gt;  2     14875 Poet…              17 Gray… 2017-08-29 15:39:22 199.66.88… &lt;raw [1]&gt;           NA         NA             0        1             0       NA         NA</span></span>
+<span id="cb13-6"><a href="#cb13-6"></a><span class="co">#&gt;  3     14918 Vale…              17 oliv… 2017-09-10 15:51:00 86.10.127… &lt;raw [1]&gt;           NA         NA             0        1             0       NA         NA</span></span>
+<span id="cb13-7"><a href="#cb13-7"></a><span class="co">#&gt;  4     14926 cucc…              14 nigg… 2017-09-12 18:29:13 172.104.1… &lt;raw [1]&gt;            0          0             0        1             0        0          0</span></span>
+<span id="cb13-8"><a href="#cb13-8"></a><span class="co">#&gt;  5     14921 Hier…              17 Prow… 2017-09-11 11:07:06 2600:8804… &lt;raw [1]&gt;           NA         NA             0        1             0       NA         NA</span></span>
+<span id="cb13-9"><a href="#cb13-9"></a><span class="co">#&gt;  6         2 Phal…              13 illu… 2011-09-12 15:52:30 68.37.21.… &lt;raw [1]&gt;            0          0             0        1             0        0          0</span></span>
+<span id="cb13-10"><a href="#cb13-10"></a><span class="co">#&gt;  7     14057 Righ               13 righ… 2017-02-20 16:13:25 46.28.53.… &lt;raw [1]&gt;            0          0             0        0             0        0          0</span></span>
+<span id="cb13-11"><a href="#cb13-11"></a><span class="co">#&gt;  8     14040 Zaxon              14 helv… 2017-02-18 09:36:32 185.93.18… &lt;raw [1]&gt;            0          2             0        1             0        0          0</span></span>
+<span id="cb13-12"><a href="#cb13-12"></a><span class="co">#&gt;  9     14041 Солд…              13 mrel… 2017-02-18 12:06:20 2a02:c7d:… &lt;raw [1]&gt;            0          0             0        1             0       NA         NA</span></span>
+<span id="cb13-13"><a href="#cb13-13"></a><span class="co">#&gt; 10         3 Bloo…              13 rene… 2011-09-12 18:10:11 68.10.255… &lt;raw [1]&gt;            0          0             0        1             0        0          0</span></span>
 <span id="cb13-14"><a href="#cb13-14"></a><span class="co">#&gt; # … with 1,197 more rows, and 52 more variables: bday_year &lt;int&gt;, msg_count_new &lt;int&gt;, msg_count_total &lt;int&gt;, msg_count_reset &lt;int&gt;, msg_show_notification &lt;lgl&gt;,</span></span>
 <span id="cb13-15"><a href="#cb13-15"></a><span class="co">#&gt; #   last_visit &lt;dttm&gt;, last_activity &lt;dttm&gt;, mod_posts &lt;int&gt;, auto_track &lt;chr&gt;, temp_ban &lt;int&gt;, mgroup_others &lt;chr&gt;, member_login_key_expire &lt;dttm&gt;,</span></span>
 <span id="cb13-16"><a href="#cb13-16"></a><span class="co">#&gt; #   members_seo_name &lt;chr&gt;, members_cache &lt;chr&gt;, members_disable_pm &lt;int&gt;, failed_logins &lt;chr&gt;, failed_login_count &lt;int&gt;, members_profile_views &lt;int&gt;,</span></span>
@@ -3157,7 +3157,6 @@ $ table_schema &lt;chr&gt; "{\"name\":\"admin_login_logs\",\"definition\":{\"nam
   <div class="dev-status">
 <h2>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://github.com/knapply/ironmarch/actions?workflow=R-CMD-check"><img src="https://github.com/knapply/ironmarch/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
 <li><a href="https://ci.appveyor.com/project/knapply/ironmarch"><img src="https://ci.appveyor.com/api/projects/status/github/knapply/ironmarch?branch=master&amp;svg=true" alt="AppVeyor build status"></a></li>
 <li><a href="https://travis-ci.org/knapply/ironmarch"><img src="https://travis-ci.org/knapply/ironmarch.svg?branch=master" alt="Travis-CI Build Status"></a></li>
 <li><a href="https://codecov.io/gh/knapply/ironmarch?branch=master"><img src="https://codecov.io/gh/knapply/ironmarch/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>

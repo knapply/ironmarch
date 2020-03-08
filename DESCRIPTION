@@ -17,8 +17,7 @@ Description:
 License: GPL-3 + file LICENSE
 Depends: R (>= 3.5)
 Imports:
-    data.table (>= 1.12.4),
-    stringi
+    data.table (>= 1.12.4)
 Suggests:
     covr,
     DBI,
