@@ -6,7 +6,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • ironmarch</title>
+<title>Combined Tables
+
+Data reconciled and merged from the <code>core_*</code> and <code>orig_*</code> tables. — combo-data • ironmarch</title>
 
 
 <!-- jquery -->
@@ -37,7 +39,12 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Combined Tables
+
+Data reconciled and merged from the <code>core_*</code> and <code>orig_*</code> tables. — combo-data" />
+<meta property="og:description" content="Combined Tables
+Data reconciled and merged from the core_* and orig_* tables." />
+<meta name="twitter:card" content="summary" />
 
 
 
@@ -56,7 +63,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -103,59 +110,38 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Combined Tables
+
+Data reconciled and merged from the <code>core_*</code> and <code>orig_*</code> tables.</h1>
+    <small class="dont-index">Source: <a href='https://github.com/knapply/ironmarch/blob/master/R/combo-data.R'><code>R/combo-data.R</code></a></small>
+    <div class="hidden name"><code>combo-data.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>Combined Tables</p>
+<p>Data reconciled and merged from the <code>core_*</code> and <code>orig_*</code> tables.</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='no'>combo_messages_df</span>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-site-data" class="hasAnchor"><a href="#section-site-data" class="anchor"></a>Site Data</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="im_core_dfs.html">im_core_dfs</a></code> <code><a href="im_core_dfs.html">im_orig_dfs</a></code> <code><a href="im_core_dfs.html">im_forums_dfs</a></code> <code><a href="im_core_dfs.html">im_other_dfs</a></code> </p>
-        </td>
-        <td><p>Iron March Data</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-reconciled-data" class="hasAnchor"><a href="#section-reconciled-data" class="anchor"></a>Reconciled Data</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="combo-data.html">combo_messages_df</a></code> <code><a href="combo-data.html">combo_members_df</a></code> </p>
-        </td>
-        <td><p>Combined Tables
+<span class='no'>combo_members_df</span></pre>
 
-Data reconciled and merged from the <code>core_*</code> and <code>orig_*</code> tables.</p></td>
-      </tr>
-    </tbody>
-    </table>
+
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p>An object of class <code>data.table</code> (inherits from <code>data.frame</code>) with 22309 rows and 8 columns.</p>
+
   </div>
-
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-site-data">Site Data</a></li>
-      <li><a href="#section-reconciled-data">Reconciled Data</a></li>
+      <li><a href="#format">Format</a></li>
     </ul>
+
+    <h2>Author</h2>
+    <p>Brendan Knapp <a href='mailto:brendan.g.knapp@gmail.com'>brendan.g.knapp@gmail.com</a></p>
   </div>
 </div>
 
