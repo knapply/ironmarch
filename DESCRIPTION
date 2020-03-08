@@ -15,7 +15,7 @@ Authors@R:
 Description: 
     Iron March.
 License: GPL-3 + file LICENSE
-Depends: R (>= 3.3)
+Depends: R (>= 3.5)
 Imports:
     data.table (>= 1.12.4),
     stringi
