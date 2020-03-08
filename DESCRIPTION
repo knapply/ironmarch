@@ -20,12 +20,8 @@ Imports:
     data.table (>= 1.12.4)
 Suggests:
     covr,
-    DBI,
-    igraph,
     knitr,
-    RSiena,
     rvest,
-    sf,
     tibble,
     testthat (>= 2.1.0),
     rmarkdown,
