@@ -8,7 +8,17 @@
 \alias{im_forums_dfs}
 \alias{im_other_dfs}
 \title{Iron March Data}
-\format{Each object is a \code{list()} of \code{tibble::tibble()}s.}
+\format{
+Each object is a \code{list()} of \code{tibble::tibble()}s.
+
+An object of class \code{list} of length 87.
+
+An object of class \code{list} of length 92.
+
+An object of class \code{list} of length 3.
+
+An object of class \code{list} of length 7.
+}
 \source{
 \url{https://www.bellingcat.com/resources/how-tos/2019/11/06/massive-white-supremacist-message-board-leak-how-to-access-and-interpret-the-data/}
 }
