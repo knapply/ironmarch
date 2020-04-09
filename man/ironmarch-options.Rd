@@ -4,11 +4,14 @@
 \alias{ironmarch-options}
 \alias{ironmarch_options}
 \alias{ironmarch_as_tibble}
+\alias{ironmarch_as_sf}
 \title{\code{{ironmarch}} Options}
 \usage{
 ironmarch_options()
 
 ironmarch_as_tibble(default = TRUE)
+
+ironmarch_as_sf(default = TRUE)
 }
 \arguments{
 \item{default}{\code{TRUE}}
@@ -18,7 +21,6 @@ ironmarch_as_tibble(default = TRUE)
 }
 \examples{
 ironmarch_options()
-
 }
 \author{
 Brendan Knapp \email{brendan.g.knapp@gmail.com}
