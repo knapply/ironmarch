@@ -7,6 +7,8 @@
 \alias{im_orig_dfs}
 \alias{im_forums_dfs}
 \alias{im_other_dfs}
+\alias{combo_members_df}
+\alias{combo_messages_df}
 \title{Iron March Data}
 \format{
 Each object is a \code{list()} of \code{tibble::tibble()}s.
@@ -18,6 +20,10 @@ An object of class \code{list} of length 92.
 An object of class \code{list} of length 3.
 
 An object of class \code{list} of length 7.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 1542 rows and 25 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 22309 rows and 9 columns.
 }
 \source{
 \url{https://www.bellingcat.com/resources/how-tos/2019/11/06/massive-white-supremacist-message-board-leak-how-to-access-and-interpret-the-data/}
@@ -30,6 +36,10 @@ im_orig_dfs
 im_forums_dfs
 
 im_other_dfs
+
+combo_members_df
+
+combo_messages_df
 }
 \description{
 Contents of the SQL dump from \emph{ironmarch.org}, a defunct neo-Nazi/white supremacist message board.
@@ -41,6 +51,8 @@ Contents of the SQL dump from \emph{ironmarch.org}, a defunct neo-Nazi/white sup
 im_core_dfs
 im_orig_dfs
 im_forums_dfs
+im_other_dfs
+im_other_dfs
 im_other_dfs
 }
 \author{

@@ -136,12 +136,22 @@ Data were acquired via the Bellingcat-linked iron_march_201911_archive.torrent.
 
 <span class='no'>im_forums_dfs</span>
 
-<span class='no'>im_other_dfs</span></pre>
+<span class='no'>im_other_dfs</span>
+
+<span class='no'>combo_members_df</span>
+
+<span class='no'>combo_messages_df</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
     <p>Each object is a <code><a href='https://rdrr.io/r/base/list.html'>list()</a></code> of <code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble::tibble()</a></code>s.</p>
+<p>An object of class <code>list</code> of length 87.</p>
+<p>An object of class <code>list</code> of length 92.</p>
+<p>An object of class <code>list</code> of length 3.</p>
+<p>An object of class <code>list</code> of length 7.</p>
+<p>An object of class <code>tbl_df</code> (inherits from <code>tbl</code>, <code>data.frame</code>) with 1542 rows and 25 columns.</p>
+<p>An object of class <code>tbl_df</code> (inherits from <code>tbl</code>, <code>data.frame</code>) with 22309 rows and 9 columns.</p>
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p><a href='https://www.bellingcat.com/resources/how-tos/2019/11/06/massive-white-supremacist-message-board-leak-how-to-access-and-interpret-the-data/'>https://www.bellingcat.com/resources/how-tos/2019/11/06/massive-white-supremacist-message-board-leak-how-to-access-and-interpret-the-data/</a></p>
@@ -3282,6 +3292,256 @@ Data were acquired via the Bellingcat-linked iron_march_201911_archive.torrent.
 #&gt; </span><span style='color: #BCBCBC;'> 9</span><span> backup_log         </span><span style='color: #949494;'>"</span><span>{\"name\":\"backup_log\",\"definition\":{\"name\":\"back…
 #&gt; </span><span style='color: #BCBCBC;'>10</span><span> backup_queue       </span><span style='color: #949494;'>"</span><span>{\"name\":\"backup_queue\",\"definition\":{\"name\":\"ba…
 #&gt; </span><span style='color: #949494;'># … with 142 more rows</span><span>
+#&gt; </div><div class='input'><span class='no'>im_other_dfs</span></div><div class='output co'>#&gt; $bbcode_mediatag
+#&gt; </span><span style='color: #949494;'># A tibble: 9 x 4</span><span>
+#&gt;   mediatag_id mediatag_name  mediatag_match           mediatag_replace          
+#&gt;         </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>                    </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>                     
+#&gt; </span><span style='color: #BCBCBC;'>1</span><span>           1 YouTube        </span><span style='color: #949494;'>"</span><span>http(?:s)?://(www.)?yo… </span><span style='color: #949494;'>"</span><span>&lt;iframe id=\"ytplayer\" …
+#&gt; </span><span style='color: #BCBCBC;'>2</span><span>           9 GameTrailers   </span><span style='color: #949494;'>"</span><span>http://www.gametrailer… </span><span style='color: #949494;'>"</span><span>&lt;embed src=\"http://medi…
+#&gt; </span><span style='color: #BCBCBC;'>3</span><span>           2 Flash Movie/G… </span><span style='color: #949494;'>"</span><span>{1}.swf</span><span style='color: #949494;'>"</span><span>                </span><span style='color: #949494;'>"</span><span>&lt;embed src=\"$1.swf\" pl…
+#&gt; </span><span style='color: #BCBCBC;'>4</span><span>           3 Google Video   </span><span style='color: #949494;'>"</span><span>http://video.google.co… </span><span style='color: #949494;'>"</span><span>&lt;embed style=\"width:400…
+#&gt; </span><span style='color: #BCBCBC;'>5</span><span>           4 MySpace Video  </span><span style='color: #949494;'>"</span><span>http://www.myspace.com… </span><span style='color: #949494;'>"</span><span>&lt;object width=\"425px\" …
+#&gt; </span><span style='color: #BCBCBC;'>6</span><span>          10 YouTu.be       </span><span style='color: #949494;'>"</span><span>http://(www.)?youtu.be… </span><span style='color: #949494;'>"</span><span>&lt;iframe id=\"ytplayer\" …
+#&gt; </span><span style='color: #BCBCBC;'>7</span><span>           6 Flickr Image … </span><span style='color: #949494;'>"</span><span>http://www.flickr.com/… </span><span style='color: #949494;'>"</span><span>&lt;iframe align=\"center\"…
+#&gt; </span><span style='color: #BCBCBC;'>8</span><span>           7 MP3            </span><span style='color: #949494;'>"</span><span>{1}.mp3</span><span style='color: #949494;'>"</span><span>                </span><span style='color: #949494;'>"</span><span>&lt;object type=\"applicati…
+#&gt; </span><span style='color: #BCBCBC;'>9</span><span>           8 Vimeo          </span><span style='color: #949494;'>"</span><span>http{1}://vimeo.com/{2… </span><span style='color: #949494;'>"</span><span>&lt;iframe src=\"http$1://p…
+#&gt; 
+#&gt; $calendar_calendars
+#&gt; </span><span style='color: #949494;'># A tibble: 12 x 4</span><span>
+#&gt;    cal_id cal_position cal_title_seo                 cal_color
+#&gt;     </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>        </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>                         </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>    
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span>      1            5 italian-nationalist-calendar  #000000  
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span>      2            8 serbian-nationalist-calendar  #0050a1  
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span>      3            6 russian-nationalist-calendar  #c2c2c2  
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span>      4           10 orthodox-christian-calendar   #d4a900  
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span>      5           11 catholic-christian-calendar   #6e4f99  
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span>      6            4 greek-nationalist-calendar    #0091ff  
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span>      7            3 german-nationalist-calendar   #e60000  
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span>      8            1 american-nationalist-calendar #17d4cd  
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span>      9           12 uncategorized-dates           #667070  
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span>     10            7 romanian-nationalist-calendar #249637  
+#&gt; </span><span style='color: #BCBCBC;'>11</span><span>     11            2 british-nationalist-calendar  #514999  
+#&gt; </span><span style='color: #BCBCBC;'>12</span><span>     12            9 spanish-nationalist-calendar  #eb9500  
+#&gt; 
+#&gt; $calendar_event_comments
+#&gt; </span><span style='color: #949494;'># A tibble: 170 x 10</span><span>
+#&gt;    comment_id comment_eid comment_mid comment_date        comment_text
+#&gt;         </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>       </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>       </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;dttm&gt;</span><span>              </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>       
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span>          1         150        </span><span style='text-decoration: underline;'>7</span><span>636 2016-03-30 </span><span style='color: #949494;'>12:25:46</span><span> </span><span style='color: #949494;'>"</span><span>&lt;p&gt;\n\tArr…
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span>          2         150        </span><span style='text-decoration: underline;'>7</span><span>508 2016-04-01 </span><span style='color: #949494;'>19:17:45</span><span> </span><span style='color: #949494;'>"</span><span>&lt;p&gt;\n\tIt'…
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span>          3         150           0 2016-04-01 </span><span style='color: #949494;'>21:15:34</span><span> </span><span style='color: #949494;'>"</span><span>&lt;p&gt;\n\tHav…
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span>          4         154        </span><span style='text-decoration: underline;'>7</span><span>636 2016-04-17 </span><span style='color: #949494;'>13:36:49</span><span> </span><span style='color: #949494;'>"</span><span>&lt;p&gt;\n\tRes…
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span>          5         147        </span><span style='text-decoration: underline;'>9</span><span>876 2016-04-20 </span><span style='color: #949494;'>05:24:10</span><span> </span><span style='color: #949494;'>"</span><span>\n&lt;p&gt;\n\tI…
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span>          6         147        </span><span style='text-decoration: underline;'>9</span><span>621 2016-04-20 </span><span style='color: #949494;'>06:37:56</span><span> </span><span style='color: #949494;'>"</span><span>\n&lt;p&gt;\n\t&lt;…
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span>          7         147        </span><span style='text-decoration: underline;'>4</span><span>873 2016-04-20 </span><span style='color: #949494;'>07:02:33</span><span> </span><span style='color: #949494;'>"</span><span>\n&lt;p&gt;\n\tH…
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span>          8         147        </span><span style='text-decoration: underline;'>9</span><span>679 2016-04-20 </span><span style='color: #949494;'>07:09:12</span><span> </span><span style='color: #949494;'>"</span><span>&lt;p&gt;\n\twha…
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span>          9         147        </span><span style='text-decoration: underline;'>9</span><span>510 2016-04-20 </span><span style='color: #949494;'>14:22:09</span><span> </span><span style='color: #949494;'>"</span><span>\n&lt;blockqu…
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span>         10         147        </span><span style='text-decoration: underline;'>9</span><span>519 2016-04-20 </span><span style='color: #949494;'>17:10:30</span><span> </span><span style='color: #949494;'>"</span><span>&lt;p&gt;\n\tRIP…
+#&gt; </span><span style='color: #949494;'># … with 160 more rows, and 5 more variables: comment_append_edit </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span style='color: #949494;'>,
+#&gt; #   comment_edit_time </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span style='color: #949494;'>, comment_edit_name </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, comment_ip_address </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>,
+#&gt; #   comment_author </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>
+#&gt; 
+#&gt; $calendar_events
+#&gt; </span><span style='color: #949494;'># A tibble: 277 x 28</span><span>
+#&gt;    event_id event_calendar_… event_member_id event_content event_title
+#&gt;       </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>            </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>           </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>         </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>      
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span>        1                7               1 </span><span style='color: #949494;'>"</span><span>\n&lt;p&gt;\n\t&lt;a… Joseph Goe…
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span>        2                1               1 </span><span style='color: #949494;'>"</span><span>\n&lt;p&gt;\n\t&lt;a… Niccolò Ma…
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span>        3                7               1 </span><span style='color: #949494;'>"</span><span>\n&lt;p&gt;\n\t&lt;a… Oswald Spe…
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span>        4                7               1 </span><span style='color: #949494;'>"</span><span>\n&lt;p&gt;\n\t&lt;a… Oswald Spe…
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span>        5                1               1 </span><span style='color: #949494;'>"</span><span>\n&lt;p&gt;\n\t&lt;a… Julius Evo…
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span>        6                1               1 </span><span style='color: #949494;'>"</span><span>\n&lt;p&gt;\n\tNi… Niccolò Ma…
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span>        7                9               1 </span><span style='color: #949494;'>"</span><span>\n&lt;p&gt;\n\t&lt;a… Summer Sol…
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span>        8                7               1 </span><span style='color: #949494;'>"</span><span>\n&lt;p&gt;\n\t&lt;a… Martin Bor…
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span>        9                9               1 </span><span style='color: #949494;'>"</span><span>\n&lt;p&gt;\n\t&lt;a… Fidél Pálf…
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span>       10                7               1 </span><span style='color: #949494;'>"</span><span>\n&lt;p&gt;\n\t&lt;a… Baldur von…
+#&gt; </span><span style='color: #949494;'># … with 267 more rows, and 23 more variables: event_comments </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span style='color: #949494;'>,
+#&gt; #   event_approved </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span style='color: #949494;'>, event_saved </span><span style='color: #949494;font-style: italic;'>&lt;dttm&gt;</span><span style='color: #949494;'>, event_lastupdated </span><span style='color: #949494;font-style: italic;'>&lt;dttm&gt;</span><span style='color: #949494;'>,
+#&gt; #   event_recurring </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, event_start_date </span><span style='color: #949494;font-style: italic;'>&lt;dttm&gt;</span><span style='color: #949494;'>, event_end_date </span><span style='color: #949494;font-style: italic;'>&lt;dttm&gt;</span><span style='color: #949494;'>,
+#&gt; #   event_title_seo </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, event_rating </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span style='color: #949494;'>, event_post_key </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>,
+#&gt; #   event_sequence </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span style='color: #949494;'>, event_all_day </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span style='color: #949494;'>, event_ip_address </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>,
+#&gt; #   event_last_comment </span><span style='color: #949494;font-style: italic;'>&lt;dttm&gt;</span><span style='color: #949494;'>, event_last_review </span><span style='color: #949494;font-style: italic;'>&lt;dttm&gt;</span><span style='color: #949494;'>,
+#&gt; #   event_approved_by </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #949494;'>, event_approved_on </span><span style='color: #949494;font-style: italic;'>&lt;dttm&gt;</span><span style='color: #949494;'>, event_location </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>,
+#&gt; #   event_rsvp_limit </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span style='color: #949494;'>, event_cover_photo </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, event_cover_offset </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span style='color: #949494;'>,
+#&gt; #   event_unapproved_reviews </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span style='color: #949494;'>, event_hidden_reviews </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span>
+#&gt; 
+#&gt; $custom_bbcode
+#&gt; </span><span style='color: #949494;'># A tibble: 34 x 16</span><span>
+#&gt;    bbcode_id bbcode_title bbcode_desc bbcode_tag bbcode_replace bbcode_useoption
+#&gt;        </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>        </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>       </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span>           
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span>         1 Post Snap B… This tag d… snapback    </span><span style='color: #BB0000;'>NA</span><span>            FALSE           
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span>         2 Right        Aligns con… right      </span><span style='color: #949494;'>"</span><span>&lt;p class='bb… FALSE           
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span>         3 Left         Aligns con… left       </span><span style='color: #949494;'>"</span><span>&lt;p class='bb… FALSE           
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span>         4 Center       Aligns con… center     </span><span style='color: #949494;'>"</span><span>&lt;p class='bb… FALSE           
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span>         5 Topic Link   This tag p… topic      </span><span style='color: #949494;'>"</span><span>&lt;a href='{ba… TRUE            
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span>         6 Post Link    This tag p… post       </span><span style='color: #949494;'>"</span><span>&lt;a href='{ba… TRUE            
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span>         7 Spoiler      Spoiler tag spoiler    </span><span style='color: #949494;'>"</span><span>&lt;div class='… FALSE           
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span>         8 Acronym      Allows you… acronym    </span><span style='color: #949494;'>"</span><span>&lt;acronym tit… TRUE            
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span>         9 Bold Text    Makes text… b          </span><span style='color: #949494;'>"</span><span>&lt;strong clas… FALSE           
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span>        10 Italic Text  Makes the … i          </span><span style='color: #949494;'>"</span><span>&lt;em class='b… FALSE           
+#&gt; </span><span style='color: #949494;'># … with 24 more rows, and 10 more variables: bbcode_example </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>,
+#&gt; #   bbcode_menu_option_text </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, bbcode_menu_content_text </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>,
+#&gt; #   bbcode_single_tag </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span style='color: #949494;'>, bbcode_php_plugin </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, bbcode_no_parsing </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span style='color: #949494;'>,
+#&gt; #   bbcode_protected </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span style='color: #949494;'>, bbcode_aliases </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, bbcode_optional_option </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span style='color: #949494;'>,
+#&gt; #   bbcode_image </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>
+#&gt; 
+#&gt; $rc_reports_index
+#&gt; </span><span style='color: #949494;'># A tibble: 23 x 14</span><span>
+#&gt;       id uid   title url   rc_class updated_by date_updated date_created exdat1
+#&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>      </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>        </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>        </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>  </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span>     1 0b3a… Why … /ind…        2          9   </span><span style='text-decoration: underline;'>1</span><span>324</span><span style='text-decoration: underline;'>720</span><span>676   </span><span style='text-decoration: underline;'>1</span><span>324</span><span style='text-decoration: underline;'>684</span><span>384     57
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span>    10 d94e… Worl… /ind…        2          4   </span><span style='text-decoration: underline;'>1</span><span>356</span><span style='text-decoration: underline;'>645</span><span>256   </span><span style='text-decoration: underline;'>1</span><span>356</span><span style='text-decoration: underline;'>640</span><span>292     22
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span>    14 4007… Oper… /ind…        2          1   </span><span style='text-decoration: underline;'>1</span><span>361</span><span style='text-decoration: underline;'>248</span><span>006   </span><span style='text-decoration: underline;'>1</span><span>361</span><span style='text-decoration: underline;'>245</span><span>960      4
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span>    58 264d… IRA … /ind…        2          1   </span><span style='text-decoration: underline;'>1</span><span>374</span><span style='text-decoration: underline;'>646</span><span>833   </span><span style='text-decoration: underline;'>1</span><span>374</span><span style='text-decoration: underline;'>646</span><span>450      9
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span>    66 cd32… Jews… /ind…        2          4   </span><span style='text-decoration: underline;'>1</span><span>377</span><span style='text-decoration: underline;'>095</span><span>062   </span><span style='text-decoration: underline;'>1</span><span>377</span><span style='text-decoration: underline;'>089</span><span>209      8
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span>    69 933f… Belg… /ind…        2         16   </span><span style='text-decoration: underline;'>1</span><span>380</span><span style='text-decoration: underline;'>356</span><span>859   </span><span style='text-decoration: underline;'>1</span><span>380</span><span style='text-decoration: underline;'>356</span><span>286      8
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span>    70 3a36… Belg… /ind…        2         16   </span><span style='text-decoration: underline;'>1</span><span>380</span><span style='text-decoration: underline;'>356</span><span>859   </span><span style='text-decoration: underline;'>1</span><span>380</span><span style='text-decoration: underline;'>356</span><span>292      8
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span>    74 9ca0… Gabo… /ind…        2          4   </span><span style='text-decoration: underline;'>1</span><span>388</span><span style='text-decoration: underline;'>663</span><span>494   </span><span style='text-decoration: underline;'>1</span><span>388</span><span style='text-decoration: underline;'>660</span><span>127      9
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span>    89 7b4b… Libe… /ind…        2       </span><span style='text-decoration: underline;'>2</span><span>170   </span><span style='text-decoration: underline;'>1</span><span>431</span><span style='text-decoration: underline;'>658</span><span>980   </span><span style='text-decoration: underline;'>1</span><span>431</span><span style='text-decoration: underline;'>533</span><span>699     30
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span>    90 f557… Iron… /ind…        2       </span><span style='text-decoration: underline;'>2</span><span>170   </span><span style='text-decoration: underline;'>1</span><span>432</span><span style='text-decoration: underline;'>309</span><span>218   </span><span style='text-decoration: underline;'>1</span><span>432</span><span style='text-decoration: underline;'>177</span><span>523      2
+#&gt; </span><span style='color: #949494;'># … with 13 more rows, and 5 more variables: exdat2 </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span style='color: #949494;'>, exdat3 </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span style='color: #949494;'>,
+#&gt; #   num_comments </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span style='color: #949494;'>, seoname </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, seotemplate </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>
+#&gt; 
+#&gt; $x_utf_convert_session_tables
+#&gt; </span><span style='color: #949494;'># A tibble: 152 x 2</span><span>
+#&gt;    table_name         table_schema                                              
+#&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>              </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>                                                     
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> admin_login_logs   </span><span style='color: #949494;'>"</span><span>{\"name\":\"admin_login_logs\",\"definition\":{\"name\":…
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span> admin_logs         </span><span style='color: #949494;'>"</span><span>{\"name\":\"admin_logs\",\"definition\":{\"name\":\"admi…
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span> admin_permission_… </span><span style='color: #949494;'>"</span><span>{\"name\":\"admin_permission_rows\",\"definition\":{\"na…
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span> announcements      </span><span style='color: #949494;'>"</span><span>{\"name\":\"announcements\",\"definition\":{\"name\":\"a…
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span> api_log            </span><span style='color: #949494;'>"</span><span>{\"name\":\"api_log\",\"definition\":{\"name\":\"api_log…
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span> api_users          </span><span style='color: #949494;'>"</span><span>{\"name\":\"api_users\",\"definition\":{\"name\":\"api_u…
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span> attachments        </span><span style='color: #949494;'>"</span><span>{\"name\":\"attachments\",\"definition\":{\"name\":\"att…
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span> attachments_type   </span><span style='color: #949494;'>"</span><span>{\"name\":\"attachments_type\",\"definition\":{\"name\":…
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span> backup_log         </span><span style='color: #949494;'>"</span><span>{\"name\":\"backup_log\",\"definition\":{\"name\":\"back…
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span> backup_queue       </span><span style='color: #949494;'>"</span><span>{\"name\":\"backup_queue\",\"definition\":{\"name\":\"ba…
+#&gt; </span><span style='color: #949494;'># … with 142 more rows</span><span>
+#&gt; </div><div class='input'><span class='no'>im_other_dfs</span></div><div class='output co'>#&gt; $bbcode_mediatag
+#&gt; </span><span style='color: #949494;'># A tibble: 9 x 4</span><span>
+#&gt;   mediatag_id mediatag_name  mediatag_match           mediatag_replace          
+#&gt;         </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>                    </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>                     
+#&gt; </span><span style='color: #BCBCBC;'>1</span><span>           1 YouTube        </span><span style='color: #949494;'>"</span><span>http(?:s)?://(www.)?yo… </span><span style='color: #949494;'>"</span><span>&lt;iframe id=\"ytplayer\" …
+#&gt; </span><span style='color: #BCBCBC;'>2</span><span>           9 GameTrailers   </span><span style='color: #949494;'>"</span><span>http://www.gametrailer… </span><span style='color: #949494;'>"</span><span>&lt;embed src=\"http://medi…
+#&gt; </span><span style='color: #BCBCBC;'>3</span><span>           2 Flash Movie/G… </span><span style='color: #949494;'>"</span><span>{1}.swf</span><span style='color: #949494;'>"</span><span>                </span><span style='color: #949494;'>"</span><span>&lt;embed src=\"$1.swf\" pl…
+#&gt; </span><span style='color: #BCBCBC;'>4</span><span>           3 Google Video   </span><span style='color: #949494;'>"</span><span>http://video.google.co… </span><span style='color: #949494;'>"</span><span>&lt;embed style=\"width:400…
+#&gt; </span><span style='color: #BCBCBC;'>5</span><span>           4 MySpace Video  </span><span style='color: #949494;'>"</span><span>http://www.myspace.com… </span><span style='color: #949494;'>"</span><span>&lt;object width=\"425px\" …
+#&gt; </span><span style='color: #BCBCBC;'>6</span><span>          10 YouTu.be       </span><span style='color: #949494;'>"</span><span>http://(www.)?youtu.be… </span><span style='color: #949494;'>"</span><span>&lt;iframe id=\"ytplayer\" …
+#&gt; </span><span style='color: #BCBCBC;'>7</span><span>           6 Flickr Image … </span><span style='color: #949494;'>"</span><span>http://www.flickr.com/… </span><span style='color: #949494;'>"</span><span>&lt;iframe align=\"center\"…
+#&gt; </span><span style='color: #BCBCBC;'>8</span><span>           7 MP3            </span><span style='color: #949494;'>"</span><span>{1}.mp3</span><span style='color: #949494;'>"</span><span>                </span><span style='color: #949494;'>"</span><span>&lt;object type=\"applicati…
+#&gt; </span><span style='color: #BCBCBC;'>9</span><span>           8 Vimeo          </span><span style='color: #949494;'>"</span><span>http{1}://vimeo.com/{2… </span><span style='color: #949494;'>"</span><span>&lt;iframe src=\"http$1://p…
+#&gt; 
+#&gt; $calendar_calendars
+#&gt; </span><span style='color: #949494;'># A tibble: 12 x 4</span><span>
+#&gt;    cal_id cal_position cal_title_seo                 cal_color
+#&gt;     </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>        </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>                         </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>    
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span>      1            5 italian-nationalist-calendar  #000000  
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span>      2            8 serbian-nationalist-calendar  #0050a1  
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span>      3            6 russian-nationalist-calendar  #c2c2c2  
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span>      4           10 orthodox-christian-calendar   #d4a900  
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span>      5           11 catholic-christian-calendar   #6e4f99  
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span>      6            4 greek-nationalist-calendar    #0091ff  
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span>      7            3 german-nationalist-calendar   #e60000  
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span>      8            1 american-nationalist-calendar #17d4cd  
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span>      9           12 uncategorized-dates           #667070  
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span>     10            7 romanian-nationalist-calendar #249637  
+#&gt; </span><span style='color: #BCBCBC;'>11</span><span>     11            2 british-nationalist-calendar  #514999  
+#&gt; </span><span style='color: #BCBCBC;'>12</span><span>     12            9 spanish-nationalist-calendar  #eb9500  
+#&gt; 
+#&gt; $calendar_event_comments
+#&gt; </span><span style='color: #949494;'># A tibble: 170 x 10</span><span>
+#&gt;    comment_id comment_eid comment_mid comment_date        comment_text
+#&gt;         </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>       </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>       </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;dttm&gt;</span><span>              </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>       
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span>          1         150        </span><span style='text-decoration: underline;'>7</span><span>636 2016-03-30 </span><span style='color: #949494;'>12:25:46</span><span> </span><span style='color: #949494;'>"</span><span>&lt;p&gt;\n\tArr…
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span>          2         150        </span><span style='text-decoration: underline;'>7</span><span>508 2016-04-01 </span><span style='color: #949494;'>19:17:45</span><span> </span><span style='color: #949494;'>"</span><span>&lt;p&gt;\n\tIt'…
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span>          3         150           0 2016-04-01 </span><span style='color: #949494;'>21:15:34</span><span> </span><span style='color: #949494;'>"</span><span>&lt;p&gt;\n\tHav…
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span>          4         154        </span><span style='text-decoration: underline;'>7</span><span>636 2016-04-17 </span><span style='color: #949494;'>13:36:49</span><span> </span><span style='color: #949494;'>"</span><span>&lt;p&gt;\n\tRes…
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span>          5         147        </span><span style='text-decoration: underline;'>9</span><span>876 2016-04-20 </span><span style='color: #949494;'>05:24:10</span><span> </span><span style='color: #949494;'>"</span><span>\n&lt;p&gt;\n\tI…
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span>          6         147        </span><span style='text-decoration: underline;'>9</span><span>621 2016-04-20 </span><span style='color: #949494;'>06:37:56</span><span> </span><span style='color: #949494;'>"</span><span>\n&lt;p&gt;\n\t&lt;…
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span>          7         147        </span><span style='text-decoration: underline;'>4</span><span>873 2016-04-20 </span><span style='color: #949494;'>07:02:33</span><span> </span><span style='color: #949494;'>"</span><span>\n&lt;p&gt;\n\tH…
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span>          8         147        </span><span style='text-decoration: underline;'>9</span><span>679 2016-04-20 </span><span style='color: #949494;'>07:09:12</span><span> </span><span style='color: #949494;'>"</span><span>&lt;p&gt;\n\twha…
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span>          9         147        </span><span style='text-decoration: underline;'>9</span><span>510 2016-04-20 </span><span style='color: #949494;'>14:22:09</span><span> </span><span style='color: #949494;'>"</span><span>\n&lt;blockqu…
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span>         10         147        </span><span style='text-decoration: underline;'>9</span><span>519 2016-04-20 </span><span style='color: #949494;'>17:10:30</span><span> </span><span style='color: #949494;'>"</span><span>&lt;p&gt;\n\tRIP…
+#&gt; </span><span style='color: #949494;'># … with 160 more rows, and 5 more variables: comment_append_edit </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span style='color: #949494;'>,
+#&gt; #   comment_edit_time </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span style='color: #949494;'>, comment_edit_name </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, comment_ip_address </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>,
+#&gt; #   comment_author </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>
+#&gt; 
+#&gt; $calendar_events
+#&gt; </span><span style='color: #949494;'># A tibble: 277 x 28</span><span>
+#&gt;    event_id event_calendar_… event_member_id event_content event_title
+#&gt;       </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>            </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>           </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>         </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>      
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span>        1                7               1 </span><span style='color: #949494;'>"</span><span>\n&lt;p&gt;\n\t&lt;a… Joseph Goe…
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span>        2                1               1 </span><span style='color: #949494;'>"</span><span>\n&lt;p&gt;\n\t&lt;a… Niccolò Ma…
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span>        3                7               1 </span><span style='color: #949494;'>"</span><span>\n&lt;p&gt;\n\t&lt;a… Oswald Spe…
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span>        4                7               1 </span><span style='color: #949494;'>"</span><span>\n&lt;p&gt;\n\t&lt;a… Oswald Spe…
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span>        5                1               1 </span><span style='color: #949494;'>"</span><span>\n&lt;p&gt;\n\t&lt;a… Julius Evo…
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span>        6                1               1 </span><span style='color: #949494;'>"</span><span>\n&lt;p&gt;\n\tNi… Niccolò Ma…
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span>        7                9               1 </span><span style='color: #949494;'>"</span><span>\n&lt;p&gt;\n\t&lt;a… Summer Sol…
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span>        8                7               1 </span><span style='color: #949494;'>"</span><span>\n&lt;p&gt;\n\t&lt;a… Martin Bor…
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span>        9                9               1 </span><span style='color: #949494;'>"</span><span>\n&lt;p&gt;\n\t&lt;a… Fidél Pálf…
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span>       10                7               1 </span><span style='color: #949494;'>"</span><span>\n&lt;p&gt;\n\t&lt;a… Baldur von…
+#&gt; </span><span style='color: #949494;'># … with 267 more rows, and 23 more variables: event_comments </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span style='color: #949494;'>,
+#&gt; #   event_approved </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span style='color: #949494;'>, event_saved </span><span style='color: #949494;font-style: italic;'>&lt;dttm&gt;</span><span style='color: #949494;'>, event_lastupdated </span><span style='color: #949494;font-style: italic;'>&lt;dttm&gt;</span><span style='color: #949494;'>,
+#&gt; #   event_recurring </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, event_start_date </span><span style='color: #949494;font-style: italic;'>&lt;dttm&gt;</span><span style='color: #949494;'>, event_end_date </span><span style='color: #949494;font-style: italic;'>&lt;dttm&gt;</span><span style='color: #949494;'>,
+#&gt; #   event_title_seo </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, event_rating </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span style='color: #949494;'>, event_post_key </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>,
+#&gt; #   event_sequence </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span style='color: #949494;'>, event_all_day </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span style='color: #949494;'>, event_ip_address </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>,
+#&gt; #   event_last_comment </span><span style='color: #949494;font-style: italic;'>&lt;dttm&gt;</span><span style='color: #949494;'>, event_last_review </span><span style='color: #949494;font-style: italic;'>&lt;dttm&gt;</span><span style='color: #949494;'>,
+#&gt; #   event_approved_by </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #949494;'>, event_approved_on </span><span style='color: #949494;font-style: italic;'>&lt;dttm&gt;</span><span style='color: #949494;'>, event_location </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>,
+#&gt; #   event_rsvp_limit </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span style='color: #949494;'>, event_cover_photo </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, event_cover_offset </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span style='color: #949494;'>,
+#&gt; #   event_unapproved_reviews </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span style='color: #949494;'>, event_hidden_reviews </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span>
+#&gt; 
+#&gt; $custom_bbcode
+#&gt; </span><span style='color: #949494;'># A tibble: 34 x 16</span><span>
+#&gt;    bbcode_id bbcode_title bbcode_desc bbcode_tag bbcode_replace bbcode_useoption
+#&gt;        </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>        </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>       </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span>           
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span>         1 Post Snap B… This tag d… snapback    </span><span style='color: #BB0000;'>NA</span><span>            FALSE           
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span>         2 Right        Aligns con… right      </span><span style='color: #949494;'>"</span><span>&lt;p class='bb… FALSE           
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span>         3 Left         Aligns con… left       </span><span style='color: #949494;'>"</span><span>&lt;p class='bb… FALSE           
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span>         4 Center       Aligns con… center     </span><span style='color: #949494;'>"</span><span>&lt;p class='bb… FALSE           
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span>         5 Topic Link   This tag p… topic      </span><span style='color: #949494;'>"</span><span>&lt;a href='{ba… TRUE            
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span>         6 Post Link    This tag p… post       </span><span style='color: #949494;'>"</span><span>&lt;a href='{ba… TRUE            
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span>         7 Spoiler      Spoiler tag spoiler    </span><span style='color: #949494;'>"</span><span>&lt;div class='… FALSE           
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span>         8 Acronym      Allows you… acronym    </span><span style='color: #949494;'>"</span><span>&lt;acronym tit… TRUE            
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span>         9 Bold Text    Makes text… b          </span><span style='color: #949494;'>"</span><span>&lt;strong clas… FALSE           
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span>        10 Italic Text  Makes the … i          </span><span style='color: #949494;'>"</span><span>&lt;em class='b… FALSE           
+#&gt; </span><span style='color: #949494;'># … with 24 more rows, and 10 more variables: bbcode_example </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>,
+#&gt; #   bbcode_menu_option_text </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, bbcode_menu_content_text </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>,
+#&gt; #   bbcode_single_tag </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span style='color: #949494;'>, bbcode_php_plugin </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, bbcode_no_parsing </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span style='color: #949494;'>,
+#&gt; #   bbcode_protected </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span style='color: #949494;'>, bbcode_aliases </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, bbcode_optional_option </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span style='color: #949494;'>,
+#&gt; #   bbcode_image </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>
+#&gt; 
+#&gt; $rc_reports_index
+#&gt; </span><span style='color: #949494;'># A tibble: 23 x 14</span><span>
+#&gt;       id uid   title url   rc_class updated_by date_updated date_created exdat1
+#&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>      </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>        </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>        </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>  </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span>     1 0b3a… Why … /ind…        2          9   </span><span style='text-decoration: underline;'>1</span><span>324</span><span style='text-decoration: underline;'>720</span><span>676   </span><span style='text-decoration: underline;'>1</span><span>324</span><span style='text-decoration: underline;'>684</span><span>384     57
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span>    10 d94e… Worl… /ind…        2          4   </span><span style='text-decoration: underline;'>1</span><span>356</span><span style='text-decoration: underline;'>645</span><span>256   </span><span style='text-decoration: underline;'>1</span><span>356</span><span style='text-decoration: underline;'>640</span><span>292     22
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span>    14 4007… Oper… /ind…        2          1   </span><span style='text-decoration: underline;'>1</span><span>361</span><span style='text-decoration: underline;'>248</span><span>006   </span><span style='text-decoration: underline;'>1</span><span>361</span><span style='text-decoration: underline;'>245</span><span>960      4
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span>    58 264d… IRA … /ind…        2          1   </span><span style='text-decoration: underline;'>1</span><span>374</span><span style='text-decoration: underline;'>646</span><span>833   </span><span style='text-decoration: underline;'>1</span><span>374</span><span style='text-decoration: underline;'>646</span><span>450      9
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span>    66 cd32… Jews… /ind…        2          4   </span><span style='text-decoration: underline;'>1</span><span>377</span><span style='text-decoration: underline;'>095</span><span>062   </span><span style='text-decoration: underline;'>1</span><span>377</span><span style='text-decoration: underline;'>089</span><span>209      8
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span>    69 933f… Belg… /ind…        2         16   </span><span style='text-decoration: underline;'>1</span><span>380</span><span style='text-decoration: underline;'>356</span><span>859   </span><span style='text-decoration: underline;'>1</span><span>380</span><span style='text-decoration: underline;'>356</span><span>286      8
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span>    70 3a36… Belg… /ind…        2         16   </span><span style='text-decoration: underline;'>1</span><span>380</span><span style='text-decoration: underline;'>356</span><span>859   </span><span style='text-decoration: underline;'>1</span><span>380</span><span style='text-decoration: underline;'>356</span><span>292      8
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span>    74 9ca0… Gabo… /ind…        2          4   </span><span style='text-decoration: underline;'>1</span><span>388</span><span style='text-decoration: underline;'>663</span><span>494   </span><span style='text-decoration: underline;'>1</span><span>388</span><span style='text-decoration: underline;'>660</span><span>127      9
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span>    89 7b4b… Libe… /ind…        2       </span><span style='text-decoration: underline;'>2</span><span>170   </span><span style='text-decoration: underline;'>1</span><span>431</span><span style='text-decoration: underline;'>658</span><span>980   </span><span style='text-decoration: underline;'>1</span><span>431</span><span style='text-decoration: underline;'>533</span><span>699     30
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span>    90 f557… Iron… /ind…        2       </span><span style='text-decoration: underline;'>2</span><span>170   </span><span style='text-decoration: underline;'>1</span><span>432</span><span style='text-decoration: underline;'>309</span><span>218   </span><span style='text-decoration: underline;'>1</span><span>432</span><span style='text-decoration: underline;'>177</span><span>523      2
+#&gt; </span><span style='color: #949494;'># … with 13 more rows, and 5 more variables: exdat2 </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span style='color: #949494;'>, exdat3 </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span style='color: #949494;'>,
+#&gt; #   num_comments </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span style='color: #949494;'>, seoname </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, seotemplate </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>
+#&gt; 
+#&gt; $x_utf_convert_session_tables
+#&gt; </span><span style='color: #949494;'># A tibble: 152 x 2</span><span>
+#&gt;    table_name         table_schema                                              
+#&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>              </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>                                                     
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> admin_login_logs   </span><span style='color: #949494;'>"</span><span>{\"name\":\"admin_login_logs\",\"definition\":{\"name\":…
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span> admin_logs         </span><span style='color: #949494;'>"</span><span>{\"name\":\"admin_logs\",\"definition\":{\"name\":\"admi…
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span> admin_permission_… </span><span style='color: #949494;'>"</span><span>{\"name\":\"admin_permission_rows\",\"definition\":{\"na…
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span> announcements      </span><span style='color: #949494;'>"</span><span>{\"name\":\"announcements\",\"definition\":{\"name\":\"a…
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span> api_log            </span><span style='color: #949494;'>"</span><span>{\"name\":\"api_log\",\"definition\":{\"name\":\"api_log…
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span> api_users          </span><span style='color: #949494;'>"</span><span>{\"name\":\"api_users\",\"definition\":{\"name\":\"api_u…
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span> attachments        </span><span style='color: #949494;'>"</span><span>{\"name\":\"attachments\",\"definition\":{\"name\":\"att…
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span> attachments_type   </span><span style='color: #949494;'>"</span><span>{\"name\":\"attachments_type\",\"definition\":{\"name\":…
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span> backup_log         </span><span style='color: #949494;'>"</span><span>{\"name\":\"backup_log\",\"definition\":{\"name\":\"back…
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span> backup_queue       </span><span style='color: #949494;'>"</span><span>{\"name\":\"backup_queue\",\"definition\":{\"name\":\"ba…
+#&gt; </span><span style='color: #949494;'># … with 142 more rows</span><span>
 #&gt; </div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -3300,7 +3560,7 @@ Data were acquired via the Bellingcat-linked iron_march_201911_archive.torrent.
 
       <footer>
       <div class="copyright">
-  <p>Developed by Brendan Knapp.</p>
+  <p>Developed by Brendan Knapp, Alex Newhouse.</p>
 </div>
 
 <div class="pkgdown">

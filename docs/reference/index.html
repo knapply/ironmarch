@@ -135,9 +135,63 @@
       <tr>
         
         <td>
-          <p><code><a href="iron-march-tables.html">im_core_dfs</a></code> <code><a href="iron-march-tables.html">im_orig_dfs</a></code> <code><a href="iron-march-tables.html">im_forums_dfs</a></code> <code><a href="iron-march-tables.html">im_other_dfs</a></code> </p>
+          <p><code><a href="iron-march-tables.html">im_core_dfs</a></code> <code><a href="iron-march-tables.html">im_orig_dfs</a></code> <code><a href="iron-march-tables.html">im_forums_dfs</a></code> <code><a href="iron-march-tables.html">im_other_dfs</a></code> <code><a href="iron-march-tables.html">combo_members_df</a></code> <code><a href="iron-march-tables.html">combo_messages_df</a></code> </p>
         </td>
         <td><p>Iron March Data</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-network-analysis" class="hasAnchor"><a href="#section-network-analysis" class="anchor"></a>Network Analysis</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="im_message_network.html">im_message_network()</a></code> </p>
+        </td>
+        <td><p>Build Message Network</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-spatial-analysis" class="hasAnchor"><a href="#section-spatial-analysis" class="anchor"></a>Spatial Analysis</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="im_geocode_members.html">im_geocode_members()</a></code> </p>
+        </td>
+        <td><p>Build a Members Data Frame with Geocoded IP Addresses</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-reference-and-enrichment-data" class="hasAnchor"><a href="#section-reference-and-enrichment-data" class="anchor"></a>Reference and Enrichment Data</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="iron-march-entities.html">im_groups</a></code> <code><a href="iron-march-entities.html">im_personnel</a></code> <code><a href="iron-march-entities.html">im_victims</a></code> </p>
+        </td>
+        <td><p>Related Groups and People</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="iron-march-events.html">im_events</a></code> </p>
+        </td>
+        <td><p>Events related (or of likely interest), to  <em>ironmarch.org</em> members.</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="iron-march-third-party.html">im_possible_mil_members</a></code> </p>
+        </td>
+        <td><p>Data compiled by third parties.</p></td>
       </tr>
     </tbody><tbody>
       <tr>
@@ -183,7 +237,7 @@
       <tr>
         
         <td>
-          <p><code><a href="ironmarch-options.html">ironmarch_options()</a></code> <code><a href="ironmarch-options.html">ironmarch_as_tibble()</a></code> </p>
+          <p><code><a href="ironmarch-options.html">ironmarch_options()</a></code> <code><a href="ironmarch-options.html">ironmarch_as_tibble()</a></code> <code><a href="ironmarch-options.html">ironmarch_as_sf()</a></code> </p>
         </td>
         <td><p><code>{ironmarch}</code> Options</p></td>
       </tr>
@@ -195,6 +249,9 @@
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#section-original-site-data">Original Site Data</a></li>
+      <li><a href="#section-network-analysis">Network Analysis</a></li>
+      <li><a href="#section-spatial-analysis">Spatial Analysis</a></li>
+      <li><a href="#section-reference-and-enrichment-data">Reference and Enrichment Data</a></li>
       <li><a href="#section-builders">Builders</a></li>
       <li><a href="#section-text-utilities">Text Utilities</a></li>
       <li><a href="#section-options">Options</a></li>
@@ -205,7 +262,7 @@
 
       <footer>
       <div class="copyright">
-  <p>Developed by Brendan Knapp.</p>
+  <p>Developed by Brendan Knapp, Alex Newhouse.</p>
 </div>
 
 <div class="pkgdown">

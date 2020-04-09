@@ -4,6 +4,11 @@ library(data.table)
 print.data.table <- function(x) print(tibble::as_tibble(x))
 print.data.frame <- function(x) print(tibble::as_tibble(x))
 
+
+
+
+  
+  
 orig_msgs <- copy(ironmarch::im_orig_dfs$orig_message_posts)
 core_msgs <- copy(ironmarch::im_core_dfs$core_message_posts)
 
@@ -42,7 +47,8 @@ combo_messages_df[
             ][, orig_msg_author_id := NULL
               ][, core_msg_post_key := NULL
                 ][, orig_msg_post_key := NULL
-                  ]
+                  ][, msg_post_no_html := strip_html(msg_post)
+                    ]
 
 stopifnot(nrow(combo_messages_df[is.na(msg_author_id)]) == 0L)
 stopifnot(nrow(combo_messages_df[is.na(msg_post)]) == 0L)

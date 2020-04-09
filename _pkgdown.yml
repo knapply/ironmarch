@@ -12,6 +12,24 @@ reference:
     contents:
     - iron-march-tables
 
+
+
+  - title: Network Analysis
+    contents:
+    - im_message_network
+    
+  - title: Spatial Analysis
+    contents:
+    - im_geocode_members
+    
+  - title: Reference and Enrichment Data
+    contents:
+    - im_groups
+    - im_personnel
+    - im_victims
+    - im_events
+    - iron-march-third-party
+    
   - title: Builders
     contents:
     - build_members

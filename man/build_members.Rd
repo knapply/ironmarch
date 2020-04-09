@@ -20,7 +20,7 @@ Whether to split the result into a named list of separate data frames, retaining
 observations.
 Ignored if \code{summarize} is \code{TRUE}.}
 
-\item{as_tibble}{\code{logical(1L)}, Default: \code{TRUE}.
+\item{as_tibble}{\code{logical(1L)}, Default: \code{ironmarch_as_tibble()}.
 Whether a \code{\link[tibble:tibble]{tibble::tibble()}} should be returned. Ignored if the \code{{tibble}} package
 is not installed.}
 }

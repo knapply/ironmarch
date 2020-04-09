@@ -22,5 +22,10 @@ Useful links:
 \author{
 \strong{Maintainer}: Brendan Knapp \email{brendan.g.knapp@gmail.com} (\href{https://orcid.org/0000-0003-3284-4972}{ORCID})
 
+Authors:
+\itemize{
+  \item Alex Newhouse \email{anewhouse@miis.edu}
+}
+
 }
 \keyword{internal}
