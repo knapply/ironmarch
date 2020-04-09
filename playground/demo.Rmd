@@ -1,0 +1,111 @@
+---
+title: "demo"
+author: "Brendan Knapp"
+date: "4/9/2020"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+```{r}
+library(ironmarch)
+library(dplyr)
+library(igraph)
+
+print.data.table <- function(x) print(tibble::as_tibble(x))
+print.data.frame <- function(x) print(tibble::as_tibble(x))
+
+extract_ego <- function(g, ego_name, n_steps = 1L) {
+  hood <- unlist(neighborhood(
+    g,
+    order = n_steps,
+    nodes = which(vertex_attr(g, "name") == ego_name)
+  ), use.names = FALSE)
+
+  induced_subgraph(g, hood)
+}
+
+vis_net <- function(ego_g) {
+  edge_attr(ego_g, "title") <- edge_attr(ego_g, "msg_post")
+  visNetwork::visIgraph(ego_g) %>%
+    visNetwork::visOptions(nodesIdSelection = TRUE, highlightNearest = TRUE)
+}
+```
+
+
+```{r}
+build_members()
+```
+
+```{r}
+build_messages()
+```
+
+```{r}
+im_personnel
+im_groups
+im_events
+```
+
+
+```{r}
+g <- im_message_network()
+g
+```
+
+```{r}
+data.table::as.data.table(vertex_attr(g))
+```
+
+```{r}
+igraph::as_data_frame(g, what = "edges")
+```
+
+```{r}
+ego_g <- g %>%
+  extract_ego("Blood and Iron")
+
+ego_g %>%
+  vis_net()
+```
+
+
+```{r}
+us_sf <- sf::st_as_sf(
+  raster::getData(
+    country = "United States",
+    level = 1
+  )
+)
+
+plot(us_sf$geometry)
+
+missouri_sf <- us_sf %>%
+  filter(NAME_1 == "Missouri")
+
+mapview::mapview(missouri_sf)
+```
+
+
+```{r}
+all_members_sf <- im_geocode_members()
+all_members_sf
+```
+
+```{r}
+all_members_sf %>%
+  mapview::mapview()
+```
+
+```{r}
+missouri_members_sf <- all_members_sf %>%
+  sf::st_crop(missouri_sf)
+
+missouri_members_sf
+
+missouri_members_sf %>% mapview::mapview()
+```
