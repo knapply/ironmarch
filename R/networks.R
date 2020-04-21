@@ -2,7 +2,7 @@
 #'
 #' @examples
 #' im_message_network()
-#' @importFrom data.table copy setDT
+#' @importFrom data.table copy setDT setnames
 #' @export
 im_message_network <- function() {
   if (!requireNamespace("igraph", quietly = TRUE)) {
@@ -44,6 +44,7 @@ im_message_network <- function() {
     copy(combo_members_df)
   )[, (member_cols_to_drop) := NULL]
   # styler: on
+  setnames(nodes_members, old = "name", new = "screen_name")
 
   igraph::graph_from_data_frame(
     edges_member_member[
