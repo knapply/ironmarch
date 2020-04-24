@@ -53,6 +53,9 @@ build_groups <- function() {
     list(
       name = "Vorherrschaft Division",
       aka = "VSD"
+    ),
+    list(
+      name = "Aryan Underground"
     )
   )
 
