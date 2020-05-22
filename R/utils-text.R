@@ -35,6 +35,9 @@ extract_html_tags <- function(x, tag, collapse = "\n", ...) {
   if (!requireNamespace("rvest", quietly = TRUE)) {
     stop("{rvest} is required for this functionality.", call. = FALSE)
   }
+  if (!requireNamespace("stringr", quietly = TRUE)) {
+    stop("{stringr} is required for this functionality.", call. = FALSE)
+  }
 
   rawified <- lapply(x, charToRaw)
   parsed <- lapply(rawified, xml2::read_html)
@@ -69,5 +72,24 @@ extract_text <- function(x, collapse = "\n", ...) {
 extract_links <- function(x, collapse = NULL, ...) {
   extract_html_tags(x, tag = "a", collapse = collapse, ...)
 }
+
+#' @rdname extract_html_tags
+#' 
+#' @export
+extract_reply_text <- function(x, collapse = "\n", ...) {
+  if(grepl("</blockquote>", x)){
+    matches=stringr::str_locate_all(x,"</blockquote>")
+    chars=sapply(matches,function(x) x[nrow(x),])[1,]
+    extract_html_tags(stringr::str_sub(x,chars, nchar(x)), tag = "p", collapse = collapse, ...)
+  }
+  else{
+    extract_html_tags(x, tag = "p", collapse = collapse, ...)
+  }
+}
+
+
+
+
+
 
 

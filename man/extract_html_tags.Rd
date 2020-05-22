@@ -4,6 +4,7 @@
 \alias{extract_html_tags}
 \alias{extract_text}
 \alias{extract_links}
+\alias{extract_reply_text}
 \title{Parse and Extract HTML Elements}
 \usage{
 extract_html_tags(x, tag, collapse = "\\n", ...)
@@ -11,6 +12,8 @@ extract_html_tags(x, tag, collapse = "\\n", ...)
 extract_text(x, collapse = "\\n", ...)
 
 extract_links(x, collapse = NULL, ...)
+
+extract_reply_text(x, collapse = "\\n", ...)
 }
 \arguments{
 \item{x}{\code{character()}. HTML text to parse.}
