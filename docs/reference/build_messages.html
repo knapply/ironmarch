@@ -17,23 +17,27 @@
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
 
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cerulean/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/cerulean/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -48,7 +52,6 @@
 <meta property="og:description" content="build_messages() reconciles and merges the messages from
 im_orig_dfs$orig_message_posts and im_core_dfs$core_message_posts." />
 <meta property="og:image" content="https://knapply.github.io/ironmarch/logo.png" />
-<meta name="twitter:card" content="summary" />
 
 
 
@@ -66,7 +69,7 @@ im_orig_dfs$orig_message_posts and im_core_dfs$core_message_posts." />
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -98,7 +101,7 @@ im_orig_dfs$orig_message_posts and im_core_dfs$core_message_posts." />
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/knapply/ironmarch">
+  <a href="https://github.com/knapply/ironmarch/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -184,8 +187,8 @@ data frames.</p></li>
 #&gt; </span><span style='color: #BCBCBC;'> 8</span><span>      8            3 2011-09-17 </span><span style='color: #949494;'>01:59:50</span><span> </span><span style='color: #949494;'>"</span><span>\n&lt;blo… 327b933d818…            14
 #&gt; </span><span style='color: #BCBCBC;'> 9</span><span>     12            5 2011-09-20 </span><span style='color: #949494;'>14:20:14</span><span> </span><span style='color: #949494;'>"</span><span>&lt;p&gt;The… 0667258c387…             1
 #&gt; </span><span style='color: #BCBCBC;'>10</span><span>     13            5 2011-09-20 </span><span style='color: #949494;'>14:42:17</span><span> </span><span style='color: #949494;'>"</span><span>&lt;p&gt;Don… de1d7fd2737…            20
-#&gt; </span><span style='color: #949494;'># … with 22,299 more rows, and 2 more variables: msg_ip_address </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>,
-#&gt; #   msg_is_first_post </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span></div><div class='input'>
+#&gt; </span><span style='color: #949494;'># … with 22,299 more rows, and 2 more variables: msg_ip_address </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>,</span><span>
+#&gt; </span><span style='color: #949494;'>#   msg_is_first_post </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span></div><div class='input'>
 <span class='co'># all message observations ============================================================</span>
 <span class='fu'>build_messages</span>(<span class='kw'>summarize</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</div><div class='output co'>#&gt; </span><span style='color: #949494;'># A tibble: 35,056 x 9</span><span>
 #&gt;    which_df msg_id msg_topic_id msg_date            msg_post msg_post_key
@@ -200,8 +203,8 @@ data frames.</p></li>
 #&gt; </span><span style='color: #BCBCBC;'> 8</span><span> core          8            3 2011-09-17 </span><span style='color: #949494;'>01:59:50</span><span> </span><span style='color: #949494;'>"</span><span>\n&lt;blo… 327b933d818…
 #&gt; </span><span style='color: #BCBCBC;'> 9</span><span> core         12            5 2011-09-20 </span><span style='color: #949494;'>14:20:14</span><span> </span><span style='color: #949494;'>"</span><span>&lt;p&gt;The… 0667258c387…
 #&gt; </span><span style='color: #BCBCBC;'>10</span><span> core         13            5 2011-09-20 </span><span style='color: #949494;'>14:42:17</span><span> </span><span style='color: #949494;'>"</span><span>&lt;p&gt;Don… de1d7fd2737…
-#&gt; </span><span style='color: #949494;'># … with 35,046 more rows, and 3 more variables: msg_author_id </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span style='color: #949494;'>,
-#&gt; #   msg_ip_address </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, msg_is_first_post </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span></div><div class='input'>
+#&gt; </span><span style='color: #949494;'># … with 35,046 more rows, and 3 more variables: msg_author_id </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span style='color: #949494;'>,</span><span>
+#&gt; </span><span style='color: #949494;'>#   msg_ip_address </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, msg_is_first_post </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span></div><div class='input'>
 <span class='co'># all message observations split into a list of data frames ===========================</span>
 <span class='no'>split_messages</span> <span class='kw'>&lt;-</span> <span class='fu'>build_messages</span>(<span class='kw'>summarize</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>split</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
 
@@ -215,8 +218,8 @@ data frames.</p></li>
 #&gt;   </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>        </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;dttm&gt;</span><span>              </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>       
 #&gt; </span><span style='color: #BCBCBC;'>1</span><span> core          1            1 2011-09-16 </span><span style='color: #949494;'>03:49:58</span><span> &lt;p&gt;The … 3320f7f06c4…
 #&gt; </span><span style='color: #BCBCBC;'>2</span><span> orig          1            1 2011-09-16 </span><span style='color: #949494;'>03:49:58</span><span> The bes… 3320f7f06c4…
-#&gt; </span><span style='color: #949494;'># … with 3 more variables: msg_author_id </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span style='color: #949494;'>, msg_ip_address </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>,
-#&gt; #   msg_is_first_post </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span>
+#&gt; </span><span style='color: #949494;'># … with 3 more variables: msg_author_id </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span style='color: #949494;'>, msg_ip_address </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>,</span><span>
+#&gt; </span><span style='color: #949494;'>#   msg_is_first_post </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span>
 #&gt; 
 #&gt; $`2`
 #&gt; </span><span style='color: #949494;'># A tibble: 2 x 9</span><span>
@@ -224,8 +227,8 @@ data frames.</p></li>
 #&gt;   </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>        </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;dttm&gt;</span><span>              </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>       
 #&gt; </span><span style='color: #BCBCBC;'>1</span><span> core          2            2 2011-09-16 </span><span style='color: #949494;'>11:54:08</span><span> </span><span style='color: #949494;'>"</span><span>\n&lt;p&gt;W… 9204e488332…
 #&gt; </span><span style='color: #BCBCBC;'>2</span><span> orig          2            2 2011-09-16 </span><span style='color: #949494;'>11:54:08</span><span> </span><span style='color: #949494;'>"</span><span>Who ar… 9204e488332…
-#&gt; </span><span style='color: #949494;'># … with 3 more variables: msg_author_id </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span style='color: #949494;'>, msg_ip_address </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>,
-#&gt; #   msg_is_first_post </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span>
+#&gt; </span><span style='color: #949494;'># … with 3 more variables: msg_author_id </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span style='color: #949494;'>, msg_ip_address </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>,</span><span>
+#&gt; </span><span style='color: #949494;'>#   msg_is_first_post </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span>
 #&gt; 
 #&gt; $`3`
 #&gt; </span><span style='color: #949494;'># A tibble: 2 x 9</span><span>
@@ -233,8 +236,8 @@ data frames.</p></li>
 #&gt;   </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>        </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;dttm&gt;</span><span>              </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>       
 #&gt; </span><span style='color: #BCBCBC;'>1</span><span> core          3            2 2011-09-16 </span><span style='color: #949494;'>14:39:59</span><span> &lt;p&gt;Cris… 12fd0309239…
 #&gt; </span><span style='color: #BCBCBC;'>2</span><span> orig          3            2 2011-09-16 </span><span style='color: #949494;'>14:39:59</span><span> Crisis … 12fd0309239…
-#&gt; </span><span style='color: #949494;'># … with 3 more variables: msg_author_id </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span style='color: #949494;'>, msg_ip_address </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>,
-#&gt; #   msg_is_first_post </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span>
+#&gt; </span><span style='color: #949494;'># … with 3 more variables: msg_author_id </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span style='color: #949494;'>, msg_ip_address </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>,</span><span>
+#&gt; </span><span style='color: #949494;'>#   msg_is_first_post </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span>
 #&gt; 
 #&gt; $`4`
 #&gt; </span><span style='color: #949494;'># A tibble: 2 x 9</span><span>
@@ -242,8 +245,8 @@ data frames.</p></li>
 #&gt;   </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>        </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;dttm&gt;</span><span>              </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>       
 #&gt; </span><span style='color: #BCBCBC;'>1</span><span> core          4            2 2011-09-16 </span><span style='color: #949494;'>15:29:01</span><span> &lt;p&gt;Than… 0658c6f99ac…
 #&gt; </span><span style='color: #BCBCBC;'>2</span><span> orig          4            2 2011-09-16 </span><span style='color: #949494;'>15:29:01</span><span> Thank y… 0658c6f99ac…
-#&gt; </span><span style='color: #949494;'># … with 3 more variables: msg_author_id </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span style='color: #949494;'>, msg_ip_address </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>,
-#&gt; #   msg_is_first_post </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span>
+#&gt; </span><span style='color: #949494;'># … with 3 more variables: msg_author_id </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span style='color: #949494;'>, msg_ip_address </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>,</span><span>
+#&gt; </span><span style='color: #949494;'>#   msg_is_first_post </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span>
 #&gt; 
 #&gt; $`5`
 #&gt; </span><span style='color: #949494;'># A tibble: 2 x 9</span><span>
@@ -251,21 +254,15 @@ data frames.</p></li>
 #&gt;   </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>        </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;dttm&gt;</span><span>              </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>       
 #&gt; </span><span style='color: #BCBCBC;'>1</span><span> core          5            2 2011-09-16 </span><span style='color: #949494;'>15:32:58</span><span> &lt;p&gt;If y… 570257864e3…
 #&gt; </span><span style='color: #BCBCBC;'>2</span><span> orig          5            2 2011-09-16 </span><span style='color: #949494;'>15:32:58</span><span> If you … 570257864e3…
-#&gt; </span><span style='color: #949494;'># … with 3 more variables: msg_author_id </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span style='color: #949494;'>, msg_ip_address </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>,
-#&gt; #   msg_is_first_post </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span>
+#&gt; </span><span style='color: #949494;'># … with 3 more variables: msg_author_id </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span style='color: #949494;'>, msg_ip_address </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>,</span><span>
+#&gt; </span><span style='color: #949494;'>#   msg_is_first_post </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span>
 #&gt; </div><div class='input'>
 </div></span></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
-    <h2>Author</h2>
-    <p>Brendan Knapp <a href='mailto:brendan.g.knapp@gmail.com'>brendan.g.knapp@gmail.com</a></p>
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -276,7 +273,7 @@ data frames.</p></li>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>

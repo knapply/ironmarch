@@ -10,5 +10,8 @@ im_message_network()
 Build Message Network
 }
 \examples{
-im_message_network()
+im_message_g <- im_message_network()
+
+print(im_message_g, max.lines = 20)
+
 }

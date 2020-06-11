@@ -20,7 +20,8 @@ Description:
 License: GPL-3 + file LICENSE
 Depends: R (>= 3.5)
 Imports:
-    data.table (>= 1.12.4)
+    data.table (>= 1.12.4),
+    stringr
 Suggests:
     covr,
     knitr,

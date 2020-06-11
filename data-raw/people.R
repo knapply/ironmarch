@@ -45,7 +45,7 @@ build_personnel <- function() {
       member_id = 6249L,
       aka = "Nordic_Wolf",
       real_name = "David Cole Tarkington",
-      was_military = TRUE
+      was_military = TRUE,
       affiliation = "Atomwaffen",
       sources = "https://www.bellingcat.com/news/2019/12/19/transnational-white-terror-exposing-atomwaffen-and-the-iron-march-networks/"
     ),
@@ -92,7 +92,7 @@ build_personnel <- function() {
       sources = "https://www.bellingcat.com/news/2019/12/19/transnational-white-terror-exposing-atomwaffen-and-the-iron-march-networks/"
     ),
     list(
-      name = "Úlfhédnar",
+      name = "\u00da\u006c\u0066\u0068\u00e9\u0064\u006e\u0061\u0072", # "Úlfhédnar",
       member_id = 13024L,
       was_military = TRUE
     ),
@@ -145,14 +145,14 @@ build_personnel <- function() {
       affiliation = "Attomwaffen"
     ),
     list(
-      name = "the_Khimære",
+      name = "\u0074\u0068\u0065\u005f\u004b\u0068\u0069\u006d\u00e6\u0072\u0065", # "the_Khimære",
       member_id = 14028L,
       real_name = "Kaleb Cole",
       affiliation = "Attomwaffen"
     ),
     list(
       name = "Rape",
-      member_id == 13353L,
+      member_id = 13353L,
       real_name = "David Cole Tarkington",
       was_military = TRUE,
       aka = "therelentlessagony",
@@ -163,7 +163,7 @@ build_personnel <- function() {
       name = "With Hate As My Sword",
       member_id = 54L,
       real_name = "Lindsay Souvannarath",
-      affiliation = "Atomwaffen", 
+      affiliation = "Atomwaffen",
       sources = "https://www.vice.com/en_us/article/eve54j/the-woman-who-plotted-a-valentines-mass-murder-shares-how-the-internet-radicalized-her"
     ),
     list(
@@ -175,7 +175,7 @@ build_personnel <- function() {
     list(
       name = "Borovikov",
       member_id = 9960L,
-      real_name = "Andrew Oneschuk", 
+      real_name = "Andrew Oneschuk",
       affiliation = "Atomwaffen, Silver Legion"
     ),
     list(
@@ -219,7 +219,7 @@ build_personnel <- function() {
       affiliation = "National Action"
     ),
     list(
-      name = "Daddy Terror", 
+      name = "Daddy Terror",
       member_id = 7L,
       real_name = "Benjamin Raymond",
       affiliation = "National Action"
@@ -239,7 +239,7 @@ build_personnel <- function() {
     list(
       name = "WadeAWD",
       member_id = 14349L,
-      real_name = "Wade Mendisabal", 
+      real_name = "Wade Mendisabal",
       affiliation = "Atomwaffen"
     ),
     list(
@@ -247,11 +247,11 @@ build_personnel <- function() {
       member_id = 3L,
       real_name = "John Cartwright"
     )
-    # ,
-    # list(
-    #   real_name = "",
-    #   affiliation = "Attomwaffen"
-    # )
+    ,
+    list(
+      real_name = "",
+      affiliation = "Attomwaffen"
+    )
   )
 
   out <- data.table::rbindlist(init, fill = TRUE)

@@ -42,8 +42,9 @@ extract_html_tags(messages, "p")
 extract_text(messages) # same as `extract_html_tags(messages, tag = "p")`
 
 extract_links(messages) # same as `extract_html_tags(messages, tag = "a", collapse = NULL)`
-
 }
 \author{
 Brendan Knapp \email{brendan.g.knapp@gmail.com}
+
+Alex Newhouse \email{anewhouse@miis.edu}
 }

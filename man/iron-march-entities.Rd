@@ -8,9 +8,9 @@
 \alias{im_victims}
 \title{Related Groups and People}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 11 rows and 2 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 16 rows and 2 columns.
 
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 17 rows and 8 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 45 rows and 8 columns.
 
 An object of class \code{data.table} (inherits from \code{data.frame}) with 1 rows and 3 columns.
 }
@@ -32,10 +32,6 @@ im_victims
 \author{
 Brendan Knapp \email{brendan.g.knapp@gmail.com}
 
-Brendan Knapp \email{brendan.g.knapp@gmail.com}
-
-Brendan Knapp \email{brendan.g.knapp@gmail.com}
-
-Brendan Knapp \email{brendan.g.knapp@gmail.com}
+Alex Newhouse \email{anewhouse@miis.edu}
 }
 \keyword{datasets}

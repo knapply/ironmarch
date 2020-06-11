@@ -17,23 +17,27 @@
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
 
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cerulean/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/cerulean/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -47,7 +51,6 @@
 <meta property="og:title" content="Related Groups and People — iron-march-entities" />
 <meta property="og:description" content="Groups and People Associated with ironmarch.org and/or its members." />
 <meta property="og:image" content="https://knapply.github.io/ironmarch/logo.png" />
-<meta name="twitter:card" content="summary" />
 
 
 
@@ -65,7 +68,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -97,7 +100,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/knapply/ironmarch">
+  <a href="https://github.com/knapply/ironmarch/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -133,15 +136,15 @@
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>An object of class <code>tbl_df</code> (inherits from <code>tbl</code>, <code>data.frame</code>) with 11 rows and 2 columns.</p>
-<p>An object of class <code>tbl_df</code> (inherits from <code>tbl</code>, <code>data.frame</code>) with 17 rows and 8 columns.</p>
+    <p>An object of class <code>tbl_df</code> (inherits from <code>tbl</code>, <code>data.frame</code>) with 16 rows and 2 columns.</p>
+<p>An object of class <code>tbl_df</code> (inherits from <code>tbl</code>, <code>data.frame</code>) with 45 rows and 8 columns.</p>
 <p>An object of class <code>data.table</code> (inherits from <code>data.frame</code>) with 1 rows and 3 columns.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>im_groups</span></div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 11 x 2</span><span>
+    <pre class="examples"><div class='input'><span class='no'>im_groups</span></div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 16 x 2</span><span>
 #&gt;    name                                       aka      
 #&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>                                      </span><span style='color: #949494;font-style: italic;'>&lt;list&gt;</span><span>   
-#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> Atomwaffen Division                        </span><span style='color: #949494;'>&lt;chr [1]&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> Atomwaffen Division                        </span><span style='color: #949494;'>&lt;chr [2]&gt;</span><span>
 #&gt; </span><span style='color: #BCBCBC;'> 2</span><span> International Third Positionist Federation </span><span style='color: #949494;'>&lt;chr [1]&gt;</span><span>
 #&gt; </span><span style='color: #BCBCBC;'> 3</span><span> Nordic Resistance Movement                 </span><span style='color: #949494;'>&lt;chr [1]&gt;</span><span>
 #&gt; </span><span style='color: #BCBCBC;'> 4</span><span> National Democratic Party of Germany       </span><span style='color: #949494;'>&lt;chr [1]&gt;</span><span>
@@ -151,40 +154,31 @@
 #&gt; </span><span style='color: #BCBCBC;'> 8</span><span> National Action                            </span><span style='color: #949494;'>&lt;chr [1]&gt;</span><span>
 #&gt; </span><span style='color: #BCBCBC;'> 9</span><span> American Vanguard                          </span><span style='color: #949494;'>&lt;chr [1]&gt;</span><span>
 #&gt; </span><span style='color: #BCBCBC;'>10</span><span> Traditionalist Workers Party               </span><span style='color: #949494;'>&lt;chr [1]&gt;</span><span>
-#&gt; </span><span style='color: #BCBCBC;'>11</span><span> Silver Legion                              </span><span style='color: #949494;'>&lt;chr [1]&gt;</span><span></div><div class='input'><span class='no'>im_personnel</span></div><div class='output co'>#&gt; </span><span style='color: #949494;'># A tibble: 17 x 8</span><span>
+#&gt; </span><span style='color: #BCBCBC;'>11</span><span> Silver Legion                              </span><span style='color: #949494;'>&lt;chr [1]&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'>12</span><span> Azov Battalion                             </span><span style='color: #949494;'>&lt;chr [3]&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'>13</span><span> Feuerkrieg Division                        </span><span style='color: #949494;'>&lt;chr [1]&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'>14</span><span> Generation WAR                             </span><span style='color: #949494;'>&lt;chr [1]&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'>15</span><span> Vorherrschaft Division                     </span><span style='color: #949494;'>&lt;chr [1]&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'>16</span><span> Aryan Underground                          </span><span style='color: #949494;'>&lt;chr [1]&gt;</span><span></div><div class='input'><span class='no'>im_personnel</span></div><div class='output co'>#&gt; </span><span style='color: #949494;'># A tibble: 45 x 8</span><span>
 #&gt;    name  real_name member_id affiliation sources aka   possible_aka was_military
 #&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>         </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;list&gt;</span><span>      </span><span style='color: #949494;font-style: italic;'>&lt;list&gt;</span><span>  </span><span style='color: #949494;font-style: italic;'>&lt;lis&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>        </span><span style='color: #949494;font-style: italic;'>&lt;lgl&gt;</span><span>       
-#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> TheW… Devon Ar…      </span><span style='text-decoration: underline;'>9</span><span>304 </span><span style='color: #949494;'>&lt;chr [1]&gt;</span><span>   </span><span style='color: #949494;'>&lt;chr [</span><span>… </span><span style='color: #949494;'>&lt;chr</span><span>… </span><span style='color: #BB0000;'>NA</span><span>           </span><span style='color: #BB0000;'>NA</span><span>          
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> TheW… Devon Ar…      </span><span style='text-decoration: underline;'>9</span><span>304 </span><span style='color: #949494;'>&lt;chr [2]&gt;</span><span>   </span><span style='color: #949494;'>&lt;chr [</span><span>… </span><span style='color: #949494;'>&lt;chr</span><span>… </span><span style='color: #BB0000;'>NA</span><span>           </span><span style='color: #BB0000;'>NA</span><span>          
 #&gt; </span><span style='color: #BCBCBC;'> 2</span><span> Woma… </span><span style='color: #BB0000;'>NA</span><span>                9 </span><span style='color: #949494;'>&lt;chr [1]&gt;</span><span>   </span><span style='color: #949494;'>&lt;chr [</span><span>… </span><span style='color: #949494;'>&lt;chr</span><span>… </span><span style='color: #BB0000;'>NA</span><span>           </span><span style='color: #BB0000;'>NA</span><span>          
 #&gt; </span><span style='color: #BCBCBC;'> 3</span><span> Mr. … </span><span style='color: #BB0000;'>NA</span><span>                8 </span><span style='color: #949494;'>&lt;chr [1]&gt;</span><span>   </span><span style='color: #949494;'>&lt;chr [</span><span>… </span><span style='color: #949494;'>&lt;chr</span><span>… </span><span style='color: #BB0000;'>NA</span><span>           </span><span style='color: #BB0000;'>NA</span><span>          
 #&gt; </span><span style='color: #BCBCBC;'> 4</span><span> Figl… </span><span style='color: #BB0000;'>NA</span><span>               37 </span><span style='color: #949494;'>&lt;chr [1]&gt;</span><span>   </span><span style='color: #949494;'>&lt;chr [</span><span>… </span><span style='color: #949494;'>&lt;chr</span><span>… </span><span style='color: #BB0000;'>NA</span><span>           </span><span style='color: #BB0000;'>NA</span><span>          
 #&gt; </span><span style='color: #BCBCBC;'> 5</span><span> Алек… </span><span style='color: #BB0000;'>NA</span><span>                1 </span><span style='color: #949494;'>&lt;chr [1]&gt;</span><span>   </span><span style='color: #949494;'>&lt;chr [</span><span>… </span><span style='color: #949494;'>&lt;chr</span><span>… Alisher Muk… </span><span style='color: #BB0000;'>NA</span><span>          
 #&gt; </span><span style='color: #BCBCBC;'> 6</span><span> Odin  Brandon …      </span><span style='text-decoration: underline;'>7</span><span>600 </span><span style='color: #949494;'>&lt;chr [1]&gt;</span><span>   </span><span style='color: #949494;'>&lt;chr [</span><span>… </span><span style='color: #949494;'>&lt;chr</span><span>… </span><span style='color: #BB0000;'>NA</span><span>           TRUE        
-#&gt; </span><span style='color: #BCBCBC;'> 7</span><span> The … </span><span style='color: #BB0000;'>NA</span><span>             </span><span style='text-decoration: underline;'>6</span><span>249 </span><span style='color: #949494;'>&lt;chr [1]&gt;</span><span>   </span><span style='color: #949494;'>&lt;chr [</span><span>… </span><span style='color: #949494;'>&lt;chr</span><span>… </span><span style='color: #BB0000;'>NA</span><span>           </span><span style='color: #BB0000;'>NA</span><span>          
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span> The … David Co…      </span><span style='text-decoration: underline;'>6</span><span>249 </span><span style='color: #949494;'>&lt;chr [1]&gt;</span><span>   </span><span style='color: #949494;'>&lt;chr [</span><span>… </span><span style='color: #949494;'>&lt;chr</span><span>… </span><span style='color: #BB0000;'>NA</span><span>           TRUE        
 #&gt; </span><span style='color: #BCBCBC;'> 8</span><span> Arat… </span><span style='color: #BB0000;'>NA</span><span>             </span><span style='text-decoration: underline;'>9</span><span>869 </span><span style='color: #949494;'>&lt;chr [1]&gt;</span><span>   </span><span style='color: #949494;'>&lt;chr [</span><span>… </span><span style='color: #949494;'>&lt;chr</span><span>… </span><span style='color: #BB0000;'>NA</span><span>           </span><span style='color: #BB0000;'>NA</span><span>          
 #&gt; </span><span style='color: #BCBCBC;'> 9</span><span> Stea… </span><span style='color: #BB0000;'>NA</span><span>            </span><span style='text-decoration: underline;'>13</span><span>092 </span><span style='color: #949494;'>&lt;chr [1]&gt;</span><span>   </span><span style='color: #949494;'>&lt;chr [</span><span>… </span><span style='color: #949494;'>&lt;chr</span><span>… </span><span style='color: #BB0000;'>NA</span><span>           </span><span style='color: #BB0000;'>NA</span><span>          
 #&gt; </span><span style='color: #BCBCBC;'>10</span><span> </span><span style='color: #BB0000;'>NA</span><span>    Nicholas…        </span><span style='color: #BB0000;'>NA</span><span> </span><span style='color: #949494;'>&lt;chr [1]&gt;</span><span>   </span><span style='color: #949494;'>&lt;chr [</span><span>… </span><span style='color: #949494;'>&lt;chr</span><span>… </span><span style='color: #BB0000;'>NA</span><span>           </span><span style='color: #BB0000;'>NA</span><span>          
-#&gt; </span><span style='color: #BCBCBC;'>11</span><span> </span><span style='color: #BB0000;'>NA</span><span>    Samuel W…        </span><span style='color: #BB0000;'>NA</span><span> </span><span style='color: #949494;'>&lt;chr [1]&gt;</span><span>   </span><span style='color: #949494;'>&lt;chr [</span><span>… </span><span style='color: #949494;'>&lt;chr</span><span>… </span><span style='color: #BB0000;'>NA</span><span>           </span><span style='color: #BB0000;'>NA</span><span>          
-#&gt; </span><span style='color: #BCBCBC;'>12</span><span> </span><span style='color: #BB0000;'>NA</span><span>    Edward C…        </span><span style='color: #BB0000;'>NA</span><span> </span><span style='color: #949494;'>&lt;chr [1]&gt;</span><span>   </span><span style='color: #949494;'>&lt;chr [</span><span>… </span><span style='color: #949494;'>&lt;chr</span><span>… </span><span style='color: #BB0000;'>NA</span><span>           </span><span style='color: #BB0000;'>NA</span><span>          
-#&gt; </span><span style='color: #BCBCBC;'>13</span><span> </span><span style='color: #BB0000;'>NA</span><span>    Benjamin…        </span><span style='color: #BB0000;'>NA</span><span> </span><span style='color: #949494;'>&lt;chr [1]&gt;</span><span>   </span><span style='color: #949494;'>&lt;chr [</span><span>… </span><span style='color: #949494;'>&lt;chr</span><span>… </span><span style='color: #BB0000;'>NA</span><span>           </span><span style='color: #BB0000;'>NA</span><span>          
-#&gt; </span><span style='color: #BCBCBC;'>14</span><span> </span><span style='color: #BB0000;'>NA</span><span>    Andrew T…        </span><span style='color: #BB0000;'>NA</span><span> </span><span style='color: #949494;'>&lt;chr [1]&gt;</span><span>   </span><span style='color: #949494;'>&lt;chr [</span><span>… </span><span style='color: #949494;'>&lt;chr</span><span>… </span><span style='color: #BB0000;'>NA</span><span>           </span><span style='color: #BB0000;'>NA</span><span>          
-#&gt; </span><span style='color: #BCBCBC;'>15</span><span> </span><span style='color: #BB0000;'>NA</span><span>    Jarrett …        </span><span style='color: #BB0000;'>NA</span><span> </span><span style='color: #949494;'>&lt;chr [1]&gt;</span><span>   </span><span style='color: #949494;'>&lt;chr [</span><span>… </span><span style='color: #949494;'>&lt;chr</span><span>… </span><span style='color: #BB0000;'>NA</span><span>           </span><span style='color: #BB0000;'>NA</span><span>          
-#&gt; </span><span style='color: #BCBCBC;'>16</span><span> Úlfh… </span><span style='color: #BB0000;'>NA</span><span>            </span><span style='text-decoration: underline;'>13</span><span>024 </span><span style='color: #949494;'>&lt;chr [1]&gt;</span><span>   </span><span style='color: #949494;'>&lt;chr [</span><span>… </span><span style='color: #949494;'>&lt;chr</span><span>… </span><span style='color: #BB0000;'>NA</span><span>           TRUE        
-#&gt; </span><span style='color: #BCBCBC;'>17</span><span> </span><span style='color: #BB0000;'>NA</span><span>    Matt Hei…        </span><span style='color: #BB0000;'>NA</span><span> </span><span style='color: #949494;'>&lt;chr [1]&gt;</span><span>   </span><span style='color: #949494;'>&lt;chr [</span><span>… </span><span style='color: #949494;'>&lt;chr</span><span>… </span><span style='color: #BB0000;'>NA</span><span>           </span><span style='color: #BB0000;'>NA</span><span>          </div><div class='input'><span class='no'>im_victims</span></div><div class='output co'>#&gt;          real_name connected_personnel                      note
+#&gt; </span><span style='color: #949494;'># … with 35 more rows</span><span></div><div class='input'><span class='no'>im_victims</span></div><div class='output co'>#&gt;          real_name connected_personnel                      note
 #&gt; 1: Blaze Bernstein     Samuel Woodward killed by Samuel Woodward</div></span></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#format">Format</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
-    <h2>Author</h2>
-    <p>Brendan Knapp <a href='mailto:brendan.g.knapp@gmail.com'>brendan.g.knapp@gmail.com</a></p>
-<p>Brendan Knapp <a href='mailto:brendan.g.knapp@gmail.com'>brendan.g.knapp@gmail.com</a></p>
-<p>Brendan Knapp <a href='mailto:brendan.g.knapp@gmail.com'>brendan.g.knapp@gmail.com</a></p>
-<p>Brendan Knapp <a href='mailto:brendan.g.knapp@gmail.com'>brendan.g.knapp@gmail.com</a></p>
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -195,7 +189,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>

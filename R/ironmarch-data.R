@@ -62,11 +62,10 @@ NULL
 #' Groups and People Associated with _ironmarch.org_ and/or its members.
 #'
 #' @template author-bk
+#' @template author-an
 NULL
 
 #' @rdname iron-march-entities
-#'
-#' @template author-bk
 #'
 #' @examples
 #' im_groups
@@ -74,15 +73,11 @@ NULL
 
 #' @rdname iron-march-entities
 #'
-#' @template author-bk
-#'
 #' @examples
 #' im_personnel
 "im_personnel"
 
 #' @rdname iron-march-entities
-#'
-#' @template author-bk
 #'
 #' @examples
 #' im_victims
