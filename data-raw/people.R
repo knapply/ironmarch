@@ -4,7 +4,7 @@ build_personnel <- function() {
       name = "TheWeissewolfe",
       real_name = "Devon Arthurs",
       member_id = 9304L,
-      affiliation = "International Third Positionist Federation",
+      affiliation = "International Third Positionist Federation, Atomwaffen",
       sources = "https://www.bellingcat.com/news/2019/12/19/transnational-white-terror-exposing-atomwaffen-and-the-iron-march-networks/"
     ),
     list(
@@ -37,11 +37,16 @@ build_personnel <- function() {
       member_id = 7600L,
       real_name = "Brandon Russel",
       was_military = TRUE,
+      affiliation = "Atomwaffen",
       sources = "https://www.bellingcat.com/news/2019/12/19/transnational-white-terror-exposing-atomwaffen-and-the-iron-march-networks/"
     ),
     list(
       name = "The Yank",
       member_id = 6249L,
+      aka = "Nordic_Wolf",
+      real_name = "David Cole Tarkington",
+      was_military = TRUE
+      affiliation = "Atomwaffen",
       sources = "https://www.bellingcat.com/news/2019/12/19/transnational-white-terror-exposing-atomwaffen-and-the-iron-march-networks/"
     ),
     list(
@@ -153,8 +158,95 @@ build_personnel <- function() {
       aka = "therelentlessagony",
       affiliation = "Attomwaffen",
       sources = "https://gizmodo.com/leak-exposes-u-s-navy-sailor-as-once-prolific-recruite-1841149776"
+    ),
+    list(
+      name = "With Hate As My Sword",
+      member_id = 54L,
+      real_name = "Lindsay Souvannarath",
+      affiliation = "Atomwaffen", 
+      sources = "https://www.vice.com/en_us/article/eve54j/the-woman-who-plotted-a-valentines-mass-murder-shares-how-the-internet-radicalized-her"
+    ),
+    list(
+      name = "Ober",
+      member_id = 13682L,
+      real_name = "Matthew Urbanik",
+      affiliation = "Atomwaffen"
+    ),
+    list(
+      name = "Borovikov",
+      member_id = 9960L,
+      real_name = "Andrew Oneschuk", 
+      affiliation = "Atomwaffen, Silver Legion"
+    ),
+    list(
+      name = "Rekse_",
+      member_id = 10133L,
+      real_name = "Lauren Paul",
+      aka = "schönundweiß",
+      affiliation = "Atomwaffen, Silver Legion, American Vanguard, Aryan Underground"
+    ),
+    list(
+      name = "Palmer",
+      member_id = 274L,
+      real_name = "Nathaniel D. Palmer",
+      affiliation = "Atomwaffen"
+    ),
+    list(
+      name = "Prussian Glory",
+      member_id = 9655L,
+      affiliation = "Atomwaffen"
+    ),
+    list(
+      name = "EuropaUnited",
+      member_id = 9648L,
+      affiliation = "Atomwaffen"
+    ),
+    list(
+      name = "SIEGE Engine",
+      member_id = 9786L,
+      affiliation = "Atomwaffen"
+    ),
+    list(
+      name = "Atlas",
+      member_id = 9174L,
+      real_name = "Ryan Fleming",
+      affiliation = "National Action"
+    ),
+    list(
+      name = "Rockerz88",
+      member_id = 7851L,
+      real_name = "Zack Davies",
+      affiliation = "National Action"
+    ),
+    list(
+      name = "Daddy Terror", 
+      member_id = 7L,
+      real_name = "Benjamin Raymond",
+      affiliation = "National Action"
+    ),
+    list(
+      name = "ManyEnemiesBringsMuchHonor",
+      member_id = 14231L,
+      real_name = "Kieran Morris",
+      affiliation = "Patriot Front"
+    ),
+    list(
+      name = "Wolfman",
+      member_id = 13308L,
+      real_name = "William James Tschantre",
+      affiliation = "Atomwaffen"
+    ),
+    list(
+      name = "WadeAWD",
+      member_id = 14349L,
+      real_name = "Wade Mendisabal", 
+      affiliation = "Atomwaffen"
+    ),
+    list(
+      name = "Blood and Iron",
+      member_id = 3L,
+      real_name = "John Cartwright"
     )
-
     # ,
     # list(
     #   real_name = "",

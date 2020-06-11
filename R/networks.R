@@ -33,7 +33,7 @@ im_message_network <- function() {
   edges_member_member <- edges_init[
     messages,
     on = "msg_topic_id", nomatch = 0, all = TRUE
-  ][, msg_date := as.double(msg_date)]
+  ]
 
   member_cols_to_drop <- c(
     "member_login_key_expire", "joined", "last_activity", "last_visit"
@@ -45,13 +45,17 @@ im_message_network <- function() {
   )[, (member_cols_to_drop) := NULL]
   # styler: on
   setnames(nodes_members, old = "name", new = "screen_name")
-
-  igraph::graph_from_data_frame(
-    edges_member_member[
-      source_msg_author_id %in% nodes_members$member_id &
-        target_msg_author_id %in% nodes_members$member_id
-    ],
-    directed = FALSE,
-    vertices = nodes_members
+  el <- as.matrix(edges_member_member[
+    source_msg_author_id %in% nodes_members$member_id &
+      target_msg_author_id %in% nodes_members$member_id, 1:2])
+  el <- apply(el, 2, as.character)
+  edge_attrs <- edges_member_member[source_msg_author_id %in% nodes_members$member_id &
+                                      target_msg_author_id %in% nodes_members$member_id,3:10]
+  g <-  igraph::graph_from_edgelist(
+    el,
+    directed = FALSE
   )
+  igraph::edge_attr(g) <- as.list(edge_attrs)
+  igraph::vertex_attr(g) <- as.list(nodes_members[member_id %in% el[,1]])
+  g
 }
