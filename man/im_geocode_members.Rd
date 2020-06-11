@@ -12,7 +12,7 @@ im_geocode_members(
 }
 \arguments{
 \item{all_geo_cols}{\code{logical(1L)}, Default \code{TRUE}.
-Whether to return all georeferncesd columns.}
+Whether to return all georeferenced columns.}
 
 \item{as_tibble}{\code{logical(1L)}, Default: \code{ironmarch_as_tibble()}.
 Whether a \code{\link[tibble:tibble]{tibble::tibble()}} should be returned. Ignored if the \code{{tibble}} package
