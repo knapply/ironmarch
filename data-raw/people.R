@@ -26,7 +26,7 @@ build_personnel <- function() {
       sources = "https://www.bellingcat.com/news/2019/12/19/transnational-white-terror-exposing-atomwaffen-and-the-iron-march-networks/"
     ),
     list(
-      name = "Александр Славрос",
+      name = "\u0410\u043b\u0435\u043a\u0441\u0430\u043d\u0434\u0440 \u0421\u043b\u0430\u0432\u0440\u043e\u0441", # "Александр Славрос",
       member_id = 1L,
       aka = "Slavros, Moi Mir",
       possible_aka = "Alisher Mukhitdinov",
@@ -182,7 +182,7 @@ build_personnel <- function() {
       name = "Rekse_",
       member_id = 10133L,
       real_name = "Lauren Paul",
-      aka = "schönundweiß",
+      aka = "\u0073\u0063\u0068\u00f6\u006e\u0075\u006e\u0064\u0077\u0065\u0069\u00df", # "schönundweiß",
       affiliation = "Atomwaffen, Silver Legion, American Vanguard, Aryan Underground"
     ),
     list(
@@ -247,11 +247,11 @@ build_personnel <- function() {
       member_id = 3L,
       real_name = "John Cartwright"
     )
-    ,
-    list(
-      real_name = "",
-      affiliation = "Attomwaffen"
-    )
+    # ,
+    # list(
+    #   real_name = "",
+    #   affiliation = "Attomwaffen"
+    # )
   )
 
   out <- data.table::rbindlist(init, fill = TRUE)
