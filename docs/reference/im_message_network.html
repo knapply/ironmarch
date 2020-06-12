@@ -129,33 +129,52 @@
 
     <pre class="usage"><span class='fu'>im_message_network</span>(<span class='kw'>edge_geo_distance</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
 
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>edge_geo_distance</th>
+      <td><p>Whether to calculate dyadic geo-distances and add as an edge attribute
+named <code>distance_km</code> (for distance in kilometers). Member points are
+calculated from the centroids of each individual's geocoded IP addresses.</p></td>
+    </tr>
+    </table>
 
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='no'>im_message_g</span> <span class='kw'>&lt;-</span> <span class='fu'>im_message_network</span>()
 
-<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='no'>im_message_g</span>, <span class='kw'>max.lines</span> <span class='kw'>=</span> <span class='fl'>20</span>)</div><div class='output co'>#&gt; IGRAPH cea8ac6 U--- 821 41786 -- 
+<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='no'>im_message_g</span>, <span class='kw'>full</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</div><div class='output co'>#&gt; IGRAPH 070c571 U--- 821 41786 -- 
 #&gt; + attr: member_id (v/n), screen_name (v/c), member_group_id (v/n),
-#&gt; | email (v/c), ip_address (v/c), skin (v/n), warn_level (v/n),
-#&gt; | warn_lastwarn (v/n), bday_day (v/n), bday_month (v/n), bday_year
-#&gt; | (v/n), msg_count_new (v/n), msg_count_total (v/n),
-#&gt; | msg_show_notification (v/l), auto_track (v/c), mgroup_others (v/c),
+#&gt; | email (v/c), ip_address (v/c), allow_admin_mails (v/l), skin (v/n),
+#&gt; | warn_level (v/n), warn_lastwarn (v/n), restrict_post (v/l), bday_day
+#&gt; | (v/n), bday_month (v/n), bday_year (v/n), msg_count_new (v/n),
+#&gt; | msg_count_total (v/n), msg_show_notification (v/l), mod_posts (v/l),
+#&gt; | auto_track (v/c), temp_ban (v/l), mgroup_others (v/c),
 #&gt; | members_seo_name (v/c), members_cache (v/c), members_disable_pm
-#&gt; | (v/n), failed_logins (v/x), members_profile_views (v/n),
-#&gt; | source_msg_author_id (e/n), target_msg_author_id (e/n), msg_topic_id
-#&gt; | (e/n), msg_id (e/n), msg_date (e/n), msg_post (e/c), msg_author_id
-#&gt; | (e/n), msg_ip_address (e/c), msg_is_first_post (e/l)
-#&gt; + edges from cea8ac6:
-#&gt;  [1] 1-- 2 1-- 2 1-- 2 1-- 2 1-- 2 1-- 2 1-- 2 1-- 2 1-- 2 1-- 2 3-- 4 3-- 4
-#&gt; [13] 3-- 4 3-- 4 1-- 5 1-- 5 1-- 5 1-- 5 1-- 2 1-- 2 1-- 2 1-- 2 6-- 7 6-- 7
-#&gt; [25] 6-- 7 6-- 7 6-- 7 6-- 7 6-- 7 6-- 7 6-- 7 6-- 7 6-- 7 6-- 7 6-- 7 6-- 7
-#&gt; [37] 6-- 7 6-- 7 1-- 8 1-- 8 1-- 8 1-- 8 1-- 8 1-- 8 3-- 9 3-- 9 3-- 9 3-- 9
-#&gt; [49] 3-- 9 3-- 9 2--10 2--10 2--10 2--10 2--10 2--10 2--10 2--10 4-- 7 4-- 7
-#&gt; [61] 4-- 7 4-- 7 4-- 7 4-- 7 4-- 7 4-- 7 2--11 2--11 9--12 9--12 9--12 9--12
-#&gt; [73] 1--13 1--13 1--13 1--13 2--11 2--11 1--14 1--14 1--14 1--14 1--14 1--14
-#&gt; [85] 1--14 1--14 1--14 1--14 7-- 9 7-- 9 7-- 9 7-- 9 7-- 9 7-- 9 9--15 9--15
-#&gt; [97] 9--15 9--15
-#&gt; + ... omitted several edges</div></pre>
+#&gt; | (v/n), failed_logins (v/c), members_profile_views (v/n),
+#&gt; | members_pass_hash (v/c), members_pass_salt (v/c), members_bitoptions
+#&gt; | (v/n), members_day_posts (v/c), notification_cnt (v/n), posts (v/n),
+#&gt; | title (v/c), time_offset (v/c), last_post (v/n), view_sigs (v/l),
+#&gt; | msg_count_reset (v/l), dst_in_use (v/l), login_anonymous (v/c),
+#&gt; | ignored_users (v/c), org_perm_id (v/c), member_login_key (v/c),
+#&gt; | members_auto_dst (v/l), members_display_name (v/c),
+#&gt; | members_l_display_name (v/c), members_l_username (v/c), member_banned
+#&gt; | (v/l), member_uploader (v/c), language (v/n), failed_login_count
+#&gt; | (v/n), pp_last_visitors (v/c), pp_main_photo (v/c), pp_main_width
+#&gt; | (v/n), pp_main_height (v/n), pp_thumb_photo (v/c), pp_thumb_width
+#&gt; | (v/n), pp_thumb_height (v/n), pp_setting_count_comments (v/l),
+#&gt; | pp_reputation_points (v/n), pp_gravatar (v/c), pp_photo_type (v/c),
+#&gt; | signature (v/c), fb_bwoptions (v/l), tc_last_sid_import (v/c),
+#&gt; | tc_bwoptions (v/l), pp_customization (v/c), timezone (v/c),
+#&gt; | pp_cover_photo (v/c), members_bitoptions2 (v/n), create_menu (v/c),
+#&gt; | marked_site_read (v/n), pp_cover_offset (v/n), acp_skin (v/l),
+#&gt; | acp_language (v/l), member_title (v/c), member_posts (v/n),
+#&gt; | member_last_post (v/n), member_streams (v/c), photo_last_update
+#&gt; | (v/n), msg_count_reset_at (v/n), source_msg_author_id (e/n),
+#&gt; | target_msg_author_id (e/n), msg_topic_id (e/n), msg_id (e/n),
+#&gt; | msg_date (e/n), msg_post (e/c), msg_author_id (e/n), msg_ip_address
+#&gt; | (e/c), msg_is_first_post (e/l)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
