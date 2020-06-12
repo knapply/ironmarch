@@ -24,6 +24,7 @@ Imports:
     stringr
 Suggests:
     covr,
+    dplyr,
     knitr,
     igraph,
     rvest,
@@ -31,6 +32,7 @@ Suggests:
     tibble,
     testthat (>= 2.1.0),
     rmarkdown,
+    units,
     xml2
 URL: https://github.com/knapply/ironmarch, https://knapply.github.io/ironmarch
 BugReports: https://github.com/knapply/ironmarch/issues

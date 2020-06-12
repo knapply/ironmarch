@@ -1,113 +1,85 @@
-ip_address <- ironmarch::combo_members_df$ip_address
+# all IP addresses =============================================================
+.extract_ips <- function(df) {
+  ip_cols <- grep("ip_address", names(df), value = TRUE)
+  if (!length(ip_cols)) {
+    return(NULL)
+  }
+  out <- df[ip_cols]
+  unique(out[!is.na(out)])
+}
+
+extract_ips <- function(...) {
+  unique(
+    unlist(
+      lapply(list(...), lapply, .extract_ips),
+      use.names = FALSE
+    )
+  )
+}
+
+all_ips <- extract_ips(ironmarch::im_orig_dfs, ironmarch::im_core_dfs)
+names(all_ips) <- all_ips
+
+geocode_ip <- function(ip) {
+  rgeolocate::ip_api(ip_addresses = ip, as_data_frame = FALSE, delay = TRUE)
+}
 
 
-# init <- lapply(.ip_addresses, function(.x) {
-#   res <- rgeolocate::ip_api(
-#     ip_addresses = .x,
-#     as_data_frame = FALSE,
-#     delay = TRUE
-#   )
-#   Sys.sleep(1)
+is_failure <- function(x) {
+  unlisted <- unlist(x, use.names = FALSE)
+  length(unlisted) == 1L && unlisted == "Error"
+}
+
+# this takes > 15 hours to run =================================================
+# geocoding_results <- lapply(all_ips, function(.x) {
+#   Sys.sleep(1L)
+#   res <- geocode_ip(.x)
+# 
+#   if (is_failure(res)) {
+#     n_attempts <- 1L
+#     while (is_failure(res) && n_attempts < 5L) {
+#       Sys.sleep(n_attempts)
+#       res <- geocode_ip(.x)
+#       n_attempts <- n_attempts + 1L
+#     }
+#   }
+#   print(unlist(res))
 #   res
 # })
 
-init <- readRDS("inst/notforgit/geocoded.rds")
+# readr::write_rds(geocoding_results, 
+#                  path = "inst/notforgit/geocoding_results.rds")
 
-geococoded <- unlist(init, recursive = FALSE)
-geococoded_df <- data.table::rbindlist(
-  lapply(geococoded, as.list)
+
+geococoded <- unlist(
+  readRDS("inst/notforgit/geocoding_results.rds"), 
+  recursive = FALSE)
+
+all_geocoded_ips_df <- data.table::rbindlist(
+  lapply(geococoded, as.list),
+  idcol = "ip_address"
 )
 
+stopifnot(
+  nrow(all_geocoded_ips_df) == nrow(all_geocoded_ips_df[ip_address == query])
+)
+
+all_geocoded_ips_df[, query := NULL]
+
 chr_cols <- names(
-  geococoded_df
-)[vapply(geococoded_df, is.character, logical(1L))]
+  all_geocoded_ips_df
+)[vapply(all_geocoded_ips_df, is.character, logical(1L))]
 
 if (length(chr_cols)) {
-  geococoded_df[, (chr_cols) := lapply(.SD, function(.x) {
+  all_geocoded_ips_df[, (chr_cols) := lapply(.SD, function(.x) {
     data.table::fifelse(nchar(.x) == 0L, NA_character_, .x)
   }), .SDcols = chr_cols]
 }
 
-# styler: off
-.geocoded_ips_df <- unique(
-  data.table::data.table(
-    ip_address = ip_address
-    )[geococoded_df, on = .(ip_address == query)
-      ][, lat := as.double(lat)
-        ][, lon := as.double(lon)
-          ][]
-)
-# styler: on
+all_geocoded_ips_df[, lat := as.double(lat)
+  ][, lon := as.double(lon)
+    ]
 
-usethis::use_data(.geocoded_ips_df, internal = TRUE, overwrite = TRUE)
+.all_geocoded_ips_df <- all_geocoded_ips_df
 
-
-# ip_address <- ips
-# decode_ip <- function(ip_address) {
-#   # ip_regex <- "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"
-#   # valid_ip_addresses <- ip_address[grepl(ip_regex, ip_address)]
-#   .ip_addresses <- unique(ip_address)
-#
-#   # init <- lapply(.ip_addresses, function(.x) {
-#   #   res <- rgeolocate::ip_api(
-#   #     ip_addresses = .x,
-#   #     as_data_frame = FALSE,
-#   #     delay = TRUE
-#   #   )
-#   #   Sys.sleep(1)
-#   #   res
-#   # })
-#
-#   geococoded <- unlist(init, recursive = FALSE)
-#
-#   geococoded_df <- data.table::rbindlist(
-#     lapply(geococoded, as.list)
-#   )
-#
-#
-#   # styler: off
-#   out <- data.table::data.table(
-#     ip_address = ip_address
-#     )[geococoded_df, on = .(ip_address == query)
-#       ][, success := status == "success"
-#         ][, lat := as.double(lat)
-#           ][, lon := as.double(lon)
-#             ][]
-#   # styler: on
-#
-#   successes <- geococoded[vapply(
-#     geococoded, function(.x) .x[["status"]] == "success",
-#     logical(1L)
-#   )]
-#   names(successes) <- vapply(successes, `[[`, character(1L), "query")
-#
-#   st_points <- lapply(successes, function(.x) {
-#     coords <- .x[c("lon", "lat")]
-#     sf::st_point(as.double(coords))
-#   })
-#
-#   test <- data.table::data.table(
-#     ip_address = ip_address,
-#     geometry = sf::st_sfc(unname(st_points[ip_address]))
-#   )
-#
-#   # sf::st_sfc(unname(test))
-#   #
-#   #
-#   #
-#   # init <- lapply(ip_address, rgeolocate::ip_api(), as_data_frame = FALSE)
-#   #
-#   # res_mat <- lapply(lapply(init, `[[`, 1L), `[`, c("lon", "lat"))
-#   #
-#   # out <- lapply(res_mat, function(.x) sf::st_point(as.double(.x)))
-#   # sf::st_sfc(out, crs = 4326L)
-#   #
-#   # coord_mat <- structure(
-#   #   as.double(res_mat[, c("lon", "lat")]),
-#   #   .Dim = c(nrow(res_mat), 2L),
-#   #   .Dimnames = list(NULL, c("lon", "lat"))
-#   # )
-#   #
-#   # apply(coord_mat, 1L, sf::st_point)
-#   # sf::st_point(coord_m)
-# }
+usethis::use_data(.all_geocoded_ips_df, internal = TRUE, overwrite = TRUE)

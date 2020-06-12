@@ -18,19 +18,18 @@
 #' 
 #' plot(im_geocode_members(as_sf = FALSE)[c("lon", "lat")])
 #'
-#' @importFrom data.table data.table
+#' @importFrom data.table data.table setDT
 #' @export
 im_geocode_members <- function(all_geo_cols = TRUE,
                                as_tibble = ironmarch_as_tibble(),
                                as_sf = ironmarch_as_sf()) {
   if (all_geo_cols) {
-    joiner <- .geocoded_ips_df
-    joiner
+    joiner <- .all_geocoded_ips_df
   } else {
-    joiner <- .geocoded_ips_df[, .(ip_address, lat, lon)]
+    joiner <- .all_geocoded_ips_df[, .(ip_address, lat, lon)]
   }
-
-  out <- data.table(combo_members_df)[joiner, on = "ip_address"]
+  
+  out <- setDT(build_members())[joiner, on = "ip_address"]
 
   if (as_tibble && requireNamespace("tibble", quietly = TRUE)) {
     out <- tibble::as_tibble(out)

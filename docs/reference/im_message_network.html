@@ -127,25 +127,25 @@
     <p>Build Message Network</p>
     </div>
 
-    <pre class="usage"><span class='fu'>im_message_network</span>()</pre>
+    <pre class="usage"><span class='fu'>im_message_network</span>(<span class='kw'>edge_geo_distance</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
 
 
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='no'>im_message_g</span> <span class='kw'>&lt;-</span> <span class='fu'>im_message_network</span>()
 
-<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='no'>im_message_g</span>, <span class='kw'>max.lines</span> <span class='kw'>=</span> <span class='fl'>20</span>)</div><div class='output co'>#&gt; IGRAPH 1a46a86 U--- 821 41786 -- 
+<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='no'>im_message_g</span>, <span class='kw'>max.lines</span> <span class='kw'>=</span> <span class='fl'>20</span>)</div><div class='output co'>#&gt; IGRAPH cea8ac6 U--- 821 41786 -- 
 #&gt; + attr: member_id (v/n), screen_name (v/c), member_group_id (v/n),
 #&gt; | email (v/c), ip_address (v/c), skin (v/n), warn_level (v/n),
 #&gt; | warn_lastwarn (v/n), bday_day (v/n), bday_month (v/n), bday_year
 #&gt; | (v/n), msg_count_new (v/n), msg_count_total (v/n),
 #&gt; | msg_show_notification (v/l), auto_track (v/c), mgroup_others (v/c),
 #&gt; | members_seo_name (v/c), members_cache (v/c), members_disable_pm
-#&gt; | (v/n), failed_logins (v/x), members_profile_views (v/n), msg_topic_id
-#&gt; | (e/n), msg_id (e/n), msg_date (e/n), msg_ip_address (e/c),
-#&gt; | msg_is_first_post (e/l), msg_post (e/c), msg_author_id (e/n),
-#&gt; | msg_post_no_html (e/c)
-#&gt; + edges from 1a46a86:
+#&gt; | (v/n), failed_logins (v/x), members_profile_views (v/n),
+#&gt; | source_msg_author_id (e/n), target_msg_author_id (e/n), msg_topic_id
+#&gt; | (e/n), msg_id (e/n), msg_date (e/n), msg_post (e/c), msg_author_id
+#&gt; | (e/n), msg_ip_address (e/c), msg_is_first_post (e/l)
+#&gt; + edges from cea8ac6:
 #&gt;  [1] 1-- 2 1-- 2 1-- 2 1-- 2 1-- 2 1-- 2 1-- 2 1-- 2 1-- 2 1-- 2 3-- 4 3-- 4
 #&gt; [13] 3-- 4 3-- 4 1-- 5 1-- 5 1-- 5 1-- 5 1-- 2 1-- 2 1-- 2 1-- 2 6-- 7 6-- 7
 #&gt; [25] 6-- 7 6-- 7 6-- 7 6-- 7 6-- 7 6-- 7 6-- 7 6-- 7 6-- 7 6-- 7 6-- 7 6-- 7
@@ -155,8 +155,7 @@
 #&gt; [73] 1--13 1--13 1--13 1--13 2--11 2--11 1--14 1--14 1--14 1--14 1--14 1--14
 #&gt; [85] 1--14 1--14 1--14 1--14 7-- 9 7-- 9 7-- 9 7-- 9 7-- 9 7-- 9 9--15 9--15
 #&gt; [97] 9--15 9--15
-#&gt; + ... omitted several edges</div><div class='input'>
-</div></pre>
+#&gt; + ... omitted several edges</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

@@ -4,7 +4,12 @@
 \alias{im_message_network}
 \title{Build Message Network}
 \usage{
-im_message_network()
+im_message_network(edge_geo_distance = FALSE)
+}
+\arguments{
+\item{edge_geo_distance}{Whether to calculate dyadic geo-distances and add as an edge attribute
+named \code{distance_km} (for distance in kilometers). Member points are
+calculated from the centroids of each individual's geocoded IP addresses.}
 }
 \description{
 Build Message Network
@@ -12,6 +17,5 @@ Build Message Network
 \examples{
 im_message_g <- im_message_network()
 
-print(im_message_g, max.lines = 20)
-
+print(im_message_g, full = FALSE)
 }
