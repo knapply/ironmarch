@@ -39,12 +39,13 @@ im_message_network <- function() {
   ]
 
   member_cols_to_drop <- c(
-    "member_login_key_expire", "joined", "last_activity", "last_visit"
+    "member_login_key_expire", "last_activity", "last_visit"
   )
 
   # styler: off
   nodes_members <- build_members(as_tibble = FALSE
-                                 )[, (member_cols_to_drop) := NULL]
+                                 )[, (member_cols_to_drop) := NULL
+                                   ][order(member_id)]
   # styler: on
   setnames(nodes_members, old = "name", new = "screen_name")
   el <- as.matrix(edges_member_member[
@@ -65,6 +66,8 @@ im_message_network <- function() {
   )
   igraph::edge_attr(g) <- as.list(edge_attrs)
   igraph::vertex_attr(g) <- as.list(nodes_members[member_id %in% el[, 1]])
+  igraph::vertex_attr(g, "name") <- sprintf("m%d", 
+                                            igraph::vertex_attr(g, "member_id"))
   g
 }
 
@@ -77,8 +80,16 @@ im_geodist_matrix <- function() {
     "{units} not installed" = requireNamespace("units", quietly = TRUE)
   )
   
+  nodes_to_keep <- igraph::vertex_attr(
+    im_message_network(), "member_id"
+  )
+  
   messages <- build_messages(as_tibble = FALSE)
-  members <- build_members(as_tibble = FALSE)
+  members <- build_members(
+    as_tibble = FALSE
+    )[member_id %in% nodes_to_keep
+      ][order(member_id)
+        ]
 
   geocoded_messages <- unique(
     merge(
@@ -155,3 +166,132 @@ im_geodist_matrix <- function() {
   
   out
 }
+
+im_same_member_group_id_mat <- function() {
+  stopifnot(
+    "{sf} not installed" = requireNamespace("sf", quietly = TRUE),
+    "{dplyr} not installed" = requireNamespace("dplyr", quietly = TRUE),
+    "{units} not installed" = requireNamespace("units", quietly = TRUE)
+  )
+  
+  nodes_to_keep <- igraph::vertex_attr(
+    im_message_network(), "member_id"
+  )
+  
+  messages <- build_messages(as_tibble = FALSE)
+  members <- build_members(
+    as_tibble = FALSE
+    )[member_id %in% nodes_to_keep
+      ][order(member_id)
+        ]
+
+  matrix_coords <- setDT(
+    expand.grid(
+      data.table(
+        source_member_id = members$member_id,
+        target_member_id = members$member_id
+      )
+    )
+  )
+  
+  
+  dyads <- merge(
+    merge(
+      matrix_coords,
+      members[, .(member_id, member_group_id)],
+      by.x  = "source_member_id",
+      by.y = "member_id"
+    ),
+    members[, .(member_id, member_group_id)],
+    by.x = "target_member_id",
+    by.y = "member_id"
+  )[, same_group := as.integer(member_group_id.x == member_group_id.y)
+    ][, member_group_id.x := NULL
+      ][, member_group_id.y := NULL
+        ][, source_member_id := paste0("m", source_member_id)
+          ][, target_member_id := paste0("m", target_member_id)
+            ]
+  
+  dim_names <- paste0("m", members$member_id)
+  
+  out <- matrix(NA, nrow = nrow(members), ncol = nrow(members),
+                dimnames = list(dim_names, dim_names))
+  for (i in seq_len(nrow(matrix_coords))) {
+    out[dyads$source_member_id[[i]], 
+        dyads$target_member_id[[i]]] <- dyads$same_group[[i]]
+  }
+  
+  out
+}
+
+
+.get_year <- function(x) as.POSIXlt(x, tz = "UTC")$year + 1900
+.as_dttm <- function(x) as.POSIXct(x, origin = "1970-01-01")
+
+.split_graph_by_year <- function(g, drop_isolates = FALSE) {
+  dates <- .as_dttm(igraph::edge_attr(g, "msg_date"))
+  years <- .get_year(dates)
+  
+  splits <- sort(unique(years))
+  names(splits) <- paste0("y", splits)
+  
+  lapply(splits, function(.x) {
+    igraph::subgraph.edges(
+      graph = g,
+      eids = which(
+        .get_year(
+          .as_dttm(igraph::edge_attr(g, "msg_date"))
+        ) == .x
+      ),
+      delete.vertices = drop_isolates
+    )
+  })
+}
+
+# @return 3d array, with each element in the third dimension containing
+# the adjacency matrix for a given year
+.as_adj_cube <- function(g) {
+  adj_mats <- lapply(
+    .split_graph_by_year(g),
+    igraph::as_adjacency_matrix,
+    sparse = FALSE
+  )
+  
+  for (nm in names(adj_mats)) {
+    adj_mats[[nm]][adj_mats[[nm]] != 0] <- 1
+    year <- as.integer(substring(nm, 2L))
+    inactive_nodes <- igraph::vertex_attr(
+      g, "name",
+      index = which(
+        .get_year(igraph::vertex_attr(g, "joined")) > year
+      )
+    )
+    adj_mats[[nm]][inactive_nodes, ] <- 10
+    adj_mats[[nm]][, inactive_nodes] <- 10
+  }
+  
+  out <- array(
+    unlist(adj_mats, use.names = FALSE),
+    dim = c(dim(adj_mats[[1L]]), length(adj_mats)),
+    dimnames = list(
+      rownames(adj_mats[[1L]]),
+      colnames(adj_mats[[1L]]),
+      names(adj_mats)
+    )
+  )
+  
+  out
+}
+
+
+.im_adacency_cube <- function() {
+  stopifnot(
+    "{igraph} not installed" = requireNamespace("igraph", quietly = TRUE)
+  )
+  g <- im_message_network()
+  
+  .as_adj_cube(g)
+}
+
+
+

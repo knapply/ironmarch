@@ -23,23 +23,26 @@ extract_ego <- function(g, ego_name, n_steps = 1L) {
   hood <- unlist(neighborhood(
     g,
     order = n_steps,
-    nodes = which(vertex_attr(g, "name") == ego_name)
+    nodes = which(vertex_attr(g, "screen_name") == ego_name)
   ), use.names = FALSE)
 
   induced_subgraph(g, hood)
 }
 
 vis_net <- function(ego_g, ego_name = NULL) {
-  if (!is.null(ego_name) && ego_name %in% vertex_attr(ego_g, "name")) {
+  if (!is.null(ego_name) && ego_name %in% vertex_attr(ego_g, "screen_name")) {
     vertex_attr(ego_g, "color", 
-                which(vertex_attr(ego_g, "name") == ego_name)) <- "red"
+                which(vertex_attr(ego_g, "screen_name") == ego_name)) <- "red"
   }
   edge_attr(ego_g, "title") <- edge_attr(ego_g, "msg_post")
-  visNetwork::visIgraph(ego_g) %>%
+  suppressWarnings(visNetwork::visIgraph(ego_g)) %>%
     visNetwork::visOptions(nodesIdSelection = TRUE, highlightNearest = TRUE)
 }
+
+igraph_options(print.full = FALSE)
 ```
 
+# Members and Messages
 
 ```{r}
 build_members()
@@ -60,7 +63,6 @@ im_events
 
 ```{r}
 g <- im_message_network()
-g
 
 edge_density(g)
 g %>% degree() %>% mean()
@@ -69,13 +71,13 @@ g %>% degree() %>% mean()
 # Node Table
 
 ```{r}
-tibble::as_tibble(igraph::vertex_attr(g))
+tibble::as_tibble(vertex_attr(g))
 ```
 
 # Edge Table
 
 ```{r}
-tibble::as_tibble(igraph::as_data_frame(g, what = "edges"))
+tibble::as_tibble(igraph::edge_attr(g))
 ```
 
 # Ego Extraction
@@ -86,7 +88,8 @@ target_node <- "Blood and Iron"
 ego_g <- g %>%
   extract_ego(ego_name = target_node, n_steps = 1)
 
-ego_g
+vcount(ego_g)
+ecount(ego_g)
 ```
 
 
@@ -94,14 +97,14 @@ ego_g
 ego_g %>%
   vis_net(ego_name = target_node)
 
-ego_g_member_names <- vertex_attr(ego_g, "name")
+ego_g_member_names <- vertex_attr(ego_g, "screen_name")
 ego_g_member_names
 ```
 
 # Spatial Data
 
 ```{r}
-all_members_sf <- im_geocode_members()
+all_members_sf <- im_geocode_members() %>% filter(!is.na(member_id))
 plot(all_members_sf$geometry)
 all_members_sf
 ```
@@ -149,29 +152,37 @@ missouri_members_sf %>% mapview::mapview()
 ```
 
 
-```{r}
-library(dplyr)
 
+
+
+```{r}
 all_member_ranges_sf <- merge(
-  all_geocoded_ips_df,
-  ironmarch:::.get_geocodable_member_dfs(),
-  by = "ip_address",
-  nomatch = 0
-  ) %>% 
+  ironmarch:::.all_geocoded_ips_df,
+  build_messages(as_tibble = FALSE),
+  by.x = "ip_address",
+  by.y = "msg_ip_address"
+  )[, .(msg_author_id, lon, lat)
+    ] %>% 
+  tibble::as_tibble() %>% 
+  rename(member_id = msg_author_id) %>% 
   sf::st_as_sf(coords = c("lon", "lat"), crs = 4326L) %>% 
-  group_by(member_id) %>% 
-  summarise() %>% 
-  left_join(combo_members_df, by = "member_id")
+  group_by(member_id) %>%
+  summarise() %>%
+  inner_join(build_members(), by = "member_id") %>% 
+  arrange(member_id)
+all_member_ranges_sf
 
 member_ranges_for_gg <- all_member_ranges_sf %>% 
   filter(member_id %in% 1:6) %>% 
-  mutate(screen_name = name)
+  mutate(screen_name = name) %>% 
+  sf::st_transform(crs = 3857L)
 ```
 
 ```{r}
 world_data <- rnaturalearthdata::sovereignty110 %>% 
   sf::st_as_sf() %>% tibble::as_tibble() %>% sf::st_as_sf() %>% 
-  sf::st_crop(sf::st_buffer(member_ranges_for_gg, 5))
+  sf::st_transform(crs = 3857L) %>% 
+  sf::st_crop(sf::st_buffer(member_ranges_for_gg, 2e5))
 
 member_ranges_gg <- member_ranges_for_gg %>% 
   ggplot() +
@@ -192,22 +203,5 @@ member_ranges_gg + facet_wrap(~ screen_name, ncol = 2) + guides(color = FALSE)
 ```{r}
 all_member_ranges_sf %>% 
   filter(member_id == 1) %>%  # Alexander Slavros
-  sf::st_centroid() %>% 
-  
-  
   mapview::mapview()
 ```
-
-
-```{r}
-all_members_sf %>% 
-  filter(name == "TheWeissewolfe") %>% 
-  # filter(member_id == 1) %>%  # Alexander Slavros
-  mapview::mapview()
-
-all_member_ranges_sf %>% 
-  filter(name == "TheWeissewolfe") %>% 
-  # filter(member_id == 1) %>%  # Alexander Slavros
-  mapview::mapview()
-```
-
