@@ -30,7 +30,9 @@ im_message_network <- function() {
         ][source_msg_author_id != target_msg_author_id
           ]
   )[, .(source_msg_author_id, target_msg_author_id, msg_topic_id)
-    ]
+    ][, source_msg_author_id := sprintf("m%s", source_msg_author_id),
+      ][, target_msg_author_id := sprintf("m%s", target_msg_author_id)
+        ]
   # styler: on
 
   edges_member_member <- edges_init[
@@ -45,30 +47,53 @@ im_message_network <- function() {
   # styler: off
   nodes_members <- build_members(as_tibble = FALSE
                                  )[, (member_cols_to_drop) := NULL
-                                   ][order(member_id)]
+                                   ][order(member_id)
+                                     ]
   # styler: on
   setnames(nodes_members, old = "name", new = "screen_name")
-  el <- as.matrix(edges_member_member[
-    source_msg_author_id %in% nodes_members$member_id &
-      target_msg_author_id %in% nodes_members$member_id, 1:2
-  ])
-
-  el <- apply(el, 2, as.character)
-
-  edge_attrs <- edges_member_member[
-    source_msg_author_id %in% nodes_members$member_id &
-      target_msg_author_id %in% nodes_members$member_id
+  setnames(nodes_members, old = "member_id", new = "name")
+  nodes_members[, name := sprintf("m%s", name)]
+  edge_df <- edges_member_member[
+    source_msg_author_id %in% nodes_members$name &
+    target_msg_author_id %in% nodes_members$name
   ]
+  # el <- as.matrix(edges_member_member[
+  #   source_msg_author_id %in% nodes_members$name &
+  #     target_msg_author_id %in% nodes_members$name, 1:2
+  # ])
 
-  g <- igraph::graph_from_edgelist(
-    el,
-    directed = FALSE
+  t_el <- matrix(
+    match(c(edge_df$source_msg_author_id, 
+            edge_df$target_msg_author_id),
+          nodes_members$name),
+    nrow = 2L, byrow = TRUE
   )
-  igraph::edge_attr(g) <- as.list(edge_attrs)
-  igraph::vertex_attr(g) <- as.list(nodes_members[member_id %in% el[, 1]])
-  igraph::vertex_attr(g, "name") <- sprintf("m%d", 
-                                            igraph::vertex_attr(g, "member_id"))
+
+  # el <- apply(el, 2, as.character)
+
+  # edge_attrs <- edges_member_member[
+  #   source_msg_author_id %in% nodes_members$member_id &
+  #     target_msg_author_id %in% nodes_members$member_id
+  # ]
+  # edges_member_member[, source_msg_author_id := NULL]
+  # edges_member_member[, target_msg_author_id := NULL]
+  
+  g <- igraph::make_empty_graph(nrow(nodes_members), directed = FALSE)
+  igraph::vertex_attr(g) <- as.list(nodes_members)
+  g <- igraph::add.edges(g, t_el)
+  igraph::edge_attr(g) <- as.list(edge_df)
+  
   g
+  
+  
+  # g <- igraph::graph_from_edgelist(
+  #   el,
+  #   directed = FALSE
+  # )
+  # igraph::edge_attr(g) <- as.list(edge_attrs)
+  # # igraph::vertex_attr(g, "name") <- sprintf("m%d", 
+  #                                           # igraph::vertex_attr(g, "member_id"))
+  # g
 }
 
 
@@ -81,14 +106,15 @@ im_geodist_matrix <- function() {
   )
   
   nodes_to_keep <- igraph::vertex_attr(
-    im_message_network(), "member_id"
+    im_message_network(), "name"
   )
   
   messages <- build_messages(as_tibble = FALSE)
   members <- build_members(
     as_tibble = FALSE
-    )[member_id %in% nodes_to_keep
-      ][order(member_id)
+    )[, name := sprintf("m%s", member_id)
+      ][name %in% nodes_to_keep
+      ][order(name)
         ]
 
   geocoded_messages <- unique(
@@ -155,7 +181,7 @@ im_geodist_matrix <- function() {
          ][, target_member_id := paste0("m", target_member_id)
            ][]
   
-  dim_names <- paste0("m", members$member_id)
+  dim_names <- paste0("m", sort(members$member_id))
   
   out <- matrix(0, nrow = nrow(members), ncol = nrow(members),
                 dimnames = list(dim_names, dim_names))
@@ -175,16 +201,16 @@ im_same_member_group_id_mat <- function() {
   )
   
   nodes_to_keep <- igraph::vertex_attr(
-    im_message_network(), "member_id"
+    im_message_network(), "name"
   )
   
   messages <- build_messages(as_tibble = FALSE)
   members <- build_members(
     as_tibble = FALSE
-    )[member_id %in% nodes_to_keep
-      ][order(member_id)
-        ]
-
+    )[, name := sprintf("m%s", member_id)
+      ][name %in% nodes_to_keep
+        ][order(name)
+          ]
   matrix_coords <- setDT(
     expand.grid(
       data.table(
@@ -212,7 +238,7 @@ im_same_member_group_id_mat <- function() {
           ][, target_member_id := paste0("m", target_member_id)
             ]
   
-  dim_names <- paste0("m", members$member_id)
+  dim_names <- paste0("m", sort(members$member_id))
   
   out <- matrix(NA, nrow = nrow(members), ncol = nrow(members),
                 dimnames = list(dim_names, dim_names))
