@@ -24,22 +24,31 @@ for (i in seq_along(slices)) {
 }
 
 
-geo_dists <- tibble::as_tibble(
+geo_dists <- ironmarch:::im_geodist_matrix()
+
+geo_dist_df <- tibble::as_tibble(
   tibble::rownames_to_column(
     as.data.frame(
-      ironmarch:::im_geodist_matrix()
+      geo_dists
     )
   )
 )
-readr::write_csv(geo_dists, "playground/siena/covariates/geodist_matrix.csv")
+readr::write_csv(geo_dist_df, "playground/siena/covariates/geodist_matrix.csv")
+
+readr::write_rds(geo_dists, "playground/siena/covariates/geodist_matrix.rds",
+                 compress = "gz")
 
 
-same_member_group_id_mat <- tibble::as_tibble(
+same_member_group_id_mat <- ironmarch:::im_same_member_group_id_mat()
+
+same_member_group_id_df <- tibble::as_tibble(
   tibble::rownames_to_column(
     as.data.frame(
-      ironmarch:::im_same_member_group_id_mat()
+      same_member_group_id_mat
     )
   )
 )
-readr::write_csv(same_member_group_id_mat,
+readr::write_csv(same_member_group_id_df,
                  "playground/siena/covariates/same_member_group_id_matrix.csv")
+readr::write_rds(same_member_group_id_mat,
+                 "playground/siena/covariates/same_member_group_id_matrix.rds")
